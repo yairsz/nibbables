@@ -57,13 +57,28 @@ def validate(products, cats):
         ids.add(p["id"])
 
 CAT_LABEL = {}
+def ga_tag():
+    gid = CFG.get("ga_measurement_id", "").strip()
+    if not gid: return ""
+    assert re.fullmatch(r"G-[A-Z0-9]+", gid), f"bad ga_measurement_id {gid}"
+    return f"""
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={gid}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){{dataLayer.push(arguments);}}
+  gtag('js', new Date());
+
+  gtag('config', '{gid}');
+</script>"""
+
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
     ld = f'<script type="application/ld+json">{json.dumps(jsonld)}</script>' if jsonld else ""
     year = datetime.date.today().year
     nav = "".join(f'<a href="{U("/" + s + "/")}">{e(n)}</a>' for s, n in CAT_LABEL.items())
     return f"""<!doctype html>
-<html lang="en"><head>
+<html lang="en"><head>{ga_tag()}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -219,6 +234,8 @@ def about():
 <p>Nibbables is an information directory, not veterinary advice. No chew is right for every dog. Supervise chewing, choose an appropriate size, and talk to your vet, especially for puppies, seniors, dogs with dental problems or dogs on special diets.</p>
 <h2>Affiliate disclosure</h2>
 <p>Nibbables is free to use. It is meant to earn money through affiliate programs in the future: when you buy through a labeled partner link, we may earn a commission at no extra cost to you. <strong>Right now Nibbables has no affiliate relationships, and no link on this site earns a commission.</strong> If that changes, affiliate links will be clearly labeled where they appear. A brand can't pay to change what its card says, because the card quotes the brand's own page.</p>
+<h2>Analytics</h2>
+<p>This site uses Google Analytics to collect aggregate traffic statistics, such as page views and how visitors found us. It doesn't collect your name or email, though Google may set cookies to tell visits apart.</p>
 <h2>Corrections</h2>
 <p>Brands update their pages. If a card is out of date, let us know and we'll re-check it against the brand's page and update the date.</p>"""
     return page("About Nibbables: how we verify & affiliate disclosure",

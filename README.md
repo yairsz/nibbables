@@ -11,6 +11,7 @@ A static directory of long-lasting dog chews (bully sticks, yak cheese chews, be
 - Every product must have: brand, product, category, source_url, ingredients, made_in, sourced_from, rawhide_free, size_guidance, supervision, sizes, last_checked. Use `Not stated, check with them` for anything the brand's page doesn't say.
 - The build refuses to publish if any page contains the word "safe"/"safer"/"safest" or a price.
 - No reviews, no ratings, no prices. "Made in USA" is always shown as the brand's quoted claim.
+- GA4 tag is rendered in every page <head> from `site.json` `ga_measurement_id` (remove the field to disable).
 - Affiliate slots stay empty (`affiliate_url` is rejected unless `site.json` has `"affiliates_live": true`, which needs Yair's approval).
 
 ## Files
