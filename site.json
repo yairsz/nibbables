@@ -1,0 +1,7 @@
+{
+ "site_name": "Nibbables",
+ "tagline": "Long-lasting dog chews, compared by what each brand actually says.",
+ "base_url": "https://yairsz.github.io/nibbables",
+ "cname_pending": "nibbables.com",
+ "_note": "Rename cname_pending to cname (and set base_url to https://nibbables.com) only after DNS is live. See DOMAIN.md."
+}
