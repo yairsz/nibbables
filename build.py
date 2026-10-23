@@ -9,6 +9,8 @@ pages contain forbidden wording ("safe"/"safer"/"safest") or a price ("$12.99").
 import json, html, shutil, datetime, re, os, sys
 from pathlib import Path
 from urllib.parse import urlparse
+from ytembed import embed as yt_embed, video_ld
+YT_CHANNEL = "https://www.youtube.com/@Nibbables"
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "site"
@@ -80,7 +82,8 @@ def ga_tag():
 
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
-    ld = f'<script type="application/ld+json">{json.dumps(jsonld)}</script>' if jsonld else ""
+    lds = [x for x in (jsonld, video_ld(path)) if x]
+    ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
     nav = "".join(f'<a href="{U("/" + s + "/")}">{e(n)}</a>' for s, n in CAT_LABEL.items())
     return f"""<!doctype html>
@@ -98,7 +101,7 @@ def page(title, desc, path, body, jsonld=None):
 <main><div class="wrap">
 {body}
 </div></main>
-<footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. {AMAZON_DISCLOSURE} <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>.</div></footer>
+<footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. {AMAZON_DISCLOSURE} <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">Nibbables on YouTube</a>.</div></footer>
 </body></html>"""
 
 SAFETY = """<aside class="note"><strong>Before you give any chew:</strong> supervise your dog while it chews, choose a size and hardness that suits your dog (follow the brand's size guidance), take away small or broken pieces, keep fresh water available, and ask your vet if a chew is right for your dog, especially for puppies, seniors, dogs with dental work or dogs on special diets. Nibbables does not rate safety. Each card shows what the brand itself says.</aside>"""
@@ -172,6 +175,7 @@ def compare(products):
 <h1>Compare long-lasting dog chews</h1>
 <p class="lead">All {len(products)} products in one table. Every cell is the brand's own wording from its product page. "Not stated" means we couldn't find it on that page, so check with the brand.</p>
 {SAFETY}
+{yt_embed('/compare/', YT_CHANNEL, 'Nibbables')}
 <div class="filters"><select id="fc" aria-label="Chew type"><option value="">All chew types</option>{opts}</select>
 <label><input type="checkbox" id="fm"> Made-in claim stated</label>
 <label><input type="checkbox" id="fu"> Claim mentions USA</label>
@@ -299,6 +303,8 @@ def main():
     latest = max(p["last_checked"] for p in products)
     urls = "".join(f"<url><loc>{base}{p}</loc><lastmod>{latest}</lastmod></url>" for p in pages)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
+    if CFG.get("indexnow_key"):  # IndexNow (Bing/Yandex) key file must sit at the site root
+        (OUT / f"{CFG['indexnow_key']}.txt").write_text(CFG["indexnow_key"])
     (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
     if CFG.get("cname"):
         (OUT / "CNAME").write_text(CFG["cname"].strip() + "\n")
