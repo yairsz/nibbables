@@ -51,3 +51,8 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 
 ## Re-verification cadence
 - Every product: re-check within 90 days of `last_checked`, or right away if someone reports a change.
+
+## After publishing (added 2026-10-23)
+- Submit new/changed URLs to IndexNow: POST https://api.indexnow.org/indexnow with {"host","key": site.json indexnow_key, "keyLocation": "https://<host>/<key>.txt", "urlList": [...]} (expect 200/202).
+- Search Console already has the sitemap; for a new page optionally check it with the URL Inspection API (developer@ ADC, quota project plenary-totem-501619-e6).
+- Videos: add an entry to data/videos.json keyed by page path to embed a lazy YouTube player + VideoObject JSON-LD.
