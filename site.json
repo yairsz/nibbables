@@ -4,5 +4,7 @@
   "base_url": "https://nibbables.com",
   "_note": "Rename cname_pending to cname (and set base_url to https://nibbables.com) only after DNS is live. See DOMAIN.md.",
   "ga_measurement_id": "G-MXKFFSYRQB",
-  "cname": "nibbables.com"
+  "cname": "nibbables.com",
+  "affiliates_live": true,
+  "amazon_tag": "nibbables-20"
 }

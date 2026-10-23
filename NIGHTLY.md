@@ -9,7 +9,7 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 4. Only use the **brand's own product page** as the source (not Amazon, Chewy, blogs or Reddit; those can only help you *find* products). Each product needs `source_url` and `last_checked` set to today (YYYY-MM-DD, America/New_York).
 5. Claims are **verbatim quotes**. "Made in USA" etc. is always the brand's claim. If a page contradicts itself (for example two different source countries), quote one and record the other in `note`.
 6. "Rawhide-free" only when the page literally says rawhide-free, no rawhide or made without rawhide. An "alternative to rawhide" line does not count.
-7. **No affiliate links** unless Yair has approved and joined a program. Then set `affiliate_url` on the product **and** `"affiliates_live": true` in `site.json`. Never sign up for programs, accept terms or create accounts. Publishing new pages to the existing GitHub Pages site is approved. Changing hosting, DNS, domains or repo settings is not.
+7. **Amazon affiliate links (approved by Yair 2026-10-23, tag `nibbables-20`, `"affiliates_live": true`).** For every new product, look for the **exact same product** on Amazon.com: same brand, same product name, same size/variant wording (pack count may differ only if the brand page sells that chew in several counts; note it). Prefer listings under the brand's own store ("Visit the <Brand> Store" / "Brand: <Brand>"). Find candidates with `curl --compressed -A "<browser UA>" "https://www.amazon.com/s?k=<brand+product>"` or WebSearch, then fetch `https://www.amazon.com/dp/<ASIN>` and read the title, byline, seller and variation list. A search result showing the ASIN and title is acceptable evidence only if brand, product and variant clearly match. **Never guess an ASIN. If unsure, leave the product with no link.** Record every match *and* every miss (with the reason) in `research/amazon-matches.md`. Then set `"amazon_asin": "<ASIN>"` and `"affiliate_url": "https://www.amazon.com/dp/<ASIN>?tag=nibbables-20"` on the product (the build rejects any other format). The card shows a "Check on Amazon" button (rel="sponsored nofollow noopener", target="_blank") next to the brand-page link, and any page with an Amazon link gets "As an Amazon Associate I earn from qualifying purchases." above the first link (the build refuses a page without it). **Never show Amazon prices, ratings, stars or review counts**, and Amazon is never a *source* for card claims (rule 4). Never sign up for other programs, accept terms or create accounts. Publishing new pages to the existing GitHub Pages site is approved. Changing hosting, DNS, domains or repo settings is not.
 8. Our own copy (intros, guide sections) should be factual and neutral: describe what the brands say, and point to the vet for health questions. No health or dental-benefit claims in our voice.
 
 ## Procedure
@@ -22,6 +22,7 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
    - **New products:** append to `data/products.json` with the same shape: `brand, product, category, source_url, ingredients, made_in, sourced_from, rawhide_free, size_guidance, supervision, sizes[], note, last_checked`, plus `"snapshot": "research/pages/<brand>-<handle>.txt"`. `category` must be a slug in `data/categories.json`. Multiple quotes in one field are joined with ` · `.
    - **New category:** add an entry to `data/categories.json` (slug, name, h1, title, meta, intro) and at least 3 products for it.
    - **New guide:** create `data/guides/<slug>.json` with `slug, title, meta, h1, intro, sections[{h,p}], sources[{label,url}], product_ids[], last_checked`. Product ids are the card anchors (`id="..."`) on the category pages, i.e. the slug of "brand product". Every sentence in `sections` must be backed by a cited brand page.
+   - **Amazon match:** per rule 7, check each new product for an exact Amazon match and log it in `research/amazon-matches.md`.
    - Title ≤ 65 characters where possible; meta description ≤ 160.
 4. **Verify quotes:** `python3 scripts/verify_quotes.py` must print `quote check: OK` (every quoted segment must appear verbatim in its snapshot).
 5. **Build:** `python3 build.py`. It fails on missing fields or sources, unknown categories, duplicate products, guides pointing at unknown products, the word safe/safer, or prices. Fix and rebuild. Sitemap and robots are regenerated automatically.
@@ -35,7 +36,7 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
    ```
    cd /workspace/nibbable/site-src
    git pull --rebase
-   git add data/ content-queue.md published-log.md NIGHTLY.md build.py static/ site.json scripts/
+   git add data/ content-queue.md published-log.md NIGHTLY.md build.py static/ site.json scripts/ research/amazon-matches.md
    git commit -m "Add <page path> (<n> products, checked <YYYY-MM-DD>)"
    git push
    ./publish.sh          # builds and force-pushes site/ to gh-pages
@@ -46,7 +47,7 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
    curl -s -o /dev/null -w "%{http_code}\n" "https://yairsz.github.io/nibbables/<path>/?v=$(date +%s)"   # expect 200
    curl -s https://yairsz.github.io/nibbables/sitemap.xml | grep -c "<path>"           # expect 1
    ```
-   (After the custom domain is live, use https://nibbables.com/; see DOMAIN.md.) Record the result in `published-log.md`.
+   (The custom domain is live: also check https://nibbables.com/<path>/ and, if the page has Amazon links, `curl -s https://nibbables.com/<path>/ | grep -c 'tag=nibbables-20'` and `grep -c 'As an Amazon Associate I earn from qualifying purchases.'`.) Record the result in `published-log.md`.
 
 ## Re-verification cadence
 - Every product: re-check within 90 days of `last_checked`, or right away if someone reports a change.

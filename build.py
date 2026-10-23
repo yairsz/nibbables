@@ -17,6 +17,8 @@ NS = "Not stated, check with them"
 REQUIRED = ["brand", "product", "category", "source_url", "ingredients", "made_in", "sourced_from",
             "rawhide_free", "size_guidance", "supervision", "sizes", "last_checked"]
 QUOTED = ["ingredients", "made_in", "sourced_from", "rawhide_free", "size_guidance", "supervision"]
+AMAZON_DISCLOSURE = "As an Amazon Associate I earn from qualifying purchases."
+AMAZON_URL = re.compile(r"https://www\.amazon\.com/dp/[A-Z0-9]{10}\?tag=" + re.escape(CFG.get("amazon_tag", "nibbables-20")))
 FORBIDDEN = [(re.compile(r"\bsafe(r|st|ly)?\b", re.I), "the word 'safe' (never call a chew safe)"),
              (re.compile(r"[$€£]\s?\d"), "a price")]
 
@@ -52,6 +54,10 @@ def validate(products, cats):
         assert p["category"] in slugs, f"{name}: unknown category {p['category']}"
         assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", p["last_checked"]), f"{name}: bad last_checked"
         assert not p.get("affiliate_url") or CFG.get("affiliates_live"), f"{name}: affiliate_url set but affiliates_live is off"
+        if p.get("affiliate_url"):
+            # Only exact Amazon /dp/<ASIN>?tag=<our tag> links, matching the recorded ASIN (see research/amazon-matches.md).
+            assert AMAZON_URL.fullmatch(p["affiliate_url"]), f"{name}: affiliate_url must be https://www.amazon.com/dp/<ASIN>?tag={CFG.get('amazon_tag')}"
+            assert p.get("amazon_asin") and f"/dp/{p['amazon_asin']}?" in p["affiliate_url"], f"{name}: amazon_asin missing or doesn't match affiliate_url"
         p["id"] = slugify(p["brand"] + " " + p["product"])[:80]
         assert p["id"] not in ids, f"duplicate product {p['id']}"
         ids.add(p["id"])
@@ -92,16 +98,24 @@ def page(title, desc, path, body, jsonld=None):
 <main><div class="wrap">
 {body}
 </div></main>
-<footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>.</div></footer>
+<footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. {AMAZON_DISCLOSURE} <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>.</div></footer>
 </body></html>"""
 
 SAFETY = """<aside class="note"><strong>Before you give any chew:</strong> supervise your dog while it chews, choose a size and hardness that suits your dog (follow the brand's size guidance), take away small or broken pieces, keep fresh water available, and ask your vet if a chew is right for your dog, especially for puppies, seniors, dogs with dental work or dogs on special diets. Nibbables does not rate safety. Each card shows what the brand itself says.</aside>"""
 
+def has_aff(p):
+    return bool(p.get("affiliate_url") and CFG.get("affiliates_live"))
+
 def affiliate_slot(p):
-    # >>> AFFILIATE SLOT <<< Empty until Yair approves a program. Set product "affiliate_url" + site.json "affiliates_live": true.
-    if p.get("affiliate_url") and CFG.get("affiliates_live"):
-        return f'<a class="aff" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" target="_blank">Shop (affiliate link)</a>'
-    return f"<!-- AFFILIATE_SLOT:{e(p['id'])} (empty: no affiliate programs joined yet) -->"
+    # Amazon Associates (tag in site.json "amazon_tag"). Only set affiliate_url for an exact Amazon match of the
+    # same brand, product and size wording, recorded in research/amazon-matches.md. Never show Amazon prices,
+    # ratings or review counts.
+    if has_aff(p):
+        return f'<a class="aff" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" target="_blank">Check on Amazon</a>'
+    return f"<!-- AFFILIATE_SLOT:{e(p['id'])} (no exact Amazon match) -->"
+
+def aff_disclosure(ps):
+    return f'<p class="disclosure meta">{AMAZON_DISCLOSURE} <a href="{U("/about/")}">Affiliate disclosure</a>.</p>' if any(has_aff(p) for p in ps) else ""
 
 def card(p):
     sizes = "".join(f"<li>{e(s)}</li>" for s in p["sizes"])
@@ -131,6 +145,7 @@ def category_page(c, products):
 <h1>{e(c['h1'])}</h1><p class="lead">{e(c['intro'])}</p>
 <p class="meta">{len(ps)} products · every claim is quoted from the brand's own page and linked · no prices (they change; check the brand) · <a href="{U('/compare/')}">compare all in one table</a></p>
 {SAFETY}
+{aff_disclosure(ps)}
 <details class="toc"><summary>Products on this page</summary><ul>{toc}</ul></details>
 {''.join(card(p) for p in ps)}"""
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": c["h1"],
@@ -211,7 +226,7 @@ def guide_page(g, products):
         assert pid in byid, f"guide {g['slug']} references unknown product {pid}"
     secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" for s in g["sections"])
     srcs = "".join(f'<li><a href="{e(s["url"])}" rel="nofollow noopener" target="_blank">{e(s["label"])}</a></li>' for s in g["sources"])
-    cards = "".join(card(byid[pid]) for pid in g.get("product_ids", []))
+    cards = aff_disclosure([byid[pid] for pid in g.get("product_ids", [])]) + "".join(card(byid[pid]) for pid in g.get("product_ids", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(g['h1'])}</p><h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p>
 <p class="meta">Last checked {e(g['last_checked'])}</p>{SAFETY}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>"""
     return page(g["title"], g["meta"], f"/{g['slug']}/", body)
@@ -233,7 +248,8 @@ def about():
 {SAFETY}
 <p>Nibbables is an information directory, not veterinary advice. No chew is right for every dog. Supervise chewing, choose an appropriate size, and talk to your vet, especially for puppies, seniors, dogs with dental problems or dogs on special diets.</p>
 <h2>Affiliate disclosure</h2>
-<p>Nibbables is free to use. It is meant to earn money through affiliate programs in the future: when you buy through a labeled partner link, we may earn a commission at no extra cost to you. <strong>Right now Nibbables has no affiliate relationships, and no link on this site earns a commission.</strong> If that changes, affiliate links will be clearly labeled where they appear. A brand can't pay to change what its card says, because the card quotes the brand's own page.</p>
+<p>Nibbables is free to use. <strong>Some links on this site are Amazon affiliate links</strong>: the "Check on Amazon" buttons on product cards. {AMAZON_DISCLOSURE} If you buy through one of those links, Nibbables earns a commission at no extra cost to you.</p>
+<p>Affiliate links don't affect which products are listed or what we say about them. Every card quotes the brand's own product page, and we add an Amazon link only when we can find the same product (same brand, product name and size) on Amazon. Products without an exact match simply have no Amazon link. A brand can't pay to change what its card says. We don't show Amazon prices, ratings or review counts. The "Brand's product page" links are ordinary links and don't earn anything.</p>
 <h2>Analytics</h2>
 <p>This site uses Google Analytics to collect aggregate traffic statistics, such as page views and how visitors found us. It doesn't collect your name or email, though Google may set cookies to tell visits apart.</p>
 <h2>Corrections</h2>
@@ -263,9 +279,17 @@ def main():
     for path, h in list(pages.items()) + [("/404.html", notfound)]:
         text = re.sub(r"<[^>]+>", " ", re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", h))
         text = text.replace("SafeFit", "")  # brand product name, not a claim
+        # Tags (and so href values like ...?tag=nibbables-20) are stripped before this scan, so affiliate URLs are
+        # never flagged; visible text is still checked for prices exactly as before.
         for rx, what in FORBIDDEN:
             for m in rx.finditer(text):
                 problems.append(f"{path}: contains {what}: ...{text[max(0, m.start()-40):m.end()+40]}...")
+        if "amazon.com/dp/" in h:
+            for u in re.findall(r'href="(https://www\.amazon\.com/[^"]+)"', h):
+                if not AMAZON_URL.fullmatch(html.unescape(u)): problems.append(f"{path}: bad Amazon link {u}")
+            top = h.split('class="aff"', 1)[0]
+            if AMAZON_DISCLOSURE not in re.sub(r"<[^>]+>", "", top):
+                problems.append(f"{path}: has Amazon links but no disclosure above the first one")
     if problems:
         print("\n".join(problems)); sys.exit("Build refused: forbidden wording found.")
     for path, h in pages.items():
