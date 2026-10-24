@@ -54,5 +54,8 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 
 ## After publishing (added 2026-10-23)
 - Submit new/changed URLs to IndexNow: POST https://api.indexnow.org/indexnow with {"host","key": site.json indexnow_key, "keyLocation": "https://<host>/<key>.txt", "urlList": [...]} (expect 200/202).
+- **Non-Google engines (added 2026-10-23, required):** every new or changed page MUST go out through IndexNow (POST above; one call to api.indexnow.org is shared with Bing, Yandex, Seznam, Naver, Yep, Internet Archive and Amazonbot). Expect HTTP 200/202 and log it in published-log.md.
+- **llms.txt:** `build.py` regenerates `/llms.txt` from each page's title + meta description, so a new page appears automatically. If you add a new kind of page (new path pattern), update `LLMS_SECTIONS` / `LLMS_SUMMARY` / `LLMS_NOTES` in build.py so llms.txt stays accurate, and check `site/llms.txt` after building. Never put anything in llms.txt that the site itself does not say.
+- **robots.txt / Bing:** build.py writes robots.txt (explicit allow for search + AI-answer crawlers in `ALLOWED_BOTS`, plus the Sitemap line) and copies `BingSiteAuth.xml` to the site root; every page carries the msvalidate.01 meta. Don't remove these.
 - Search Console already has the sitemap; for a new page optionally check it with the URL Inspection API (developer@ ADC, quota project plenary-totem-501619-e6).
 - Videos: add an entry to data/videos.json keyed by page path to embed a lazy YouTube player + VideoObject JSON-LD.
