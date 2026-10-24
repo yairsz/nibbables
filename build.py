@@ -163,6 +163,28 @@ def mentions_usa(p):
     t = (p["made_in"] + " " + p["sourced_from"]) if True else ""
     return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|American", t))
 
+def compare_summary(products):
+    """Answer-first summary (added 2026-10-24): counts computed from data/products.json only, no judgments."""
+    rows, tot = "", {"n": 0, "made": 0, "usa": 0, "rh": 0}
+    for slug, name in CAT_LABEL.items():
+        ps = [p for p in products if p["category"] == slug]
+        if not ps: continue
+        n, b = len(ps), len({p["brand"] for p in ps})
+        made = sum(1 for p in ps if p["made_in"] != NS); usa = sum(1 for p in ps if mentions_usa(p)); rh = sum(1 for p in ps if p["rawhide_free"] != NS)
+        for k, v in (("n", n), ("made", made), ("usa", usa), ("rh", rh)): tot[k] += v
+        rows += (f'<tr><td><a href="{U("/" + slug + "/")}">{e(name)}</a></td><td>{n}</td><td>{b}</td>'
+                 f'<td>{made} of {n}</td><td>{usa} of {n}</td><td>{rh} of {n}</td></tr>')
+    brands = len({p["brand"] for p in products})
+    dates = sorted(p["last_checked"] for p in products)
+    lead = (f"The short version: this page lists {tot['n']} long-lasting dog chews from {brands} brands. "
+            f"{tot['made']} of the {tot['n']} product pages state where the chew is made, {tot['usa']} have made-in or sourcing wording that mentions the USA, "
+            f"and {tot['rh']} literally say rawhide-free (or no rawhide). The rest don't say, so ask the brand. "
+            + (f"Product pages were last checked on {dates[0]}. " if dates[0] == dates[-1] else f"Product pages were last checked between {dates[0]} and {dates[-1]}. ") + f"Nibbables doesn't rank chews or rate their safety.")
+    return (f'<p>{e(lead)}</p><h2>At a glance: what the brand pages state, by chew type</h2>'
+            f'<div class="tablewrap"><table class="cmp"><caption>Counts of products whose own page states each item. Computed from the full table below.</caption>'
+            f'<thead><tr><th>Chew type</th><th>Products</th><th>Brands</th><th>Made-in claim stated</th><th>Made-in or sourcing claim mentions USA</th><th>Says rawhide-free</th></tr></thead>'
+            f'<tbody>{rows}</tbody></table></div>')
+
 def compare(products):
     set_page("/compare/")
     opts = "".join(f'<option value="{e(s)}">{e(n)}</option>' for s, n in CAT_LABEL.items())
@@ -178,6 +200,7 @@ def compare(products):
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › Compare</p>
 <h1>Compare long-lasting dog chews</h1>
 <p class="lead">All {len(products)} products in one table. Every cell is the brand's own wording from its product page. "Not stated" means we couldn't find it on that page, so check with the brand.</p>
+{compare_summary(products)}
 {SAFETY}
 {yt_embed('/compare/', YT_CHANNEL, 'Nibbables')}
 <div class="filters"><select id="fc" aria-label="Chew type"><option value="">All chew types</option>{opts}</select>
@@ -239,7 +262,7 @@ def guide_page(g, products):
     srcs = "".join(f'<li><a href="{e(s["url"])}" rel="nofollow noopener" target="_blank">{e(s["label"])}</a></li>' for s in g["sources"])
     cards = aff_disclosure([byid[pid] for pid in g.get("product_ids", [])]) + "".join(card(byid[pid]) for pid in g.get("product_ids", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(g['h1'])}</p><h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p>
-<p class="meta">Last checked {e(g['last_checked'])}</p>{SAFETY}{tbl}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>"""
+<p class="meta">Last checked {e(g['last_checked'])}</p>{SAFETY}{tbl}{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>"""
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]} if faq else None
     return page(g["title"], g["meta"], f"/{g['slug']}/", body, ld)
