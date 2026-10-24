@@ -9,7 +9,8 @@ pages contain forbidden wording ("safe"/"safer"/"safest") or a price ("$12.99").
 import json, html, shutil, datetime, re, os, sys
 from pathlib import Path
 from urllib.parse import urlparse
-from ytembed import embed as yt_embed, video_ld
+from ytembed import embed as yt_embed, video_ld, VIDEOS
+import privacy
 YT_CHANNEL = "https://www.youtube.com/@Nibbables"
 
 ROOT = Path(__file__).parent
@@ -104,7 +105,7 @@ def page(title, desc, path, body, jsonld=None):
 <main><div class="wrap">
 {body}
 </div></main>
-<footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. {AMAZON_DISCLOSURE} <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">Nibbables on YouTube</a>.</div></footer>
+<footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. {AMAZON_DISCLOSURE} <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>. <a href="{U('/privacy/')}">Privacy policy</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">Nibbables on YouTube</a>.</div></footer>
 </body></html>"""
 
 SAFETY = """<aside class="note"><strong>Before you give any chew:</strong> supervise your dog while it chews, choose a size and hardness that suits your dog (follow the brand's size guidance), take away small or broken pieces, keep fresh water available, and ask your vet if a chew is right for your dog, especially for puppies, seniors, dogs with dental work or dogs on special diets. Nibbables does not rate safety. Each card shows what the brand itself says.</aside>"""
@@ -258,11 +259,53 @@ def about():
 <p>Nibbables is free to use. <strong>Some links on this site are Amazon affiliate links</strong>: the "Check on Amazon" buttons on product cards. {AMAZON_DISCLOSURE} If you buy through one of those links, Nibbables earns a commission at no extra cost to you.</p>
 <p>Affiliate links don't affect which products are listed or what we say about them. Every card quotes the brand's own product page, and we add an Amazon link only when we can find the same product (same brand, product name and size) on Amazon. Products without an exact match simply have no Amazon link. A brand can't pay to change what its card says. We don't show Amazon prices, ratings or review counts. The "Brand's product page" links are ordinary links and don't earn anything.</p>
 <h2>Analytics</h2>
-<p>This site uses Google Analytics to collect aggregate traffic statistics, such as page views and how visitors found us. It doesn't collect your name or email, though Google may set cookies to tell visits apart.</p>
+<p>This site uses Google Analytics to collect aggregate traffic statistics, such as page views and how visitors found us. It doesn't collect your name or email, though Google may set cookies to tell visits apart. Details are in our <a href="{U('/privacy/')}">privacy policy</a>.</p>
 <h2>Corrections</h2>
 <p>Brands update their pages. If a card is out of date, let us know and we'll re-check it against the brand's page and update the date.</p>"""
     return page("About Nibbables: how we verify & affiliate disclosure",
                 "How Nibbables quotes each dog chew brand's own claims, what we don't do (no safety ratings, prices or reviews), and our affiliate disclosure.", "/about/", body)
+
+def privacy_page():
+    set_page("/privacy/")
+    vids = [(VIDEOS[k].get("heading", k).split(" (")[0], U(k)) for k in sorted(VIDEOS)]
+    tag = e(CFG.get("amazon_tag", ""))
+    aff = f"""<h2>Amazon affiliate links</h2>
+<p>Nibbables is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. {AMAZON_DISCLOSURE}</p>
+<ul>
+<li>The "Check on Amazon" buttons on product cards are affiliate links to amazon.com that include our Associates tag (<code>{tag}</code>). They're the only affiliate links on the site. "Brand's product page" links are ordinary links.</li>
+<li>Nibbables doesn't load any Amazon scripts, images or widgets, and our pages don't set Amazon cookies. Nothing is sent to Amazon unless you click one of those links.</li>
+<li>When you click one, you leave Nibbables for amazon.com. Amazon may set or read cookies on your device to record that you came from our link and to credit qualifying purchases, as described in the <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ" rel="noopener" target="_blank">Amazon.com Privacy Notice</a> (which links to Amazon's Cookies Notice).</li>
+<li>Amazon gives us aggregate reports, such as the number of clicks and which items were ordered, so we can be paid. Those reports don't tell us who you are.</li>
+</ul>"""
+    body = privacy.body(CFG["site_name"], "nibbables.com", CFG.get("ga_measurement_id", "").strip(), vids, aff,
+                        "The compare page has a chew-type menu, checkboxes and a search box for narrowing the table.")
+    return page("Privacy policy | Nibbables",
+                "What Nibbables collects (Google Analytics, click-to-play YouTube videos, GitHub Pages hosting logs), how its Amazon affiliate links work, and how to opt out.",
+                "/privacy/", body)
+
+def check_links(out):
+    """Fail the build if any internal href/src in the generated site points at a file that doesn't exist."""
+    import posixpath
+    from urllib.parse import unquote
+    sub = urlparse(base_url()).path.rstrip("/")
+    bad = []
+    for f in out.rglob("*.html"):
+        r = str(f.parent.relative_to(out)); rel_dir = "/" + ("" if r == "." else r)
+        for u in re.findall(r'(?:href|src)="([^"]+)"', f.read_text()):
+            u = html.unescape(u)
+            if re.match(r"^(?:[a-z][a-z0-9+.-]*:|//|#)", u, re.I): continue
+            path = unquote(u.split("#")[0].split("?")[0])
+            if not path: continue
+            if path.startswith("/"):
+                if sub and path.startswith(sub + "/"): path = path[len(sub):]
+                tgt = posixpath.normpath(path)
+            else:
+                tgt = posixpath.normpath(posixpath.join(rel_dir, path))
+            t = out / tgt.lstrip("/")
+            if not (t.is_file() or (t / "index.html").is_file()):
+                bad.append(f"{f.relative_to(out)} -> {u}")
+    if bad:
+        sys.exit("Build refused: broken internal links:\n" + "\n".join(bad))
 
 LLMS_SUMMARY = (CFG["tagline"] + " A directory of long-lasting dog chews (bully sticks, yak cheese chews, beef cheek rolls, "
                 "rawhide-free chews and antlers) that quotes each brand's own product page.")
@@ -272,8 +315,8 @@ LLMS_NOTES = ["Each product card quotes the brand's own page word for word (ingr
               "reviews, star ratings or safety ratings, and it is not veterinary advice. Some product cards have Amazon "
               "affiliate links; see the About page for the disclosure."]
 LLMS_SECTIONS = [("Chew types", lambda p: p.strip("/") in CAT_LABEL),
-                 ("Guides", lambda p: p not in ("/", "/compare/", "/about/") and p.strip("/") not in CAT_LABEL),
-                 ("Compare and about", lambda p: p in ("/", "/compare/", "/about/"))]
+                 ("Guides", lambda p: p not in ("/", "/compare/", "/about/", "/privacy/") and p.strip("/") not in CAT_LABEL),
+                 ("Compare, about and privacy", lambda p: p in ("/", "/compare/", "/about/", "/privacy/"))]
 
 # Search and AI-answer crawlers we explicitly welcome (one robots.txt group, RFC 9309).
 # The catch-all group below allows everyone else too; this list just makes intent explicit.
@@ -308,7 +351,7 @@ def main():
     if OUT.exists(): shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copytree(ROOT / "static", OUT / "static")
-    pages = {"/": home(products, cats, guides), "/compare/": compare(products), "/about/": about()}
+    pages = {"/": home(products, cats, guides), "/compare/": compare(products), "/about/": about(), "/privacy/": privacy_page()}
     for c in cats: pages[f"/{c['slug']}/"] = category_page(c, products)
     for g in guides:
         assert f"/{g['slug']}/" not in pages, f"guide slug clash {g['slug']}"
@@ -348,7 +391,8 @@ def main():
         shutil.copyfile(ROOT / "BingSiteAuth.xml", OUT / "BingSiteAuth.xml")
     if CFG.get("cname"):
         (OUT / "CNAME").write_text(CFG["cname"].strip() + "\n")
-    print(f"Built {len(pages)} pages, {len(products)} products -> {OUT}")
+    check_links(OUT)
+    print(f"Built {len(pages)} pages (internal links OK), {len(products)} products -> {OUT}")
 
 if __name__ == "__main__":
     main()
