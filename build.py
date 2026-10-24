@@ -80,8 +80,10 @@ def ga_tag():
   gtag('config', '{gid}');
 </script>"""
 
+META = {}  # path -> (title, description); feeds llms.txt
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
+    META[path] = (title, desc)
     lds = [x for x in (jsonld, video_ld(path)) if x]
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
@@ -91,6 +93,7 @@ def page(title, desc, path, body, jsonld=None):
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
+<meta name="msvalidate.01" content="45CDFD465C8824EB2040D1A77F7E20CB" />
 <link rel="canonical" href="{e(url)}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:type" content="website"><meta property="og:url" content="{e(url)}">
@@ -261,6 +264,40 @@ def about():
     return page("About Nibbables: how we verify & affiliate disclosure",
                 "How Nibbables quotes each dog chew brand's own claims, what we don't do (no safety ratings, prices or reviews), and our affiliate disclosure.", "/about/", body)
 
+LLMS_SUMMARY = (CFG["tagline"] + " A directory of long-lasting dog chews (bully sticks, yak cheese chews, beef cheek rolls, "
+                "rawhide-free chews and antlers) that quotes each brand's own product page.")
+LLMS_NOTES = ["Each product card quotes the brand's own page word for word (ingredients, made-in and sourcing wording, size "
+              "guidance, supervision notes), links that page and shows the date it was checked. Made-in and sourcing statements "
+              f'are the brands\' claims, not independently verified. Missing facts are marked "{NS}". Nibbables shows no prices, '
+              "reviews, star ratings or safety ratings, and it is not veterinary advice. Some product cards have Amazon "
+              "affiliate links; see the About page for the disclosure."]
+LLMS_SECTIONS = [("Chew types", lambda p: p.strip("/") in CAT_LABEL),
+                 ("Guides", lambda p: p not in ("/", "/compare/", "/about/") and p.strip("/") not in CAT_LABEL),
+                 ("Compare and about", lambda p: p in ("/", "/compare/", "/about/"))]
+
+# Search and AI-answer crawlers we explicitly welcome (one robots.txt group, RFC 9309).
+# The catch-all group below allows everyone else too; this list just makes intent explicit.
+ALLOWED_BOTS = ["Googlebot", "Bingbot", "Applebot", "DuckDuckBot", "DuckAssistBot", "OAI-SearchBot", "ChatGPT-User",
+                "PerplexityBot", "Perplexity-User", "Claude-SearchBot", "Claude-User", "ClaudeBot", "YandexBot",
+                "SeznamBot", "Yeti", "MojeekBot"]
+def robots_txt(base):
+    group = "".join(f"User-agent: {b}\n" for b in ALLOWED_BOTS)
+    return (f"# {CFG['site_name']}: search engines and AI answer engines are welcome.\n"
+            f"{group}Allow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n")
+
+def llms_txt(base, pages):
+    """/llms.txt (llmstxt.org format) built only from the site's own page titles and meta descriptions."""
+    def item(path):
+        t, d = META[path]
+        return f"- [{t}]({base}{path}): {d}"
+    out = [f"# {CFG['site_name']}", "", f"> {LLMS_SUMMARY}", ""] + LLMS_NOTES + [""]
+    for heading, test in LLMS_SECTIONS:
+        items = [item(p) for p in pages if test(p)]
+        if items: out += [f"## {heading}", ""] + items + [""]
+    out += ["## Optional", "", f"- [Sitemap]({base}/sitemap.xml): every page with a lastmod date", ""]
+    return "\n".join(out)
+
+
 def main():
     products = json.loads((ROOT / "data/products.json").read_text())
     cats = json.loads((ROOT / "data/categories.json").read_text())
@@ -305,7 +342,10 @@ def main():
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     if CFG.get("indexnow_key"):  # IndexNow (Bing/Yandex) key file must sit at the site root
         (OUT / f"{CFG['indexnow_key']}.txt").write_text(CFG["indexnow_key"])
-    (OUT / "robots.txt").write_text(f"User-agent: *\nAllow: /\nSitemap: {base}/sitemap.xml\n")
+    (OUT / "robots.txt").write_text(robots_txt(base))
+    (OUT / "llms.txt").write_text(llms_txt(base, pages))
+    if (ROOT / "BingSiteAuth.xml").exists():  # Bing Webmaster Tools verification file, must sit at the site root
+        shutil.copyfile(ROOT / "BingSiteAuth.xml", OUT / "BingSiteAuth.xml")
     if CFG.get("cname"):
         (OUT / "CNAME").write_text(CFG["cname"].strip() + "\n")
     print(f"Built {len(pages)} pages, {len(products)} products -> {OUT}")
