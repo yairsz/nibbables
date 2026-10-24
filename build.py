@@ -108,11 +108,15 @@ def webpage_ld(title, desc, path):
                          "url": base_url() + "/", "publisher": org_ld()},
             "publisher": {"@id": base_url() + "/#org"}}
 
+# Hand-written complete meta descriptions for pages whose long description would otherwise be cut mid-sentence.
+# Reworded only from the page's own description; no new facts. Keep <= 158 chars.
+META_DESC = {'/rawhide-free/': "Dog chews whose brand says they're rawhide-free or made without rawhide, including Earth Animal No-Hide, quoted from each brand's page.", '/compare/': "Bully sticks, yak chews, beef cheek rolls, rawhide-free chews and antlers side by side, with each brand's ingredient and made-in claims quoted.", '/yak-cheese-chews/': 'Yak cheese dog chews from Mighty Paw, Pupford, Pawstruck, Raw Paws and Best Bully Sticks, with ingredients and origin claims quoted from each brand.', '/antlers/': 'Elk and deer antler chews from GREAT DOG, Redbarn, Mighty Paw, Nature Gnaws and Best Bully Sticks, with sourcing and size guidance quoted from each brand.', '/': "Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared by each brand's own ingredient, made-in and sourcing claims.", '/bully-sticks/': 'Bully sticks from Campfire Treats, GREAT DOG, Best Bully Sticks, Redbarn, Jack&Pup, Mighty Paw and more, with ingredients, made-in claims and sizes quoted.'}
+
 def fit_meta(title, desc, suffix=" | Nibbables"):
-    """Keep SERP snippets readable: titles <= 60 chars (drop the site-name suffix if needed),
+    """Keep SERP snippets readable: titles <= 70 chars (keep the brand suffix unless longer; drop the site-name suffix if needed),
     descriptions <= 158 chars (cut at the last full sentence, else the last word + ellipsis).
     Only shortens; never adds wording."""
-    if suffix and title.endswith(suffix) and len(title) > 60:
+    if suffix and title.endswith(suffix) and len(title) > 70:
         title = title[: -len(suffix)]
     if len(desc) > 158:
         cut = desc[:158]
@@ -125,6 +129,7 @@ def fit_meta(title, desc, suffix=" | Nibbables"):
     return title, desc
 
 def page(title, desc, path, body, jsonld=None):
+    desc = META_DESC.get(path, desc)
     title, desc = fit_meta(title, desc)
     url = base_url() + path
     META[path] = (title, desc)
