@@ -322,7 +322,8 @@ LLMS_SECTIONS = [("Chew types", lambda p: p.strip("/") in CAT_LABEL),
 # The catch-all group below allows everyone else too; this list just makes intent explicit.
 ALLOWED_BOTS = ["Googlebot", "Bingbot", "Applebot", "DuckDuckBot", "DuckAssistBot", "OAI-SearchBot", "ChatGPT-User",
                 "PerplexityBot", "Perplexity-User", "Claude-SearchBot", "Claude-User", "ClaudeBot", "YandexBot",
-                "SeznamBot", "Yeti", "MojeekBot"]
+                "SeznamBot", "Yeti", "MojeekBot", "GPTBot", "Google-Extended", "Applebot-Extended",
+                "Amazonbot", "meta-externalagent", "CCBot"]
 def robots_txt(base):
     group = "".join(f"User-agent: {b}\n" for b in ALLOWED_BOTS)
     return (f"# {CFG['site_name']}: search engines and AI answer engines are welcome.\n"
