@@ -107,7 +107,25 @@ def webpage_ld(title, desc, path):
             "isPartOf": {"@type": "WebSite", "@id": base_url() + "/#website", "name": CFG["site_name"],
                          "url": base_url() + "/", "publisher": org_ld()},
             "publisher": {"@id": base_url() + "/#org"}}
+
+def fit_meta(title, desc, suffix=" | Nibbables"):
+    """Keep SERP snippets readable: titles <= 60 chars (drop the site-name suffix if needed),
+    descriptions <= 158 chars (cut at the last full sentence, else the last word + ellipsis).
+    Only shortens; never adds wording."""
+    if suffix and title.endswith(suffix) and len(title) > 60:
+        title = title[: -len(suffix)]
+    if len(desc) > 158:
+        cut = desc[:158]
+        ends = [cut.rfind(p) for p in (". ", "? ", "! ")]
+        end = max(ends)
+        if end >= 90:
+            desc = cut[: end + 1]
+        else:
+            desc = cut[: cut.rfind(" ")].rstrip(",;:-–—(") + "…"
+    return title, desc
+
 def page(title, desc, path, body, jsonld=None):
+    title, desc = fit_meta(title, desc)
     url = base_url() + path
     META[path] = (title, desc)
     lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path), webpage_ld(title, desc, path)]) if x]

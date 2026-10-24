@@ -24,13 +24,21 @@ def embed(path, channel_url, channel_name):
 <p class="meta">{e(v.get('caption', ''))} <a href="https://www.youtube.com/watch?v={e(vid)}" rel="noopener" target="_blank">Watch on YouTube</a> · <a href="{e(channel_url)}" rel="noopener" target="_blank">{e(channel_name)} on YouTube</a></p></section>
 {YT_JS}"""
 
+def _iso_dt(s):
+    """Google wants uploadDate as a full ISO 8601 datetime with a timezone.
+    Store the real YouTube publish time in videos.json (yt-dlp --print "%(timestamp)s");
+    a bare date falls back to midnight US Eastern."""
+    if "T" in s: return s
+    import datetime, zoneinfo
+    return datetime.datetime.fromisoformat(s).replace(tzinfo=zoneinfo.ZoneInfo("America/New_York")).isoformat()
+
 def video_ld(path):
     v = VIDEOS.get(path)
     if not v: return None
     vid = v["id"]
     return {"@context": "https://schema.org", "@type": "VideoObject", "name": v["name"], "description": v["description"],
             "thumbnailUrl": [f"https://i.ytimg.com/vi/{vid}/maxresdefault.jpg", f"https://i.ytimg.com/vi/{vid}/hqdefault.jpg"],
-            "uploadDate": v["uploadDate"], "duration": v["duration"],
+            "uploadDate": _iso_dt(v["uploadDate"]), "duration": v["duration"],
             "embedUrl": f"https://www.youtube.com/embed/{vid}", "contentUrl": f"https://www.youtube.com/watch?v={vid}"}
 
 YT_CSS = """
