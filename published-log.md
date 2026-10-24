@@ -13,3 +13,5 @@
 - Size guidance not stated (2): Pupford bully and yak.
 - Rawhide-free stated by only 7 of 34 (4 Earth Animal No-Hide, GREAT DOG jumbo bully, Nature Gnaws bully, Best Bully Sticks yak). The others are "Not stated" even if they say "alternative to rawhide".
 - Mighty Paw bully page names both Colombia and Brazil (noted on the card). Jack&Pup bully says Brazil and "South American" (noted).
+
+| 2026-10-23 | /privacy/ | — | Privacy policy published (GA4 settings checked via Admin API; YouTube facade; GitHub Pages logs). Live 200 over HTTPS; IndexNow 200 | — |

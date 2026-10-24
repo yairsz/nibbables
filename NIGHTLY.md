@@ -59,3 +59,5 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 - **robots.txt / Bing:** build.py writes robots.txt (explicit allow for search + AI-answer crawlers in `ALLOWED_BOTS`, plus the Sitemap line) and copies `BingSiteAuth.xml` to the site root; every page carries the msvalidate.01 meta. Don't remove these.
 - Search Console already has the sitemap; for a new page optionally check it with the URL Inspection API (developer@ ADC, quota project plenary-totem-501619-e6).
 - Videos: add an entry to data/videos.json keyed by page path to embed a lazy YouTube player + VideoObject JSON-LD.
+
+- **Privacy policy (added 2026-10-23):** `/privacy/` is generated from `privacy.py` and linked in every footer. If you add a script, embed, form, affiliate program or hosting change, update `privacy.py` (and its EFFECTIVE date) in the same commit so the policy stays true. The build now fails on broken internal links.
