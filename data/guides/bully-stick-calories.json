@@ -1,0 +1,412 @@
+{
+ "slug": "bully-stick-calories",
+ "title": "Bully stick calories: brand figures and a vet study | Nibbables",
+ "meta": "Bully stick calories per inch and per stick from a Canadian Veterinary Journal study, plus the calorie and per-day wording on 15 brand pages, quoted.",
+ "h1": "Bully stick calories: what a vet study measured and what brands state",
+ "intro": "Bully sticks add calories to a dog's day, and in a veterinary survey half of owners underestimated how many. This page quotes the one peer-reviewed analysis of bully stick calories we found (Canadian Veterinary Journal, 2013), veterinary nutritionists at Tufts on how treats fit into a dog's daily calories, and the calorie and per-day wording on each bully stick product page in our directory. Nibbables doesn't calculate or recommend amounts; your vet can tell you how many calories your dog needs.",
+ "table": {
+  "h": "Calories and per-day wording on each brand's page",
+  "caption": "Quoted from each brand's product page, checked 2026-10-23. \"Not stated\" means we found no calorie figure or per-day wording on that page. Brands state calories in different ways (per kilogram, per ounce or per stick), so the figures can't be compared directly.",
+  "head": [
+   "Brand: product",
+   "Calorie statement (quoted)",
+   "Per-day / treat-share wording (quoted)"
+  ],
+  "rows": [
+   {
+    "snapshot": "research/pages/campfire-odor-free-bully-sticks-for-dogs-8-10-inch.txt",
+    "cells": [
+     "Campfire Treats: Standard Odor-Free Bully Sticks (8-10 Inch)",
+     {
+      "q": "Calorie Content: 3,320 kcal/kg; 94 kcal/oz"
+     },
+     {
+      "q": "Depending on the size and diet of your dog, we recommend giving your dog up to one bully stick per day."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/campfire-odor-free-thin-bully-sticks-4-6-inch.txt",
+    "cells": [
+     "Campfire Treats: Thin Odor-Free Bully Sticks (4-6 Inch)",
+     {
+      "q": "Calorie Content: 3,320 kcal/kg; 94 kcal/oz"
+     },
+     {
+      "q": "Depending on the size and diet of your dog, we recommend giving your dog between one and three of these bully sticks per day."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/bowwowlabs-bully-sticks.txt",
+    "cells": [
+     "Bow Wow Labs: SafeFit Bully Sticks",
+     {
+      "q": "Caloric Content (calculated): ME 3,495 Kcal/kg · 6\" Bully Sticks Midsize: 58-87 calories per stick Thick: 90-119 calories per stick Jumbo: 122-151 calories per stick · 12\" Bully Sticks Midsize: 116-174 calories per stick Thick: 180-238 calories per stick Jumbo: 244-302 calories per stick"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/bbs-12-inch-standard-usa-baked-odor-free-bully-stick.txt",
+    "cells": [
+     "Best Bully Sticks: 12-Inch Standard USA-Baked Odor-Free Bully Stick",
+     {
+      "q": "Calories per kg 3300 kcal/kg Calories Each 86"
+     },
+     {
+      "q": "As with any treat, bully sticks should not make up more than 10% of your dog's daily caloric intake."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/bbs-6-inch-thin-bully-stick.txt",
+    "cells": [
+     "Best Bully Sticks: 6-Inch Thin Bully Stick",
+     "Not stated",
+     {
+      "q": "As with any treat, bully sticks should not make up more than 10% of your dog's daily caloric intake."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/mightypaw-naturals-bully-sticks-5-pack.txt",
+    "cells": [
+     "Mighty Paw: All-Natural Bully Sticks",
+     {
+      "q": "Calorie Content (calculated): 3,500 kcal/kg (~160 kcal per stick)"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/naturegnaws-natural-small-beef-bully-sticks.txt",
+    "cells": [
+     "Nature Gnaws: Small Bully Sticks 6\"",
+     {
+      "q": "About 70 calories per chew"
+     },
+     {
+      "q": "Always best to consult a veterinarian before introducing any new food, treat, or chew to your dog."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/greatdog-great-dog-bison-bully-sticks-6-inch-5-pack.txt",
+    "cells": [
+     "GREAT DOG CO.: Bison Pizzle (Bison Bully Sticks) – 5, 6 Inch Sticks",
+     {
+      "q": "Metabolizable Energy (ME): 3,450 kcal/kg"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/pupford-skinny-bully-sticks.txt",
+    "cells": [
+     "Pupford: Skinny Smoky Bully Stick",
+     {
+      "q": "Metabolizable Energy: 2,625 kcal/kg"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/redbarn-bully-stick.txt",
+    "cells": [
+     "Redbarn: Bully Sticks for Dogs",
+     {
+      "q": "Calories: N/A"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/greatdog-12-inch-jumbo.txt",
+    "cells": [
+     "GREAT DOG CO.: 12\" Beef Bully Stick – Beef Pizzle 4.0, Jumbo Size",
+     "Not stated",
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/greatdog-thin-12-inch.txt",
+    "cells": [
+     "GREAT DOG CO.: Thin Bully Sticks – 12\" Steer Pizzle, 11 oz",
+     "Not stated",
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/jackandpup-bully-stick-6-inch-standard.txt",
+    "cells": [
+     "Jack&Pup: Bully Sticks - 6 inch Standard",
+     "Not stated",
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/pawstruck-straight-bully-sticks.txt",
+    "cells": [
+     "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight)",
+     "Not stated",
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/rawpaws-standard-bully-sticks-6-inch-10-ct.txt",
+    "cells": [
+     "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct",
+     "Not stated",
+     "Not stated"
+    ]
+   }
+  ]
+ },
+ "faq": [
+  {
+   "q": "How many calories are in a bully stick?",
+   "a": "It depends on the stick's length, thickness and weight. In a 2013 Canadian Veterinary Journal study, five 5- to 7-inch bully sticks bought in the US were analysed by a commercial lab; the authors reported “a mean total caloric density of 88 kcal/treat (range: 45 to 133 kcal/treat)”. Brand pages that give a per-stick figure run from Bow Wow Labs' “58-87 calories per stick” for its 6-inch midsize stick to “244-302 calories per stick” for its 12-inch jumbo; Nature Gnaws says “About 70 calories per chew” for its small 6-inch stick (see the table above)."
+  },
+  {
+   "q": "How many calories per inch is a bully stick?",
+   "a": "The same study reported: “Mean caloric density was 15 kcal/inch”, with a range of 9 to 22 kcal per inch and 2.96 to 3.07 kcal per gram. A 2015 correction changed only the per-centimetre conversions (to 5.9 kcal/cm, range 3.5 to 8.7 kcal/cm); the per-inch figures stand. Lisa M. Freeman, DVM, PhD, one of the authors, summarised it on Tufts' Petfoodology blog: “an average 6-inch bully stick is nearly 100 calories!”"
+  },
+  {
+   "q": "How many calories are in a 12-inch bully stick?",
+   "a": "The study's authors wrote that “bully sticks could provide between 54 to 132 kcal for a 6″ bully stick and 108 to 264 for a 12″ bully stick.” In its owner survey, “Calories in a 12″ bully stick were underestimated by 50% of respondents.” Among brand pages, Best Bully Sticks lists “Calories Each 86” for its 12-inch standard odor-free stick, and Bow Wow Labs gives 116 to 302 calories per 12-inch stick depending on thickness."
+  },
+  {
+   "q": "How many bully sticks a day can a dog have?",
+   "a": "Nibbables doesn't set a number. Campfire Treats says of its 8-10 inch sticks, “we recommend giving your dog up to one bully stick per day”, and of its 4-6 inch sticks, “between one and three of these bully sticks per day”. Best Bully Sticks says “bully sticks should not make up more than 10% of your dog's daily caloric intake.” Deborah E. Linder, DVM, writing for Tufts Petfoodology, says “your pet should only receive 10% of their daily calories from treats so you don’t unbalance their diet!” Ask your vet how that applies to your dog."
+  },
+  {
+   "q": "Can dogs have bully sticks every day?",
+   "a": "The study gives an example rather than a rule: “If the mean for a 6″ bully stick were used (i.e., 90 kcal), 1 bully stick daily would be equivalent to 9% of the daily calorie requirements for a 50-pound (23-kg) dog and 30% of the daily calorie requirements for a 10-pound (4.5-kg) dog”. For comparison, Tufts Petfoodology says a 10 lb dog's treat maximum would be “only 30 calories for treats” and an average 75 lb dog's “a maximum of 140 calories for treats.” Whether a daily bully stick fits your dog's diet is a question for your vet."
+  }
+ ],
+ "sections": [
+  {
+   "h": "Why per-stick calories vary so much",
+   "p": [
+    "The study's authors found the sticks were similar by weight but not by size: “The number of calories measured in the 5 bully stick samples was similar on a weight basis. However, the length and width of bully sticks varies widely so total calories in an individual treat will vary accordingly.”",
+    "That matches how brands present their numbers. Bow Wow Labs lists a separate calorie range for each length and thickness. Campfire Treats, GREAT DOG CO. and Pupford give calories only per kilogram (Campfire also per ounce), so you'd need the stick's weight to work out a per-stick figure. Mighty Paw's page gives “~160 kcal per stick” but doesn't say which of its stick sizes that refers to. Redbarn's page lists “Calories: N/A”."
+   ]
+  },
+  {
+   "h": "Other findings in the same study",
+   "p": "The study also tested 26 bully sticks for bacteria. In the authors' words: “Of 26 bully sticks that were tested for bacterial contamination 1 (4%) was contaminated with Clostridium difficile, 1 was contaminated with methicillin-resistant Staphylococcus aureus (MRSA), and 1 with a tetracycline resistant Escherichia coli.” Dr. Freeman's Petfoodology summary says the results emphasize “the importance of washing your hands after touching these treats, as you should with any raw meat or raw meat diets.”"
+  },
+  {
+   "h": "About the sources",
+   "p": "The study is Freeman LM, Janecko N, Weese JS, “Nutritional and microbial analysis of bully sticks and survey of opinions about pet treats”, Canadian Veterinary Journal 2013;54(1):50–54 (Tufts Cummings School of Veterinary Medicine and the Ontario Veterinary College), with a 2015 correction. It analysed five sticks for calories, so it's a small sample from one point in time. Brand calorie figures are each brand's own statement, quoted as published; Nibbables hasn't measured any product."
+  }
+ ],
+ "product_ids": [
+  "campfire-treats-standard-odor-free-bully-sticks-8-10-inch",
+  "campfire-treats-thin-odor-free-bully-sticks-4-6-inch",
+  "bow-wow-labs-safefit-bully-sticks",
+  "best-bully-sticks-12-inch-standard-usa-baked-odor-free-bully-stick",
+  "mighty-paw-all-natural-bully-sticks",
+  "nature-gnaws-small-bully-sticks-6",
+  "great-dog-co-bison-pizzle-bison-bully-sticks-5-6-inch-sticks",
+  "pupford-skinny-smoky-bully-stick"
+ ],
+ "sources": [
+  {
+   "label": "Freeman LM, Janecko N, Weese JS. Nutritional and microbial analysis of bully sticks and survey of opinions about pet treats. Can Vet J. 2013;54(1):50–54 (PubMed Central)",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3524813/"
+  },
+  {
+   "label": "Correction to the above, Can Vet J. 2015;56(5):520",
+   "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4399744/"
+  },
+  {
+   "label": "Tufts Petfoodology (Lisa M. Freeman, DVM, PhD, DACVIM): Dangers of Bully Sticks: Popular Treat Can Carry Bacteria and Add Calories",
+   "url": "https://sites.tufts.edu/petfoodology/2018/11/01/dangers-of-bully-sticks-popular-treat-can-carry-bacteria-and-add-calories/"
+  },
+  {
+   "label": "Tufts Petfoodology (Deborah E. Linder, DVM): Treat Options for Dogs and Cats Without Unbalancing Their Diet",
+   "url": "https://sites.tufts.edu/petfoodology/2021/10/21/treat-options-for-dogs-and-cats-without-unbalancing-their-diet/"
+  },
+  {
+   "label": "Campfire Treats: Standard Odor-Free Bully Sticks (8-10 Inch) (brand product page)",
+   "url": "https://campfiretreats.com/products/odor-free-bully-sticks-for-dogs-8-10-inch"
+  },
+  {
+   "label": "Campfire Treats: Thin Odor-Free Bully Sticks (4-6 Inch) (brand product page)",
+   "url": "https://campfiretreats.com/products/odor-free-thin-bully-sticks-4-6-inch"
+  },
+  {
+   "label": "Bow Wow Labs: SafeFit Bully Sticks (brand product page)",
+   "url": "https://bowwowlabs.com/products/bully-sticks"
+  },
+  {
+   "label": "Best Bully Sticks: 12-Inch Standard USA-Baked Odor-Free Bully Stick (brand product page)",
+   "url": "https://www.bestbullysticks.com/products/12-inch-standard-usa-baked-odor-free-bully-stick"
+  },
+  {
+   "label": "Best Bully Sticks: 6-Inch Thin Bully Stick (brand product page)",
+   "url": "https://www.bestbullysticks.com/products/6-inch-thin-bully-stick"
+  },
+  {
+   "label": "Mighty Paw: All-Natural Bully Sticks (brand product page)",
+   "url": "https://mightypaw.com/products/naturals-bully-sticks-5-pack"
+  },
+  {
+   "label": "Nature Gnaws: Small Bully Sticks 6\" (brand product page)",
+   "url": "https://www.naturegnaws.com/products/natural-small-beef-bully-sticks-long-lasting-dog-chews"
+  },
+  {
+   "label": "GREAT DOG CO.: Bison Pizzle (Bison Bully Sticks) – 5, 6 Inch Sticks (brand product page)",
+   "url": "https://www.greatdogco.com/products/great-dog-bison-bully-sticks-6-inch-5-pack"
+  },
+  {
+   "label": "Pupford: Skinny Smoky Bully Stick (brand product page)",
+   "url": "https://www.pupford.com/products/skinny-bully-sticks"
+  },
+  {
+   "label": "Redbarn: Bully Sticks for Dogs (brand product page)",
+   "url": "https://www.redbarn.com/products/bully-stick"
+  },
+  {
+   "label": "GREAT DOG CO.: 12\" Beef Bully Stick – Beef Pizzle 4.0, Jumbo Size (brand product page)",
+   "url": "https://www.greatdogco.com/products/great-dog-12-inch-4oz-beef-pizzle-jumbo-bully-stick-usa"
+  },
+  {
+   "label": "GREAT DOG CO.: Thin Bully Sticks – 12\" Steer Pizzle, 11 oz (brand product page)",
+   "url": "https://www.greatdogco.com/products/great-dog-thin-bully-sticks-12-inch-small-dogs"
+  },
+  {
+   "label": "Jack&Pup: Bully Sticks - 6 inch Standard (brand product page)",
+   "url": "https://www.jackandpup.com/products/bully-stick-6-inch-standard"
+  },
+  {
+   "label": "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight) (brand product page)",
+   "url": "https://pawstruck.com/products/straight-bully-sticks-for-dogs-sold-by-weight"
+  },
+  {
+   "label": "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct (brand product page)",
+   "url": "https://www.rawpawspetfood.com/products/standard-bully-sticks-6-inch-10-ct"
+  }
+ ],
+ "quote_checks": [
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "mean total caloric density of 88 kcal/treat (range: 45 to 133 kcal/treat)"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "Five 5- to 7-inch (13- to 18-cm) bully sticks purchased in the United States were randomly selected and submitted for proximate analysis at a commercial laboratory"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "Mean caloric density was 15 kcal/inch"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "9 to 22 kcal/inch"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "2.96 to 3.07 kcal/g"
+  },
+  {
+   "snapshot": "research/pages/pmc4399744.txt",
+   "text": "15 kcal/inch should be 5.9 kcal/cm and 9 to 22 kcal/inch should be 3.5 to 8.7 kcal/cm"
+  },
+  {
+   "snapshot": "research/pages/tufts-petfoodology-bully-sticks.txt",
+   "text": "an average 6-inch bully stick is nearly 100 calories!"
+  },
+  {
+   "snapshot": "research/pages/tufts-petfoodology-bully-sticks.txt",
+   "text": "Lisa M. Freeman, DVM, PhD, DACVIM (Nutrition)"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "the results show that bully sticks could provide between 54 to 132 kcal for a 6″ bully stick and 108 to 264 for a 12″ bully stick."
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "Calories in a 12″ bully stick were underestimated by 50% of respondents."
+  },
+  {
+   "snapshot": "research/pages/bbs-12-inch-standard-usa-baked-odor-free-bully-stick.txt",
+   "text": "Calories Each 86"
+  },
+  {
+   "snapshot": "research/pages/campfire-odor-free-bully-sticks-for-dogs-8-10-inch.txt",
+   "text": "we recommend giving your dog up to one bully stick per day"
+  },
+  {
+   "snapshot": "research/pages/campfire-odor-free-thin-bully-sticks-4-6-inch.txt",
+   "text": "between one and three of these bully sticks per day"
+  },
+  {
+   "snapshot": "research/pages/bbs-12-inch-standard-usa-baked-odor-free-bully-stick.txt",
+   "text": "bully sticks should not make up more than 10% of your dog's daily caloric intake."
+  },
+  {
+   "snapshot": "research/pages/tufts-petfoodology-treat-options.txt",
+   "text": "your pet should only receive 10% of their daily calories from treats so you don’t unbalance their diet!"
+  },
+  {
+   "snapshot": "research/pages/tufts-petfoodology-treat-options.txt",
+   "text": "Deborah E. Linder, DVM"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "If the mean for a 6″ bully stick were used (i.e., 90 kcal), 1 bully stick daily would be equivalent to 9% of the daily calorie requirements for a 50-pound (23-kg) dog and 30% of the daily calorie requirements for a 10-pound (4.5-kg) dog"
+  },
+  {
+   "snapshot": "research/pages/tufts-petfoodology-treat-options.txt",
+   "text": "A 10 lb dog or cat has an average daily calorie requirement of 300 calories per day so 10% of that would be a maximum of only 30 calories for treats."
+  },
+  {
+   "snapshot": "research/pages/tufts-petfoodology-treat-options.txt",
+   "text": "For your average 75 lb dog, their average calorie requirements are 1,400 calories per day so that means a maximum of 140 calories for treats."
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "The number of calories measured in the 5 bully stick samples was similar on a weight basis. However, the length and width of bully sticks varies widely so total calories in an individual treat will vary accordingly."
+  },
+  {
+   "snapshot": "research/pages/mightypaw-naturals-bully-sticks-5-pack.txt",
+   "text": "~160 kcal per stick"
+  },
+  {
+   "snapshot": "research/pages/naturegnaws-natural-small-beef-bully-sticks.txt",
+   "text": "About 70 calories per chew"
+  },
+  {
+   "snapshot": "research/pages/bowwowlabs-bully-sticks.txt",
+   "text": "Jumbo: 244-302 calories per stick"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "Of 26 bully sticks that were tested for bacterial contamination 1 (4%) was contaminated with Clostridium difficile, 1 was contaminated with methicillin-resistant Staphylococcus aureus (MRSA), and 1 with a tetracycline resistant Escherichia coli."
+  },
+  {
+   "snapshot": "research/pages/tufts-petfoodology-bully-sticks.txt",
+   "text": "the importance of washing your hands after touching these treats, as you should with any raw meat or raw meat diets."
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "Nutritional and microbial analysis of bully sticks and survey of opinions about pet treats"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "Can Vet J. 2013 Jan;54(1):50–54."
+  },
+  {
+   "snapshot": "research/pages/bowwowlabs-bully-sticks.txt",
+   "text": "Midsize: 58-87 calories per stick"
+  },
+  {
+   "snapshot": "research/pages/pmc3524813.txt",
+   "text": "Calories in a 12″ bully stick were underestimated by 50% of respondents."
+  }
+ ],
+ "last_checked": "2026-10-23"
+}

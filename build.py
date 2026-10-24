@@ -232,12 +232,32 @@ def guide_page(g, products):
     byid = {p["id"]: p for p in products}
     for pid in g.get("product_ids", []):
         assert pid in byid, f"guide {g['slug']} references unknown product {pid}"
-    secs = "".join(f"<h2>{e(s['h'])}</h2><p>{e(s['p'])}</p>" for s in g["sections"])
+    secs = "".join(f"<h2>{e(s['h'])}</h2>" + "".join(f"<p>{e(x)}</p>" for x in (s['p'] if isinstance(s['p'], list) else [s['p']])) for s in g["sections"])
+    tbl = guide_table(g.get("table"))
+    faq = g.get("faq") or []
+    faq_html = "".join(f'<h2>{e(f["q"])}</h2><p>{e(f["a"])}</p>' for f in faq)  # question-style H2s + FAQPage JSON-LD
     srcs = "".join(f'<li><a href="{e(s["url"])}" rel="nofollow noopener" target="_blank">{e(s["label"])}</a></li>' for s in g["sources"])
     cards = aff_disclosure([byid[pid] for pid in g.get("product_ids", [])]) + "".join(card(byid[pid]) for pid in g.get("product_ids", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(g['h1'])}</p><h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p>
-<p class="meta">Last checked {e(g['last_checked'])}</p>{SAFETY}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>"""
-    return page(g["title"], g["meta"], f"/{g['slug']}/", body)
+<p class="meta">Last checked {e(g['last_checked'])}</p>{SAFETY}{tbl}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>"""
+    ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]} if faq else None
+    return page(g["title"], g["meta"], f"/{g['slug']}/", body, ld)
+
+def guide_table(t):
+    """Optional guide table: {"h", "caption", "head": [...], "rows": [{"cells": [...], "snapshot": path}]}.
+    A cell is plain text (our neutral label, e.g. a brand name or "Not stated") or {"q": "verbatim quote"};
+    quote cells are rendered in <q> and checked against the row's snapshot by scripts/verify_quotes.py."""
+    if not t: return ""
+    def cell(c):
+        if isinstance(c, dict): return q(c["q"])
+        return '<span class="ns">Not stated</span>' if c == "Not stated" else e(c)
+    head = "".join(f"<th>{e(h)}</th>" for h in t["head"])
+    rows = "".join("<tr>" + "".join(f"<td>{cell(c)}</td>" for c in r["cells"]) + "</tr>" for r in t["rows"])
+    cap = f"<caption>{e(t['caption'])}</caption>" if t.get("caption") else ""
+    h = f"<h2>{e(t['h'])}</h2>" if t.get("h") else ""
+    return f'{h}<div class="tablewrap"><table class="cmp">{cap}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
+
 
 def about():
     set_page("/about/")

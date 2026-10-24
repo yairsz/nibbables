@@ -24,4 +24,23 @@ for p in json.load(open("data/products.json")):
         for seg in v.split(" · "):
             if norm(seg) not in hay:
                 bad += 1; print(f"NOT FOUND [{p['brand']} / {p['product']}] {f}: {seg}")
+# Guides (data/guides/*.json): quote cells in the optional table are checked against the row's snapshot, and
+# every entry in "quote_checks" ({"snapshot", "text"}) must appear verbatim in its snapshot. Put every quoted
+# fragment used in a guide's sections/FAQ text into quote_checks.
+import glob
+for gp in sorted(glob.glob("data/guides/*.json")):
+    g = json.load(open(gp))
+    checks = list(g.get("quote_checks", []))
+    for r in (g.get("table") or {}).get("rows", []):
+        for c in r["cells"]:
+            if isinstance(c, dict):
+                checks += [{"snapshot": r["snapshot"], "text": seg} for seg in c["q"].split(" · ")]
+    for c in checks:
+        try:
+            hay = norm(open(c["snapshot"]).read().replace("\n", " "))
+        except FileNotFoundError:
+            bad += 1; print(f"NO SNAPSHOT [{gp}] {c['snapshot']}"); continue
+        if norm(c["text"]) not in hay:
+            bad += 1; print(f"NOT FOUND [{gp}] {c['snapshot']}: {c['text']}")
+    print(f"guide {g['slug']}: {len(checks)} quotes checked")
 print("quote check:", "OK" if not bad else f"{bad} problems"); sys.exit(1 if bad else 0)

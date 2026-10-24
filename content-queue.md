@@ -22,6 +22,11 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /antlers/ expansion: Antler Dog Chews brands with official sites (e.g. Elkhorn-type ranch brands). Only if the brand page states sourcing
 
 ## Guides (reuse existing product cards; every sentence sourced)
+- [x] /yak-chew-microwave/: published 2026-10-23 (keyword-targets Nibbables row 1)
+- [x] /bully-stick-calories/: published 2026-10-23 (keyword-targets Nibbables row 2)
+- [ ] /compare/bully-stick-vs-collagen-stick/ style pair pages (keyword-targets row 3): needs collagen products researched first (see /collagen-sticks/ above). Guides are top-level slugs today, e.g. /bully-stick-vs-collagen-stick/
+- [ ] /how-long-do-bully-sticks-last/: brand-stated shelf life (e.g. Redbarn page lists "Shelf Life: 36 months") and storage wording, quoted (keyword-targets row 6)
+- [ ] /yak-chew-age-guidance/: brand minimum ages, e.g. Himalayan Pet Supply "For dogs over 12 weeks old", YAKERS FAQ "4 months and over" (quote only)
 - [ ] /made-in-usa-bully-sticks/: bully sticks whose brand states a made-in-USA claim, with each exact wording (claim ≠ verified)
 - [ ] /bully-stick-country-of-origin/: table of the countries each brand names for its bully sticks
 - [ ] /single-ingredient-chews/: products whose ingredient list (as stated) is one item

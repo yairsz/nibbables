@@ -55,3 +55,7 @@ it may be temporarily unavailable. Re-check these at the next re-verification.
 | 15 | Best Bully Sticks / Medium Himalayan Golden Yak Cheese Odor-Free (3 Pack) | Amazon B09R6NFBFF is "Himalayan Yak Cheese Odor-Free, Medium, 4 Count" with no "Golden" wording. Can't confirm it's the same product. |
 | 19 | Pawstruck / Medium Himalayan Yak Dog Chew, 3-4 oz. | WebSearch showed B09JHRQBKT as a 3-4 oz 3-pack, but the live dp page shows "Large Himalayan Yak Dog Chew (6-7 oz)". Conflicting, so no link. |
 | 28 | GREAT DOG CO. / Medium Red Deer Antler Chew | No Great Dog red deer antler listing found on Amazon. |
+
+
+## 2026-10-23 (night run): /yak-chew-microwave/ and /bully-stick-calories/
+No new products were added; both guides reuse existing cards, so no new Amazon searches were needed. Links shown come from the matches above (yak page: Mighty Paw yak linked, Pawstruck medium yak unlinked; calories page: Bow Wow Labs, Mighty Paw bully, Nature Gnaws, GREAT DOG bison linked; Campfire x2, Best Bully Sticks 12" USA-baked, Pupford skinny unlinked). Sources cited only in the guides' tables (Himalayan Dog Chew, Yak Chewz, YAKERS, Yakkity Zac's, Whole Dog Journal) have no product card and no Amazon link.
