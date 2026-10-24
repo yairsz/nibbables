@@ -164,6 +164,25 @@ def card(p):
 <dt>Source</dt><dd><a href="{e(p['source_url'])}" rel="nofollow noopener" target="_blank">Brand's product page</a> · checked {e(p['last_checked'])}</dd></dl>
 {affiliate_slot(p)}</article>"""
 
+GUIDES = []  # filled in main(); used for contextual internal links (added 2026-10-24)
+
+def related_guides_block(cat_slug, cat_name):
+    """Contextual links from a chew-type page to guides tagged with that category (guide JSON "categories")."""
+    gs = [g for g in GUIDES if cat_slug in g.get("categories", [])]
+    if not gs: return ""
+    return f'<h2>Guides about {e(cat_name.lower())}</h2><ul>' + "".join(
+        f'<li><a href="{U("/" + g["slug"] + "/")}">{e(g["h1"])}</a></li>' for g in gs) + "</ul>"
+
+def guide_related(g):
+    """Guide footer: links to its chew-type page(s) and the other guides."""
+    cl = [f'<a href="{U("/" + c + "/")}">all {e(CAT_LABEL[c].lower())} we list</a>' for c in g.get("categories", []) if c in CAT_LABEL]
+    others = [x for x in GUIDES if x["slug"] != g["slug"]]
+    out = "<h2>Related on Nibbables</h2><ul>"
+    if cl: out += "<li>Browse " + " and ".join(cl) + ", with each brand's own ingredient and made-in wording.</li>"
+    out += f'<li><a href="{U("/compare/")}">Compare all chews in one table</a></li>'
+    out += "".join(f'<li><a href="{U("/" + x["slug"] + "/")}">{e(x["h1"])}</a></li>' for x in others)
+    return out + "</ul>"
+
 def category_page(c, products):
     set_page(f"/{c['slug']}/")
     ps = cat_products(c, products)
@@ -175,6 +194,7 @@ def category_page(c, products):
 {SAFETY}
 {aff_disclosure(ps)}
 <details class="toc"><summary>Products on this page</summary><ul>{toc}</ul></details>
+{related_guides_block(c['slug'], c['name'])}
 {''.join(card(p) for p in ps)}"""
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": c["h1"],
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{p['brand']} {p['product']}"} for i, p in enumerate(ps)]}
@@ -284,7 +304,7 @@ def guide_page(g, products):
     srcs = "".join(f'<li><a href="{e(s["url"])}" rel="nofollow noopener" target="_blank">{e(s["label"])}</a></li>' for s in g["sources"])
     cards = aff_disclosure([byid[pid] for pid in g.get("product_ids", [])]) + "".join(card(byid[pid]) for pid in g.get("product_ids", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(g['h1'])}</p><h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p>
-<p class="meta">Last checked {e(g['last_checked'])}{(" · page updated " + e(MODIFIED[f"/{g['slug']}/"])) if MODIFIED.get(f"/{g['slug']}/", g['last_checked']) != g['last_checked'] else ""}</p>{SAFETY}{tbl}{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>"""
+<p class="meta">Last checked {e(g['last_checked'])}{(" · page updated " + e(MODIFIED[f"/{g['slug']}/"])) if MODIFIED.get(f"/{g['slug']}/", g['last_checked']) != g['last_checked'] else ""}</p>{SAFETY}{tbl}{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>{guide_related(g)}"""
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]} if faq else None
     return page(g["title"], g["meta"], f"/{g['slug']}/", body, ld)
@@ -425,6 +445,9 @@ def main():
     cats = json.loads((ROOT / "data/categories.json").read_text())
     guides = [json.loads(p.read_text()) for p in sorted((ROOT / "data/guides").glob("*.json"))] if (ROOT / "data/guides").exists() else []
     for c in cats: CAT_LABEL[c["slug"]] = c["name"]
+    GUIDES[:] = guides
+    for g in guides:
+        for c in g.get("categories", []): assert c in CAT_LABEL, f"guide {g['slug']}: unknown category {c}"
     validate(products, cats)
     products.sort(key=lambda p: (p["brand"].lower(), p["product"].lower()))
     if OUT.exists(): shutil.rmtree(OUT)

@@ -65,3 +65,6 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 ## Freshness signals (added 2026-10-24)
 - build.py emits WebPage (AboutPage on /about/) JSON-LD with `dateModified` on every page, plus an Organization with `sameAs` the YouTube channel. `MODIFIED` is computed from the data (latest last_verified/last_checked of what the page shows), never from today; sitemap `lastmod` and the visible "page updated" dates use the same value. Keep it that way: never bump dates without actually re-checking.
 - If you edit /about/ text, bump `ABOUT_UPDATED`; if privacy text changes, bump `PRIVACY_UPDATED` with privacy.EFFECTIVE. /about/ has a computed "By the numbers" block, so it updates itself.
+
+## Internal links for guides (added 2026-10-24)
+- Every guide JSON should carry `"categories": [<chew-type slugs>]`. The build then links the guide from those chew-type pages ("Guides about …") and adds a "Related on Nibbables" block on the guide (its chew-type pages, /compare/, the other guides). Orphan or single-link pages tend to sit in "Discovered - currently not indexed". Check with `python3 /workspace/affiliate-library/scripts/index_audit.py nibbables.com` after publishing.
