@@ -61,3 +61,7 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 - Videos: add an entry to data/videos.json keyed by page path to embed a lazy YouTube player + VideoObject JSON-LD.
 
 - **Privacy policy (added 2026-10-23):** `/privacy/` is generated from `privacy.py` and linked in every footer. If you add a script, embed, form, affiliate program or hosting change, update `privacy.py` (and its EFFECTIVE date) in the same commit so the policy stays true. The build now fails on broken internal links.
+
+## Freshness signals (added 2026-10-24)
+- build.py emits WebPage (AboutPage on /about/) JSON-LD with `dateModified` on every page, plus an Organization with `sameAs` the YouTube channel. `MODIFIED` is computed from the data (latest last_verified/last_checked of what the page shows), never from today; sitemap `lastmod` and the visible "page updated" dates use the same value. Keep it that way: never bump dates without actually re-checking.
+- If you edit /about/ text, bump `ABOUT_UPDATED`; if privacy text changes, bump `PRIVACY_UPDATED` with privacy.EFFECTIVE. /about/ has a computed "By the numbers" block, so it updates itself.

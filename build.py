@@ -82,10 +82,35 @@ def ga_tag():
 </script>"""
 
 META = {}  # path -> (title, description); feeds llms.txt
+# path -> YYYY-MM-DD the page's content was last checked/changed. Filled in main() from the data
+# (latest last_checked of what the page shows), never "today". Feeds WebPage dateModified, visible dates and sitemap lastmod.
+MODIFIED = {}
+ABOUT_UPDATED = "2026-10-24"     # bump when /about/ text changes
+PRIVACY_UPDATED = "2026-10-23"   # matches privacy.EFFECTIVE
+
+def cat_products(c, products):
+    if c["slug"] == "rawhide-free":
+        return [p for p in products if p["category"] == "rawhide-free"] + \
+               [p for p in products if p["category"] != "rawhide-free" and p["rawhide_free"] != NS]
+    return [p for p in products if p["category"] == c["slug"]]
+
+def org_ld():
+    return {"@type": "Organization", "@id": base_url() + "/#org", "name": CFG["site_name"], "url": base_url() + "/",
+            "sameAs": [YT_CHANNEL]}
+
+def webpage_ld(title, desc, path):
+    if path not in MODIFIED:
+        return None
+    return {"@context": "https://schema.org", "@type": "AboutPage" if path == "/about/" else "WebPage",
+            "@id": base_url() + path, "url": base_url() + path, "name": title, "description": desc,
+            "dateModified": MODIFIED[path], "inLanguage": "en-US",
+            "isPartOf": {"@type": "WebSite", "@id": base_url() + "/#website", "name": CFG["site_name"],
+                         "url": base_url() + "/", "publisher": org_ld()},
+            "publisher": {"@id": base_url() + "/#org"}}
 def page(title, desc, path, body, jsonld=None):
     url = base_url() + path
     META[path] = (title, desc)
-    lds = [x for x in (jsonld, video_ld(path)) if x]
+    lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path), webpage_ld(title, desc, path)]) if x]
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
     nav = "".join(f'<a href="{U("/" + s + "/")}">{e(n)}</a>' for s, n in CAT_LABEL.items())
@@ -141,16 +166,12 @@ def card(p):
 
 def category_page(c, products):
     set_page(f"/{c['slug']}/")
-    if c["slug"] == "rawhide-free":
-        ps = [p for p in products if p["category"] == "rawhide-free"] + \
-             [p for p in products if p["category"] != "rawhide-free" and p["rawhide_free"] != NS]
-    else:
-        ps = [p for p in products if p["category"] == c["slug"]]
+    ps = cat_products(c, products)
     assert ps, f"category {c['slug']} is empty"
     toc = "".join(f'<li><a href="#{e(p["id"])}">{e(p["brand"])}: {e(p["product"])}</a></li>' for p in ps)
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}</p>
 <h1>{e(c['h1'])}</h1><p class="lead">{e(c['intro'])}</p>
-<p class="meta">{len(ps)} products · every claim is quoted from the brand's own page and linked · no prices (they change; check the brand) · <a href="{U('/compare/')}">compare all in one table</a></p>
+<p class="meta">{len(ps)} products · every claim is quoted from the brand's own page and linked · no prices (they change; check the brand) · page updated {e(MODIFIED.get(f"/{c['slug']}/", ""))} · <a href="{U('/compare/')}">compare all in one table</a></p>
 {SAFETY}
 {aff_disclosure(ps)}
 <details class="toc"><summary>Products on this page</summary><ul>{toc}</ul></details>
@@ -244,6 +265,7 @@ def home(products, cats, guides):
 <li>We don't publish reviews or star ratings.</li>
 <li>"Made in USA" and similar wording is the brand's claim, shown in quotes.</li></ul>
 <h2>Brands covered</h2><p>{e(', '.join(brands))}</p>
+<p class="meta">Product pages last checked {e(MODIFIED.get('/', ''))}.</p>
 <p><a href="{U('/about/')}">How we verify &amp; how this site makes money →</a></p>"""
     return page(f"{CFG['site_name']}: long-lasting dog chews compared (ingredients, made-in claims, sizes)",
                 "Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared using each brand's own ingredient, made-in and sourcing claims, quoted and linked.", "/", body)
@@ -262,7 +284,7 @@ def guide_page(g, products):
     srcs = "".join(f'<li><a href="{e(s["url"])}" rel="nofollow noopener" target="_blank">{e(s["label"])}</a></li>' for s in g["sources"])
     cards = aff_disclosure([byid[pid] for pid in g.get("product_ids", [])]) + "".join(card(byid[pid]) for pid in g.get("product_ids", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(g['h1'])}</p><h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p>
-<p class="meta">Last checked {e(g['last_checked'])}</p>{SAFETY}{tbl}{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>"""
+<p class="meta">Last checked {e(g['last_checked'])}{(" · page updated " + e(MODIFIED[f"/{g['slug']}/"])) if MODIFIED.get(f"/{g['slug']}/", g['last_checked']) != g['last_checked'] else ""}</p>{SAFETY}{tbl}{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>"""
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]} if faq else None
     return page(g["title"], g["meta"], f"/{g['slug']}/", body, ld)
@@ -282,8 +304,21 @@ def guide_table(t):
     return f'{h}<div class="tablewrap"><table class="cmp">{cap}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
 
 
-def about():
+def about(products, cats, guides):
     set_page("/about/")
+    brands = {p["brand"] for p in products}
+    dates = sorted(p["last_checked"] for p in products)
+    fields = ("ingredients", "made_in", "sourced_from", "rawhide_free", "size_guidance", "supervision")
+    nns = sum(1 for p in products for k in fields if str(p.get(k) or NS).strip().startswith(NS))
+    namz = sum(1 for p in products if has_aff(p))
+    nums = f"""<h2>By the numbers</h2>
+<ul>
+<li>{len(products)} products from {len(brands)} brands, in {len(cats)} chew-type pages, plus {len(guides)} guides and a <a href="{U('/compare/')}">compare table</a>.</li>
+<li>Each product cites 1 brand product page ({len({p['source_url'] for p in products})} distinct pages in total). Product pages were last checked {("on " + e(dates[0])) if dates[0] == dates[-1] else ("between " + e(dates[0]) + " and " + e(dates[-1]))}.</li>
+<li>{nns} product fields say <span class="ns">{e(NS)}</span> because the brand's page doesn't state them. We don't fill those in with guesses.</li>
+<li>{namz} of {len(products)} products have a "Check on Amazon" link, added only where we found the exact same product on Amazon.</li>
+</ul>
+<p class="meta">These counts are computed from the site's data each time it's built. This page was last updated {e(ABOUT_UPDATED)}.</p>"""
     body = f"""<h1>About Nibbables: how we verify, and our affiliate disclosure</h1>
 <h2>How we verify</h2>
 <ul>
@@ -304,7 +339,7 @@ def about():
 <h2>Analytics</h2>
 <p>This site uses Google Analytics to collect aggregate traffic statistics, such as page views and how visitors found us. It doesn't collect your name or email, though Google may set cookies to tell visits apart. Details are in our <a href="{U('/privacy/')}">privacy policy</a>.</p>
 <h2>Corrections</h2>
-<p>Brands update their pages. If a card is out of date, let us know and we'll re-check it against the brand's page and update the date.</p>"""
+<p>Brands update their pages. If a card is out of date, let us know and we'll re-check it against the brand's page and update the date.</p>""" + nums
     return page("About Nibbables: how we verify & affiliate disclosure",
                 "How Nibbables quotes each dog chew brand's own claims, what we don't do (no safety ratings, prices or reviews), and our affiliate disclosure.", "/about/", body)
 
@@ -395,7 +430,13 @@ def main():
     if OUT.exists(): shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copytree(ROOT / "static", OUT / "static")
-    pages = {"/": home(products, cats, guides), "/compare/": compare(products), "/about/": about(), "/privacy/": privacy_page()}
+    latest = max(p["last_checked"] for p in products)
+    byid0 = {p["id"]: p for p in products}
+    MODIFIED.update({"/": latest, "/compare/": latest, "/about/": ABOUT_UPDATED, "/privacy/": PRIVACY_UPDATED})
+    for c in cats: MODIFIED[f"/{c['slug']}/"] = max(p["last_checked"] for p in cat_products(c, products))
+    for g in guides:
+        MODIFIED[f"/{g['slug']}/"] = max([g["last_checked"]] + [byid0[i]["last_checked"] for i in g.get("product_ids", []) if i in byid0])
+    pages = {"/": home(products, cats, guides), "/compare/": compare(products), "/about/": about(products, cats, guides), "/privacy/": privacy_page()}
     for c in cats: pages[f"/{c['slug']}/"] = category_page(c, products)
     for g in guides:
         assert f"/{g['slug']}/" not in pages, f"guide slug clash {g['slug']}"
@@ -424,8 +465,7 @@ def main():
         d = OUT / path.strip("/"); d.mkdir(parents=True, exist_ok=True); (d / "index.html").write_text(h)
     (OUT / "404.html").write_text(notfound)
     base = base_url()
-    latest = max(p["last_checked"] for p in products)
-    urls = "".join(f"<url><loc>{base}{p}</loc><lastmod>{latest}</lastmod></url>" for p in pages)
+    urls = "".join(f"<url><loc>{base}{p}</loc><lastmod>{MODIFIED.get(p, latest)}</lastmod></url>" for p in pages)
     (OUT / "sitemap.xml").write_text(f'<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{urls}</urlset>\n')
     if CFG.get("indexnow_key"):  # IndexNow (Bing/Yandex) key file must sit at the site root
         (OUT / f"{CFG['indexnow_key']}.txt").write_text(CFG["indexnow_key"])
