@@ -68,3 +68,6 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 
 ## Internal links for guides (added 2026-10-24)
 - Every guide JSON should carry `"categories": [<chew-type slugs>]`. The build then links the guide from those chew-type pages ("Guides about …") and adds a "Related on Nibbables" block on the guide (its chew-type pages, /compare/, the other guides). Orphan or single-link pages tend to sit in "Discovered - currently not indexed". Check with `python3 /workspace/affiliate-library/scripts/index_audit.py nibbables.com` after publishing.
+
+## Quick answers on chew-type pages (added 2026-10-24)
+- Each chew-type page gets a computed "Quick answers" block + FAQPage JSON-LD (`cat_faq` in build.py): where made/sourced (places named in made_in/sourced_from, counted via `PLACES`), which say USA, which brands, which say rawhide-free. It answers AI "fan-out" sub-questions and updates itself from products.json. If a new product names a new country, add it to `PLACES`; if a field names a place that isn't about where the chew is made (e.g. a recipe's origin), extend `NOT_A_PLACE`. Never hand-write these answers.

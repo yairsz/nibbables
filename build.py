@@ -206,10 +206,64 @@ def guide_related(g):
     out += "".join(f'<li><a href="{U("/" + x["slug"] + "/")}">{e(x["h1"])}</a></li>' for x in others)
     return out + "</ul>"
 
+# Fan-out "Quick answers" on chew-type pages (added 2026-10-24). AI answers split a query into sub-questions
+# (where is it made, which brands, rawhide-free?). Every answer is COUNTED from data/products.json, so it can't
+# say anything the cards don't. No judgments, no safety wording.
+PLACES = [("USA", r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American"), ("Canada", r"Canada"),
+          ("Brazil", r"Brazil"), ("Argentina", r"Argentina"), ("Paraguay", r"Paraguay"),
+          ("Colombia", r"Colombi|Columbia"),  # one brand page writes "Columbia" for its country of origin
+          ("Peru", r"Peru"), ("Mexico", r"Mexico"), ("South America", r"South America"), ("the Americas", r"The Americas"),
+          ("Turkey", r"Turkey"), ("New Zealand", r"New Zealand"), ("Europe", r"Europe"), ("India", r"India"),
+          ("Nepal", r"Nepal"), ("the Himalayas", r"Himalaya")]
+FAQ_NOUN = {"antlers": "antler chews"}
+# Wording that names a place but isn't about where the chew is made or sourced (e.g. a recipe's origin).
+NOT_A_PLACE = re.compile(r"recipe that originates in [^.·]*", re.I)
+
+def cat_faq(c, ps):
+    noun = FAQ_NOUN.get(c["slug"], c["name"].lower())
+    n = len(ps); last = max(p["last_checked"] for p in ps)
+    stated = sum(1 for p in ps if p["made_in"] != NS)
+    counts = []
+    for place, rx in PLACES:
+        k = sum(1 for p in ps if re.search(rx, NOT_A_PLACE.sub("", p["made_in"] + " " + p["sourced_from"])))
+        if k: counts.append((k, place))
+    counts.sort(key=lambda x: -x[0])
+    places = ", ".join(f"{pl} ({k})" for k, pl in counts)
+    qa = []
+    qa.append((f"Where are {noun} made or sourced?",
+        (f"All {n} {noun} product pages we list state where the chew is made. " if stated == n else
+         f"{stated} of the {n} {noun} product pages we list state where the chew is made; the rest don't say. ")
+        + (f"Places named in the brands' own made-in or sourcing wording, with the number of products: {places}. "
+           "Some pages name several possible countries, so the counts can add up to more than the number of products. " if counts else "")
+        + f"These are the brands' claims, not ours; each card below quotes the exact wording. Last checked {last}."))
+    usa = [p for p in ps if mentions_usa(p)]
+    if usa:
+        qa.append((f"Which {noun} say they're made or sourced in the USA?",
+            f"{len(usa)} of {n}: " + "; ".join(f"{p['brand']} {p['product']}" for p in usa)
+            + ". The wording differs (for example sourced in the USA vs made in the USA), so read the quote on each card."))
+    brands = {}
+    for p in ps: brands[p["brand"]] = brands.get(p["brand"], 0) + 1
+    qa.append((f"Which brands' {noun} are listed here?",
+        f"{n} products from {len(brands)} brands: " + ", ".join(f"{b} ({k})" for b, k in brands.items())
+        + ". Nibbables doesn't rank or rate them; each card links the brand's own product page."))
+    if c["slug"] != "rawhide-free":
+        rh = [p for p in ps if p["rawhide_free"] != NS]
+        qa.append((f"Do brands say their {noun} are rawhide-free?",
+            (f"{len(rh)} of {n} product pages literally say rawhide-free or made without rawhide: "
+             + "; ".join(f"{p['brand']} {p['product']}" for p in rh) + ". " if rh else
+             f"None of the {n} product pages we list use the words rawhide-free or made without rawhide. ")
+            + ("The others don't say either way, which doesn't mean they contain rawhide; check with the brand." if rh else
+               "That doesn't mean they contain rawhide; the pages just don't say. Check with the brand.")))
+    html_ = '<section class="faq"><h2>Quick answers</h2>' + "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in qa) + "</section>"
+    ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
+    return html_, ld
+
 def category_page(c, products):
     set_page(f"/{c['slug']}/")
     ps = cat_products(c, products)
     assert ps, f"category {c['slug']} is empty"
+    faq_html, faq_ld = cat_faq(c, ps)
     toc = "".join(f'<li><a href="#{e(p["id"])}">{e(p["brand"])}: {e(p["product"])}</a></li>' for p in ps)
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}</p>
 <h1>{e(c['h1'])}</h1><p class="lead">{e(c['intro'])}</p>
@@ -217,15 +271,16 @@ def category_page(c, products):
 {SAFETY}
 {aff_disclosure(ps)}
 <details class="toc"><summary>Products on this page</summary><ul>{toc}</ul></details>
+{faq_html}
 {related_guides_block(c['slug'], c['name'])}
 {''.join(card(p) for p in ps)}"""
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": c["h1"],
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{p['brand']} {p['product']}"} for i, p in enumerate(ps)]}
-    return page(c["title"], c["meta"], f"/{c['slug']}/", body, ld)
+    return page(c["title"], c["meta"], f"/{c['slug']}/", body, [ld, faq_ld])
 
 def mentions_usa(p):
     t = (p["made_in"] + " " + p["sourced_from"]) if True else ""
-    return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|American", t))
+    return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American", t))  # "South American cattle" is not USA (fixed 2026-10-24)
 
 def compare_summary(products):
     """Answer-first summary (added 2026-10-24): counts computed from data/products.json only, no judgments."""
