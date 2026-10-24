@@ -1,0 +1,29 @@
+# Nibbables
+
+> Long-lasting dog chews, compared by what each brand actually says. A directory of long-lasting dog chews (bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers) that quotes each brand's own product page.
+
+Each product card quotes the brand's own page word for word (ingredients, made-in and sourcing wording, size guidance, supervision notes), links that page and shows the date it was checked. Made-in and sourcing statements are the brands' claims, not independently verified. Missing facts are marked "Not stated, check with them". Nibbables shows no prices, reviews, star ratings or safety ratings, and it is not veterinary advice. Some product cards have Amazon affiliate links; see the About page for the disclosure.
+
+## Chew types
+
+- [Bully sticks compared: ingredients, made-in claims & sizes | Nibbables](https://nibbables.com/bully-sticks/): Bully sticks from Campfire Treats, GREAT DOG, Best Bully Sticks, Redbarn, Jack&Pup, Mighty Paw and more, with ingredients, made-in claims and sizes quoted.
+- [Yak cheese chews compared: ingredients & origin claims | Nibbables](https://nibbables.com/yak-cheese-chews/): Yak cheese dog chews from Mighty Paw, Pupford, Pawstruck, Raw Paws and Best Bully Sticks, with ingredients and origin claims quoted from each brand.
+- [Beef cheek rolls compared: ingredients & country of origin | Nibbables](https://nibbables.com/beef-cheek-rolls/): Beef cheek roll dog chews from Redbarn, Raw Paws and Best Bully Sticks, with ingredients and country-of-origin claims quoted from each brand's page.
+- [Rawhide-free dog chews: brands that state it, quoted | Nibbables](https://nibbables.com/rawhide-free/): Dog chews whose brand says they're rawhide-free or made without rawhide, including Earth Animal No-Hide, quoted from each brand's page.
+- [Elk & deer antler dog chews compared: sourcing claims & sizes](https://nibbables.com/antlers/): Elk and deer antler chews from GREAT DOG, Redbarn, Mighty Paw, Nature Gnaws and Best Bully Sticks, with sourcing and size guidance quoted from each brand.
+
+## Guides
+
+- [Bully stick calories: brand figures and a vet study | Nibbables](https://nibbables.com/bully-stick-calories/): Bully stick calories per inch and per stick from a Canadian Veterinary Journal study, plus the calorie and per-day wording on 15 brand pages, quoted.
+- [How long to microwave a yak chew: brand instructions | Nibbables](https://nibbables.com/yak-chew-microwave/): Yak chew microwave instructions from Himalayan Dog Chew, Yak Chewz, Mighty Paw, Pawstruck, YAKERS, Yakkity Zac's and Whole Dog Journal: soak, time, cooling.
+
+## Compare, about and privacy
+
+- [Nibbables: long-lasting dog chews compared (ingredients, made-in claims, sizes)](https://nibbables.com/): Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared by each brand's own ingredient, made-in and sourcing claims.
+- [Compare dog chews: ingredients, made-in & sourcing claims side by side](https://nibbables.com/compare/): Bully sticks, yak chews, beef cheek rolls, rawhide-free chews and antlers side by side, with each brand's ingredient and made-in claims quoted.
+- [About Nibbables: how we verify & affiliate disclosure](https://nibbables.com/about/): How Nibbables quotes each dog chew brand's own claims, what we don't do (no safety ratings, prices or reviews), and our affiliate disclosure.
+- [Privacy policy | Nibbables](https://nibbables.com/privacy/): What Nibbables collects (Google Analytics, click-to-play YouTube videos, GitHub Pages hosting logs), how its Amazon affiliate links work, and how to opt out.
+
+## Optional
+
+- [Sitemap](https://nibbables.com/sitemap.xml): every page with a lastmod date
