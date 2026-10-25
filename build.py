@@ -322,6 +322,7 @@ def category_page(c, products):
 {aff_disclosure(ps)}
 <details class="toc"><summary>Products on this page</summary><ul>{toc}</ul></details>
 {faq_html}
+{yt_embed(f"/{c['slug']}/", YT_CHANNEL, 'Nibbables')}
 {related_guides_block(c['slug'], c['name'])}
 {sibling_hubs_block(c, products)}
 {''.join(card(p) for p in ps)}"""
