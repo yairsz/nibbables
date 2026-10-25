@@ -128,7 +128,48 @@ def fit_meta(title, desc, suffix=" | Nibbables"):
             desc = cut[: cut.rfind(" ")].rstrip(",;:-–—(") + "…"
     return title, desc
 
+# Entity hub links (added 2026-10-25, from Dixon Jones / Advanced Web Ranking on entity hubs): each chew type has
+# ONE authority page. The first plain-text mention of that chew type in a body paragraph links to its hub, unless
+# the page is the hub or already links to it. Never touches quotes, links, headings, cards or tables.
+HUB_TERMS = [("bully-sticks", r"(?<!Best )(?<!&quot; Beef )\bbully sticks?\b"), ("yak-cheese-chews", r"\b(?:yak|Himalayan)(?: cheese)? chews?\b"),
+             ("beef-cheek-rolls", r"\bbeef cheek rolls?\b"), ("rawhide-free", r"\brawhide-free(?: chews?)?\b"),
+             ("antlers", r"\b(?:(?:elk|deer) )?antler chews?\b")]
+_SKIP_TAGS = ("a", "q", "blockquote", "cite", "code", "h1", "h2", "h3")
+
+def link_hubs(body, path):
+    for slug, pat in HUB_TERMS:
+        hub = "/" + slug + "/"
+        if path == hub or f'href="{U(hub)}"' in body: continue
+        rx = re.compile(pat, re.I)
+        def para(m):
+            attrs = m.group(1) or ""
+            if 'class="disclosure' in attrs: return m.group(0)
+            parts = re.split(r"(<[^>]+>)", m.group(2)); depth = 0; done = False; inq = 0
+            for i, t in enumerate(parts):
+                if t.startswith("<"):
+                    tag = re.match(r"</?([a-zA-Z0-9]+)", t)
+                    if tag and tag.group(1).lower() in _SKIP_TAGS:
+                        depth += -1 if t.startswith("</") else 1
+                    continue
+                # never link inside a quotation (“…”), which may span tags
+                if depth == 0 and not done:
+                    for mm in rx.finditer(t):
+                        before = t[:mm.start()]
+                        if (inq + before.count("“") - before.count("”")) > 0: continue
+                        parts[i] = before + f'<a href="{U(hub)}">{mm.group(0)}</a>' + t[mm.end():]; done = True; break
+                inq += t.count("“") - t.count("”")
+            return f"<p{attrs}>" + "".join(parts) + "</p>"
+        new = re.sub(r"<p(\s[^>]*)?>(.*?)</p>", para, body, flags=re.S)
+        # keep only the first inserted link for this hub
+        first = new.find(f'<a href="{U(hub)}">')
+        if first != -1:
+            head, tail = new[:first + 1], new[first + 1:]
+            tail = re.sub(r'<a href="' + re.escape(U(hub)) + r'">([^<]*)</a>', r"\1", tail)
+            body = head + tail
+    return body
+
 def page(title, desc, path, body, jsonld=None):
+    body = link_hubs(body, path)
     desc = META_DESC.get(path, desc)
     title, desc = fit_meta(title, desc)
     url = base_url() + path
@@ -259,6 +300,15 @@ def cat_faq(c, ps):
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
     return html_, ld
 
+CATS = []  # filled in main()
+
+def sibling_hubs_block(c, products):
+    """Hub-to-hub links (entity hubs, 2026-10-25): every chew-type page links in-body to the other chew-type pages,
+    with product counts computed from data/products.json."""
+    items = [f'<li><a href="{U("/" + o["slug"] + "/")}">{e(o["name"])}</a> ({len(cat_products(o, products))} products)</li>'
+             for o in CATS if o["slug"] != c["slug"]]
+    return "<h2>Other chew types we list</h2><ul>" + "".join(items) + "</ul>" if items else ""
+
 def category_page(c, products):
     set_page(f"/{c['slug']}/")
     ps = cat_products(c, products)
@@ -273,6 +323,7 @@ def category_page(c, products):
 <details class="toc"><summary>Products on this page</summary><ul>{toc}</ul></details>
 {faq_html}
 {related_guides_block(c['slug'], c['name'])}
+{sibling_hubs_block(c, products)}
 {''.join(card(p) for p in ps)}"""
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": c["h1"],
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{p['brand']} {p['product']}"} for i, p in enumerate(ps)]}
@@ -523,6 +574,7 @@ def main():
     cats = json.loads((ROOT / "data/categories.json").read_text())
     guides = [json.loads(p.read_text()) for p in sorted((ROOT / "data/guides").glob("*.json"))] if (ROOT / "data/guides").exists() else []
     for c in cats: CAT_LABEL[c["slug"]] = c["name"]
+    CATS[:] = cats
     GUIDES[:] = guides
     for g in guides:
         for c in g.get("categories", []): assert c in CAT_LABEL, f"guide {g['slug']}: unknown category {c}"

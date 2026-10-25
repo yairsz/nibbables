@@ -71,3 +71,5 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 
 ## Quick answers on chew-type pages (added 2026-10-24)
 - Each chew-type page gets a computed "Quick answers" block + FAQPage JSON-LD (`cat_faq` in build.py): where made/sourced (places named in made_in/sourced_from, counted via `PLACES`), which say USA, which brands, which say rawhide-free. It answers AI "fan-out" sub-questions and updates itself from products.json. If a new product names a new country, add it to `PLACES`; if a field names a place that isn't about where the chew is made (e.g. a recipe's origin), extend `NOT_A_PLACE`. Never hand-write these answers.
+
+- **Entity hubs (added 2026-10-25):** each chew type has ONE authority page (its category page). `link_hubs()` in build.py links the first plain-text mention of a chew type in a body paragraph to its hub (skips quotes, existing links, headings, cards, tables, and the brand name "Best Bully Sticks"), and `sibling_hubs_block()` lists the other chew-type pages with computed product counts. Don't create a second page that competes with a hub; link guides to the hub instead.
