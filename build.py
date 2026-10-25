@@ -282,6 +282,30 @@ def cat_faq(c, ps):
         qa.append((f"Which {noun} say they're made or sourced in the USA?",
             f"{len(usa)} of {n}: " + "; ".join(f"{p['brand']} {p['product']}" for p in usa)
             + ". The wording differs (for example sourced in the USA vs made in the USA), so read the quote on each card."))
+        # Multi-condition follow-up (added 2026-10-25, Ethan Smith/Graphite AEO playbook: answer the long-tail
+        # follow-up questions). Split the USA list by WHICH field names the USA. Counted from the quotes only.
+        def _usa(t): return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American", t))
+        nm = lambda L: "; ".join(f"{p['brand']} {p['product']}" for p in L)
+        # "made" = made-in quote names the USA with a making verb (packaged / country of origin don't count).
+        mk = lambda p: _usa(p["made_in"]) and bool(re.search(r"\bmade\b|bak|manufactur|produced", p["made_in"], re.I))
+        # "sourced" = a separate sourcing quote names the USA, or the made-in quote says sourced in/and ... USA
+        # ("globally sourced ingredients" does not count).
+        sr = lambda p: ((p["sourced_from"] != p["made_in"] and _usa(p["sourced_from"]))
+                        or bool(re.search(r"sourced (and \w+ )?(in|from) (the )?(USA|U\.S\.|United States)", p["made_in"], re.I)))
+        both = [p for p in usa if mk(p) and sr(p)]
+        made_only = [p for p in usa if mk(p) and not sr(p)]
+        src_only = [p for p in usa if sr(p) and not mk(p)]
+        other = [p for p in usa if not mk(p) and not sr(p)]
+        parts = [f"{len(both)} of {n} {'says' if len(both)==1 else 'say'} both made (or baked) in the USA and sourced in the USA" + (f": {nm(both)}." if both else ".")]
+        if made_only: parts.append(f"{len(made_only)} {'says' if len(made_only)==1 else 'say'} made or baked in the USA but don't say the source is the USA: {nm(made_only)}.")
+        if src_only: parts.append(f"{len(src_only)} {'says' if len(src_only)==1 else 'say'} sourced in the USA but don't say made in the USA: {nm(src_only)}.")
+        if other: parts.append(f"{len(other)} {'names' if len(other)==1 else 'name'} the USA another way (for example packaged in, or country of origin): {nm(other)}.")
+        parts.append("Some lines name the USA alongside other countries, so read the exact quote on each card.")
+        qa.append((f"Which {noun} say they're both sourced and made in the USA?", " ".join(parts)))
+    else:  # zero-answer tail question: being the page that says "none of these" is still a citable answer
+        qa.append((f"Are any {noun} made or sourced in the USA?",
+            f"None of the {n} {noun} product pages we list say the chew is made or sourced in the USA (some name a US office or inspection site, which is different). "
+            "That only covers the products listed here, as of the last check; other brands may differ."))
     brands = {}
     for p in ps: brands[p["brand"]] = brands.get(p["brand"], 0) + 1
     qa.append((f"Which brands' {noun} are listed here?",
