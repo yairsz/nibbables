@@ -1,0 +1,446 @@
+{
+  "slug": "bully-stick-vs-yak-chew",
+  "title": "Bully stick vs yak chew: ingredients, origin, calories",
+  "meta": "Bully stick vs yak chew, side by side: ingredients, where made and calories as 14 brand pages state them, plus what the AKC and a vet journal say about each.",
+  "h1": "Bully stick vs yak chew: what the brands and the AKC say",
+  "intro": "Bully sticks and yak chews are two of the most common single-ingredient-style chews, and they're very different things: one is dried beef pizzle, the other is hardened cheese. This page puts 14 products from our directory side by side, quoting each brand's own page on ingredients, where it's made and where it's sourced, and adds what the AKC and a veterinary journal say about each type. We don't pick a winner; your vet can help you choose for your dog.",
+  "table": {
+    "h": "Bully sticks and yak chews, side by side",
+    "caption": "Quoted from each brand's product page, checked 2026-10-24. \"Not stated\" means we found nothing on that page about it.",
+    "head": [
+      "Brand: product",
+      "Type",
+      "Ingredients (quoted)",
+      "Where made (quoted)",
+      "Sourced from (quoted)"
+    ],
+    "rows": [
+      {
+        "snapshot": "research/pages/bs-campfire-1024.txt",
+        "cells": [
+          "Campfire Treats: Standard Odor-Free Bully Sticks (8-10 Inch)",
+          "Bully stick",
+          {
+            "q": "Ingredients: Dehydrated beef pizzles"
+          },
+          {
+            "q": "Sourced and made in the USA"
+          },
+          {
+            "q": "Sourced and made in the USA"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-bbs6-1024.txt",
+        "cells": [
+          "Best Bully Sticks: 6-Inch Thin Bully Stick",
+          "Bully stick",
+          {
+            "q": "Made from 100% high-quality beef"
+          },
+          "Not stated",
+          "Not stated"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-jackpup-1024.txt",
+        "cells": [
+          "Jack&Pup: Bully Sticks - 6 inch Standard",
+          "Bully stick",
+          {
+            "q": "100% Beef Pizzle"
+          },
+          "Not stated",
+          {
+            "q": "Made from all-natural beef - grass-fed cattle from Brazil"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-bowwow-1024.txt",
+        "cells": [
+          "Bow Wow Labs: SafeFit Bully Sticks",
+          "Bully stick",
+          {
+            "q": "Ingredients: 100% Beef Pizzle"
+          },
+          "Not stated",
+          {
+            "q": "Sourced from Brazil, Argentina, the USA, & Turkey"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-pawstruck-1024.txt",
+        "cells": [
+          "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight)",
+          "Bully stick",
+          {
+            "q": "Beef pizzle"
+          },
+          {
+            "q": "Made in: Paraguay, Brazil, Colombia, New Zealand, Peru, or Turkey"
+          },
+          {
+            "q": "Sourced from high-quality South American cattle"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-naturegnaws-1024.txt",
+        "cells": [
+          "Nature Gnaws: Small Bully Sticks 6\"",
+          "Bully stick",
+          {
+            "q": "Ingredients: Beef Pizzle"
+          },
+          "Not stated",
+          {
+            "q": "We source from Europe, The Americas and Nepal through our SQF Food Safety Program"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-redbarn-1024.txt",
+        "cells": [
+          "Redbarn: Bully Sticks for Dogs",
+          "Bully stick",
+          {
+            "q": "Beef Pizzle."
+          },
+          {
+            "q": "Country of Origin: Paraguay, Brazil, Colombia, New Zealand, Peru, Turkey"
+          },
+          "Not stated"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-mightypaw-1024.txt",
+        "cells": [
+          "Mighty Paw: All-Natural Bully Sticks",
+          "Bully stick",
+          {
+            "q": "Ingredients: Beef"
+          },
+          "Not stated",
+          {
+            "q": "Indulge your pup with the finest treats sourced from grass-fed, free-range beef in Colombia."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-rawpaws-1024.txt",
+        "cells": [
+          "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct",
+          "Bully stick",
+          {
+            "q": "Single-ingredient: Bull Pizzle!"
+          },
+          {
+            "q": "Origin: Turkey."
+          },
+          {
+            "q": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/yk-bbs-golden-1024.txt",
+        "cells": [
+          "Best Bully Sticks: Medium Himalayan Golden Yak Cheese Odor-Free (3 Pack)",
+          "Yak chew",
+          {
+            "q": "Ingredients Yak and Cow Milk, Lime Juice, Salt"
+          },
+          "Not stated",
+          {
+            "q": "The delicious treats are made from a generations-old recipe that originates in the Himalayan mountains."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/yk-mightypaw-1024.txt",
+        "cells": [
+          "Mighty Paw: All-Natural Yak Cheese Dog Chews",
+          "Yak chew",
+          {
+            "q": "Made from just milk, salt and lime."
+          },
+          {
+            "q": "Handcrafted in Nepal and inspected at our headquarters in Rochester, NY"
+          },
+          "Not stated"
+        ]
+      },
+      {
+        "snapshot": "research/pages/yk-pupford-1024.txt",
+        "cells": [
+          "Pupford: Yak Cheese Dog Chew Medium",
+          "Yak chew",
+          {
+            "q": "Yak Milk, Salt, Lime Juice."
+          },
+          {
+            "q": "This chew is sourced and made in the Nepal area of the Himalayan mountain range."
+          },
+          {
+            "q": "This chew is sourced and made in the Nepal area of the Himalayan mountain range."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/yk-rawpaws-1024.txt",
+        "cells": [
+          "Raw Paws Pet Food: Himalayan Yak Chews for Dogs, Medium - 3-ct",
+          "Yak chew",
+          {
+            "q": "yak milk, salt, and lime juice"
+          },
+          {
+            "q": "Origin: Nepal."
+          },
+          {
+            "q": "Sourced from free-range yak raised without antibiotics, steroids, or added hormones."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/yk-pawstruck-1024.txt",
+        "cells": [
+          "Pawstruck: Medium Himalayan Yak Dog Chew, 3-4 oz.",
+          "Yak chew",
+          {
+            "q": "Yak Milk, Cow Milk, Lime Juice, and a small amount of salt"
+          },
+          {
+            "q": "made in the Himalayan mountains by local craftsmen"
+          },
+          {
+            "q": "only source the highest-quality chews from cow and yak farmers in the foothills of the Himalayas"
+          }
+        ]
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Bully stick vs yak chew: what's the difference?",
+      "a": "They're made from different things. Redbarn describes a bully stick as “a single-ingredient dog chew made from 100% beef pizzle”, and the bully stick pages in the table list beef pizzle (or just beef) as the ingredient. Yak chews are hard cheese: Raw Paws says “we boil yak milk and then add lime juice and salt, which curdles the milk and forms cheese”, and the AKC describes them as “hard blocks of dried cheese”. Four of the five yak chew pages say they're made in Nepal or the Himalayas; the bully stick pages that say where they're made name the USA, countries in South America, New Zealand or Turkey."
+    },
+    {
+      "q": "Which lasts longer, a bully stick or a yak chew?",
+      "a": "We found no study that measured it. Brands on both sides call their chews long-lasting: Redbarn says its bully sticks “create a long-lasting chew dogs love”, and Pawstruck says of its yak chew “still longer chew time than a bully stick!”, which is the brand's own claim. The AKC says yak chews “are hard enough to be long-lasting”. How long any chew lasts depends on its size and on how your dog chews."
+    },
+    {
+      "q": "Do yak chews or bully sticks have more calories?",
+      "a": "The few brands that state calories mostly give them per kilogram, and the figures are close. Campfire Treats states “Calorie Content: 3,320 kcal/kg; 94 kcal/oz” for its bully sticks. For yak chews, Raw Paws states “3,168 kcal/kg., 90 kcal/oz.” and Pupford “Metabolizable Energy: 3,074 kcal/kg” (“About 329 kcal per chew.” for its medium chew). A per-chew figure depends on the chew's weight; see our bully stick calories guide for the published study."
+    }
+  ],
+  "sections": [
+    {
+      "h": "What the AKC says about each",
+      "p": [
+        "On bully sticks, the AKC says they “are easily digestible” and adds that “power chewers might bite straight through, producing large pieces that pose a choking risk, or swallow the entire stick whole.” It suggests a bully stick holder for those dogs and says: “When your dog has chewed the stick down to a nub, take it away before they can swallow what’s left.”",
+        "On yak chews, it says “The lactose content is low, so dogs generally digest them well”, and also “although these are cheese, they are quite hard and could lead to broken teeth.” Its advice: “only give your dog a block large enough that they can’t eat whole.”"
+      ]
+    },
+    {
+      "h": "How a veterinary journal classes them",
+      "p": [
+        "Today's Veterinary Practice (two board-certified veterinary nutritionists) lists bully sticks among “Other body parts” in the group of “Animal-derived products that have undergone minimal processing”. The article doesn't mention yak or cheese chews, so we can't say how it would class them."
+      ]
+    },
+    {
+      "h": "Where they come from",
+      "p": [
+        "Of the five yak chews in the table, Mighty Paw says “Handcrafted in Nepal”, Pupford “sourced and made in the Nepal area of the Himalayan mountain range”, Raw Paws “Origin: Nepal.” and Pawstruck “made in the Himalayan mountains by local craftsmen”; Best Bully Sticks doesn't say where its yak chew is made. The bully sticks vary more: Campfire Treats says “Sourced and made in the USA”, while Redbarn and Pawstruck list several countries in South America plus New Zealand and Turkey, and Raw Paws says “Origin: Turkey.”"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Today's Veterinary Practice: The Benefits and Risks of Chew Treats, by Laura Gaylord, DVM, DACVIM (Nutrition) and Donna Raditic, DVM, DACVIM (Nutrition) (Jan/Feb 2024 issue)",
+      "url": "https://todaysveterinarypractice.com/nutrition/the-benefits-and-risks-of-chew-treats/"
+    },
+    {
+      "label": "American Kennel Club: How to Pick Edible Dog Chews (Stephanie Gibeault, MSc, CPDT; updated Nov 6, 2025)",
+      "url": "https://www.akc.org/expert-advice/nutrition/choosing-edible-chews-for-dogs/"
+    },
+    {
+      "label": "Campfire Treats: Standard Odor-Free Bully Sticks (8-10 Inch) (product page)",
+      "url": "https://campfiretreats.com/products/odor-free-bully-sticks-for-dogs-8-10-inch"
+    },
+    {
+      "label": "Best Bully Sticks: 6-Inch Thin Bully Stick (product page)",
+      "url": "https://www.bestbullysticks.com/products/6-inch-thin-bully-stick"
+    },
+    {
+      "label": "Jack&Pup: Bully Sticks - 6 inch Standard (product page)",
+      "url": "https://www.jackandpup.com/products/bully-stick-6-inch-standard"
+    },
+    {
+      "label": "Bow Wow Labs: SafeFit Bully Sticks (product page)",
+      "url": "https://bowwowlabs.com/products/bully-sticks"
+    },
+    {
+      "label": "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight) (product page)",
+      "url": "https://pawstruck.com/products/straight-bully-sticks-for-dogs-sold-by-weight"
+    },
+    {
+      "label": "Nature Gnaws: Small Bully Sticks 6\" (product page)",
+      "url": "https://www.naturegnaws.com/products/natural-small-beef-bully-sticks-long-lasting-dog-chews"
+    },
+    {
+      "label": "Redbarn: Bully Sticks for Dogs (product page)",
+      "url": "https://www.redbarn.com/products/bully-stick"
+    },
+    {
+      "label": "Mighty Paw: All-Natural Bully Sticks (product page)",
+      "url": "https://mightypaw.com/products/naturals-bully-sticks-5-pack"
+    },
+    {
+      "label": "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct (product page)",
+      "url": "https://www.rawpawspetfood.com/products/standard-bully-sticks-6-inch-10-ct"
+    },
+    {
+      "label": "Best Bully Sticks: Medium Himalayan Golden Yak Cheese Odor-Free (3 Pack) (product page)",
+      "url": "https://www.bestbullysticks.com/products/products-himalayan-golden-yak-cheese-odor-free-medium-3-pack"
+    },
+    {
+      "label": "Mighty Paw: All-Natural Yak Cheese Dog Chews (product page)",
+      "url": "https://mightypaw.com/products/mighty-paw-all-natural-yak-cheese-dog-chews-4-pack"
+    },
+    {
+      "label": "Pupford: Yak Cheese Dog Chew Medium (product page)",
+      "url": "https://www.pupford.com/products/yak-cheese-dog-chew-medium"
+    },
+    {
+      "label": "Raw Paws Pet Food: Himalayan Yak Chews for Dogs, Medium - 3-ct (product page)",
+      "url": "https://www.rawpawspetfood.com/products/himalayan-yak-chews-dogs-medium-3-ct"
+    },
+    {
+      "label": "Pawstruck: Medium Himalayan Yak Dog Chew, 3-4 oz. (product page)",
+      "url": "https://pawstruck.com/products/medium-himalayan-yak-dog-chew-3-4-oz-disco-1"
+    }
+  ],
+  "product_ids": [
+    "campfire-treats-standard-odor-free-bully-sticks-8-10-inch",
+    "best-bully-sticks-6-inch-thin-bully-stick",
+    "jack-pup-bully-sticks-6-inch-standard",
+    "bow-wow-labs-safefit-bully-sticks",
+    "pawstruck-straight-bully-sticks-for-dogs-sold-by-weight",
+    "nature-gnaws-small-bully-sticks-6",
+    "redbarn-bully-sticks-for-dogs",
+    "mighty-paw-all-natural-bully-sticks",
+    "raw-paws-pet-food-standard-bully-sticks-6-inch-10-ct",
+    "best-bully-sticks-medium-himalayan-golden-yak-cheese-odor-free-3-pack",
+    "mighty-paw-all-natural-yak-cheese-dog-chews",
+    "pupford-yak-cheese-dog-chew-medium",
+    "raw-paws-pet-food-himalayan-yak-chews-for-dogs-medium-3-ct",
+    "pawstruck-medium-himalayan-yak-dog-chew-3-4-oz"
+  ],
+  "last_checked": "2026-10-24",
+  "categories": [
+    "bully-sticks",
+    "yak-cheese-chews"
+  ],
+  "quote_checks": [
+    {
+      "snapshot": "research/pages/bs-redbarn-1024.txt",
+      "text": "a single-ingredient dog chew made from 100% beef pizzle"
+    },
+    {
+      "snapshot": "research/pages/yk-rawpaws-1024.txt",
+      "text": "we boil yak milk and then add lime juice and salt, which curdles the milk and forms cheese"
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews.txt",
+      "text": "hard blocks of dried cheese"
+    },
+    {
+      "snapshot": "research/pages/bs-redbarn-1024.txt",
+      "text": "create a long-lasting chew dogs love"
+    },
+    {
+      "snapshot": "research/pages/yk-pawstruck-1024.txt",
+      "text": "still longer chew time than a bully stick!"
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews.txt",
+      "text": "are hard enough to be long-lasting"
+    },
+    {
+      "snapshot": "research/pages/bs-campfire-1024.txt",
+      "text": "Calorie Content: 3,320 kcal/kg; 94 kcal/oz"
+    },
+    {
+      "snapshot": "research/pages/yk-rawpaws-1024.txt",
+      "text": "3,168 kcal/kg., 90 kcal/oz."
+    },
+    {
+      "snapshot": "research/pages/yk-pupford-1024.txt",
+      "text": "Metabolizable Energy: 3,074 kcal/kg"
+    },
+    {
+      "snapshot": "research/pages/yk-pupford-1024.txt",
+      "text": "About 329 kcal per chew."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews.txt",
+      "text": "are easily digestible"
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews.txt",
+      "text": "power chewers might bite straight through, producing large pieces that pose a choking risk, or swallow the entire stick whole."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews.txt",
+      "text": "When your dog has chewed the stick down to a nub, take it away before they can swallow what’s left."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews.txt",
+      "text": "The lactose content is low, so dogs generally digest them well"
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews.txt",
+      "text": "although these are cheese, they are quite hard and could lead to broken teeth."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews.txt",
+      "text": "only give your dog a block large enough that they can’t eat whole."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats.txt",
+      "text": "Other body parts"
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats.txt",
+      "text": "Animal-derived products that have undergone minimal processing"
+    },
+    {
+      "snapshot": "research/pages/yk-mightypaw-1024.txt",
+      "text": "Handcrafted in Nepal"
+    },
+    {
+      "snapshot": "research/pages/yk-pupford-1024.txt",
+      "text": "sourced and made in the Nepal area of the Himalayan mountain range"
+    },
+    {
+      "snapshot": "research/pages/yk-rawpaws-1024.txt",
+      "text": "Origin: Nepal."
+    },
+    {
+      "snapshot": "research/pages/yk-pawstruck-1024.txt",
+      "text": "made in the Himalayan mountains by local craftsmen"
+    },
+    {
+      "snapshot": "research/pages/bs-campfire-1024.txt",
+      "text": "Sourced and made in the USA"
+    },
+    {
+      "snapshot": "research/pages/bs-rawpaws-1024.txt",
+      "text": "Origin: Turkey."
+    }
+  ]
+}

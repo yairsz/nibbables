@@ -23,6 +23,8 @@ Each item: page path, what it needs, and candidate official sources to check fir
 
 ## Guides (reuse existing product cards; every sentence sourced)
 - [x] /yak-chew-microwave/: published 2026-10-23 (keyword-targets Nibbables row 1)
+- [x] /bully-stick-vs-yak-chew/: published 2026-10-24 (keyword-targets row 3, first pair)
+- [x] /beef-cheek-roll-vs-rawhide/: published 2026-10-24 (keyword-targets row 4)
 - [x] /bully-stick-calories/: published 2026-10-23 (keyword-targets Nibbables row 2)
 - [ ] /compare/bully-stick-vs-collagen-stick/ style pair pages (keyword-targets row 3): needs collagen products researched first (see /collagen-sticks/ above). Guides are top-level slugs today, e.g. /bully-stick-vs-collagen-stick/
 - [ ] /how-long-do-bully-sticks-last/: brand-stated shelf life (e.g. Redbarn page lists "Shelf Life: 36 months") and storage wording, quoted (keyword-targets row 6)
@@ -40,3 +42,5 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /odor-free-bully-sticks/: brands that describe their sticks as odor-free or low-odor (quoted)
 - [ ] /bison-and-alternative-protein-chews/: bison, venison, salmon chews from existing data plus new
 - [ ] /how-to-read-a-chew-label/: neutral explainer on what "made in" vs "sourced from" vs "country of origin" mean on these pages, citing FTC Made in USA guidance (ftc.gov)
+- [ ] /bully-stick-vs-beef-cheek/: pair page from existing data (keyword-targets row 3); re-snapshot the cheek and bully pages that night
+- [ ] /bully-sticks/made-in-usa/: only brands whose page states made in USA, quoted (keyword-targets row 5)
