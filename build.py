@@ -260,6 +260,15 @@ FAQ_NOUN = {"antlers": "antler chews"}
 # Wording that names a place but isn't about where the chew is made or sourced (e.g. a recipe's origin).
 NOT_A_PLACE = re.compile(r"recipe that originates in [^.·]*", re.I)
 
+def _usa(t): return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American", t))
+def usa_made(p):
+    """Made-in quote names the USA with a making verb (packaged / country of origin don't count)."""
+    return _usa(p["made_in"]) and bool(re.search(r"\bmade\b|bak|manufactur|produced", p["made_in"], re.I))
+def usa_sourced(p):
+    """A separate sourcing quote names the USA, or the made-in quote says sourced in/and ... USA ("globally sourced" doesn't count)."""
+    return ((p["sourced_from"] != p["made_in"] and _usa(p["sourced_from"]))
+            or bool(re.search(r"sourced (and \w+ )?(in|from) (the )?(USA|U\.S\.|United States)", p["made_in"], re.I)))
+
 def cat_faq(c, ps):
     noun = FAQ_NOUN.get(c["slug"], c["name"].lower())
     n = len(ps); last = max(p["last_checked"] for p in ps)
@@ -284,14 +293,8 @@ def cat_faq(c, ps):
             + ". The wording differs (for example sourced in the USA vs made in the USA), so read the quote on each card."))
         # Multi-condition follow-up (added 2026-10-25, Ethan Smith/Graphite AEO playbook: answer the long-tail
         # follow-up questions). Split the USA list by WHICH field names the USA. Counted from the quotes only.
-        def _usa(t): return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American", t))
+        mk, sr = usa_made, usa_sourced
         nm = lambda L: "; ".join(f"{p['brand']} {p['product']}" for p in L)
-        # "made" = made-in quote names the USA with a making verb (packaged / country of origin don't count).
-        mk = lambda p: _usa(p["made_in"]) and bool(re.search(r"\bmade\b|bak|manufactur|produced", p["made_in"], re.I))
-        # "sourced" = a separate sourcing quote names the USA, or the made-in quote says sourced in/and ... USA
-        # ("globally sourced ingredients" does not count).
-        sr = lambda p: ((p["sourced_from"] != p["made_in"] and _usa(p["sourced_from"]))
-                        or bool(re.search(r"sourced (and \w+ )?(in|from) (the )?(USA|U\.S\.|United States)", p["made_in"], re.I)))
         both = [p for p in usa if mk(p) and sr(p)]
         made_only = [p for p in usa if mk(p) and not sr(p)]
         src_only = [p for p in usa if sr(p) and not mk(p)]
@@ -360,24 +363,24 @@ def mentions_usa(p):
 
 def compare_summary(products):
     """Answer-first summary (added 2026-10-24): counts computed from data/products.json only, no judgments."""
-    rows, tot = "", {"n": 0, "made": 0, "usa": 0, "rh": 0}
+    rows, tot = "", {"n": 0, "made": 0, "usa": 0, "both": 0, "rh": 0}
     for slug, name in CAT_LABEL.items():
         ps = [p for p in products if p["category"] == slug]
         if not ps: continue
         n, b = len(ps), len({p["brand"] for p in ps})
-        made = sum(1 for p in ps if p["made_in"] != NS); usa = sum(1 for p in ps if mentions_usa(p)); rh = sum(1 for p in ps if p["rawhide_free"] != NS)
-        for k, v in (("n", n), ("made", made), ("usa", usa), ("rh", rh)): tot[k] += v
+        made = sum(1 for p in ps if p["made_in"] != NS); usa = sum(1 for p in ps if mentions_usa(p)); both = sum(1 for p in ps if mentions_usa(p) and usa_made(p) and usa_sourced(p)); rh = sum(1 for p in ps if p["rawhide_free"] != NS)
+        for k, v in (("n", n), ("made", made), ("usa", usa), ("both", both), ("rh", rh)): tot[k] += v
         rows += (f'<tr><td><a href="{U("/" + slug + "/")}">{e(name)}</a></td><td>{n}</td><td>{b}</td>'
-                 f'<td>{made} of {n}</td><td>{usa} of {n}</td><td>{rh} of {n}</td></tr>')
+                 f'<td>{made} of {n}</td><td>{usa} of {n}</td><td>{both} of {n}</td><td>{rh} of {n}</td></tr>')
     brands = len({p["brand"] for p in products})
     dates = sorted(p["last_checked"] for p in products)
     lead = (f"The short version: this page lists {tot['n']} long-lasting dog chews from {brands} brands. "
-            f"{tot['made']} of the {tot['n']} product pages state where the chew is made, {tot['usa']} have made-in or sourcing wording that mentions the USA, "
+            f"{tot['made']} of the {tot['n']} product pages state where the chew is made, {tot['usa']} have made-in or sourcing wording that mentions the USA ({tot['both']} say both made and sourced in the USA), "
             f"and {tot['rh']} literally say rawhide-free (or no rawhide). The rest don't say, so ask the brand. "
             + (f"Product pages were last checked on {dates[0]}. " if dates[0] == dates[-1] else f"Product pages were last checked between {dates[0]} and {dates[-1]}. ") + f"Nibbables doesn't rank chews or rate their safety.")
     return (f'<p>{e(lead)}</p><h2>At a glance: what the brand pages state, by chew type</h2>'
             f'<div class="tablewrap"><table class="cmp"><caption>Counts of products whose own page states each item. Computed from the full table below.</caption>'
-            f'<thead><tr><th>Chew type</th><th>Products</th><th>Brands</th><th>Made-in claim stated</th><th>Made-in or sourcing claim mentions USA</th><th>Says rawhide-free</th></tr></thead>'
+            f'<thead><tr><th>Chew type</th><th>Products</th><th>Brands</th><th>Made-in claim stated</th><th>Made-in or sourcing claim mentions USA</th><th>Says both made and sourced in USA</th><th>Says rawhide-free</th></tr></thead>'
             f'<tbody>{rows}</tbody></table></div>')
 
 def compare(products):
