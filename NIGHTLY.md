@@ -80,3 +80,6 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 - Multi-condition USA answer (2026-10-25): chew-type Quick answers split USA claims into "both made and sourced in the USA" / made-only / sourced-only / other (packaged in, country of origin), counted in cat_faq from made_in + sourced_from. "Globally sourced" never counts as USA-sourced; "packaged" never counts as made. Categories with no USA claim get an explicit "None of the N ..." answer. Keep new products' made_in/sourced_from verbatim so these counts stay right.
 
 - **Puppies / small dogs answer (added 2026-10-26, run #20):** `cat_faq()` adds "Which <chews> do brands say are for puppies or small dogs?" counted from literal mentions in each product's `size_guidance` quote (`SMALL_DOG` regex: puppy/puppies, small/smaller dogs or breeds, small-to-medium), crossed with `usa_made()`. Keep `size_guidance` a verbatim brand quote; never infer suitability from sizes or weights, and never hand-edit the answer.
+
+## Intent-matched headings (added 2026-10-26, run #22)
+- Product cards (h3) on chew-type pages sit under their own H2 "All N <chew type> we list, with what each brand's page says" (`id="all-products"`), so the heading outline is correct. Guide section and FAQ headings should name what they answer, never "Introduction"/"Overview"/"Conclusion".

@@ -369,6 +369,7 @@ def category_page(c, products):
 {yt_embed(f"/{c['slug']}/", YT_CHANNEL, 'Nibbables')}
 {related_guides_block(c['slug'], c['name'])}
 {sibling_hubs_block(c, products)}
+<h2 id="all-products">All {len(ps)} {e(c['name'].lower())} we list, with what each brand's page says</h2>
 {''.join(card(p) for p in ps)}"""
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": c["h1"],
           "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{p['brand']} {p['product']}"} for i, p in enumerate(ps)]}
