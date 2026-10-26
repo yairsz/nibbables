@@ -11,7 +11,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /cow-ears/: Pawstruck, Raw Paws, Best Bully Sticks, Nature Gnaws
 - [ ] /esophagus-chews/: beef gullet and esophagus. Pawstruck, Raw Paws, Best Bully Sticks
 - [ ] /trachea-chews/: beef trachea. Pawstruck, Redbarn, Best Bully Sticks, Nature Gnaws
-- [ ] /braided-bully-sticks/: braided and ring bully sticks. Best Bully Sticks, Jack&Pup, Redbarn, Pawstruck
+- [ ] /braided-bully-sticks/: braided and ring bully sticks. Best Bully Sticks, Jack&Pup, Redbarn, Pawstruck; also GREAT DOG twisted and Jack's Premium braided (both say USA in their feed titles; real query "braided bully sticks made in usa")
 - [ ] /bully-stick-holders/: bully-stick holder devices. Bow Wow Labs (feed); quote brand descriptions only, no safety claims
 - [ ] /filled-bones/: Redbarn filled bones (feed)
 - [ ] /coffee-wood-and-plant-chews/: plant-based chews. Check the brand pages first
@@ -29,7 +29,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /compare/bully-stick-vs-collagen-stick/ style pair pages (keyword-targets row 3): needs collagen products researched first (see /collagen-sticks/ above). Guides are top-level slugs today, e.g. /bully-stick-vs-collagen-stick/
 - [ ] /how-long-do-bully-sticks-last/: brand-stated shelf life (e.g. Redbarn page lists "Shelf Life: 36 months") and storage wording, quoted (keyword-targets row 6)
 - [ ] /yak-chew-age-guidance/: brand minimum ages, e.g. Himalayan Pet Supply "For dogs over 12 weeks old", YAKERS FAQ "4 months and over" (quote only)
-- [ ] /made-in-usa-bully-sticks/: bully sticks whose brand states a made-in-USA claim, with each exact wording (claim ≠ verified)
+- [x] /made-in-usa-bully-sticks/: published 2026-10-25 as /bully-sticks-made-in-usa/ (keyword-targets row 5)
 - [ ] /bully-stick-country-of-origin/: table of the countries each brand names for its bully sticks
 - [ ] /single-ingredient-chews/: products whose ingredient list (as stated) is one item
 - [ ] /yak-chew-ingredients-compared/: yak milk only vs yak and cow milk, per brand
@@ -42,5 +42,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /odor-free-bully-sticks/: brands that describe their sticks as odor-free or low-odor (quoted)
 - [ ] /bison-and-alternative-protein-chews/: bison, venison, salmon chews from existing data plus new
 - [ ] /how-to-read-a-chew-label/: neutral explainer on what "made in" vs "sourced from" vs "country of origin" mean on these pages, citing FTC Made in USA guidance (ftc.gov)
-- [ ] /bully-stick-vs-beef-cheek/: pair page from existing data (keyword-targets row 3); re-snapshot the cheek and bully pages that night
-- [ ] /bully-sticks/made-in-usa/: only brands whose page states made in USA, quoted (keyword-targets row 5)
+- [x] /bully-stick-vs-beef-cheek/: published 2026-10-25 (keyword-targets row 3, cheek pair)
+- [x] /bully-sticks/made-in-usa/: covered by /bully-sticks-made-in-usa/ (2026-10-25)
+- [ ] /how-long-do-bully-sticks-last/ needs brand FAQ/blog pages first: on 2026-10-25 only Redbarn ("36 months"), Bully Bunches ("Shelf life of 1-2 years.") and Pawstruck (a "Shelf Life:" field) state a shelf life on the product page; storage lines on Campfire and Jack&Pup
+- [ ] Re-check Amazon for Sancho & Lola's 6" Standard Charcuterie (B07DBTS9BM seen in search, dp not confirmable 2026-10-25)

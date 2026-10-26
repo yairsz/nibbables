@@ -1,0 +1,495 @@
+{
+  "slug": "bully-sticks-made-in-usa",
+  "title": "Bully sticks made in the USA: what 18 brand pages say",
+  "meta": "Which bully sticks say they're made or sourced in the USA? 18 brand pages quoted word for word, from made-and-sourced to packaged-only, plus the FTC rule.",
+  "h1": "Bully sticks made in the USA: each brand's exact wording",
+  "intro": "“Made in USA” on a bully stick can mean different things: some brands say the stick is made and sourced in the USA, some say only where it was baked, and some say it was packaged here from imported beef. This page quotes the made-in and sourcing wording from 18 bully stick product pages, side by side, plus what the FTC says a Made in USA claim requires. These are the brands' claims, not our findings, and we don't rank them.",
+  "table": {
+    "h": "Where 18 bully sticks say they're made and sourced",
+    "caption": "Quoted from each brand's product page, checked 2026-10-25. \"Not stated\" means we found nothing on that page about it. The last column is our plain-English summary of the wording, not a verdict.",
+    "head": [
+      "Brand: product",
+      "Where made (quoted)",
+      "Sourced from (quoted)",
+      "What the wording says"
+    ],
+    "rows": [
+      {
+        "snapshot": "research/pages/bs-campfire-treats-standard-odor-free-bully-sticks-8--1025.txt",
+        "cells": [
+          "Campfire Treats: Standard Odor-Free Bully Sticks (8-10 Inch)",
+          {
+            "q": "Sourced and made in the USA"
+          },
+          {
+            "q": "Sourced and made in the USA"
+          },
+          "Says both made and sourced in the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-campfire-treats-thin-odor-free-bully-sticks-4-6-in-1025.txt",
+        "cells": [
+          "Campfire Treats: Thin Odor-Free Bully Sticks (4-6 Inch)",
+          {
+            "q": "Sourced and made in the USA"
+          },
+          {
+            "q": "Sourced and made in the USA"
+          },
+          "Says both made and sourced in the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-great-dog-co-12-beef-bully-stick-beef-pizzle-4-0-j-1025.txt",
+        "cells": [
+          "GREAT DOG CO.: 12\" Beef Bully Stick – Beef Pizzle 4.0, Jumbo Size",
+          {
+            "q": "Proudly sourced and made in the USA"
+          },
+          {
+            "q": "Made from 100% U.S.-sourced beef bull pizzle"
+          },
+          "Says both made and sourced in the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-great-dog-co-thin-bully-sticks-12-steer-pizzle-11--1025.txt",
+        "cells": [
+          "GREAT DOG CO.: Thin Bully Sticks – 12\" Steer Pizzle, 11 oz",
+          {
+            "q": "Sourced from U.S. steer and made in the USA"
+          },
+          {
+            "q": "From Midwest family farms, free of antibiotics and growth promotants."
+          },
+          "Says both made and sourced in the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-great-dog-co-bison-pizzle-bison-bully-sticks-5-6-i-1025.txt",
+        "cells": [
+          "GREAT DOG CO.: Bison Pizzle (Bison Bully Sticks) – 5, 6 Inch Sticks",
+          {
+            "q": "Made entirely in the USA in a certified human-grade facility"
+          },
+          {
+            "q": "Made from 100% free-range, grass-fed American bison"
+          },
+          "Says both made and sourced in the USA (bison, not beef)"
+        ]
+      },
+      {
+        "snapshot": "research/pages/sancho-6-standard-charcuterie-1025.txt",
+        "cells": [
+          "Sancho & Lola's Closet: 6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA",
+          {
+            "q": "CHARCUTERIE: Made in the USA."
+          },
+          {
+            "q": "Sourced and Made in the USA"
+          },
+          "Says both made and sourced in the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/jackspremium-5-8-thin-1025.txt",
+        "cells": [
+          "Jack's Premium: 5-8\" Thin Bully Sticks",
+          {
+            "q": "Jack’s Premium Bully Sticks are a longer lasting treat sourced and made in the USA."
+          },
+          {
+            "q": "We source all our cattle from small farms, not feeder stock cattle."
+          },
+          "Says both made and sourced in the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-best-bully-sticks-12-inch-standard-usa-baked-odor--1025.txt",
+        "cells": [
+          "Best Bully Sticks: 12-Inch Standard USA-Baked Odor-Free Bully Stick",
+          {
+            "q": "This 12-Inch Standard Bully Stick is USA-baked and odor-free."
+          },
+          "Not stated",
+          "Says baked in the USA; doesn't say where the beef is from"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-pupford-skinny-smoky-bully-stick-1025.txt",
+        "cells": [
+          "Pupford: Skinny Smoky Bully Stick",
+          {
+            "q": "This product is made in the USA."
+          },
+          "Not stated",
+          "Says made in the USA; doesn't say where the beef is from"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-bow-wow-labs-safefit-bully-sticks-1025.txt",
+        "cells": [
+          "Bow Wow Labs: SafeFit Bully Sticks",
+          "Not stated",
+          {
+            "q": "Sourced from Brazil, Argentina, the USA, & Turkey"
+          },
+          "Lists the USA as one of four sourcing countries"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bullybunches-6-standard-1025.txt",
+        "cells": [
+          "Bully Bunches: 6 Inch Standard Bully Stick",
+          {
+            "q": "Packaged in the USA; product of Brazil, Turkey or Colombia."
+          },
+          {
+            "q": "Made from free-range, grass-fed cattle."
+          },
+          "Packaged in the USA; product of other countries"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-jack-pup-bully-sticks-6-inch-standard-1025.txt",
+        "cells": [
+          "Jack&Pup: Bully Sticks - 6 inch Standard",
+          "Not stated",
+          {
+            "q": "Made from all-natural beef - grass-fed cattle from Brazil"
+          },
+          "Names Brazil, not the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-pawstruck-straight-bully-sticks-for-dogs-sold-by-w-1025.txt",
+        "cells": [
+          "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight)",
+          {
+            "q": "Made in: Paraguay, Brazil, Colombia, New Zealand, Peru, or Turkey"
+          },
+          {
+            "q": "Sourced from high-quality South American cattle"
+          },
+          "Names other countries, not the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-redbarn-bully-sticks-for-dogs-1025.txt",
+        "cells": [
+          "Redbarn: Bully Sticks for Dogs",
+          {
+            "q": "Country of Origin: Paraguay, Brazil, Colombia, New Zealand, Peru, Turkey"
+          },
+          "Not stated",
+          "Names other countries, not the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-mighty-paw-all-natural-bully-sticks-1025.txt",
+        "cells": [
+          "Mighty Paw: All-Natural Bully Sticks",
+          "Not stated",
+          {
+            "q": "Indulge your pup with the finest treats sourced from grass-fed, free-range beef in Colombia."
+          },
+          "Names Colombia, not the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-raw-paws-pet-food-standard-bully-sticks-6-inch-10--1025.txt",
+        "cells": [
+          "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct",
+          {
+            "q": "Origin: Turkey."
+          },
+          {
+            "q": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones."
+          },
+          "Names Turkey, not the USA"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-nature-gnaws-small-bully-sticks-6-1025.txt",
+        "cells": [
+          "Nature Gnaws: Small Bully Sticks 6\"",
+          "Not stated",
+          {
+            "q": "We source from Europe, The Americas and Nepal through our SQF Food Safety Program"
+          },
+          "Names regions, not the USA specifically"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bs-best-bully-sticks-6-inch-thin-bully-stick-1025.txt",
+        "cells": [
+          "Best Bully Sticks: 6-Inch Thin Bully Stick",
+          "Not stated",
+          "Not stated",
+          "Doesn't say"
+        ]
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Which bully sticks are made in the USA?",
+      "a": "Of the 18 bully stick product pages we checked on 2026-10-25, nine say the chew is made (or baked) in the USA, and seven of those also say it's sourced in the USA: Campfire Treats' Standard and Thin Odor-Free sticks (“Sourced and made in the USA”), three GREAT DOG CO. products (including its bison pizzle), Sancho & Lola's Closet's 6-inch Charcuterie Style sticks (“CHARCUTERIE: Made in the USA.”) and Jack's Premium 5-8\" Thin sticks (“sourced and made in the USA”). Pupford says “This product is made in the USA.” and Best Bully Sticks calls its 12-inch stick “USA-baked”, but neither page says where the beef comes from. These are the brands' own claims; we haven't verified them."
+    },
+    {
+      "q": "Are there bully sticks made from American cattle?",
+      "a": "Several brands say so in their own words. GREAT DOG CO. says its jumbo stick is “Made from 100% U.S.-sourced beef bull pizzle” and its thin stick is “Sourced from U.S. steer and made in the USA”; Campfire Treats says “Sourced and made in the USA”; Jack's Premium says its sticks are “sourced and made in the USA”. GREAT DOG's bison pizzle is “Made from 100% free-range, grass-fed American bison”, which is bison, not cattle. Bow Wow Labs lists the USA as one of several sourcing countries: “Sourced from Brazil, Argentina, the USA, & Turkey”."
+    },
+    {
+      "q": "Are bully sticks made in Brazil?",
+      "a": "Five of the 18 pages name Brazil in their made-in or sourcing wording. Jack&Pup says “grass-fed cattle from Brazil”; Bully Bunches says “Packaged in the USA; product of Brazil, Turkey or Colombia.”; Bow Wow Labs lists Brazil among its sourcing countries; Pawstruck (“Made in: Paraguay, Brazil, Colombia, New Zealand, Peru, or Turkey”) and Redbarn (“Country of Origin: Paraguay, Brazil, Colombia, New Zealand, Peru, Turkey”) list it among several possible countries, so a given bag may come from any of them. Mighty Paw's page also mentions Brazil: it names Colombia in one place and says “sourced from grass-fed, free-range beef in Brazil” in another."
+    },
+    {
+      "q": "Are any bully sticks made in Canada?",
+      "a": "None of the 18 bully stick pages we checked names Canada as where the chew is made or sourced. The countries they do name are the USA, Brazil, Argentina, Paraguay, Colombia, Peru, New Zealand, Turkey and Nepal, plus regions such as South America, Europe and “The Americas”."
+    },
+    {
+      "q": "Are there odor-free bully sticks made in the USA?",
+      "a": "Yes, by the brands' own descriptions. Campfire Treats' Standard and Thin “Odor-Free” sticks say “Sourced and made in the USA”; Sancho & Lola's Closet lists its 6-inch Charcuterie Style sticks as “No odor-Made in the USA”; and Best Bully Sticks says its 12-inch stick “is USA-baked and odor-free.” Jack's Premium calls its sticks “\"Odor Free\" - Might leave behind a BBQ smell”."
+    },
+    {
+      "q": "What are the best bully sticks made in the USA?",
+      "a": "Nibbables doesn't rank chews, so we can't name a best one. What we can show is exactly what each brand claims (the table above), which brands back the claim with a sourcing statement, and which don't say. For which stick suits your dog's size and chewing style, follow the brand's size guidance on each card and ask your vet."
+    },
+    {
+      "q": "Are there braided bully sticks made in the USA?",
+      "a": "None of the 18 bully sticks in our directory is a braided stick, so we haven't checked any braided product pages yet. Braided bully sticks are on our list to add, with the same quoted made-in and sourcing wording."
+    }
+  ],
+  "sections": [
+    {
+      "h": "What a “Made in USA” claim is supposed to mean",
+      "p": [
+        "The Federal Trade Commission's guidance says that for a product to be called Made in USA without qualification, “the product must be “all or virtually all” made in the U.S.” It defines that as meaning “the final assembly or processing of the product occurs in the United States, all significant processing that goes into the product occurs in the United States, and all or virtually all ingredients or components of the product are made and sourced in the United States.”",
+        "The FTC also says “A company doesn’t need approval from the FTC before making a Made in USA claim”, so a claim on a product page is the company's own statement. Its guidance gives a packaging example: “Stating Made in USA on the package would deceive consumers about the origin of the product inside.” We quote the FTC so you can read each brand's wording against it; we don't judge whether any brand meets the standard."
+      ]
+    },
+    {
+      "h": "Made, sourced, baked or packaged: the wording differs",
+      "p": [
+        "Seven of the 18 pages say both made and sourced in the USA. Two say only where the stick is made or baked: Pupford (“This product is made in the USA.”) and Best Bully Sticks' 12-inch stick (“USA-baked”), and our card for the Best Bully Sticks stick notes the page doesn't say where the beef comes from.",
+        "Two pages mention the USA in a narrower way. Bully Bunches says “Packaged in the USA; product of Brazil, Turkey or Colombia.” Bow Wow Labs lists “Sourced from Brazil, Argentina, the USA, & Turkey”, and its FAQ says the sticks “are packaged in the US”. Mighty Paw names Colombia (and, elsewhere on the page, Brazil) as its source and says the sticks are “Hand-inspected in our Rochester, NY headquarters”. None of these three says the stick is made in the USA."
+      ]
+    },
+    {
+      "h": "How we checked",
+      "p": [
+        "We fetched each brand's own product page on 2026-10-25 and copied the made-in and sourcing wording word for word; every quote on this page is checked against a saved copy of that page. Three brands are new to the directory tonight: Sancho & Lola's Closet, Jack's Premium and Bully Bunches. We didn't contact the brands or see their supplier records, so if origin matters to you, ask the brand for details. Pages change, so the date on each card is the last time we looked."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Federal Trade Commission: Complying with the Made in USA Standard (July 2024)",
+      "url": "https://www.ftc.gov/business-guidance/resources/complying-made-usa-standard"
+    },
+    {
+      "label": "Campfire Treats: Standard Odor-Free Bully Sticks (8-10 Inch) (product page)",
+      "url": "https://campfiretreats.com/products/odor-free-bully-sticks-for-dogs-8-10-inch"
+    },
+    {
+      "label": "Campfire Treats: Thin Odor-Free Bully Sticks (4-6 Inch) (product page)",
+      "url": "https://campfiretreats.com/products/odor-free-thin-bully-sticks-4-6-inch"
+    },
+    {
+      "label": "GREAT DOG CO.: 12\" Beef Bully Stick – Beef Pizzle 4.0, Jumbo Size (product page)",
+      "url": "https://www.greatdogco.com/products/great-dog-12-inch-4oz-beef-pizzle-jumbo-bully-stick-usa"
+    },
+    {
+      "label": "GREAT DOG CO.: Thin Bully Sticks – 12\" Steer Pizzle, 11 oz (product page)",
+      "url": "https://www.greatdogco.com/products/great-dog-thin-bully-sticks-12-inch-small-dogs"
+    },
+    {
+      "label": "GREAT DOG CO.: Bison Pizzle (Bison Bully Sticks) – 5, 6 Inch Sticks (product page)",
+      "url": "https://www.greatdogco.com/products/great-dog-bison-bully-sticks-6-inch-5-pack"
+    },
+    {
+      "label": "Sancho & Lola's Closet: 6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA (product page)",
+      "url": "https://sanchoandlola.com/products/copy-of-6-inch-charcuterie-style-bully-sticks-no-odor-farmed-in-the-usa"
+    },
+    {
+      "label": "Jack's Premium: 5-8\" Thin Bully Sticks (product page)",
+      "url": "https://jackspremium.com/products/6-inch-thin-bully-sticks"
+    },
+    {
+      "label": "Best Bully Sticks: 12-Inch Standard USA-Baked Odor-Free Bully Stick (product page)",
+      "url": "https://www.bestbullysticks.com/products/12-inch-standard-usa-baked-odor-free-bully-stick"
+    },
+    {
+      "label": "Pupford: Skinny Smoky Bully Stick (product page)",
+      "url": "https://www.pupford.com/products/skinny-bully-sticks"
+    },
+    {
+      "label": "Bow Wow Labs: SafeFit Bully Sticks (product page)",
+      "url": "https://bowwowlabs.com/products/bully-sticks"
+    },
+    {
+      "label": "Bully Bunches: 6 Inch Standard Bully Stick (product page)",
+      "url": "https://bullybunches.com/products/6-inch-standard-bully-stick"
+    },
+    {
+      "label": "Jack&Pup: Bully Sticks - 6 inch Standard (product page)",
+      "url": "https://www.jackandpup.com/products/bully-stick-6-inch-standard"
+    },
+    {
+      "label": "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight) (product page)",
+      "url": "https://pawstruck.com/products/straight-bully-sticks-for-dogs-sold-by-weight"
+    },
+    {
+      "label": "Redbarn: Bully Sticks for Dogs (product page)",
+      "url": "https://www.redbarn.com/products/bully-stick"
+    },
+    {
+      "label": "Mighty Paw: All-Natural Bully Sticks (product page)",
+      "url": "https://mightypaw.com/products/naturals-bully-sticks-5-pack"
+    },
+    {
+      "label": "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct (product page)",
+      "url": "https://www.rawpawspetfood.com/products/standard-bully-sticks-6-inch-10-ct"
+    },
+    {
+      "label": "Nature Gnaws: Small Bully Sticks 6\" (product page)",
+      "url": "https://www.naturegnaws.com/products/natural-small-beef-bully-sticks-long-lasting-dog-chews"
+    },
+    {
+      "label": "Best Bully Sticks: 6-Inch Thin Bully Stick (product page)",
+      "url": "https://www.bestbullysticks.com/products/6-inch-thin-bully-stick"
+    }
+  ],
+  "product_ids": [
+    "campfire-treats-standard-odor-free-bully-sticks-8-10-inch",
+    "campfire-treats-thin-odor-free-bully-sticks-4-6-inch",
+    "great-dog-co-12-beef-bully-stick-beef-pizzle-4-0-jumbo-size",
+    "great-dog-co-thin-bully-sticks-12-steer-pizzle-11-oz",
+    "great-dog-co-bison-pizzle-bison-bully-sticks-5-6-inch-sticks",
+    "sancho-lola-s-closet-6-inch-standard-charcuterie-style-bully-sticks-no-odor-made",
+    "jack-s-premium-5-8-thin-bully-sticks",
+    "best-bully-sticks-12-inch-standard-usa-baked-odor-free-bully-stick",
+    "pupford-skinny-smoky-bully-stick",
+    "bow-wow-labs-safefit-bully-sticks",
+    "bully-bunches-6-inch-standard-bully-stick",
+    "jack-pup-bully-sticks-6-inch-standard",
+    "pawstruck-straight-bully-sticks-for-dogs-sold-by-weight",
+    "redbarn-bully-sticks-for-dogs",
+    "mighty-paw-all-natural-bully-sticks",
+    "raw-paws-pet-food-standard-bully-sticks-6-inch-10-ct",
+    "nature-gnaws-small-bully-sticks-6",
+    "best-bully-sticks-6-inch-thin-bully-stick"
+  ],
+  "last_checked": "2026-10-25",
+  "categories": [
+    "bully-sticks"
+  ],
+  "quote_checks": [
+    {
+      "snapshot": "research/pages/ftc-made-in-usa-standard.txt",
+      "text": "the product must be “all or virtually all” made in the U.S."
+    },
+    {
+      "snapshot": "research/pages/ftc-made-in-usa-standard.txt",
+      "text": "the final assembly or processing of the product occurs in the United States, all significant processing that goes into the product occurs in the United States, and all or virtually all ingredients or components of the product are made and sourced in the United States."
+    },
+    {
+      "snapshot": "research/pages/ftc-made-in-usa-standard.txt",
+      "text": "A company doesn’t need approval from the FTC before making a Made in USA claim"
+    },
+    {
+      "snapshot": "research/pages/ftc-made-in-usa-standard.txt",
+      "text": "Stating Made in USA on the package would deceive consumers about the origin of the product inside."
+    },
+    {
+      "snapshot": "research/pages/bs-bow-wow-labs-safefit-bully-sticks-1025.txt",
+      "text": "are packaged in the US"
+    },
+    {
+      "snapshot": "research/pages/bs-mighty-paw-all-natural-bully-sticks-1025.txt",
+      "text": "Hand-inspected in our Rochester, NY headquarters"
+    },
+    {
+      "snapshot": "research/pages/bs-pupford-skinny-smoky-bully-stick-1025.txt",
+      "text": "This product is made in the USA."
+    },
+    {
+      "snapshot": "research/pages/bs-best-bully-sticks-12-inch-standard-usa-baked-odor--1025.txt",
+      "text": "USA-baked"
+    },
+    {
+      "snapshot": "research/pages/bs-best-bully-sticks-12-inch-standard-usa-baked-odor--1025.txt",
+      "text": "is USA-baked and odor-free."
+    },
+    {
+      "snapshot": "research/pages/bullybunches-6-standard-1025.txt",
+      "text": "Packaged in the USA; product of Brazil, Turkey or Colombia."
+    },
+    {
+      "snapshot": "research/pages/bs-bow-wow-labs-safefit-bully-sticks-1025.txt",
+      "text": "Sourced from Brazil, Argentina, the USA, & Turkey"
+    },
+    {
+      "snapshot": "research/pages/bs-campfire-treats-standard-odor-free-bully-sticks-8--1025.txt",
+      "text": "Sourced and made in the USA"
+    },
+    {
+      "snapshot": "research/pages/bs-campfire-treats-thin-odor-free-bully-sticks-4-6-in-1025.txt",
+      "text": "Sourced and made in the USA"
+    },
+    {
+      "snapshot": "research/pages/sancho-6-standard-charcuterie-1025.txt",
+      "text": "CHARCUTERIE: Made in the USA."
+    },
+    {
+      "snapshot": "research/pages/sancho-6-standard-charcuterie-1025.txt",
+      "text": "No odor-Made in the USA"
+    },
+    {
+      "snapshot": "research/pages/jackspremium-5-8-thin-1025.txt",
+      "text": "sourced and made in the USA"
+    },
+    {
+      "snapshot": "research/pages/jackspremium-5-8-thin-1025.txt",
+      "text": "\"Odor Free\" - Might leave behind a BBQ smell"
+    },
+    {
+      "snapshot": "research/pages/bs-great-dog-co-12-beef-bully-stick-beef-pizzle-4-0-j-1025.txt",
+      "text": "Made from 100% U.S.-sourced beef bull pizzle"
+    },
+    {
+      "snapshot": "research/pages/bs-great-dog-co-thin-bully-sticks-12-steer-pizzle-11--1025.txt",
+      "text": "Sourced from U.S. steer and made in the USA"
+    },
+    {
+      "snapshot": "research/pages/bs-great-dog-co-bison-pizzle-bison-bully-sticks-5-6-i-1025.txt",
+      "text": "Made from 100% free-range, grass-fed American bison"
+    },
+    {
+      "snapshot": "research/pages/bs-jack-pup-bully-sticks-6-inch-standard-1025.txt",
+      "text": "grass-fed cattle from Brazil"
+    },
+    {
+      "snapshot": "research/pages/bs-pawstruck-straight-bully-sticks-for-dogs-sold-by-w-1025.txt",
+      "text": "Made in: Paraguay, Brazil, Colombia, New Zealand, Peru, or Turkey"
+    },
+    {
+      "snapshot": "research/pages/bs-redbarn-bully-sticks-for-dogs-1025.txt",
+      "text": "Country of Origin: Paraguay, Brazil, Colombia, New Zealand, Peru, Turkey"
+    },
+    {
+      "snapshot": "research/pages/bs-nature-gnaws-small-bully-sticks-6-1025.txt",
+      "text": "The Americas"
+    },
+    {
+      "snapshot": "research/pages/bs-mighty-paw-all-natural-bully-sticks-1025.txt",
+      "text": "sourced from grass-fed, free-range beef in Brazil"
+    },
+    {
+      "snapshot": "research/pages/bs-nature-gnaws-small-bully-sticks-6-1025.txt",
+      "text": "Nepal"
+    }
+  ]
+}

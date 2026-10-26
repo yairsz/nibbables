@@ -59,3 +59,14 @@ it may be temporarily unavailable. Re-check these at the next re-verification.
 
 ## 2026-10-23 (night run): /yak-chew-microwave/ and /bully-stick-calories/
 No new products were added; both guides reuse existing cards, so no new Amazon searches were needed. Links shown come from the matches above (yak page: Mighty Paw yak linked, Pawstruck medium yak unlinked; calories page: Bow Wow Labs, Mighty Paw bully, Nature Gnaws, GREAT DOG bison linked; Campfire x2, Best Bully Sticks 12" USA-baked, Pupford skinny unlinked). Sources cited only in the guides' tables (Himalayan Dog Chew, Yak Chewz, YAKERS, Yakkity Zac's, Whole Dog Journal) have no product card and no Amazon link.
+
+## 2026-10-25 (night run): 3 new bully stick products for /bully-sticks-made-in-usa/
+Amazon search via curl returned 503 and /dp/ pages returned a captcha tonight, so candidates came from WebSearch and were confirmed with WebFetch of the /dp/ page where possible.
+
+| Brand / product (our card) | Result | Evidence / reason |
+|---|---|---|
+| Bully Bunches / 6 Inch Standard Bully Stick | **Linked: B08FDKGZ15** | WebFetch of /dp/B08FDKGZ15: title "Bully Bunches Premium (6" Standard - 10 Pack) Odor-Free Bully Sticks for Small to Medium Dogs & Puppies ...", "Visit the Bully Bunches Store", Brand Name Bully Bunches, sold by Bully Bunches, ships from Amazon. Same 6" standard stick; pack count differs (10 on Amazon; brand page sells 1/18/36/72), which the rule allows. |
+| Sancho & Lola's Closet / 6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA | Not linked | WebSearch shows B07DBTS9BM "Sancho & Lola's Standard 6-Inch 8-Count Odor-Free Bully Sticks ... Made in USA ..." (Brand: Sancho & Lola's Closet), but WebFetch of its /dp/ page returned 404 (and 403 with the slug URL), so we couldn't confirm the listing is live. B081FWF2MH (6-inch charcuterie, 8 sticks) shows "Currently unavailable". Unsure, so no link; re-check another night. |
+| Jack's Premium / 5-8" Thin Bully Sticks | Not linked | Only Amazon listing found is B07Y8T27ZY "JACK'S PREMIUM All Natural Beef Bully Sticks Small Dog Chews; USA Made ...", which doesn't say thin or 5-8". Not an exact match. |
+
+The 18 existing bully stick and beef cheek cards were re-snapshotted tonight; their existing Amazon links are unchanged.
