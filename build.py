@@ -378,6 +378,20 @@ def sibling_hubs_block(c, products):
              for o in CATS if o["slug"] != c["slug"]]
     return "<h2>Other chew types we list</h2><ul>" + "".join(items) + "</ul>" if items else ""
 
+def cat_glance(c, ps):
+    """Per-chew-type "At a glance" table (added 2026-10-26): every cell is the product's own data field,
+    verbatim (same text as its card), so it adds a skimmable comparison without any new claims."""
+    def cell(v):
+        v = " · ".join(v) if isinstance(v, list) else v
+        return '<span class="ns">Not stated</span>' if (not v or v == NS) else e(v)
+    rows = "".join(f'<tr><td><a href="#{e(p["id"])}">{e(p["brand"])}</a><br><span class="meta">{e(p["product"])}</span></td>'
+                   f'<td>{cell(p["made_in"])}</td><td>{cell(p["sourced_from"])}</td><td>{cell(p["rawhide_free"])}</td><td>{cell(p["sizes"])}</td></tr>' for p in ps)
+    name = c["name"].lower()
+    return (f'<h2 id="at-a-glance">At a glance: made-in, sourcing, rawhide-free and options for {len(ps)} {e(name)}</h2>'
+            f'<div class="tablewrap"><table class="cmp"><caption>Each cell is the brand\'s own wording from its product page, the same text as the product card below. "Not stated" means the page doesn\'t say, so check with the brand.</caption>'
+            f'<thead><tr><th>Brand / product</th><th>Made-in claim</th><th>Sourced-from claim</th><th>Rawhide-free (as stated)</th><th>Options on the brand page</th></tr></thead>'
+            f'<tbody>{rows}</tbody></table></div>')
+
 def category_page(c, products):
     set_page(f"/{c['slug']}/")
     ps = cat_products(c, products)
@@ -391,6 +405,7 @@ def category_page(c, products):
 {aff_disclosure(ps)}
 <details class="toc"><summary>Products on this page</summary><ul>{toc}</ul></details>
 {faq_html}
+{cat_glance(c, ps)}
 {yt_embed(f"/{c['slug']}/", YT_CHANNEL, 'Nibbables')}
 {related_guides_block(c['slug'], c['name'])}
 {sibling_hubs_block(c, products)}
