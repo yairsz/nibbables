@@ -271,6 +271,20 @@ def usa_sourced(p):
 
 SMALL_DOG = re.compile(r"\bpupp(y|ies)\b|\bsmall(er)? (dogs?|breeds?)\b|\bsmall(-| )to(-| )medium|\bsmall and medium", re.I)
 
+# Pack-count parser (added 2026-10-26, run #23; Surfer "rank in AI Overviews": answer late-stage buying questions
+# on money pages). Reads ONLY the brand's own size/pack option labels; lengths and weights are stripped first, and
+# labels without a number (e.g. "various pack and case counts", "1 lbs bag") count as no pack number.
+def pack_counts(p):
+    out = []
+    for s in p["sizes"]:
+        t = re.sub(r"\d+(\.\d+)?\s*(-|–)?\s*(\d+(\.\d+)?)?\s*(\"|”|in\b|inch|-inch|oz|lbs?|ounces)", "", s, flags=re.I)
+        t = re.sub(r"\|\s*\d+\s*-\s*\d+\s*lbs|\d+\+\s*lbs", "", t)
+        out += [int(x) for x in re.findall(r"pack of (\d+)", t, re.I)]
+        for m in re.finditer(r"((?:\d+\s*(?:ct\.?)?\s*(?:,|or)\s*)*\d+)\s*(?:-\s*)?(pack|count|ct\b|ct\.|pieces|sticks?|chews|-ct|-count)", t, re.I):
+            out += [int(x) for x in re.findall(r"\d+", m.group(1))]
+    return out
+BULK = 20
+
 def cat_faq(c, ps):
     noun = FAQ_NOUN.get(c["slug"], c["name"].lower())
     n = len(ps); last = max(p["last_checked"] for p in ps)
@@ -326,6 +340,17 @@ def cat_faq(c, ps):
         qa.append((f"Do any {noun} say they're for puppies or small dogs?",
             f"None of the {n} {noun} product pages we list mention puppies or small dogs in their size guidance. "
             "That only covers the products listed here; read each card's size quote."))
+    bulk = [(p, max(pack_counts(p))) for p in ps if pack_counts(p) and max(pack_counts(p)) >= BULK]
+    if bulk:
+        qa.append((f"Which {noun} come in packs of {BULK} or more?",
+            f"{len(bulk)} of {n} product pages list a pack of {BULK} or more: "
+            + "; ".join(f"{p['brand']} {p['product']} (up to {k})" for p, k in bulk)
+            + ". Counted from each brand's own pack options as of the last check; pages that list only lengths, weights, or "
+              "unnumbered case counts aren't counted. Pack options and prices change, so check the brand's page."))
+    else:
+        qa.append((f"Do any {noun} come in packs of {BULK} or more?",
+            f"None of the {n} {noun} product pages we list show a pack of {BULK} or more in their pack options, as of the last check. "
+            "That only covers the products listed here; check the brand's page for current pack options."))
     brands = {}
     for p in ps: brands[p["brand"]] = brands.get(p["brand"], 0) + 1
     qa.append((f"Which brands' {noun} are listed here?",
