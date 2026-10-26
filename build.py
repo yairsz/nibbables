@@ -269,6 +269,8 @@ def usa_sourced(p):
     return ((p["sourced_from"] != p["made_in"] and _usa(p["sourced_from"]))
             or bool(re.search(r"sourced (and \w+ )?(in|from) (the )?(USA|U\.S\.|United States)", p["made_in"], re.I)))
 
+SMALL_DOG = re.compile(r"\bpupp(y|ies)\b|\bsmall(er)? (dogs?|breeds?)\b|\bsmall(-| )to(-| )medium|\bsmall and medium", re.I)
+
 def cat_faq(c, ps):
     noun = FAQ_NOUN.get(c["slug"], c["name"].lower())
     n = len(ps); last = max(p["last_checked"] for p in ps)
@@ -309,6 +311,21 @@ def cat_faq(c, ps):
         qa.append((f"Are any {noun} made or sourced in the USA?",
             f"None of the {n} {noun} product pages we list say the chew is made or sourced in the USA (some name a US office or inspection site, which is different). "
             "That only covers the products listed here, as of the last check; other brands may differ."))
+    # Multi-condition follow-up (added 2026-10-26, run #20): puppies / small dogs, counted only from the brand's own
+    # size-guidance quote (literal mentions), crossed with the made-in-USA test above. Never inferred from size/weight.
+    small = [p for p in ps if SMALL_DOG.search(p["size_guidance"])]
+    nm2 = lambda L: "; ".join(f"{p['brand']} {p['product']}" for p in L)
+    if small:
+        sm_usa = [p for p in small if usa_made(p)]
+        qa.append((f"Which {noun} do brands say are for puppies or small dogs?",
+            f"{len(small)} of {n} product pages mention puppies or small dogs in their size guidance: {nm2(small)}. "
+            + (f"Of those, {len(sm_usa)} also {'says' if len(sm_usa)==1 else 'say'} made in the USA: {nm2(sm_usa)}. " if sm_usa else
+               "None of those say the chew is made in the USA. ")
+            + "This is the brands' own size wording, not our recommendation; read each card's size and supervision quotes."))
+    else:
+        qa.append((f"Do any {noun} say they're for puppies or small dogs?",
+            f"None of the {n} {noun} product pages we list mention puppies or small dogs in their size guidance. "
+            "That only covers the products listed here; read each card's size quote."))
     brands = {}
     for p in ps: brands[p["brand"]] = brands.get(p["brand"], 0) + 1
     qa.append((f"Which brands' {noun} are listed here?",
