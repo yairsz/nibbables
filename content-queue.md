@@ -27,7 +27,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [x] /beef-cheek-roll-vs-rawhide/: published 2026-10-24 (keyword-targets row 4)
 - [x] /bully-stick-calories/: published 2026-10-23 (keyword-targets Nibbables row 2)
 - [ ] /compare/bully-stick-vs-collagen-stick/ style pair pages (keyword-targets row 3): needs collagen products researched first (see /collagen-sticks/ above). Guides are top-level slugs today, e.g. /bully-stick-vs-collagen-stick/
-- [ ] /how-long-do-bully-sticks-last/: brand-stated shelf life (e.g. Redbarn page lists "Shelf Life: 36 months") and storage wording, quoted (keyword-targets row 6)
+- [x] (2026-10-26) /how-long-do-bully-sticks-last/: brand-stated shelf life (e.g. Redbarn page lists "Shelf Life: 36 months") and storage wording, quoted (keyword-targets row 6)
 - [ ] /yak-chew-age-guidance/: brand minimum ages, e.g. Himalayan Pet Supply "For dogs over 12 weeks old", YAKERS FAQ "4 months and over" (quote only)
 - [x] /made-in-usa-bully-sticks/: published 2026-10-25 as /bully-sticks-made-in-usa/ (keyword-targets row 5)
 - [ ] /bully-stick-country-of-origin/: table of the countries each brand names for its bully sticks
@@ -44,5 +44,8 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /how-to-read-a-chew-label/: neutral explainer on what "made in" vs "sourced from" vs "country of origin" mean on these pages, citing FTC Made in USA guidance (ftc.gov)
 - [x] /bully-stick-vs-beef-cheek/: published 2026-10-25 (keyword-targets row 3, cheek pair)
 - [x] /bully-sticks/made-in-usa/: covered by /bully-sticks-made-in-usa/ (2026-10-25)
-- [ ] /how-long-do-bully-sticks-last/ needs brand FAQ/blog pages first: on 2026-10-25 only Redbarn ("36 months"), Bully Bunches ("Shelf life of 1-2 years.") and Pawstruck (a "Shelf Life:" field) state a shelf life on the product page; storage lines on Campfire and Jack&Pup
+- [x] (2026-10-26, done with Redbarn, Natural Farm, Bully Sticks Direct and Brutus & Barnaby guides + FDA) /how-long-do-bully-sticks-last/ needs brand FAQ/blog pages first: on 2026-10-25 only Redbarn ("36 months"), Bully Bunches ("Shelf life of 1-2 years.") and Pawstruck (a "Shelf Life:" field) state a shelf life on the product page; storage lines on Campfire and Jack&Pup
 - [ ] Re-check Amazon for Sancho & Lola's 6" Standard Charcuterie (B07DBTS9BM seen in search, dp not confirmable 2026-10-25)
+
+- [ ] Yak chew shelf life and storage, quoted from the yak cheese chew product pages (same table format as /how-long-do-bully-sticks-last/)
+- [ ] Bully stick holders (keyword-targets row 8): needs a data model for non-chew accessories (material, sizes, cleaning as stated) before it can be built
