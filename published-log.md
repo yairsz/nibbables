@@ -32,3 +32,5 @@
 - Sources: rawpawspetfood.com, bestbullysticks.com, jackandpup.com product pages (snapshots under research/pages/rp-*, bbs-collagen-6, jp-collagen-6).
 - Gaps: CJ deep-link codes; Pawstruck collagen not yet listed; Raw Paws gullet/tripe/ears still queued as their own categories.
 
+
+Deploy confirm 2026-10-27: main@5d15618 gh-pages pushed; live /collagen-sticks/ and chew-type pages HTTP 200; IndexNow posted (see following note).
