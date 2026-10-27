@@ -3,7 +3,7 @@
 Each item: page path, what it needs, and candidate official sources to check first. Sources marked (feed) have a Shopify products.json that worked on 2026-10-23.
 
 ## New categories / product batches
-- [ ] /collagen-sticks/: collagen and beef-skin-free collagen chews. Best Bully Sticks (feed), Jack&Pup (feed), Pawstruck (feed)
+- [x] /collagen-sticks/: published 2026-10-27 (Raw Paws, Best Bully Sticks, Jack&Pup; Pawstruck still available for expansion)
 - [ ] /beef-tendons/: beef tendon and "paddywhack" chews. Pawstruck, Redbarn, Best Bully Sticks, Raw Paws (feeds)
 - [ ] /lamb-and-goat-horns/: horn chews. Pawstruck, Best Bully Sticks, Nature Gnaws (feeds)
 - [ ] /water-buffalo-horns/: Pawstruck, Nature Gnaws, Jack&Pup

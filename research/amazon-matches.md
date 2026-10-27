@@ -70,3 +70,25 @@ Amazon search via curl returned 503 and /dp/ pages returned a captcha tonight, s
 | Jack's Premium / 5-8" Thin Bully Sticks | Not linked | Only Amazon listing found is B07Y8T27ZY "JACK'S PREMIUM All Natural Beef Bully Sticks Small Dog Chews; USA Made ...", which doesn't say thin or 5-8". Not an exact match. |
 
 The 18 existing bully stick and beef cheek cards were re-snapshotted tonight; their existing Amazon links are unchanged.
+
+## Raw Paws expansion + collagen (2026-10-27)
+
+Method: WebSearch Amazon.com titles/ASINs (brand + product + size); curl dp pages returned shell titles only (Amazon bot wall), so matches rely on search-result titles that clearly name brand, product and pack. No prices/ratings recorded.
+
+### Linked
+| Brand / product | ASIN | Amazon title (search) | Notes |
+|---|---|---|---|
+| Raw Paws / Jumbo Bully Sticks, 6-inch - 5-ct | B071LHZ93V | Raw Paws 6-Inch Jumbo Bully Sticks for Large Dogs - (5-ct) - Extra Thick | Exact size and count |
+| Raw Paws / Jumbo Bully Sticks, 12-inch - 5-ct | B071Z9NYMN | Raw Paws Jumbo Bully Sticks for Dogs - 12-Inch (5-Count) | Exact |
+| Raw Paws / Thin Bully Sticks, 6-inch | B01CPISC0O | Raw Paws Thin Bully Sticks for Small Dogs, 6-Inch (20-Count) | Brand sells 5/15/20-ct; linked 20-ct option |
+| Raw Paws / Himalayan Yak Chews, Small - 10-ct | B084X48ZYW | Raw Paws Himalayan Yak Chews for Dogs - Small Chews (10-Count) | Exact |
+| Raw Paws / Himalayan Yak Chews, Extra Large - 3-ct | B0BRNVQV8L | Raw Paws Himalayan Yak Chews for Dogs, Extra Large (3 Pack) | Exact |
+| Raw Paws / Beef Cheek Rolls, 10-inch - 4-ct | B087YY49CP | Raw Paws Beef Cheek Rolls for Dogs Large - 10 inch (4 Pack) | Exact |
+| Raw Paws / Beef Collagen Sticks, 6-inch - 10-ct | B0BS1Q1KLM | Raw Paws Beef Collagen Sticks for Dogs, 6 inch (10-Count) | Exact |
+| Jack&Pup / Collagen Sticks - 6 Inch | B09TBM3XTC | Jack&Pup 6" Beef Collagen Sticks ... (10 Pack) | Matches brand "10 Pieces" |
+
+### Not linked
+| Brand / product | Reason |
+|---|---|
+| Raw Paws / Himalayan Yak Chews, Large - 3-ct | Amazon Large listing found as 10 Pack (B085WGD4K7), not the brand's 3-ct |
+| Best Bully Sticks / Best Bully Collagen Sticks (6-Inch) | Amazon 5/10-ct packs do not match brand pack options (2/6/12 Pack) |

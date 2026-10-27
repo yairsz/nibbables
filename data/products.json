@@ -301,7 +301,7 @@
   "last_checked": "2026-10-25"
  },
  {
-  "snapshot": "research/pages/bs-raw-paws-pet-food-standard-bully-sticks-6-inch-10--1025.txt",
+  "snapshot": "research/pages/rp-standard-bully-6.txt",
   "brand": "Raw Paws Pet Food",
   "product": "Standard Bully Sticks, 6-inch - 10-ct",
   "category": "bully-sticks",
@@ -316,7 +316,7 @@
    "6-inch, 10-ct (single listing)"
   ],
   "note": "",
-  "last_checked": "2026-10-25",
+  "last_checked": "2026-10-27",
   "amazon_asin": "B078TPGBL9",
   "affiliate_url": "https://www.amazon.com/dp/B078TPGBL9?tag=nibbables-20"
  },
@@ -386,12 +386,12 @@
   "affiliate_url": "https://www.amazon.com/dp/B07VSHJ91Y?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/yk-rawpaws-1024.txt",
+  "snapshot": "research/pages/rp-yak-medium.txt",
   "brand": "Raw Paws Pet Food",
   "product": "Himalayan Yak Chews for Dogs, Medium - 3-ct",
   "category": "yak-cheese-chews",
   "source_url": "https://www.rawpawspetfood.com/products/himalayan-yak-chews-dogs-medium-3-ct",
-  "ingredients": "yak milk, salt, and lime juice",
+  "ingredients": "Ingredients: Yak Milk, Lime Juice, Salt",
   "made_in": "Origin: Nepal.",
   "sourced_from": "Sourced from free-range yak raised without antibiotics, steroids, or added hormones.",
   "rawhide_free": "Not stated, check with them",
@@ -401,7 +401,7 @@
    "Medium, 3-ct (single listing)"
   ],
   "note": "",
-  "last_checked": "2026-10-24",
+  "last_checked": "2026-10-27",
   "amazon_asin": "B08BSWYGCB",
   "affiliate_url": "https://www.amazon.com/dp/B08BSWYGCB?tag=nibbables-20"
  },
@@ -446,7 +446,7 @@
   "affiliate_url": "https://www.amazon.com/dp/B09FQDVHLT?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/bc-raw-paws-pet-food-beef-cheek-rolls-for-dogs-6-inch-1025.txt",
+  "snapshot": "research/pages/rp-cheek-6.txt",
   "brand": "Raw Paws Pet Food",
   "product": "Beef Cheek Rolls for Dogs, 6-inch - 4-ct",
   "category": "beef-cheek-rolls",
@@ -461,7 +461,7 @@
    "6-inch, 4-ct (single listing)"
   ],
   "note": "",
-  "last_checked": "2026-10-25",
+  "last_checked": "2026-10-27",
   "amazon_asin": "B09H7MYP3Y",
   "affiliate_url": "https://www.amazon.com/dp/B09H7MYP3Y?tag=nibbables-20"
  },
@@ -785,5 +785,206 @@
   "last_checked": "2026-10-25",
   "amazon_asin": "B08FDKGZ15",
   "affiliate_url": "https://www.amazon.com/dp/B08FDKGZ15?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/rp-jumbo-bully-6.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Jumbo Bully Sticks, 6-inch - 5-ct",
+  "category": "bully-sticks",
+  "source_url": "https://www.rawpawspetfood.com/products/jumbo-bully-sticks-6-inch-5-ct",
+  "ingredients": "Single-ingredient: Bull Pizzle!",
+  "made_in": "Origin: Turkey.",
+  "sourced_from": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Medium to Large Dogs.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "6-inch, 5-ct (single listing)"
+  ],
+  "note": "",
+  "last_checked": "2026-10-27",
+  "amazon_asin": "B071LHZ93V",
+  "affiliate_url": "https://www.amazon.com/dp/B071LHZ93V?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/rp-jumbo-bully-12.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Jumbo Bully Sticks, 12-inch - 5-ct",
+  "category": "bully-sticks",
+  "source_url": "https://www.rawpawspetfood.com/products/jumbo-bully-sticks-12-inch-5-ct",
+  "ingredients": "Single-ingredient: Bull Pizzle!",
+  "made_in": "Origin: Turkey.",
+  "sourced_from": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Medium to Large Dogs.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "12-inch, 5-ct (single listing)"
+  ],
+  "note": "",
+  "last_checked": "2026-10-27",
+  "amazon_asin": "B071Z9NYMN",
+  "affiliate_url": "https://www.amazon.com/dp/B071Z9NYMN?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/rp-thin-bully-6.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Thin Bully Sticks, 6-inch",
+  "category": "bully-sticks",
+  "source_url": "https://www.rawpawspetfood.com/products/thin-bully-sticks-6-inch",
+  "ingredients": "Single-ingredient: Bull Pizzle!",
+  "made_in": "Origin: Turkey.",
+  "sourced_from": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Small Dogs & Puppies.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "5-ct",
+   "15-ct",
+   "20-ct"
+  ],
+  "note": "",
+  "last_checked": "2026-10-27",
+  "amazon_asin": "B01CPISC0O",
+  "affiliate_url": "https://www.amazon.com/dp/B01CPISC0O?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/rp-yak-small.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Himalayan Yak Chews for Dogs, Small - 10-ct",
+  "category": "yak-cheese-chews",
+  "source_url": "https://www.rawpawspetfood.com/products/himalayan-yak-chews-dogs-small-10-ct",
+  "ingredients": "Ingredients: Yak Milk, Lime Juice, Salt",
+  "made_in": "Origin: Nepal.",
+  "sourced_from": "Sourced from free-range yak raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Small to Medium Dogs.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "Small, 10-ct (single listing)"
+  ],
+  "note": "Brand page title also says \"Great Rawhide Alternative\"; that wording does not meet our rawhide-free quote rule.",
+  "last_checked": "2026-10-27",
+  "amazon_asin": "B084X48ZYW",
+  "affiliate_url": "https://www.amazon.com/dp/B084X48ZYW?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/rp-yak-large.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Himalayan Yak Chews for Dogs, Large - 3-ct",
+  "category": "yak-cheese-chews",
+  "source_url": "https://www.rawpawspetfood.com/products/himalayan-yak-chews-dogs-large-3-ct",
+  "ingredients": "Ingredients: Yak Milk, Lime Juice, Salt",
+  "made_in": "Origin: Nepal.",
+  "sourced_from": "Sourced from free-range yak raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Medium to Large Dogs.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "Large, 3-ct (single listing)"
+  ],
+  "note": "",
+  "last_checked": "2026-10-27"
+ },
+ {
+  "snapshot": "research/pages/rp-yak-xl.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Himalayan Yak Chews for Dogs, Extra Large - 3-ct",
+  "category": "yak-cheese-chews",
+  "source_url": "https://www.rawpawspetfood.com/products/himalayan-yak-chews-dogs-extra-large-3-ct",
+  "ingredients": "Ingredients: Yak Milk, Lime Juice, Salt",
+  "made_in": "Origin: Nepal.",
+  "sourced_from": "Sourced from free-range yak raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Medium to Large Dogs.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "Extra Large, 3-ct (single listing)"
+  ],
+  "note": "",
+  "last_checked": "2026-10-27",
+  "amazon_asin": "B0BRNVQV8L",
+  "affiliate_url": "https://www.amazon.com/dp/B0BRNVQV8L?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/rp-cheek-10.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Beef Cheek Rolls for Dogs, 10-inch - 4-ct",
+  "category": "beef-cheek-rolls",
+  "source_url": "https://www.rawpawspetfood.com/products/beef-cheek-rolls-dogs-10-inch-4-ct",
+  "ingredients": "Single-ingredient: Beef Cheek!",
+  "made_in": "Origin: Turkey.",
+  "sourced_from": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Medium to Large Dogs.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "10-inch, 4-ct (single listing)"
+  ],
+  "note": "Product title and handle are 10-inch; the page Length line also says \"Length: 6 inches (approx)\" (same wording as the 6-inch listing).",
+  "last_checked": "2026-10-27",
+  "amazon_asin": "B087YY49CP",
+  "affiliate_url": "https://www.amazon.com/dp/B087YY49CP?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/rp-collagen-6.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Beef Collagen Sticks for Dogs, 6-inch - 10-ct",
+  "category": "collagen-sticks",
+  "source_url": "https://www.rawpawspetfood.com/products/beef-collagen-sticks-dogs-6-inch-10-ct",
+  "ingredients": "Single-ingredient: Beef Collagen!",
+  "made_in": "Origin: Colombia.",
+  "sourced_from": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Small to Medium Dogs.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "6-inch, 10-ct (single listing)"
+  ],
+  "note": "",
+  "last_checked": "2026-10-27",
+  "amazon_asin": "B0BS1Q1KLM",
+  "affiliate_url": "https://www.amazon.com/dp/B0BS1Q1KLM?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/bbs-collagen-6.txt",
+  "brand": "Best Bully Sticks",
+  "product": "Best Bully Collagen Sticks (6-Inch)",
+  "category": "collagen-sticks",
+  "source_url": "https://bestbullysticks.com/products/6-inch-beef-collagen-stick",
+  "ingredients": "Beef Hide (Source of Collagen)",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "Made from natural bovine hide (source of collagen)",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "always choose a collagen stick that's wider than your dog's mouth. When in doubt, select a larger size.",
+  "supervision": "Always supervise your dog when they're enjoying a collagen stick, and remove small or broken pieces to prevent your pup from choking.",
+  "sizes": [
+   "2 Pack",
+   "6 Pack",
+   "12 Pack"
+  ],
+  "note": "Brand also labels the product \"Natural Alternative to Rawhide\"; that wording does not meet our rawhide-free quote rule. Amazon packs seen (5/10 ct) do not match brand pack options (2/6/12), so no Amazon link.",
+  "last_checked": "2026-10-27"
+ },
+ {
+  "snapshot": "research/pages/jp-collagen-6.txt",
+  "brand": "Jack&Pup",
+  "product": "Collagen Sticks - 6 Inch",
+  "category": "collagen-sticks",
+  "source_url": "https://jackandpup.com/products/collagen-sticks-6-inch",
+  "ingredients": "100% Beef Collagen",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "Made from all-natural bovine collagen",
+  "rawhide_free": "100% beef collagen – no rawhide or fillers",
+  "size_guidance": "Choose chews appropriate for your dog's size and chewing ability to prevent choking hazards.",
+  "supervision": "Always supervise your dog while chewing and provide fresh water.",
+  "sizes": [
+   "10 Pieces",
+   "30 Pieces"
+  ],
+  "note": "",
+  "last_checked": "2026-10-27",
+  "amazon_asin": "B09TBM3XTC",
+  "affiliate_url": "https://www.amazon.com/dp/B09TBM3XTC?tag=nibbables-20"
  }
 ]
