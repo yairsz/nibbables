@@ -213,6 +213,13 @@ def affiliate_slot(p):
 def aff_disclosure(ps):
     return f'<p class="disclosure meta">{AMAZON_DISCLOSURE} <a href="{U("/about/")}">Affiliate disclosure</a>.</p>' if any(has_aff(p) for p in ps) else ""
 
+
+from urllib.parse import quote as _q
+def report_link(name):
+    """Public 'Report a change' mailto on every listing card (added 2026-10-26; address = privacy.CONTACT)."""
+    subj = _q(f"Report a change: {name}")
+    return f'<p class="meta report"><a href="mailto:{privacy.CONTACT}?subject={subj}">Report a change</a></p>'
+
 def card(p):
     sizes = "".join(f"<li>{e(s)}</li>" for s in p["sizes"])
     note = f"<dt>Note</dt><dd>{e(p['note'])}</dd>" if p.get("note") else ""
@@ -226,7 +233,7 @@ def card(p):
 <dt>Supervision note</dt><dd>{q(p['supervision'])}</dd>
 <dt>Options on the page</dt><dd><ul class="items">{sizes}</ul></dd>{note}
 <dt>Source</dt><dd><a href="{e(p['source_url'])}" rel="nofollow noopener" target="_blank">Brand's product page</a> · checked {e(p['last_checked'])}</dd></dl>
-{affiliate_slot(p)}</article>"""
+{affiliate_slot(p)}{report_link(p['brand'] + ': ' + p['product'])}</article>"""
 
 GUIDES = []  # filled in main(); used for contextual internal links (added 2026-10-24)
 
