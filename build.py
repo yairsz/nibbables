@@ -122,10 +122,10 @@ def webpage_ld(title, desc, path):
 META_DESC = {'/rawhide-free/': "Dog chews whose brand says they're rawhide-free or made without rawhide, including Earth Animal No-Hide, quoted from each brand's page.", '/compare/': "Bully sticks, yak chews, beef cheek rolls, rawhide-free chews and antlers side by side, with each brand's ingredient and made-in claims quoted.", '/yak-cheese-chews/': 'Yak cheese dog chews from Mighty Paw, Pupford, Pawstruck, Raw Paws and Best Bully Sticks, with ingredients and origin claims quoted from each brand.', '/antlers/': 'Elk and deer antler chews from GREAT DOG, Redbarn, Mighty Paw, Nature Gnaws and Best Bully Sticks, with sourcing and size guidance quoted from each brand.', '/': "Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared by each brand's own ingredient, made-in and sourcing claims.", '/bully-sticks/': 'Bully sticks from Campfire Treats, GREAT DOG, Best Bully Sticks, Redbarn, Jack&Pup, Mighty Paw and more, with ingredients, made-in claims and sizes quoted.'}
 
 def fit_meta(title, desc, suffix=" | Nibbables"):
-    """Keep SERP snippets readable: titles <= 70 chars (keep the brand suffix unless longer; drop the site-name suffix if needed),
+    """Keep SERP snippets readable: titles <= 60 chars (keep the brand suffix unless longer; drop the site-name suffix if needed),
     descriptions <= 158 chars (cut at the last full sentence, else the last word + ellipsis).
     Only shortens; never adds wording."""
-    if suffix and title.endswith(suffix) and len(title) > 70:
+    if suffix and title.endswith(suffix) and len(title) > 60:  # 60 since 2026-10-27 (SERP truncation)
         title = title[: -len(suffix)]
     if len(desc) > 158:
         cut = desc[:158]
@@ -524,7 +524,7 @@ var ok=(!c.value||t.dataset.cat===c.value)&&(!m.checked||t.dataset.made==='1')&&
 t.style.display=ok?'':'none';if(ok)k++;}});n.textContent=k+' of {len(products)} products shown';}}
 [c,m,u,r].forEach(function(x){{x.addEventListener('change',f)}});q.addEventListener('input',f);f();}})();
 </script>"""
-    return page("Compare dog chews: ingredients, made-in & sourcing claims side by side | Nibbables",
+    return page("Compare dog chews: ingredients, made-in & sourcing claims",
                 "Side-by-side table of bully sticks, yak chews, beef cheek rolls, rawhide-free chews and antlers, with each brand's ingredient, made-in and sourcing claims quoted and linked.",
                 "/compare/", body)
 
@@ -551,7 +551,7 @@ def home(products, cats, guides):
 <h2>Brands covered</h2><p>{e(', '.join(brands))}</p>
 <p class="meta">Product pages last checked {e(MODIFIED.get('/', ''))}.</p>
 <p><a href="{U('/about/')}">How we verify &amp; how this site makes money →</a></p>"""
-    return page(f"{CFG['site_name']}: long-lasting dog chews compared (ingredients, made-in claims, sizes)",
+    return page(f"{CFG['site_name']}: long-lasting dog chews compared by ingredients",
                 "Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared using each brand's own ingredient, made-in and sourcing claims, quoted and linked.", "/", body)
 
 def guide_page(g, products):
@@ -745,7 +745,13 @@ def main():
         pages[f"/{g['slug']}/"] = guide_page(g, products)
     global PREFIX
     PREFIX = urlparse(base_url()).path.rstrip("/") + "/"
-    notfound = page("Page not found | Nibbables", "Page not found.", "/404.html", f'<h1>Page not found</h1><p><a href="{U("/")}">Go to the home page</a></p>')
+    # Smarter 404 (2026-10-27, Ahrefs AEO course: AI assistants send visitors to made-up or stale URLs far more often than
+    # Google). Lists every real page, and old /nibbables/... project-site links jump to the same page at the root.
+    nf_links = "".join(f'<li><a href="{U(p)}">{e(META.get(p, (p, ""))[0].replace(" | Nibbables", ""))}</a></li>' for p in pages)
+    nf_js = ("<script>(function(){var p=location.pathname;if(p.indexOf('/nibbables/')===0){"
+             "location.replace(p.slice(10)+location.search+location.hash);}})();</script>")
+    notfound = page("Page not found | Nibbables", "Page not found.", "/404.html",
+                    f'<h1>Page not found</h1><p>That page doesn\'t exist (the link may be old or mistyped). Try one of these:</p><ul>{nf_links}</ul>{nf_js}')
     problems = []
     for path, h in list(pages.items()) + [("/404.html", notfound)]:
         text = re.sub(r"<[^>]+>", " ", re.sub(r"(?is)<(script|style)[^>]*>.*?</\1>", " ", h))
@@ -787,6 +793,15 @@ def main():
     if CFG.get("cname"):
         (OUT / "CNAME").write_text(CFG["cname"].strip() + "\n")
     check_links(OUT)
+    # Redirect stubs for the old project-site path (yairsz.github.io/nibbables/...), still requested per GA4 (2026-10-27).
+    # GitHub Pages can't send 301s; an instant meta refresh plus canonical is the closest equivalent. Not in the sitemap.
+    for path in pages:
+        target = base + path
+        d = OUT / "nibbables" / path.strip("/"); d.mkdir(parents=True, exist_ok=True)
+        (d / "index.html").write_text(f'<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Moved</title>'
+            f'<link rel="canonical" href="{e(target)}">'
+            f'<meta http-equiv="refresh" content="0; url={e(target)}"></head>'
+            f'<body><p>This page moved to <a href="{e(target)}">{e(target)}</a>.</p></body></html>')
     print(f"Built {len(pages)} pages (internal links OK), {len(products)} products -> {OUT}")
 
 if __name__ == "__main__":
