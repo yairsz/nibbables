@@ -8,7 +8,7 @@ The build REFUSES to run if a product is missing a field or a source, or if the 
 pages contain forbidden wording ("safe"/"safer"/"safest") or a price ("$12.99")."""
 import json, html, shutil, datetime, re, os, sys
 from pathlib import Path
-from urllib.parse import urlparse
+from urllib.parse import urlparse, quote as urlquote, unquote as urlunquote, parse_qs
 from ytembed import embed as yt_embed, video_ld, VIDEOS
 import privacy
 YT_CHANNEL = "https://www.youtube.com/@Nibbables"
@@ -22,6 +22,9 @@ REQUIRED = ["brand", "product", "category", "source_url", "ingredients", "made_i
 QUOTED = ["ingredients", "made_in", "sourced_from", "rawhide_free", "size_guidance", "supervision"]
 AMAZON_DISCLOSURE = "As an Amazon Associate I earn from qualifying purchases."
 AMAZON_URL = re.compile(r"https://www\.amazon\.com/dp/[A-Z0-9]{10}\?tag=" + re.escape(CFG.get("amazon_tag", "nibbables-20")))
+CJ_DISCLOSURE = "Some brand-page links for Raw Paws Pet Food are CJ Affiliate links: if you buy through them, Nibbables earns a commission at no extra cost to you."
+# Raw Paws CJ deep links: property NibblesPrimary 101911617, link "Pet Treats" 17014991 (Deep Linking Yes).
+CJ_CLICK_RE = re.compile(r"^https://www\.jdoqocy\.com/click-101911617-17014991\?url=(.+)$")
 FORBIDDEN = [(re.compile(r"\bsafe(r|st|ly)?\b", re.I), "the word 'safe' (never call a chew safe)"),
              (re.compile(r"[$€£]\s?\d"), "a price")]
 
@@ -61,6 +64,12 @@ def validate(products, cats):
             # Only exact Amazon /dp/<ASIN>?tag=<our tag> links, matching the recorded ASIN (see research/amazon-matches.md).
             assert AMAZON_URL.fullmatch(p["affiliate_url"]), f"{name}: affiliate_url must be https://www.amazon.com/dp/<ASIN>?tag={CFG.get('amazon_tag')}"
             assert p.get("amazon_asin") and f"/dp/{p['amazon_asin']}?" in p["affiliate_url"], f"{name}: amazon_asin missing or doesn't match affiliate_url"
+        assert not p.get("cj_url") or CFG.get("affiliates_live"), f"{name}: cj_url set but affiliates_live is off"
+        if p.get("cj_url"):
+            m = CJ_CLICK_RE.fullmatch(p["cj_url"])
+            assert m, f"{name}: cj_url must be https://www.jdoqocy.com/click-101911617-17014991?url=<urlencoded destination>"
+            dest = urlunquote(m.group(1))
+            assert dest == p["source_url"], f"{name}: cj_url destination must equal source_url (got {dest!r})"
         p["id"] = slugify(p["brand"] + " " + p["product"])[:80]
         assert p["id"] not in ids, f"duplicate product {p['id']}"
         ids.add(p["id"])
@@ -85,8 +94,8 @@ META = {}  # path -> (title, description); feeds llms.txt
 # path -> YYYY-MM-DD the page's content was last checked/changed. Filled in main() from the data
 # (latest last_checked of what the page shows), never "today". Feeds WebPage dateModified, visible dates and sitemap lastmod.
 MODIFIED = {}
-ABOUT_UPDATED = "2026-10-24"     # bump when /about/ text changes
-PRIVACY_UPDATED = "2026-10-23"   # matches privacy.EFFECTIVE
+ABOUT_UPDATED = "2026-10-27"     # bump when /about/ text changes
+PRIVACY_UPDATED = "2026-10-27"   # matches privacy.EFFECTIVE
 
 def cat_products(c, products):
     if c["slug"] == "rawhide-free":
@@ -194,24 +203,57 @@ def page(title, desc, path, body, jsonld=None):
 <main><div class="wrap">
 {body}
 </div></main>
-<footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. {AMAZON_DISCLOSURE} <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>. <a href="{U('/privacy/')}">Privacy policy</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">Nibbables on YouTube</a>.</div></footer>
+<footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. {footer_aff_note()} <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>. <a href="{U('/privacy/')}">Privacy policy</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">Nibbables on YouTube</a>.</div></footer>
 </body></html>"""
 
 SAFETY = """<aside class="note"><strong>Before you give any chew:</strong> supervise your dog while it chews, choose a size and hardness that suits your dog (follow the brand's size guidance), take away small or broken pieces, keep fresh water available, and ask your vet if a chew is right for your dog, especially for puppies, seniors, dogs with dental work or dogs on special diets. Nibbables does not rate safety. Each card shows what the brand itself says.</aside>"""
 
-def has_aff(p):
+def has_amazon(p):
     return bool(p.get("affiliate_url") and CFG.get("affiliates_live"))
+
+def has_cj(p):
+    return bool(p.get("cj_url") and CFG.get("affiliates_live"))
+
+def has_aff(p):
+    """True if the card has any outbound affiliate CTA (Amazon and/or CJ)."""
+    return has_amazon(p) or has_cj(p)
+
+def footer_aff_note():
+    # Footer is sitewide; keep both disclosures short and point to /about/ for detail.
+    bits = []
+    if CFG.get("affiliates_live"):
+        bits.append(AMAZON_DISCLOSURE)
+        bits.append(CJ_DISCLOSURE)
+    return " ".join(bits)
+
+def brand_page_link(p, label="Brand's product page"):
+    """Outbound brand CTA: CJ deep link when present (sponsored), else plain source_url."""
+    if has_cj(p):
+        return f'<a href="{e(p["cj_url"])}" rel="sponsored nofollow noopener" target="_blank">{e(label)}</a>'
+    return f'<a href="{e(p["source_url"])}" rel="nofollow noopener" target="_blank">{e(label)}</a>'
 
 def affiliate_slot(p):
     # Amazon Associates (tag in site.json "amazon_tag"). Only set affiliate_url for an exact Amazon match of the
     # same brand, product and size wording, recorded in research/amazon-matches.md. Never show Amazon prices,
-    # ratings or review counts.
-    if has_aff(p):
-        return f'<a class="aff" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" target="_blank">Check on Amazon</a>'
-    return f"<!-- AFFILIATE_SLOT:{e(p['id'])} (no exact Amazon match) -->"
+    # ratings or review counts. CJ (cj_url) is the primary Raw Paws brand-site click-through; see brand_page_link.
+    bits = []
+    if has_cj(p):
+        bits.append(f'<a class="aff" href="{e(p["cj_url"])}" rel="sponsored nofollow noopener" target="_blank">Check at Raw Paws</a>')
+    if has_amazon(p):
+        bits.append(f'<a class="aff" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" target="_blank">Check on Amazon</a>')
+    if bits:
+        return " ".join(bits)
+    return f"<!-- AFFILIATE_SLOT:{e(p['id'])} (no affiliate link) -->"
 
 def aff_disclosure(ps):
-    return f'<p class="disclosure meta">{AMAZON_DISCLOSURE} <a href="{U("/about/")}">Affiliate disclosure</a>.</p>' if any(has_aff(p) for p in ps) else ""
+    if not any(has_aff(p) for p in ps):
+        return ""
+    parts = []
+    if any(has_amazon(p) for p in ps):
+        parts.append(AMAZON_DISCLOSURE)
+    if any(has_cj(p) for p in ps):
+        parts.append(CJ_DISCLOSURE)
+    return f'<p class="disclosure meta">{" ".join(parts)} <a href="{U("/about/")}">Affiliate disclosure</a>.</p>'
 
 
 from urllib.parse import quote as _q
@@ -232,7 +274,7 @@ def card(p):
 <dt>Size / dog guidance</dt><dd>{q(p['size_guidance'])}</dd>
 <dt>Supervision note</dt><dd>{q(p['supervision'])}</dd>
 <dt>Options on the page</dt><dd><ul class="items">{sizes}</ul></dd>{note}
-<dt>Source</dt><dd><a href="{e(p['source_url'])}" rel="nofollow noopener" target="_blank">Brand's product page</a> · checked {e(p['last_checked'])}</dd></dl>
+<dt>Source</dt><dd>{brand_page_link(p)} · checked {e(p['last_checked'])}</dd></dl>
 {affiliate_slot(p)}{report_link(p['brand'] + ': ' + p['product'])}</article>"""
 
 GUIDES = []  # filled in main(); used for contextual internal links (added 2026-10-24)
@@ -459,7 +501,7 @@ def compare(products):
                  f'<td><a href="{U("/" + p["category"] + "/")}#{e(p["id"])}">{e(p["brand"])}</a><br><span class="meta">{e(p["product"])}</span></td>'
                  f'<td>{e(CAT_LABEL[p["category"]])}</td><td>{cell(p["ingredients"])}</td><td>{cell(p["made_in"])}</td>'
                  f'<td>{cell(p["sourced_from"])}</td><td>{cell(p["rawhide_free"])}</td>'
-                 f'<td><a href="{e(p["source_url"])}" rel="nofollow noopener" target="_blank">Source</a><br><span class="meta">{e(p["last_checked"])}</span></td></tr>')
+                 f'<td>{brand_page_link(p, "Source")}<br><span class="meta">{e(p["last_checked"])}</span></td></tr>')
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › Compare</p>
 <h1>Compare long-lasting dog chews</h1>
 <p class="lead">All {len(products)} products in one table. Every cell is the brand's own wording from its product page. "Not stated" means we couldn't find it on that page, so check with the brand.</p>
@@ -552,13 +594,15 @@ def about(products, cats, guides):
     dates = sorted(p["last_checked"] for p in products)
     fields = ("ingredients", "made_in", "sourced_from", "rawhide_free", "size_guidance", "supervision")
     nns = sum(1 for p in products for k in fields if str(p.get(k) or NS).strip().startswith(NS))
-    namz = sum(1 for p in products if has_aff(p))
+    namz = sum(1 for p in products if has_amazon(p))
+    ncj = sum(1 for p in products if has_cj(p))
     nums = f"""<h2>By the numbers</h2>
 <ul>
 <li>{len(products)} products from {len(brands)} brands, in {len(cats)} chew-type pages, plus {len(guides)} guides and a <a href="{U('/compare/')}">compare table</a>.</li>
 <li>Each product cites 1 brand product page ({len({p['source_url'] for p in products})} distinct pages in total). Product pages were last checked {("on " + e(dates[0])) if dates[0] == dates[-1] else ("between " + e(dates[0]) + " and " + e(dates[-1]))}.</li>
 <li>{nns} product fields say <span class="ns">{e(NS)}</span> because the brand's page doesn't state them. We don't fill those in with guesses.</li>
 <li>{namz} of {len(products)} products have a "Check on Amazon" link, added only where we found the exact same product on Amazon.</li>
+<li>{ncj} of {len(products)} products have a Raw Paws CJ Affiliate brand-site link (deep link through CJ; destination is the brand's own product page).</li>
 </ul>
 <p class="meta">These counts are computed from the site's data each time it's built. This page was last updated {e(ABOUT_UPDATED)}.</p>"""
     body = f"""<h1>About Nibbables: how we verify, and our affiliate disclosure</h1>
@@ -576,8 +620,12 @@ def about(products, cats, guides):
 {SAFETY}
 <p>Nibbables is an information directory, not veterinary advice. No chew is right for every dog. Supervise chewing, choose an appropriate size, and talk to your vet, especially for puppies, seniors, dogs with dental problems or dogs on special diets.</p>
 <h2>Affiliate disclosure</h2>
-<p>Nibbables is free to use. <strong>Some links on this site are Amazon affiliate links</strong>: the "Check on Amazon" buttons on product cards. {AMAZON_DISCLOSURE} If you buy through one of those links, Nibbables earns a commission at no extra cost to you.</p>
-<p>Affiliate links don't affect which products are listed or what we say about them. Every card quotes the brand's own product page, and we add an Amazon link only when we can find the same product (same brand, product name and size) on Amazon. Products without an exact match simply have no Amazon link. A brand can't pay to change what its card says. We don't show Amazon prices, ratings or review counts. The "Brand's product page" links are ordinary links and don't earn anything.</p>
+<p>Nibbables is free to use. It uses two affiliate programs:</p>
+<ul>
+<li><strong>Amazon Associates</strong>: the "Check on Amazon" buttons on some product cards. {AMAZON_DISCLOSURE}</li>
+<li><strong>CJ Affiliate (Commission Junction)</strong>: for Raw Paws Pet Food, the "Brand's product page" / "Check at Raw Paws" links go through a CJ deep link to the brand's own product page on rawpawspetfood.com. {CJ_DISCLOSURE}</li>
+</ul>
+<p>Affiliate links don't affect which products are listed or what we say about them. Every card quotes the brand's own product page. We add an Amazon link only when we can find the same product (same brand, product name and size) on Amazon. Products without an exact match simply have no Amazon link. CJ links are used only for Raw Paws products where we have a verified deep-link URL. A brand can't pay to change what its card says. We don't show prices, ratings or review counts. For brands other than Raw Paws, "Brand's product page" links are ordinary links and don't earn a commission.</p>
 <h2>Analytics</h2>
 <p>This site uses Google Analytics to collect aggregate traffic statistics, such as page views and how visitors found us. It doesn't collect your name or email, though Google may set cookies to tell visits apart. Details are in our <a href="{U('/privacy/')}">privacy policy</a>.</p>
 <h2>Corrections</h2>
@@ -592,15 +640,23 @@ def privacy_page():
     aff = f"""<h2>Amazon affiliate links</h2>
 <p>Nibbables is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.com. {AMAZON_DISCLOSURE}</p>
 <ul>
-<li>The "Check on Amazon" buttons on product cards are affiliate links to amazon.com that include our Associates tag (<code>{tag}</code>). They're the only affiliate links on the site. "Brand's product page" links are ordinary links.</li>
+<li>The "Check on Amazon" buttons on product cards are affiliate links to amazon.com that include our Associates tag (<code>{tag}</code>).</li>
 <li>Nibbables doesn't load any Amazon scripts, images or widgets, and our pages don't set Amazon cookies. Nothing is sent to Amazon unless you click one of those links.</li>
 <li>When you click one, you leave Nibbables for amazon.com. Amazon may set or read cookies on your device to record that you came from our link and to credit qualifying purchases, as described in the <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=GX7NJQ4ZB8MHFRNJ" rel="noopener" target="_blank">Amazon.com Privacy Notice</a> (which links to Amazon's Cookies Notice).</li>
 <li>Amazon gives us aggregate reports, such as the number of clicks and which items were ordered, so we can be paid. Those reports don't tell us who you are.</li>
+</ul>
+<h2>CJ Affiliate (Raw Paws Pet Food)</h2>
+<p>Nibbables also participates in the CJ Affiliate network for Raw Paws Pet Food. When a Raw Paws card has a CJ deep link, the "Brand's product page" and "Check at Raw Paws" links point at a CJ tracking URL on <code>www.jdoqocy.com</code> that redirects to the brand's own product page on rawpawspetfood.com. {CJ_DISCLOSURE}</p>
+<ul>
+<li>Nibbables doesn't load CJ scripts, pixels or widgets. Nothing is sent to CJ unless you click one of those Raw Paws links.</li>
+<li>When you click one, you leave Nibbables for CJ's redirect, then the brand's site. CJ and/or Raw Paws may set or read cookies to credit a qualifying purchase, as described in their own privacy policies.</li>
+<li>CJ gives us aggregate reports (for example clicks and commissions). Those reports don't tell us who you are.</li>
+<li>For brands other than Raw Paws, "Brand's product page" links remain ordinary (non-affiliate) links.</li>
 </ul>"""
     body = privacy.body(CFG["site_name"], "nibbables.com", CFG.get("ga_measurement_id", "").strip(), vids, aff,
                         "The compare page has a chew-type menu, checkboxes and a search box for narrowing the table.")
     return page("Privacy policy | Nibbables",
-                "What Nibbables collects (Google Analytics, click-to-play YouTube videos, GitHub Pages hosting logs), how its Amazon affiliate links work, and how to opt out.",
+                "What Nibbables collects (Google Analytics, click-to-play YouTube videos, GitHub Pages hosting logs), how its Amazon and CJ affiliate links work, and how to opt out.",
                 "/privacy/", body)
 
 def check_links(out):
@@ -633,7 +689,7 @@ LLMS_NOTES = ["Each product card quotes the brand's own page word for word (ingr
               "guidance, supervision notes), links that page and shows the date it was checked. Made-in and sourcing statements "
               f'are the brands\' claims, not independently verified. Missing facts are marked "{NS}". Nibbables shows no prices, '
               "reviews, star ratings or safety ratings, and it is not veterinary advice. Some product cards have Amazon "
-              "affiliate links; see the About page for the disclosure."]
+              "Associates and/or CJ Affiliate (Raw Paws) links; see the About page for the disclosure."]
 LLMS_SECTIONS = [("Chew types", lambda p: p.strip("/") in CAT_LABEL),
                  ("Guides", lambda p: p not in ("/", "/compare/", "/about/", "/privacy/") and p.strip("/") not in CAT_LABEL),
                  ("Compare, about and privacy", lambda p: p in ("/", "/compare/", "/about/", "/privacy/"))]
@@ -705,6 +761,15 @@ def main():
             top = h.split('class="aff"', 1)[0]
             if AMAZON_DISCLOSURE not in re.sub(r"<[^>]+>", "", top):
                 problems.append(f"{path}: has Amazon links but no disclosure above the first one")
+        if "jdoqocy.com/click-" in h:
+            for u in re.findall(r'href="(https://www\.jdoqocy\.com/[^"]+)"', h):
+                if not CJ_CLICK_RE.fullmatch(html.unescape(u)):
+                    problems.append(f"{path}: bad CJ link {u}")
+            # Disclosure may sit above first .aff OR in the Source dd; require page text to include CJ_DISCLOSURE
+            # on content pages that use CJ (footer also carries it sitewide).
+            plain = re.sub(r"<[^>]+>", " ", h)
+            if CJ_DISCLOSURE not in plain:
+                problems.append(f"{path}: has CJ links but no CJ disclosure text")
     if problems:
         print("\n".join(problems)); sys.exit("Build refused: forbidden wording found.")
     for path, h in pages.items():

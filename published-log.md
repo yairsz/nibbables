@@ -34,3 +34,9 @@
 
 
 Deploy confirm 2026-10-27: main@5d15618 gh-pages pushed; live /collagen-sticks/ and chew-type pages HTTP 200; IndexNow posted (see following note).
+
+## 2026-10-27 — Wire Raw Paws CJ deep links
+
+- Attached `cj_url` on all 11 Raw Paws products (property 101911617 / link 17014991).
+- build.py: CJ validation, "Check at Raw Paws" + Source CTA via jdoqocy.com, Amazon kept where ASINs exist; About/privacy/footer/llms disclosure updated; privacy.EFFECTIVE 2026-10-27.
+- No content/review changes.

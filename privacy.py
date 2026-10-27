@@ -8,7 +8,7 @@ no forms, accounts or email collection; hosted on GitHub Pages (no Cloudflare/CD
 import html
 e = lambda s: html.escape(str(s), quote=True)
 
-EFFECTIVE = "October 23, 2026"
+EFFECTIVE = "October 27, 2026"
 OPERATOR = "2 Handed Coding, LLC"
 CONTACT = "developer@2handedcoding.com"
 
