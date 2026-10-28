@@ -457,6 +457,7 @@ def category_page(c, products):
 {cat_glance(c, ps)}
 {yt_embed(f"/{c['slug']}/", YT_CHANNEL, 'Nibbables')}
 {related_guides_block(c['slug'], c['name'])}
+<p><a href="{U(AUD_PATH)}">All chews grouped by dog size and chewer type, in each brand's words →</a></p>
 {sibling_hubs_block(c, products)}
 <h2 id="all-products">All {len(ps)} {e(c['name'].lower())} we list, with what each brand's page says</h2>
 {''.join(card(p) for p in ps)}"""
@@ -522,6 +523,106 @@ def site_faq(products):
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
     return html_, ld
 
+# Audience page (added 2026-10-28, run #40; Ahrefs GEO experts: audience-specific comparison pages get mentions and
+# citations because assistants know who the user is). Groups are KEYWORD MATCHES on each brand's own size_guidance
+# wording (verbatim, already quote-checked); a product sits in every group its wording names. Nothing is recommended.
+AUD_PATH = "/dog-chews-by-dog-size-and-chewer/"
+AUD_GROUPS = [
+    ("puppies", "Puppies", "puppies", re.compile(r"\bpupp(y|ies)\b", re.I)),
+    ("small-dogs", "Small dogs and smaller breeds", "small dogs or smaller breeds", re.compile(r"\bsmall(er)?\b", re.I)),
+    ("medium-large-dogs", "Medium, midsize and large dogs", "medium, midsize or large dogs", re.compile(r"\b(medium|midsize|large)\b(?!\s+pieces)", re.I)),
+    ("power-chewers", "Power, heavy, strong or aggressive chewers", "power, heavy, strong or aggressive chewers",
+     re.compile(r"\b(power|heavy|strong|aggressive)\s+chewers?\b", re.I)),
+    ("light-chewers", "Light, gentle or moderate chewers", "light, gentle or moderate chewers",
+     re.compile(r"\b(light|gentle|moderate)\s+(to\s+\w+\s+)?chewers?\b", re.I)),
+    ("seniors", "Senior and older dogs", "senior or older dogs", re.compile(r"\bsenior\b|\bolder dogs\b", re.I)),
+    ("by-weight", "Weight ranges in pounds", "a dog weight range in pounds", re.compile(r"\d\s*(lbs?|LBS)\b|\blbs\b", re.I)),
+]
+def aud_groups(p):
+    sg = p["size_guidance"]
+    return [] if sg == NS else [g for g in AUD_GROUPS if g[3].search(sg)]
+
+def aud_link(p, label):
+    url, aff = primary_url(p)
+    return f'<a href="{e(url)}" rel="{"sponsored nofollow noopener" if aff else "nofollow noopener"}" target="_blank">{e(label)}</a>'
+
+def audience_page(products):
+    set_page(AUD_PATH)
+    n = len(products)
+    grouped = {g[0]: [p for p in products if g in aud_groups(p)] for g in AUD_GROUPS}
+    rule_only = [p for p in products if p["size_guidance"] != NS and not aud_groups(p)]
+    none = [p for p in products if p["size_guidance"] == NS]
+    named = [p for p in products if aud_groups(p)]
+    nm = lambda L: "; ".join(f"{p['brand']} {p['product']}" for p in L)
+    def bycat(L):
+        return ", ".join(f"{CAT_LABEL[s].lower()} ({k})" for s, k in ((s, sum(1 for p in L if p["category"] == s)) for s in CAT_LABEL) if k)
+    lead = (f"Short answer: of the {n} dog chews we list, {len(named)} have brand size wording that names a kind of dog or chewer "
+            + "(" + ", ".join(f"{len(grouped[g[0]])} mention {g[2]}" for g in AUD_GROUPS) + ")"
+            + f". {len(rule_only)} only give a general sizing rule (such as choosing a chew wider or larger than your dog's mouth) and {len(none)} don't state size guidance. "
+            "Every group below is the brand's own wording, quoted from its product page. It's not our recommendation; ask your vet what suits your dog.")
+    # Brand table: chewer/size groups each brand's pages name, plus links to each brand's bully stick(s) and collagen stick(s).
+    brands = sorted({p["brand"] for p in products}, key=str.lower)
+    def links(L): return "<br>".join(aud_link(p, p["product"]) for p in L) or '<span class="ns">None listed</span>'
+    brows = ""
+    for b in brands:
+        bp = [p for p in products if p["brand"] == b]
+        gs = [g[1] for g in AUD_GROUPS if any(g in aud_groups(p) for p in bp)]
+        brows += (f'<tr><td>{e(b)}</td><td>{e("; ".join(gs)) if gs else "<span class=ns>Only a general sizing rule or not stated</span>"}</td>'
+                  f'<td>{links([p for p in bp if p["category"] == "bully-sticks"])}</td><td>{links([p for p in bp if p["category"] == "collagen-sticks"])}</td></tr>')
+    btable = (f'<h2 id="by-brand">By brand: who each brand\'s pages say its chews are for</h2>'
+              f'<div class="tablewrap"><table class="cmp"><caption>Groups come from each brand\'s own size wording on the products we list. '
+              f'Bully stick and collagen stick columns link each brand\'s product (some links are affiliate links; see the disclosure above).</caption>'
+              f'<thead><tr><th>Brand</th><th>Dog sizes / chewer types its pages name</th><th>Bully stick</th><th>Collagen stick</th></tr></thead><tbody>{brows}</tbody></table></div>')
+    def gtable(L):
+        rows = "".join(f'<tr><td>{aud_link(p, p["brand"])}<br><span class="meta">{e(p["product"])}</span></td>'
+                       f'<td><a href="{U("/" + p["category"] + "/")}#{e(p["id"])}">{e(CAT_LABEL[p["category"]])}</a></td>'
+                       f'<td>{q(p["size_guidance"])}</td><td>{brand_page_link(p, "Source")}<br><span class="meta">checked {e(p["last_checked"])}</span></td></tr>' for p in L)
+        return (f'<div class="tablewrap"><table class="cmp"><thead><tr><th>Brand / product</th><th>Chew type</th><th>Size / dog guidance (brand\'s exact words)</th><th>Source</th></tr></thead>'
+                f'<tbody>{rows}</tbody></table></div>')
+    secs = ""
+    for slug, h, phrase, _ in AUD_GROUPS:
+        L = grouped[slug]
+        if not L: continue
+        secs += (f'<h2 id="{slug}">{e(h)}: {len(L)} chews whose brand mentions {e(phrase)}</h2>'
+                 f'<p>{len(L)} of {n} product pages mention {e(phrase)} in their size guidance, by chew type: {e(bycat(L))}. '
+                 f'Brands: {e(", ".join(sorted({p["brand"] for p in L}, key=str.lower)))}.</p>{gtable(L)}')
+    if rule_only:
+        secs += (f'<h2 id="sizing-rule-only">General sizing rule only: {len(rule_only)} chews</h2>'
+                 f'<p>These pages give a sizing rule but don\'t name a dog size or chewer type.</p>{gtable(rule_only)}')
+    if none:
+        secs += (f'<h2 id="not-stated">No size guidance stated: {len(none)} chews</h2><p>We couldn\'t find size guidance on these pages, so check with the brand: '
+                 + "; ".join(f'<a href="{U("/" + p["category"] + "/")}#{e(p["id"])}">{e(p["brand"])}: {e(p["product"])}</a>' for p in none) + ".</p>")
+    toc = "".join(f'<li><a href="#{g[0]}">{e(g[1])}</a> ({len(grouped[g[0]])})</li>' for g in AUD_GROUPS if grouped[g[0]])
+    qa = []
+    for slug, h, phrase, _ in AUD_GROUPS[:6]:
+        L = grouped[slug]
+        if not L: continue
+        qa.append((f"Which dog chews do brands say are for {phrase}?",
+                   f"{len(L)} of {n} products we list have brand size wording that mentions {phrase}: {nm(L)}. "
+                   "That is each brand's own wording, not a recommendation; ask your vet what suits your dog."))
+    qa.append(("Does Nibbables recommend a chew for my dog's size?",
+               "No. Nibbables groups chews only by the words each brand uses on its own product page and links that page. "
+               "It doesn't rank chews or rate their safety. Pick a size by the brand's guidance and ask your vet."))
+    faq = '<section class="faq"><h2>Quick answers</h2>' + "".join(f"<h3>{e(a)}</h3><p>{e(b)}</p>" for a, b in qa) + "</section>"
+    ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": a, "acceptedAnswer": {"@type": "Answer", "text": b}} for a, b in qa]}
+    hubs = "".join(f'<li><a href="{U("/" + s + "/")}">{e(nme)}</a></li>' for s, nme in CAT_LABEL.items())
+    body = f"""<p class="meta"><a href="{U('/')}">Home</a> › <a href="{U('/compare/')}">Compare</a> › By dog size and chewer</p>
+<h1>Dog chews by dog size and chewer type: what each brand says</h1>
+<p class="lead">{e(lead)}</p>
+<p class="meta">{n} products · groups are matched from each brand's size wording, quoted verbatim · a chew can appear in more than one group · page updated {e(MODIFIED.get(AUD_PATH, ""))}</p>
+{SAFETY}
+{aff_disclosure(products)}
+<details class="toc" open><summary>Jump to a group</summary><ul>{toc}<li><a href="#by-brand">By brand (with bully stick and collagen stick links)</a></li></ul></details>
+{btable}
+{secs}
+{faq}
+<h2>How we grouped these</h2><p>We read the "Size / dog guidance" line we quote from each brand's product page and put the chew in every group whose words appear in it (for example "puppies", "small dogs", "power chewers", "senior" or a weight in pounds). We don't add groups the brand doesn't name, and being in a group is not a recommendation.</p>
+<h2>Related on Nibbables</h2><ul><li><a href="{U('/compare/')}">Compare all chews in one table</a></li>{hubs}</ul>"""
+    return page("Dog chews by dog size and chewer type, in brands' words",
+                "Bully sticks, yak chews, antlers and more grouped by the dog size or chewer type each brand names (puppies, small dogs, power chewers), quoted and linked.",
+                AUD_PATH, body, [ld])
+
 def compare(products):
     set_page("/compare/")
     opts = "".join(f'<option value="{e(s)}">{e(n)}</option>' for s, n in CAT_LABEL.items())
@@ -538,6 +639,7 @@ def compare(products):
 <h1>Compare long-lasting dog chews</h1>
 <p class="lead">All {len(products)} products in one table. Every cell is the brand's own wording from its product page. "Not stated" means we couldn't find it on that page, so check with the brand.</p>
 {compare_summary(products)}
+<p><a href="{U(AUD_PATH)}">See chews grouped by dog size and chewer type (puppies, small dogs, power chewers), in each brand's words →</a></p>
 {site_faq(products)[0]}
 {SAFETY}
 {yt_embed('/compare/', YT_CHANNEL, 'Nibbables')}
@@ -573,7 +675,7 @@ def home(products, cats, guides):
     brands = sorted({p["brand"] for p in products}, key=str.lower)
     body = f"""<h1>Long-lasting dog chews, compared by what the brands actually say</h1>
 <p class="lead">{e(CFG['tagline'])} For {len(products)} bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers from {len(brands)} brands, we quote each brand's own product page: the ingredient list, where it says the chew is made and sourced, its size guidance and its supervision note. Every card links its source and shows the date we checked it.</p>
-<h2>Browse by chew type</h2><div class="cities">{cl}<a href="{U('/compare/')}">Compare all<br><span class="meta">filterable table</span></a></div>
+<h2>Browse by chew type</h2><div class="cities">{cl}<a href="{U('/compare/')}">Compare all<br><span class="meta">filterable table</span></a><a href="{U(AUD_PATH)}">By dog size &amp; chewer<br><span class="meta">puppies, small dogs, power chewers</span></a></div>
 {SAFETY}
 {site_faq(products)[0]}
 {gl}
@@ -742,8 +844,8 @@ LLMS_NOTES = ["Each product card quotes the brand's own page word for word (ingr
               "reviews, star ratings or safety ratings, and it is not veterinary advice. Some product cards have Amazon "
               "Associates and/or CJ Affiliate (Raw Paws) links; see the About page for the disclosure."]
 LLMS_SECTIONS = [("Chew types", lambda p: p.strip("/") in CAT_LABEL),
-                 ("Guides", lambda p: p not in ("/", "/compare/", "/about/", "/privacy/") and p.strip("/") not in CAT_LABEL),
-                 ("Compare, about and privacy", lambda p: p in ("/", "/compare/", "/about/", "/privacy/"))]
+                 ("Guides", lambda p: p not in ("/", "/compare/", "/about/", "/privacy/", "/dog-chews-by-dog-size-and-chewer/") and p.strip("/") not in CAT_LABEL),
+                 ("Compare, about and privacy", lambda p: p in ("/", "/compare/", "/about/", "/privacy/", "/dog-chews-by-dog-size-and-chewer/"))]
 
 # Search and AI-answer crawlers we explicitly welcome (one robots.txt group, RFC 9309).
 # The catch-all group below allows everyone else too; this list just makes intent explicit.
@@ -789,8 +891,10 @@ def main():
     for c in cats: MODIFIED[f"/{c['slug']}/"] = max(p["last_checked"] for p in cat_products(c, products))
     for g in guides:
         MODIFIED[f"/{g['slug']}/"] = max([g["last_checked"]] + [byid0[i]["last_checked"] for i in g.get("product_ids", []) if i in byid0])
+    MODIFIED[AUD_PATH] = latest
     pages = {"/": home(products, cats, guides), "/compare/": compare(products), "/about/": about(products, cats, guides), "/privacy/": privacy_page()}
     for c in cats: pages[f"/{c['slug']}/"] = category_page(c, products)
+    pages[AUD_PATH] = audience_page(products)
     for g in guides:
         assert f"/{g['slug']}/" not in pages, f"guide slug clash {g['slug']}"
         pages[f"/{g['slug']}/"] = guide_page(g, products)

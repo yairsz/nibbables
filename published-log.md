@@ -50,3 +50,8 @@ Deploy confirm 2026-10-27: main@5d15618 gh-pages pushed; live /collagen-sticks/ 
 - Gaps: no origin stated for BBS or Jack&Pup collagen sticks; no calories on Raw Paws or BBS thin bully pages; no study comparing chew duration.
 
 Deploy confirm 2026-10-27 11:41 PM ET: main@954400b gh-pages pushed, Pages built; https://nibbables.com/bully-stick-vs-collagen-stick/ HTTP 200, 5 tag=nibbables-20 links, Amazon disclosure present, in sitemap and llms.txt. IndexNow 200 (new guide, /bully-sticks/, /collagen-sticks/, /compare/, llms.txt, sitemap).
+
+## 2026-10-28 3:20 PM ET — /dog-chews-by-dog-size-and-chewer/ (improvement run #40)
+- New computed audience page "Dog chews by dog size and chewer type: what each brand says": all 47 products grouped by keyword matches on each brand's own quoted size_guidance (puppies 7, small dogs/smaller breeds 12, medium/midsize/large 16, power/heavy/strong/aggressive chewers 6, light/gentle/moderate chewers 6, senior/older 3, weight in lbs 4; 13 general sizing rule only; 2 not stated). Every cell is the existing verbatim size_guidance (quote check OK). By-brand table with links to each brand's bully stick(s) and collagen stick(s) (primary URL: CJ > Amazon > brand page). Computed Quick answers + FAQPage JSON-LD. Linked from home, /compare/ and every chew-type page; in sitemap + llms.txt. No new products or research.
+- Audit fixes before shipping: "large pieces" (Pawstruck sizing rule) and "introductory chew" (Bully Bunches) excluded from the size/chewer groups.
+- Headless Chrome screenshots hung on this box this run (even for a data: URL), so only structural HTML checks were done (tags balanced, anchors resolve, JSON-LD parses).
