@@ -48,3 +48,5 @@ Deploy confirm 2026-10-27: main@5d15618 gh-pages pushed; live /collagen-sticks/ 
 - Re-checked all 6 product pages tonight (snapshots research/pages/bc-*-1028.txt, last_checked 2026-10-27). Change found: BBS 6-Inch Thin Bully Stick page no longer says "Made from 100% high-quality beef"; ingredients now quoted as "made from a single ingredient: beef pizzle" and sourced_from as "sourced from trusted free-range cattle farmers around the world".
 - Non-brand sources: Today's Veterinary Practice (Jan/Feb 2024), ASPCA chews position statement, AKC edible chews. None of them names collagen sticks; the page says so.
 - Gaps: no origin stated for BBS or Jack&Pup collagen sticks; no calories on Raw Paws or BBS thin bully pages; no study comparing chew duration.
+
+Deploy confirm 2026-10-27 11:41 PM ET: main@954400b gh-pages pushed, Pages built; https://nibbables.com/bully-stick-vs-collagen-stick/ HTTP 200, 5 tag=nibbables-20 links, Amazon disclosure present, in sitemap and llms.txt. IndexNow 200 (new guide, /bully-sticks/, /collagen-sticks/, /compare/, llms.txt, sitemap).
