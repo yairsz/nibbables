@@ -490,6 +490,38 @@ def compare_summary(products):
             f'<thead><tr><th>Chew type</th><th>Products</th><th>Brands</th><th>Made-in claim stated</th><th>Made-in or sourcing claim mentions USA</th><th>Says both made and sourced in USA</th><th>Says rawhide-free</th></tr></thead>'
             f'<tbody>{rows}</tbody></table></div>')
 
+def site_faq(products):
+    """Site-wide quick answers (added 2026-10-28, run #36: FAQPage JSON-LD in the raw HTML on home and /compare/,
+    which previously had none). Every number/name is computed from data/products.json, same tests as cat_faq."""
+    n = len(products); brands = sorted({p["brand"] for p in products}, key=str.lower)
+    nm = lambda L: "; ".join(f"{p['brand']} {p['product']}" for p in L)
+    by = lambda f: ", ".join(f"{CAT_LABEL[s].lower()} ({k})" for s, k in
+                             ((s, sum(1 for p in products if p["category"] == s and f(p))) for s in CAT_LABEL) if k)
+    both = [p for p in products if mentions_usa(p) and usa_made(p) and usa_sourced(p)]
+    small = [p for p in products if SMALL_DOG.search(p["size_guidance"])]
+    rh = [p for p in products if p["rawhide_free"] != NS]
+    dates = sorted(p["last_checked"] for p in products)
+    qa = [("How many dog chews and brands does Nibbables compare?",
+           f"{n} products from {len(brands)} brands, by chew type: {by(lambda p: True)}. "
+           f"Each product page was last checked between {dates[0]} and {dates[-1]}."),
+          ("Which dog chews say they're both made and sourced in the USA?",
+           (f"{len(both)} of {n} products have brand wording saying both made (or baked) and sourced in the USA, by chew type: {by(lambda p: p in both)}. They are: {nm(both)}. " if both else
+            f"None of the {n} products have brand wording saying both made and sourced in the USA. ")
+           + "These are the brands' own claims; read the exact quote on each card."),
+          ("Which dog chews do brands say are for puppies or small dogs?",
+           f"{len(small)} of {n} product pages mention puppies or small dogs in their size guidance, by chew type: {by(lambda p: p in small)}. "
+           "That's the brands' own size wording, not our recommendation; ask your vet what suits your dog."),
+          ("Which dog chews say they're rawhide-free?",
+           f"{len(rh)} of {n} product pages literally say rawhide-free, no rawhide or made without rawhide, by chew type: {by(lambda p: p in rh)}. "
+           "The others don't say either way, which doesn't mean they contain rawhide."),
+          ("Does Nibbables rank, rate or review dog chews?",
+           "No. Nibbables quotes each brand's own product page (ingredients, made-in and sourcing wording, size guidance, supervision note) "
+           "and links it. It doesn't rank chews, rate their safety, show prices or publish reviews.")]
+    html_ = '<section class="faq"><h2>Quick answers</h2>' + "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in qa) + "</section>"
+    ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
+    return html_, ld
+
 def compare(products):
     set_page("/compare/")
     opts = "".join(f'<option value="{e(s)}">{e(n)}</option>' for s, n in CAT_LABEL.items())
@@ -506,6 +538,7 @@ def compare(products):
 <h1>Compare long-lasting dog chews</h1>
 <p class="lead">All {len(products)} products in one table. Every cell is the brand's own wording from its product page. "Not stated" means we couldn't find it on that page, so check with the brand.</p>
 {compare_summary(products)}
+{site_faq(products)[0]}
 {SAFETY}
 {yt_embed('/compare/', YT_CHANNEL, 'Nibbables')}
 <div class="filters"><select id="fc" aria-label="Chew type"><option value="">All chew types</option>{opts}</select>
@@ -526,7 +559,7 @@ t.style.display=ok?'':'none';if(ok)k++;}});n.textContent=k+' of {len(products)} 
 </script>"""
     return page("Compare dog chews: ingredients, made-in & sourcing claims",
                 "Side-by-side table of bully sticks, yak chews, beef cheek rolls, rawhide-free chews and antlers, with each brand's ingredient, made-in and sourcing claims quoted and linked.",
-                "/compare/", body)
+                "/compare/", body, [site_faq(products)[1]])
 
 def home(products, cats, guides):
     set_page("/")
@@ -542,6 +575,7 @@ def home(products, cats, guides):
 <p class="lead">{e(CFG['tagline'])} For {len(products)} bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers from {len(brands)} brands, we quote each brand's own product page: the ingredient list, where it says the chew is made and sourced, its size guidance and its supervision note. Every card links its source and shows the date we checked it.</p>
 <h2>Browse by chew type</h2><div class="cities">{cl}<a href="{U('/compare/')}">Compare all<br><span class="meta">filterable table</span></a></div>
 {SAFETY}
+{site_faq(products)[0]}
 {gl}
 <h2>What we don't do</h2>
 <ul><li>We don't rate or vouch for the safety of any chew. Only you and your vet can judge what suits your dog.</li>
@@ -552,7 +586,7 @@ def home(products, cats, guides):
 <p class="meta">Product pages last checked {e(MODIFIED.get('/', ''))}.</p>
 <p><a href="{U('/about/')}">How we verify &amp; how this site makes money →</a></p>"""
     return page(f"{CFG['site_name']}: long-lasting dog chews compared by ingredients",
-                "Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared using each brand's own ingredient, made-in and sourcing claims, quoted and linked.", "/", body)
+                "Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared using each brand's own ingredient, made-in and sourcing claims, quoted and linked.", "/", body, [site_faq(products)[1]])
 
 def guide_page(g, products):
     set_page(f"/{g['slug']}/")
