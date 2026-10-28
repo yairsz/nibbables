@@ -92,3 +92,6 @@ Method: WebSearch Amazon.com titles/ASINs (brand + product + size); curl dp page
 |---|---|
 | Raw Paws / Himalayan Yak Chews, Large - 3-ct | Amazon Large listing found as 10 Pack (B085WGD4K7), not the brand's 3-ct |
 | Best Bully Sticks / Best Bully Collagen Sticks (6-Inch) | Amazon 5/10-ct packs do not match brand pack options (2/6/12 Pack) |
+
+### 2026-10-27 /bully-stick-vs-collagen-stick/
+No new products; the guide reuses 6 existing cards. Amazon links unchanged: 5 of 6 linked (Raw Paws bully B078TPGBL9, Raw Paws collagen B0BS1Q1KLM, BBS thin bully B013TKCZZK, Jack&Pup bully B071248J35, Jack&Pup collagen B09TBM3XTC); Best Bully Collagen Sticks still unlinked (pack mismatch, see above).

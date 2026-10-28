@@ -26,7 +26,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [x] /bully-stick-vs-yak-chew/: published 2026-10-24 (keyword-targets row 3, first pair)
 - [x] /beef-cheek-roll-vs-rawhide/: published 2026-10-24 (keyword-targets row 4)
 - [x] /bully-stick-calories/: published 2026-10-23 (keyword-targets Nibbables row 2)
-- [ ] /compare/bully-stick-vs-collagen-stick/ style pair pages (keyword-targets row 3): needs collagen products researched first (see /collagen-sticks/ above). Guides are top-level slugs today, e.g. /bully-stick-vs-collagen-stick/
+- [x] /bully-stick-vs-collagen-stick/: published 2026-10-27 (keyword-targets row 3; 3 brands' 6-inch pairs). Still open from row 3: bully stick vs gullet / beef tendon / rawhide / bully hide pairs
 - [x] (2026-10-26) /how-long-do-bully-sticks-last/: brand-stated shelf life (e.g. Redbarn page lists "Shelf Life: 36 months") and storage wording, quoted (keyword-targets row 6)
 - [ ] /yak-chew-age-guidance/: brand minimum ages, e.g. Himalayan Pet Supply "For dogs over 12 weeks old", YAKERS FAQ "4 months and over" (quote only)
 - [x] /made-in-usa-bully-sticks/: published 2026-10-25 as /bully-sticks-made-in-usa/ (keyword-targets row 5)
@@ -49,3 +49,5 @@ Each item: page path, what it needs, and candidate official sources to check fir
 
 - [ ] Yak chew shelf life and storage, quoted from the yak cheese chew product pages (same table format as /how-long-do-bully-sticks-last/)
 - [ ] Bully stick holders (keyword-targets row 8): needs a data model for non-chew accessories (material, sizes, cleaning as stated) before it can be built
+
+- [ ] Collagen chew vs rawhide standalone guide (autocomplete: "collagen chew vs rawhide", "collagen dog chew vs rawhide"); needs more collagen brands (Pawstruck) and processing quotes

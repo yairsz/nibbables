@@ -40,3 +40,11 @@ Deploy confirm 2026-10-27: main@5d15618 gh-pages pushed; live /collagen-sticks/ 
 - Attached `cj_url` on all 11 Raw Paws products (property 101911617 / link 17014991).
 - build.py: CJ validation, "Check at Raw Paws" + Source CTA via jdoqocy.com, Amazon kept where ASINs exist; About/privacy/footer/llms disclosure updated; privacy.EFFECTIVE 2026-10-27.
 - No content/review changes.
+
+## 2026-10-27 — /bully-stick-vs-collagen-stick/ (nightly)
+
+- New guide targeting keyword-targets row 3 (queries: bully stick vs collagen stick / collagen chew; collagen chew vs bully stick; collagen chews vs bully sticks for dogs; collagen chew vs rawhide; what lasts longer than a bully stick).
+- 6 product cards (3 brands' 6-inch bully stick + collagen stick: Raw Paws, Best Bully Sticks, Jack&Pup); 5 with Amazon links (tag nibbables-20); Raw Paws cards keep CJ links.
+- Re-checked all 6 product pages tonight (snapshots research/pages/bc-*-1028.txt, last_checked 2026-10-27). Change found: BBS 6-Inch Thin Bully Stick page no longer says "Made from 100% high-quality beef"; ingredients now quoted as "made from a single ingredient: beef pizzle" and sourced_from as "sourced from trusted free-range cattle farmers around the world".
+- Non-brand sources: Today's Veterinary Practice (Jan/Feb 2024), ASPCA chews position statement, AKC edible chews. None of them names collagen sticks; the page says so.
+- Gaps: no origin stated for BBS or Jack&Pup collagen sticks; no calories on Raw Paws or BBS thin bully pages; no study comparing chew duration.
