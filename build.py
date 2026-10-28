@@ -596,7 +596,7 @@ def guide_page(g, products):
     for pid in g.get("product_ids", []):
         assert pid in byid, f"guide {g['slug']} references unknown product {pid}"
     secs = "".join(f"<h2>{e(s['h'])}</h2>" + "".join(f"<p>{e(x)}</p>" for x in (s['p'] if isinstance(s['p'], list) else [s['p']])) for s in g["sections"])
-    tbl = guide_table(g.get("table"))
+    tbl = guide_table(g.get("table"), products)
     faq = g.get("faq") or []
     faq_html = "".join(f'<h2>{e(f["q"])}</h2><p>{e(f["a"])}</p>' for f in faq)  # question-style H2s + FAQPage JSON-LD
     srcs = "".join(f'<li><a href="{e(s["url"])}" rel="nofollow noopener" target="_blank">{e(s["label"])}</a></li>' for s in g["sources"])
@@ -607,7 +607,13 @@ def guide_page(g, products):
         {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]} if faq else None
     return page(g["title"], g["meta"], f"/{g['slug']}/", body, ld)
 
-def guide_table(t):
+def primary_url(p):
+    """Same primary outbound destination as the product card: CJ (Raw Paws) > Amazon (exact ASIN) > brand source_url."""
+    if has_cj(p): return p["cj_url"], True
+    if has_amazon(p): return p["affiliate_url"], True
+    return p["source_url"], False
+
+def guide_table(t, products=()):
     """Optional guide table: {"h", "caption", "head": [...], "rows": [{"cells": [...], "snapshot": path}]}.
     A cell is plain text (our neutral label, e.g. a brand name or "Not stated") or {"q": "verbatim quote"};
     quote cells are rendered in <q> and checked against the row's snapshot by scripts/verify_quotes.py."""
@@ -615,8 +621,19 @@ def guide_table(t):
     def cell(c):
         if isinstance(c, dict): return q(c["q"])
         return '<span class="ns">Not stated</span>' if c == "Not stated" else e(c)
+    # Product rows (added 2026-10-28): first cell links to the product, matched by "Brand: product" label
+    # (or an explicit row "product" label when the table uses a shortened name). Non-product rows stay plain.
+    bylabel = {f"{p['brand']}: {p['product']}": p for p in products}
+    def first(r):
+        c = r["cells"][0]
+        p = bylabel.get(r.get("product") or (c if isinstance(c, str) else ""))
+        if r.get("product"): assert p, f"table row product {r['product']!r} not in products.json"
+        if not p: return cell(c)
+        url, aff = primary_url(p)
+        rel = "sponsored nofollow noopener" if aff else "nofollow noopener"
+        return f'<a href="{e(url)}" rel="{rel}" target="_blank">{cell(c)}</a>'
     head = "".join(f"<th>{e(h)}</th>" for h in t["head"])
-    rows = "".join("<tr>" + "".join(f"<td>{cell(c)}</td>" for c in r["cells"]) + "</tr>" for r in t["rows"])
+    rows = "".join("<tr><td>" + first(r) + "</td>" + "".join(f"<td>{cell(c)}</td>" for c in r["cells"][1:]) + "</tr>" for r in t["rows"])
     cap = f"<caption>{e(t['caption'])}</caption>" if t.get("caption") else ""
     h = f"<h2>{e(t['h'])}</h2>" if t.get("h") else ""
     return f'{h}<div class="tablewrap"><table class="cmp">{cap}<thead><tr>{head}</tr></thead><tbody>{rows}</tbody></table></div>'
