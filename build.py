@@ -613,6 +613,7 @@ def audience_page(products):
 <p class="meta">{n} products · groups are matched from each brand's size wording, quoted verbatim · a chew can appear in more than one group · page updated {e(MODIFIED.get(AUD_PATH, ""))}</p>
 {SAFETY}
 {aff_disclosure(products)}
+{yt_embed(AUD_PATH, YT_CHANNEL, 'Nibbables')}
 <details class="toc" open><summary>Jump to a group</summary><ul>{toc}<li><a href="#by-brand">By brand (with bully stick and collagen stick links)</a></li></ul></details>
 {btable}
 {secs}
