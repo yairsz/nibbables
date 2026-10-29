@@ -368,6 +368,35 @@ def supervision_faq(noun, ps):
     qa.append((f"How often can a dog have {noun}?", a))
     return qa
 
+# Antler "how to choose" answers (added 2026-10-29, run #46: Search Console shows "best antlers for dogs" on
+# /antlers/; Nathan Gotch AI SEO checklist: answer the conversational version of the query). We don't rank or pick
+# a "best"; every line is counted from product names/size options or quoted from each card's size_guidance.
+def _merge_quotes(ps):
+    out = {}
+    for p in ps:
+        q = p["size_guidance"].strip().rstrip(".")
+        out.setdefault(q, []).append(f"{p['brand']} {p['product']}")
+    return [(q, " and ".join(w)) for q, w in out.items()]
+
+def antler_choose_faq(ps):
+    n = len(ps)
+    nm = lambda L: "; ".join(f"{p['brand']} {p['product']}" for p in L)
+    txt = lambda p: p["product"] + " " + " ".join(p["sizes"])
+    elk = [p for p in ps if re.search(r"\belk\b", txt(p), re.I)]
+    deer = [p for p in ps if re.search(r"\bdeer\b", txt(p), re.I)]
+    split = [p for p in ps if re.search(r"\bsplit\b|\bhalf\b", txt(p), re.I)]
+    sg = [p for p in ps if not p["size_guidance"].startswith("Not stated")]
+    a1 = ("Nibbables doesn't rank antlers or pick a best one. What the brands themselves say about choosing: "
+          + " ".join(f"{who}: \u201c{q}\u201d." for q, who in _merge_quotes(sg))
+          + " Your vet can tell you whether a hard chew like antler suits your dog's teeth.")
+    a2 = (f"Of the {n} antler products we list, {len(elk)} name elk and {len(deer)} name deer in the product name or size options"
+          + (" (one lists both)" if set(map(id, elk)) & set(map(id, deer)) else "") + ". "
+          + (f"{len(split)} offer a split or half option: {nm(split)}. " if split else "")
+          + "GREAT DOG CO. describes its split elk antler as \u201c" + next((p["size_guidance"].rstrip(".") for p in ps if p["brand"] == "GREAT DOG CO." and "Split" in p["product"]), "") + "\u201d. "
+          "Those are the brands' descriptions, not our recommendation.")
+    return [("How do I choose an antler chew for my dog? What brands say", a1),
+            ("Elk vs deer antlers, and split vs whole: what's listed here?", a2)]
+
 def cat_faq(c, ps):
     noun = FAQ_NOUN.get(c["slug"], c["name"].lower())
     n = len(ps); last = max(p["last_checked"] for p in ps)
@@ -450,6 +479,7 @@ def cat_faq(c, ps):
     # Supervision / how-often answers (added 2026-10-29, run #43: Google autocomplete shows "are bully sticks safe",
     # "how often can a dog eat a bully stick", "are collagen sticks safe"). Counted only from each card's quoted
     # supervision wording; we never give our own safety or frequency advice.
+    if c["slug"] == "antlers": qa.extend(antler_choose_faq(ps))
     qa.extend(supervision_faq(noun, ps))
     html_ = '<section class="faq"><h2>Quick answers</h2>' + "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in qa) + "</section>"
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
