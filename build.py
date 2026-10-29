@@ -334,6 +334,40 @@ def pack_counts(p):
     return out
 BULK = 20
 
+SUP_RX = [
+    ("supervise", re.compile(r"supervis|monitor", re.I)),
+    ("pieces", re.compile(r"\b(remove|discard|throw it away|take away)\b", re.I)),
+    ("water", re.compile(r"\bwater\b", re.I)),
+    ("limited", re.compile(r"limited quantity|intermittent|supplemental|slowly introduce", re.I)),
+]
+FREQ_RX = re.compile(r"per day|per week|daily|a day|a week|once a|times a", re.I)
+
+def supervision_faq(noun, ps):
+    n = len(ps)
+    V = lambda L, pl, sg: sg if len(L) == 1 else pl
+    ns = [p for p in ps if p["supervision"].startswith("Not stated")]
+    hit = {k: [p for p in ps if not p["supervision"].startswith("Not stated") and rx.search(p["supervision"])] for k, rx in SUP_RX}
+    def brands(L):
+        out = []
+        for p in L:
+            if p["brand"] not in out: out.append(p["brand"])
+        return ", ".join(out)
+    parts = [f"{n - len(ns)} of the {n} {noun} product pages we list include supervision or feeding wording; "
+             + (f"{len(ns)} {'doesn\'t' if len(ns)==1 else 'don\'t'} say anything we could quote." if ns else "all of them say something.")]
+    if hit["supervise"]: parts.append(f"{len(hit['supervise'])} {V(hit['supervise'],'say','says')} to supervise or monitor your dog ({brands(hit['supervise'])}).")
+    if hit["pieces"]: parts.append(f"{len(hit['pieces'])} {V(hit['pieces'],'say','says')} to remove or throw away small, broken or swallowable pieces ({brands(hit['pieces'])}).")
+    if hit["water"]: parts.append(f"{len(hit['water'])} {V(hit['water'],'mention','mentions')} fresh water ({brands(hit['water'])}).")
+    parts.append("These are the brands' words, not a safety rating from us; each card quotes the exact wording, and your vet knows your dog.")
+    qa = [(f"What do brands say about supervising dogs with {noun}?", " ".join(parts))]
+    freq = [p for p in ps if FREQ_RX.search(p["supervision"] + " " + p["size_guidance"] + " " + p.get("note", ""))]
+    lim = hit["limited"]
+    a = (f"{len(freq)} of the {n} {noun} product pages we list {V(freq,'give','gives')} a number of chews per day or week in the wording we quote. " if freq else
+         f"None of the {n} {noun} product pages we list give a number of chews per day or week in the wording we quote. ")
+    if lim: a += f"{len(lim)} {V(lim,'say','says')} to give them in limited quantity, as an occasional or supplemental treat, or to introduce new chews slowly ({brands(lim)}). "
+    a += "For how often your own dog should have one, ask your vet; we don't give feeding advice."
+    qa.append((f"How often can a dog have {noun}?", a))
+    return qa
+
 def cat_faq(c, ps):
     noun = FAQ_NOUN.get(c["slug"], c["name"].lower())
     n = len(ps); last = max(p["last_checked"] for p in ps)
@@ -413,6 +447,10 @@ def cat_faq(c, ps):
              f"None of the {n} product pages we list use the words rawhide-free or made without rawhide. ")
             + ("The others don't say either way, which doesn't mean they contain rawhide; check with the brand." if rh else
                "That doesn't mean they contain rawhide; the pages just don't say. Check with the brand.")))
+    # Supervision / how-often answers (added 2026-10-29, run #43: Google autocomplete shows "are bully sticks safe",
+    # "how often can a dog eat a bully stick", "are collagen sticks safe"). Counted only from each card's quoted
+    # supervision wording; we never give our own safety or frequency advice.
+    qa.extend(supervision_faq(noun, ps))
     html_ = '<section class="faq"><h2>Quick answers</h2>' + "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in qa) + "</section>"
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in qa]}
