@@ -299,7 +299,7 @@ def guide_related(g):
 # Fan-out "Quick answers" on chew-type pages (added 2026-10-24). AI answers split a query into sub-questions
 # (where is it made, which brands, rawhide-free?). Every answer is COUNTED from data/products.json, so it can't
 # say anything the cards don't. No judgments, no safety wording.
-PLACES = [("USA", r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American"), ("Canada", r"Canada"),
+PLACES = [("USA", r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American|Colorado"), ("Canada", r"Canada"),
           ("Brazil", r"Brazil"), ("Argentina", r"Argentina"), ("Paraguay", r"Paraguay"),
           ("Colombia", r"Colombi|Columbia"),  # one brand page writes "Columbia" for its country of origin
           ("Peru", r"Peru"), ("Mexico", r"Mexico"), ("South America", r"South America"), ("the Americas", r"The Americas"),
@@ -309,7 +309,7 @@ FAQ_NOUN = {"antlers": "antler chews"}
 # Wording that names a place but isn't about where the chew is made or sourced (e.g. a recipe's origin).
 NOT_A_PLACE = re.compile(r"recipe that originates in [^.·]*", re.I)
 
-def _usa(t): return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American", t))
+def _usa(t): return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American|Colorado", t))  # Colorado: US state
 def usa_made(p):
     """Made-in quote names the USA with a making verb (packaged / country of origin don't count)."""
     return _usa(p["made_in"]) and bool(re.search(r"\bmade\b|bak|manufactur|produced", p["made_in"], re.I))
@@ -467,7 +467,7 @@ def category_page(c, products):
 
 def mentions_usa(p):
     t = (p["made_in"] + " " + p["sourced_from"]) if True else ""
-    return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American", t))  # "South American cattle" is not USA (fixed 2026-10-24)
+    return bool(re.search(r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American|Colorado", t))  # "South American cattle" is not USA (fixed 2026-10-24)
 
 def compare_summary(products):
     """Answer-first summary (added 2026-10-24): counts computed from data/products.json only, no judgments."""

@@ -4,7 +4,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 
 ## New categories / product batches
 - [x] /collagen-sticks/: published 2026-10-27 (Raw Paws, Best Bully Sticks, Jack&Pup; Pawstruck still available for expansion)
-- [ ] /beef-tendons/: beef tendon and "paddywhack" chews. Pawstruck, Redbarn, Best Bully Sticks, Raw Paws (feeds)
+- [x] /beef-tendons/ (PUBLISHED 2026-10-28, 6 products; also /bully-stick-vs-beef-tendon/): beef tendon and "paddywhack" chews. Pawstruck, Redbarn, Best Bully Sticks, Raw Paws (feeds)
 - [ ] /lamb-and-goat-horns/: horn chews. Pawstruck, Best Bully Sticks, Nature Gnaws (feeds)
 - [ ] /water-buffalo-horns/: Pawstruck, Nature Gnaws, Jack&Pup
 - [ ] /pig-ears/: Redbarn, Pawstruck, Raw Paws, Jack&Pup (feeds)
@@ -51,3 +51,5 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] Bully stick holders (keyword-targets row 8): needs a data model for non-chew accessories (material, sizes, cleaning as stated) before it can be built
 
 - [ ] Collagen chew vs rawhide standalone guide (autocomplete: "collagen chew vs rawhide", "collagen dog chew vs rawhide"); needs more collagen brands (Pawstruck) and processing quotes
+- [ ] /bully-stick-vs-gullet/: pair page once /esophagus-chews/ exists (keyword-targets row 3, "bully stick vs gullet stick")
+- [ ] /beef-tendons/ expansion: Nature Gnaws USA Beef Tendons, Pupford Standard and Turbo tendons, turkey tendons (Pupford, Nature Gnaws, Sancho) as a separate chew type if 3+ brands

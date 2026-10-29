@@ -56,3 +56,12 @@ Deploy confirm 2026-10-27 11:41 PM ET: main@954400b gh-pages pushed, Pages built
 - Audit fixes before shipping: "large pieces" (Pawstruck sizing rule) and "introductory chew" (Bully Bunches) excluded from the size/chewer groups.
 - Headless Chrome screenshots hung on this box this run (even for a data: URL), so only structural HTML checks were done (tags balanced, anchors resolve, JSON-LD parses).
 Deploy confirm 2026-10-28 3:24 PM ET: main@0e0e836 gh-pages pushed; https://nibbables.com/dog-chews-by-dog-size-and-chewer/ HTTP 200, Amazon disclosure present, in sitemap (19/19 URLs 200) and llms.txt. IndexNow 200 api.indexnow.org + bing (new page, home, /compare/, 6 chew-type pages, sitemap, llms.txt).
+
+## 2026-10-28 — /beef-tendons/ + /bully-stick-vs-beef-tendon/ (nightly)
+- Target: keyword-targets Nibbables row 3 (bully stick vs beef tendon; what lasts longer than a bully stick) plus content-queue top item /beef-tendons/.
+- New chew type /beef-tendons/ with 6 products, all from brand pages snapshotted tonight (research/pages/bt-*-1029.txt): Pawstruck Beef Tendons for Dogs, Redbarn Beef Tendon, Pupford Thick Beef Tendon Dog Chew, Sancho & Lola's Closet USA Flexor Tendons and USA Beef Tendons, Nature Gnaws Beef Tendon Wraps. Amazon links on 2 (Pawstruck B07BZ2KXTN, Nature Gnaws B0DVBJ6R3Y); 4 misses logged in research/amazon-matches.md.
+- New guide /bully-stick-vs-beef-tendon/: each of the 5 brands' bully stick next to its tendon chew (11 cards), table of ingredients/origin/calories/shelf life quoted, FAQ with the real queries, AKC + Today's Veterinary Practice quotes (AKC's "safer" sentence avoided). 69 quotes checked.
+- Re-checked tonight the 5 paired bully stick pages (Pawstruck, Redbarn, Pupford, Sancho & Lola's, Nature Gnaws): all existing card quotes still verbatim; snapshots bsre-*-1028.txt, last_checked bumped to 2026-10-28.
+- Contradictions recorded in card notes: Redbarn tendon page shows both "Country of Origin: Paraguay" and "Made in the USA with Globally Sourced Ingredients"; Pupford thick tendon shows "Made in the USA" while its FAQ says "These chews are sourced in Colombia."
+- build.py: "Colorado" now counts as USA in the place/USA regexes (Sancho flexor page says "Made in Colorado.").
+- Gaps: no calories for Pawstruck, Sancho flexor or Nature Gnaws wraps; no shelf life on Pupford, Sancho or Nature Gnaws; Redbarn has no supervision line; Sancho USA Beef Tendons out of stock ("back in stock mid November or sooner"). Headless Chrome screenshots didn't write this run, so only structural checks.

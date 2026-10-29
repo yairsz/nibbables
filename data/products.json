@@ -188,7 +188,7 @@
   "affiliate_url": "https://www.amazon.com/dp/B08176Q9LF?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/bs-pawstruck-straight-bully-sticks-for-dogs-sold-by-w-1025.txt",
+  "snapshot": "research/pages/bsre-bs-pawstruck-straight-bully-sticks-for-dogs-sold-by-w-1028.txt",
   "brand": "Pawstruck",
   "product": "Straight Bully Sticks for Dogs (Sold by Weight)",
   "category": "bully-sticks",
@@ -206,12 +206,12 @@
    "1 lbs bag"
   ],
   "note": "",
-  "last_checked": "2026-10-25",
+  "last_checked": "2026-10-28",
   "amazon_asin": "B0CDFJWVZD",
   "affiliate_url": "https://www.amazon.com/dp/B0CDFJWVZD?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/bs-nature-gnaws-small-bully-sticks-6-1025.txt",
+  "snapshot": "research/pages/bsre-bs-nature-gnaws-small-bully-sticks-6-1028.txt",
   "brand": "Nature Gnaws",
   "product": "Small Bully Sticks 6\"",
   "category": "bully-sticks",
@@ -227,12 +227,12 @@
    "15 count"
   ],
   "note": "The sourcing line is the brand's general statement shown on the product page, not specific to this item.",
-  "last_checked": "2026-10-25",
+  "last_checked": "2026-10-28",
   "amazon_asin": "B06XRX23M2",
   "affiliate_url": "https://www.amazon.com/dp/B06XRX23M2?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/bs-redbarn-bully-sticks-for-dogs-1025.txt",
+  "snapshot": "research/pages/bsre-bs-redbarn-bully-sticks-for-dogs-1028.txt",
   "brand": "Redbarn",
   "product": "Bully Sticks for Dogs",
   "category": "bully-sticks",
@@ -253,7 +253,7 @@
    "36\" (various pack and case counts)"
   ],
   "note": "",
-  "last_checked": "2026-10-25",
+  "last_checked": "2026-10-28",
   "amazon_asin": "B004QGK8TW",
   "affiliate_url": "https://www.amazon.com/dp/B004QGK8TW?tag=nibbables-20"
  },
@@ -281,7 +281,7 @@
   "affiliate_url": "https://www.amazon.com/dp/B09C2HLQZK?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/bs-pupford-skinny-smoky-bully-stick-1025.txt",
+  "snapshot": "research/pages/bsre-bs-pupford-skinny-smoky-bully-stick-1028.txt",
   "brand": "Pupford",
   "product": "Skinny Smoky Bully Stick",
   "category": "bully-sticks",
@@ -298,7 +298,7 @@
    "20 oz (5 oz x 4)"
   ],
   "note": "",
-  "last_checked": "2026-10-25"
+  "last_checked": "2026-10-28"
  },
  {
   "snapshot": "research/pages/bc-rpb-1028.txt",
@@ -727,7 +727,7 @@
   "affiliate_url": "https://www.amazon.com/dp/B085DMRMCX?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/sancho-6-standard-charcuterie-1025.txt",
+  "snapshot": "research/pages/bsre-sancho-6-standard-charcuterie-1028.txt",
   "brand": "Sancho & Lola's Closet",
   "product": "6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA",
   "category": "bully-sticks",
@@ -744,7 +744,7 @@
    "Standard 40-Count"
   ],
   "note": "\"Sourced and Made in the USA\" is in the page title; the product description says \"Made in the USA\". The rawhide line is from the founder's note on the page, about all of the brand's chews.",
-  "last_checked": "2026-10-25"
+  "last_checked": "2026-10-28"
  },
  {
   "snapshot": "research/pages/jackspremium-5-8-thin-1025.txt",
@@ -997,5 +997,126 @@
   "last_checked": "2026-10-27",
   "amazon_asin": "B09TBM3XTC",
   "affiliate_url": "https://www.amazon.com/dp/B09TBM3XTC?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/bt-pawstruck-1029.txt",
+  "brand": "Pawstruck",
+  "product": "Beef Tendons for Dogs",
+  "category": "beef-tendons",
+  "source_url": "https://pawstruck.com/products/beef-tendons-for-dogs",
+  "ingredients": "Made from a single ingredient—premium beef tendon",
+  "made_in": "Made in: Paraguay",
+  "sourced_from": "We source tendons from trusted suppliers",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Recommended chew size is slightly larger than your pet’s mouth.",
+  "supervision": "we always recommend supervision while feeding your pet any treat or chew. · remove any large, swallowable pieces to prevent blockages.",
+  "sizes": [
+   "10 Tendons",
+   "50 Tendons",
+   "100 Tendons"
+  ],
+  "note": "The page lists dimensions as 7\"-9\" long.",
+  "last_checked": "2026-10-28",
+  "amazon_asin": "B07BZ2KXTN",
+  "affiliate_url": "https://www.amazon.com/dp/B07BZ2KXTN?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/bt-redbarn-1029.txt",
+  "brand": "Redbarn",
+  "product": "Beef Tendon",
+  "category": "beef-tendons",
+  "source_url": "https://www.redbarn.com/products/beef-tendon",
+  "ingredients": "Beef Tendon.",
+  "made_in": "Country of Origin: Paraguay",
+  "sourced_from": "Not stated, check with them",
+  "rawhide_free": "No Rawhide",
+  "size_guidance": "All Breeds · All Life Stages",
+  "supervision": "Not stated, check with them",
+  "sizes": [
+   "2 pack",
+   "Case of 50"
+  ],
+  "note": "The same page also shows the line \"Made in the USA with Globally Sourced Ingredients\". It lists Calories as N/A and Shelf Life as 36 months. Both sizes showed as sold out when checked.",
+  "last_checked": "2026-10-28"
+ },
+ {
+  "snapshot": "research/pages/bt-pupford-1029.txt",
+  "brand": "Pupford",
+  "product": "Thick Beef Tendon Dog Chew",
+  "category": "beef-tendons",
+  "source_url": "https://www.pupford.com/products/thick-beef-tendon-dog-chew",
+  "ingredients": "Beef Achilles Tendon",
+  "made_in": "Made in the USA",
+  "sourced_from": "These chews are sourced in Colombia.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "It depends on your dog's size and chewing tendencies.",
+  "supervision": "Please monitor your dog whenever giving them a dog chew. · It is recommended to slowly introduce new chews to your dog's diet.",
+  "sizes": [
+   "5 Pack",
+   "10 Pack (5 Pack x 2)",
+   "20 Pack (5 Pack x 4)"
+  ],
+  "note": "The page's FAQ answers \"Where is this chew made?\" with \"These chews are sourced in Colombia.\" It states \"About 170 kcal per chew\" and \"These chews are about 3-5 inches long.\"",
+  "last_checked": "2026-10-28"
+ },
+ {
+  "snapshot": "research/pages/bt-sancho-flexor-1029.txt",
+  "brand": "Sancho & Lola's Closet",
+  "product": "USA Flexor Tendons - DELISH!",
+  "category": "beef-tendons",
+  "source_url": "https://sanchoandlola.com/products/beef-flexor-tendons-10oz-5-6",
+  "ingredients": "100% dehydrated beef. Single-ingredient DIGESTIBLE chew.",
+  "made_in": "Made in Colorado.",
+  "sourced_from": "Not stated, check with them",
+  "rawhide_free": "They will never contain any rawhide.",
+  "size_guidance": "MEDIUM -LARGE DOGS 25+: Tendons are 4\"- 5\" · MODERATE TO POWER CHEWER",
+  "supervision": "So, we recommend monitoring your pup when you notice they are chewing on anything.",
+  "sizes": [
+   "10oz (6-9 Count)",
+   "2 LB BULK (16-22)",
+   "4 LBS BULK (32-44 Count)"
+  ],
+  "note": "The rawhide line is from the brand's general FAQ text on the page.",
+  "last_checked": "2026-10-28"
+ },
+ {
+  "snapshot": "research/pages/bt-sancho-tendons-1029.txt",
+  "brand": "Sancho & Lola's Closet",
+  "product": "USA Beef Tendons",
+  "category": "beef-tendons",
+  "source_url": "https://sanchoandlola.com/products/new-beef-tendons",
+  "ingredients": "Single ingredient - beef.",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "gourmet dog chews made from American-sourced beef",
+  "rawhide_free": "They will never contain any rawhide.",
+  "size_guidance": "Will not be long-lasting for larger dogs",
+  "supervision": "So, we recommend monitoring your pup when you notice they are chewing on anything.",
+  "sizes": [
+   "8oz bag",
+   "16oz (2 x 8oz bags)",
+   "24oz (3x 8oz bags)"
+  ],
+  "note": "The page says \"Hoping to have these delicious Tendons back in stock mid November or sooner\" and describes \"Various shapes and sizes (9\" -11\"). Approx. 7-8 Tendons\".",
+  "last_checked": "2026-10-28"
+ },
+ {
+  "snapshot": "research/pages/bt-ng-wraps-1029.txt",
+  "brand": "Nature Gnaws",
+  "product": "Beef Tendon Wraps Durable Dental Chews",
+  "category": "beef-tendons",
+  "source_url": "https://www.naturegnaws.com/products/natural-beef-gullet-tendon-wraps-lasting-dental-chews",
+  "ingredients": "Ingredients: Beef Tendons, Beef Gullet",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "responsibly sourced",
+  "rawhide_free": "these grain-free, gluten-free, and rawhide-free chews",
+  "size_guidance": "perfect for power chewers and teething puppies of medium and large breeds",
+  "supervision": "Always supervise your dog while they are chewing and provide plenty of fresh water. · remove any small, broken, or splintered pieces, and be sure to choose the appropriate size chew.",
+  "sizes": [
+   "5 Count"
+  ],
+  "note": "",
+  "last_checked": "2026-10-28",
+  "amazon_asin": "B0DVBJ6R3Y",
+  "affiliate_url": "https://www.amazon.com/dp/B0DVBJ6R3Y?tag=nibbables-20"
  }
 ]

@@ -95,3 +95,10 @@ Method: WebSearch Amazon.com titles/ASINs (brand + product + size); curl dp page
 
 ### 2026-10-27 /bully-stick-vs-collagen-stick/
 No new products; the guide reuses 6 existing cards. Amazon links unchanged: 5 of 6 linked (Raw Paws bully B078TPGBL9, Raw Paws collagen B0BS1Q1KLM, BBS thin bully B013TKCZZK, Jack&Pup bully B071248J35, Jack&Pup collagen B09TBM3XTC); Best Bully Collagen Sticks still unlinked (pack mismatch, see above).
+
+## 2026-10-28 nightly: /beef-tendons/ (new chew type)
+- MATCH Pawstruck Beef Tendons for Dogs (10 Tendons) → B07BZ2KXTN "Pawstruck 7"-9" Tendons 100% Natural Premium Beef Dog Chew, 10 Pack", byline "Visit the Pawstruck Store" (brand page: 7"-9" long; 10/50/100 tendons).
+- MATCH Nature Gnaws Beef Tendon Wraps Durable Dental Chews (5 Count) → B0DVBJ6R3Y "Nature Gnaws Beef Tendon Wraps Rawhide Free Dog Chews, 5 Count", byline "Visit the Nature Gnaws Store".
+- MISS Redbarn Beef Tendon: Amazon lists "Redbarn Large Beef Tendons" (10-ct B00DZSCAG6, 50-ct B005EIPD9G); brand page product is "Beef Tendon" (2 pack / Case of 50) with no "Large" wording, so the variant can't be confirmed.
+- MISS Pupford Thick Beef Tendon Dog Chew: Amazon search shows only Pupford Standard (B07VMZWHG7, B07VS9XHB7) and Turbo (B0B65P7PGS, B0B663HJPR) tendons, no Thick.
+- MISS Sancho & Lola's Closet USA Flexor Tendons and USA Beef Tendons: no Sancho & Lola's tendon listing found in Amazon search.

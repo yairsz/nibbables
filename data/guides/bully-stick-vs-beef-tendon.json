@@ -1,0 +1,470 @@
+{
+ "slug": "bully-stick-vs-beef-tendon",
+ "title": "Bully stick vs beef tendon: what 5 brands say",
+ "meta": "Bully sticks vs beef tendon chews from the same 5 brands: ingredients, origin, calories and shelf life quoted from each page, plus what the AKC says.",
+ "h1": "Bully stick vs beef tendon: the same brands, side by side",
+ "intro": "Bully sticks and beef tendon chews are both beef chews, but they're made from different parts of the animal. Five brands in our directory sell both, so this page puts each brand's bully stick next to its tendon chew and quotes what the pages say about ingredients, origin, calories and shelf life. Where a page is silent, we say so. We don't pick a winner; your vet can help you choose for your dog.",
+ "table": {
+  "h": "Each brand's bully stick and beef tendon chew",
+  "caption": "Quoted from each brand's product page, checked 2026-10-28. \"Not stated\" means we found nothing on that page about it.",
+  "head": [
+   "Brand: product",
+   "Type",
+   "Ingredients (quoted)",
+   "Origin (quoted)",
+   "Calories (quoted)",
+   "Shelf life (quoted)"
+  ],
+  "rows": [
+   {
+    "snapshot": "research/pages/bsre-bs-pawstruck-straight-bully-sticks-for-dogs-sold-by-w-1028.txt",
+    "cells": [
+     "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight)",
+     "Bully stick",
+     {
+      "q": "Beef pizzle"
+     },
+     {
+      "q": "Made in: Paraguay, Brazil, Colombia, New Zealand, Peru, or Turkey"
+     },
+     "Not stated",
+     {
+      "q": "36 months"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/bt-pawstruck-1029.txt",
+    "cells": [
+     "Pawstruck: Beef Tendons for Dogs",
+     "Beef tendon",
+     {
+      "q": "Beef tendon"
+     },
+     {
+      "q": "Made in: Paraguay"
+     },
+     "Not stated",
+     {
+      "q": "36 months"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/bsre-bs-redbarn-bully-sticks-for-dogs-1028.txt",
+    "cells": [
+     "Redbarn: Bully Sticks for Dogs",
+     "Bully stick",
+     {
+      "q": "Beef Pizzle."
+     },
+     {
+      "q": "Country of Origin: Paraguay, Brazil, Colombia, New Zealand, Peru, Turkey"
+     },
+     {
+      "q": "Calories: N/A"
+     },
+     {
+      "q": "36 months"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/bt-redbarn-1029.txt",
+    "cells": [
+     "Redbarn: Beef Tendon",
+     "Beef tendon",
+     {
+      "q": "Beef Tendon."
+     },
+     {
+      "q": "Country of Origin: Paraguay"
+     },
+     {
+      "q": "Calories: N/A"
+     },
+     {
+      "q": "36 months"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/bsre-bs-pupford-skinny-smoky-bully-stick-1028.txt",
+    "cells": [
+     "Pupford: Skinny Smoky Bully Stick",
+     "Bully stick",
+     {
+      "q": "Beef Pizzle"
+     },
+     {
+      "q": "This product is made in the USA."
+     },
+     {
+      "q": "Metabolizable Energy: 2,625 kcal/kg"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/bt-pupford-1029.txt",
+    "cells": [
+     "Pupford: Thick Beef Tendon Dog Chew",
+     "Beef tendon",
+     {
+      "q": "Beef Achilles Tendon"
+     },
+     {
+      "q": "Made in the USA"
+     },
+     {
+      "q": "About 170 kcal per chew"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/bsre-sancho-6-standard-charcuterie-1028.txt",
+    "cells": [
+     "Sancho & Lola's Closet: 6-Inch Standard Charcuterie Style Bully Sticks",
+     "Bully stick",
+     {
+      "q": "SINGLE INGREDIENT: 100% Beef Pizzle and nothing else."
+     },
+     {
+      "q": "CHARCUTERIE: Made in the USA."
+     },
+     "Not stated",
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/bt-sancho-flexor-1029.txt",
+    "cells": [
+     "Sancho & Lola's Closet: USA Flexor Tendons - DELISH!",
+     "Beef tendon",
+     {
+      "q": "100% dehydrated beef."
+     },
+     {
+      "q": "Made in Colorado."
+     },
+     "Not stated",
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/bt-sancho-tendons-1029.txt",
+    "cells": [
+     "Sancho & Lola's Closet: USA Beef Tendons",
+     "Beef tendon",
+     {
+      "q": "Single ingredient - beef."
+     },
+     {
+      "q": "made from American-sourced beef"
+     },
+     {
+      "q": "3400 kcal/kg"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/bsre-bs-nature-gnaws-small-bully-sticks-6-1028.txt",
+    "cells": [
+     "Nature Gnaws: Small Bully Sticks 6\"",
+     "Bully stick",
+     {
+      "q": "Ingredients: Beef Pizzle"
+     },
+     "Not stated",
+     {
+      "q": "About 70 calories per chew"
+     },
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/bt-ng-wraps-1029.txt",
+    "cells": [
+     "Nature Gnaws: Beef Tendon Wraps Durable Dental Chews",
+     "Beef tendon wrap",
+     {
+      "q": "Ingredients: Beef Tendons, Beef Gullet"
+     },
+     "Not stated",
+     "Not stated",
+     "Not stated"
+    ]
+   }
+  ]
+ },
+ "faq": [
+  {
+   "q": "Bully stick vs beef tendon: what's the difference?",
+   "a": "They're made from different parts of the animal. All five brands' bully sticks list beef pizzle (Redbarn: “Beef Pizzle.”; Sancho & Lola's Closet: “SINGLE INGREDIENT: 100% Beef Pizzle and nothing else.”). Their tendon chews list tendon or beef instead: Redbarn “Beef Tendon.”, Pupford “Beef Achilles Tendon”, Sancho & Lola's Closet “Single ingredient - beef.” Not every tendon chew is tendon alone: Nature Gnaws' wraps list “Ingredients: Beef Tendons, Beef Gullet”."
+  },
+  {
+   "q": "What lasts longer than a bully stick?",
+   "a": "We found no study that measures how long bully sticks or tendons last. Brand wording varies even within one brand: Sancho & Lola's Closet calls its flexor tendon “Our toughest Tendon” but says of its USA Beef Tendons that they “Will not be long-lasting for larger dogs”. Pawstruck says its tendons' “firm texture provides hours of chewing satisfaction”, and Pupford answers its own “Will this last my dog a long time?” question with “It depends on your dog's size and chewing tendencies.” How long any chew lasts depends on its size and on how your dog chews."
+  },
+  {
+   "q": "Do beef tendons or bully sticks have more calories?",
+   "a": "Most of these pages don't say, and the ones that do use different units. Redbarn lists “Calories: N/A” on both its pages. Pupford gives “About 170 kcal per chew” for its thick tendon (“These chews are about 3-5 inches long.”) and “Metabolizable Energy: 2,625 kcal/kg” for its skinny bully stick (“These chews are about 6 inches long.”). Nature Gnaws gives “About 70 calories per chew” for its 6-inch bully stick, and Sancho & Lola's Closet lists “3400 kcal/kg” for its USA Beef Tendons. A per-kilogram figure doesn't tell you what one chew contains, so these numbers can't be lined up directly; our bully stick calories guide covers the published study that measured bully sticks."
+  },
+  {
+   "q": "Are beef tendons made in the USA?",
+   "a": "Some brands say so and some name other countries. Sancho & Lola's Closet says its flexor tendons are “Made in Colorado.” and its USA Beef Tendons are “made from American-sourced beef”. Pupford's tendon page shows “Made in the USA”, but its FAQ answers “Where is this chew made?” with “These chews are sourced in Colombia.” Pawstruck states “Made in: Paraguay”, and Redbarn lists “Country of Origin: Paraguay” while the same page also shows “Made in the USA with Globally Sourced Ingredients”. Nature Gnaws' wraps page doesn't state a country. Read the exact quote on each card before you buy."
+  }
+ ],
+ "sections": [
+  {
+   "h": "The same five brands, side by side",
+   "p": [
+    "Pawstruck, Redbarn, Pupford, Sancho & Lola's Closet and Nature Gnaws each sell both a bully stick and a beef tendon chew, so the table puts each brand's pages next to each other. Pawstruck and Redbarn give the same shelf life for both their chews (“36 months”). Pawstruck's bully stick page names six possible countries and its tendon page names one (“Made in: Paraguay”)."
+   ]
+  },
+  {
+   "h": "What veterinary sources say about tendon chews",
+   "p": [
+    "The AKC's edible chews article has a section headed “Tendons and Other Animal Parts” and describes “Backstrap and other tendon chews” as “low in fat and high in protein and collagen.” Today's Veterinary Practice lists both bully sticks and tendons under “Other body parts” in its group of “Animal-derived products that have undergone minimal processing”. Neither source ranks one over the other here; ask your vet which chew suits your dog."
+   ]
+  },
+  {
+   "h": "What each brand says about supervision",
+   "p": [
+    "Each brand's tendon page asks you to watch your dog except Redbarn's, where we found no supervision line. Pawstruck says “we always recommend supervision while feeding your pet any treat or chew.”, Pupford says “Please monitor your dog whenever giving them a dog chew.”, and Nature Gnaws says “Always supervise your dog while they are chewing and provide plenty of fresh water.”"
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "American Kennel Club: How to Pick Edible Dog Chews (Stephanie Gibeault, MSc, CPDT; updated Nov 6, 2025)",
+   "url": "https://www.akc.org/expert-advice/nutrition/choosing-edible-chews-for-dogs/"
+  },
+  {
+   "label": "Today's Veterinary Practice: The Benefits and Risks of Chew Treats, by Laura Gaylord, DVM, DACVIM (Nutrition) and Donna Raditic, DVM, DACVIM (Nutrition) (Jan/Feb 2024 issue)",
+   "url": "https://todaysveterinarypractice.com/nutrition/the-benefits-and-risks-of-chew-treats/"
+  },
+  {
+   "label": "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight) (product page)",
+   "url": "https://pawstruck.com/products/straight-bully-sticks-for-dogs-sold-by-weight"
+  },
+  {
+   "label": "Pawstruck: Beef Tendons for Dogs (product page)",
+   "url": "https://pawstruck.com/products/beef-tendons-for-dogs"
+  },
+  {
+   "label": "Redbarn: Bully Sticks for Dogs (product page)",
+   "url": "https://www.redbarn.com/products/bully-stick"
+  },
+  {
+   "label": "Redbarn: Beef Tendon (product page)",
+   "url": "https://www.redbarn.com/products/beef-tendon"
+  },
+  {
+   "label": "Pupford: Skinny Smoky Bully Stick (product page)",
+   "url": "https://www.pupford.com/products/skinny-bully-sticks"
+  },
+  {
+   "label": "Pupford: Thick Beef Tendon Dog Chew (product page)",
+   "url": "https://www.pupford.com/products/thick-beef-tendon-dog-chew"
+  },
+  {
+   "label": "Sancho & Lola's Closet: 6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA (product page)",
+   "url": "https://sanchoandlola.com/products/copy-of-6-inch-charcuterie-style-bully-sticks-no-odor-farmed-in-the-usa"
+  },
+  {
+   "label": "Sancho & Lola's Closet: USA Flexor Tendons - DELISH! (product page)",
+   "url": "https://sanchoandlola.com/products/beef-flexor-tendons-10oz-5-6"
+  },
+  {
+   "label": "Sancho & Lola's Closet: USA Beef Tendons (product page)",
+   "url": "https://sanchoandlola.com/products/new-beef-tendons"
+  },
+  {
+   "label": "Nature Gnaws: Small Bully Sticks 6\" (product page)",
+   "url": "https://www.naturegnaws.com/products/natural-small-beef-bully-sticks-long-lasting-dog-chews"
+  },
+  {
+   "label": "Nature Gnaws: Beef Tendon Wraps Durable Dental Chews (product page)",
+   "url": "https://www.naturegnaws.com/products/natural-beef-gullet-tendon-wraps-lasting-dental-chews"
+  }
+ ],
+ "product_ids": [
+  "pawstruck-straight-bully-sticks-for-dogs-sold-by-weight",
+  "pawstruck-beef-tendons-for-dogs",
+  "redbarn-bully-sticks-for-dogs",
+  "redbarn-beef-tendon",
+  "pupford-skinny-smoky-bully-stick",
+  "pupford-thick-beef-tendon-dog-chew",
+  "sancho-lola-s-closet-6-inch-standard-charcuterie-style-bully-sticks-no-odor-made",
+  "sancho-lola-s-closet-usa-flexor-tendons-delish",
+  "sancho-lola-s-closet-usa-beef-tendons",
+  "nature-gnaws-small-bully-sticks-6",
+  "nature-gnaws-beef-tendon-wraps-durable-dental-chews"
+ ],
+ "quote_checks": [
+  {
+   "snapshot": "research/pages/bsre-bs-redbarn-bully-sticks-for-dogs-1028.txt",
+   "text": "Beef Pizzle."
+  },
+  {
+   "snapshot": "research/pages/bsre-sancho-6-standard-charcuterie-1028.txt",
+   "text": "SINGLE INGREDIENT: 100% Beef Pizzle and nothing else."
+  },
+  {
+   "snapshot": "research/pages/bt-redbarn-1029.txt",
+   "text": "Beef Tendon."
+  },
+  {
+   "snapshot": "research/pages/bt-redbarn-1029.txt",
+   "text": "Calories: N/A"
+  },
+  {
+   "snapshot": "research/pages/bt-redbarn-1029.txt",
+   "text": "Country of Origin: Paraguay"
+  },
+  {
+   "snapshot": "research/pages/bt-redbarn-1029.txt",
+   "text": "Made in the USA with Globally Sourced Ingredients"
+  },
+  {
+   "snapshot": "research/pages/bt-redbarn-1029.txt",
+   "text": "36 months"
+  },
+  {
+   "snapshot": "research/pages/bsre-bs-redbarn-bully-sticks-for-dogs-1028.txt",
+   "text": "Calories: N/A"
+  },
+  {
+   "snapshot": "research/pages/bsre-bs-redbarn-bully-sticks-for-dogs-1028.txt",
+   "text": "36 months"
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "Beef Achilles Tendon"
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "About 170 kcal per chew"
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "These chews are about 3-5 inches long."
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "Made in the USA"
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "Where is this chew made?"
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "These chews are sourced in Colombia."
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "Will this last my dog a long time?"
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "It depends on your dog's size and chewing tendencies."
+  },
+  {
+   "snapshot": "research/pages/bt-pupford-1029.txt",
+   "text": "Please monitor your dog whenever giving them a dog chew."
+  },
+  {
+   "snapshot": "research/pages/bt-sancho-tendons-1029.txt",
+   "text": "Single ingredient - beef."
+  },
+  {
+   "snapshot": "research/pages/bt-sancho-tendons-1029.txt",
+   "text": "Will not be long-lasting for larger dogs"
+  },
+  {
+   "snapshot": "research/pages/bt-sancho-tendons-1029.txt",
+   "text": "made from American-sourced beef"
+  },
+  {
+   "snapshot": "research/pages/bt-sancho-tendons-1029.txt",
+   "text": "3400 kcal/kg"
+  },
+  {
+   "snapshot": "research/pages/bt-ng-wraps-1029.txt",
+   "text": "Ingredients: Beef Tendons, Beef Gullet"
+  },
+  {
+   "snapshot": "research/pages/bt-ng-wraps-1029.txt",
+   "text": "Always supervise your dog while they are chewing and provide plenty of fresh water."
+  },
+  {
+   "snapshot": "research/pages/bt-sancho-flexor-1029.txt",
+   "text": "Our toughest Tendon"
+  },
+  {
+   "snapshot": "research/pages/bt-sancho-flexor-1029.txt",
+   "text": "Made in Colorado."
+  },
+  {
+   "snapshot": "research/pages/bt-pawstruck-1029.txt",
+   "text": "firm texture provides hours of chewing satisfaction"
+  },
+  {
+   "snapshot": "research/pages/bt-pawstruck-1029.txt",
+   "text": "Made in: Paraguay"
+  },
+  {
+   "snapshot": "research/pages/bt-pawstruck-1029.txt",
+   "text": "36 months"
+  },
+  {
+   "snapshot": "research/pages/bt-pawstruck-1029.txt",
+   "text": "we always recommend supervision while feeding your pet any treat or chew."
+  },
+  {
+   "snapshot": "research/pages/bsre-bs-pawstruck-straight-bully-sticks-for-dogs-sold-by-w-1028.txt",
+   "text": "36 months"
+  },
+  {
+   "snapshot": "research/pages/bsre-bs-pupford-skinny-smoky-bully-stick-1028.txt",
+   "text": "Metabolizable Energy: 2,625 kcal/kg"
+  },
+  {
+   "snapshot": "research/pages/bsre-bs-pupford-skinny-smoky-bully-stick-1028.txt",
+   "text": "These chews are about 6 inches long."
+  },
+  {
+   "snapshot": "research/pages/bsre-bs-nature-gnaws-small-bully-sticks-6-1028.txt",
+   "text": "About 70 calories per chew"
+  },
+  {
+   "snapshot": "research/pages/akc-edible-chews.txt",
+   "text": "Tendons and Other Animal Parts"
+  },
+  {
+   "snapshot": "research/pages/akc-edible-chews.txt",
+   "text": "Backstrap and other tendon chews"
+  },
+  {
+   "snapshot": "research/pages/akc-edible-chews.txt",
+   "text": "low in fat and high in protein and collagen."
+  },
+  {
+   "snapshot": "research/pages/tvp-chew-treats.txt",
+   "text": "Other body parts"
+  },
+  {
+   "snapshot": "research/pages/tvp-chew-treats.txt",
+   "text": "Animal-derived products that have undergone minimal processing"
+  }
+ ],
+ "last_checked": "2026-10-28",
+ "categories": [
+  "bully-sticks",
+  "beef-tendons"
+ ]
+}
