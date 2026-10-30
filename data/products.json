@@ -98,7 +98,7 @@
   "last_checked": "2026-10-25"
  },
  {
-  "snapshot": "research/pages/bc-bbsb-1028.txt",
+  "snapshot": "research/pages/gbs-best-bully-sticks-1029.txt",
   "brand": "Best Bully Sticks",
   "product": "6-Inch Thin Bully Stick",
   "category": "bully-sticks",
@@ -116,7 +116,7 @@
    "50 Pack"
   ],
   "note": "",
-  "last_checked": "2026-10-27",
+  "last_checked": "2026-10-29",
   "amazon_asin": "B013TKCZZK",
   "affiliate_url": "https://www.amazon.com/dp/B013TKCZZK?tag=nibbables-20"
  },
@@ -142,7 +142,7 @@
   "last_checked": "2026-10-25"
  },
  {
-  "snapshot": "research/pages/bc-jpb-1028.txt",
+  "snapshot": "research/pages/gbs-jack-pup-1029.txt",
   "brand": "Jack&Pup",
   "product": "Bully Sticks - 6 inch Standard",
   "category": "bully-sticks",
@@ -160,7 +160,7 @@
    "50 Pieces"
   ],
   "note": "The same page also says the beef is from \"free-range South American cows\".",
-  "last_checked": "2026-10-27",
+  "last_checked": "2026-10-29",
   "amazon_asin": "B071248J35",
   "affiliate_url": "https://www.amazon.com/dp/B071248J35?tag=nibbables-20"
  },
@@ -211,7 +211,7 @@
   "affiliate_url": "https://www.amazon.com/dp/B0CDFJWVZD?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/bsre-bs-nature-gnaws-small-bully-sticks-6-1028.txt",
+  "snapshot": "research/pages/gbs-nature-gnaws-1029.txt",
   "brand": "Nature Gnaws",
   "product": "Small Bully Sticks 6\"",
   "category": "bully-sticks",
@@ -227,12 +227,12 @@
    "15 count"
   ],
   "note": "The sourcing line is the brand's general statement shown on the product page, not specific to this item.",
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-10-29",
   "amazon_asin": "B06XRX23M2",
   "affiliate_url": "https://www.amazon.com/dp/B06XRX23M2?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/bsre-bs-redbarn-bully-sticks-for-dogs-1028.txt",
+  "snapshot": "research/pages/gbs-redbarn-1029.txt",
   "brand": "Redbarn",
   "product": "Bully Sticks for Dogs",
   "category": "bully-sticks",
@@ -253,7 +253,7 @@
    "36\" (various pack and case counts)"
   ],
   "note": "",
-  "last_checked": "2026-10-28",
+  "last_checked": "2026-10-29",
   "amazon_asin": "B004QGK8TW",
   "affiliate_url": "https://www.amazon.com/dp/B004QGK8TW?tag=nibbables-20"
  },
@@ -301,7 +301,7 @@
   "last_checked": "2026-10-28"
  },
  {
-  "snapshot": "research/pages/bc-rpb-1028.txt",
+  "snapshot": "research/pages/gbs-raw-paws-pet-food-1029.txt",
   "brand": "Raw Paws Pet Food",
   "product": "Standard Bully Sticks, 6-inch - 10-ct",
   "category": "bully-sticks",
@@ -316,7 +316,7 @@
    "6-inch, 10-ct (single listing)"
   ],
   "note": "",
-  "last_checked": "2026-10-27",
+  "last_checked": "2026-10-29",
   "amazon_asin": "B078TPGBL9",
   "affiliate_url": "https://www.amazon.com/dp/B078TPGBL9?tag=nibbables-20",
   "cj_url": "https://www.jdoqocy.com/click-101911617-17014991?url=https%3A%2F%2Fwww.rawpawspetfood.com%2Fproducts%2Fstandard-bully-sticks-6-inch-10-ct"
@@ -727,7 +727,7 @@
   "affiliate_url": "https://www.amazon.com/dp/B085DMRMCX?tag=nibbables-20"
  },
  {
-  "snapshot": "research/pages/bsre-sancho-6-standard-charcuterie-1028.txt",
+  "snapshot": "research/pages/gbs-sancho-lola-s-closet-1029.txt",
   "brand": "Sancho & Lola's Closet",
   "product": "6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA",
   "category": "bully-sticks",
@@ -744,10 +744,10 @@
    "Standard 40-Count"
   ],
   "note": "\"Sourced and Made in the USA\" is in the page title; the product description says \"Made in the USA\". The rawhide line is from the founder's note on the page, about all of the brand's chews.",
-  "last_checked": "2026-10-28"
+  "last_checked": "2026-10-29"
  },
  {
-  "snapshot": "research/pages/jackspremium-5-8-thin-1025.txt",
+  "snapshot": "research/pages/gbs-jack-s-premium-1029.txt",
   "brand": "Jack's Premium",
   "product": "5-8\" Thin Bully Sticks",
   "category": "bully-sticks",
@@ -764,7 +764,7 @@
    "25 Sticks"
   ],
   "note": "Listed as 5-8 inches in length, 1-2 ounces per stick.",
-  "last_checked": "2026-10-25"
+  "last_checked": "2026-10-29"
  },
  {
   "snapshot": "research/pages/bullybunches-6-standard-1025.txt",
@@ -1118,5 +1118,187 @@
   "last_checked": "2026-10-28",
   "amazon_asin": "B0DVBJ6R3Y",
   "affiliate_url": "https://www.amazon.com/dp/B0DVBJ6R3Y?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/gu-rawpaws-gullet-1029.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Beef Gullet Sticks for Dogs, 6-inch - 10-ct",
+  "category": "esophagus-chews",
+  "source_url": "https://www.rawpawspetfood.com/products/beef-gullet-sticks-dogs-6-inch-10-ct",
+  "ingredients": "Single-ingredient: Beef Gullet!",
+  "made_in": "Origin: Colombia.",
+  "sourced_from": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Ideal for Small to Medium Dogs. Chew Hardness: Light.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "10-ct"
+  ],
+  "note": "The page lists the size as \"Length: 6 inches (approx) - Thickness: 1/2 inch (approx).\" It doesn't state a calorie figure.",
+  "last_checked": "2026-10-29",
+  "amazon_asin": "B09317B3D3",
+  "affiliate_url": "https://www.amazon.com/dp/B09317B3D3?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/gu-rawpaws-esoph-1029.txt",
+  "brand": "Raw Paws Pet Food",
+  "product": "Beef Esophagus Strips for Dogs, 40-ct",
+  "category": "esophagus-chews",
+  "source_url": "https://www.rawpawspetfood.com/products/beef-esophagus-strips-dogs-40-ct",
+  "ingredients": "Single-ingredient: Beef Esophagus!",
+  "made_in": "Origin: Brazil.",
+  "sourced_from": "Sourced from free-range cattle raised without antibiotics, steroids, or added hormones.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "For Medium to Large Dogs. · Can be easily cut into pieces for smaller dogs.",
+  "supervision": "To prevent injury and choking hazard, always supervise your pet when giving any chew. If this chew splinters, develops sharp edges or breaks into pieces throw it away immediately.",
+  "sizes": [
+   "40-ct"
+  ],
+  "note": "The page lists the size as \"Length: 6 inches (approx) - Width: 1.5 to 3.5 inches (approx).\" It doesn't state a calorie figure.",
+  "last_checked": "2026-10-29",
+  "amazon_asin": "B01M5KFNQ3",
+  "affiliate_url": "https://www.amazon.com/dp/B01M5KFNQ3?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/gu-bbs-braided-1029.txt",
+  "brand": "Best Bully Sticks",
+  "product": "6-Inch Standard Braided Gullet Sticks (25 Pack)",
+  "category": "esophagus-chews",
+  "source_url": "https://www.bestbullysticks.com/products/6-inch-standard-braided-gullet-sticks-25-pack",
+  "ingredients": "single-ingredient natural chews made by braiding three beef gullet sticks together · Beef Esophagus",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "Our beef gullet is sourced from trusted free-range cattle farmers around the world.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "ideal for small to medium dogs who are moderate to strong chewers.",
+  "supervision": "Please supervise your dog when giving any chew or treat and ensure your pup has easy access to fresh water before, during, and after treat consumption. · Remove small or broken pieces to prevent any potential choking hazard.",
+  "sizes": [
+   "25 Pack"
+  ],
+  "note": "The nutrition facts list 114 calories each (3800 kcal/kg). The page calls it a \"rawhide alternative\" but doesn't say rawhide-free.",
+  "last_checked": "2026-10-29",
+  "amazon_asin": "B00JWW8G6C",
+  "affiliate_url": "https://www.amazon.com/dp/B00JWW8G6C?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/gu-bbs-jerky-1029.txt",
+  "brand": "Best Bully Sticks",
+  "product": "5-6 Inch Beef Jerky Gullet Strips",
+  "category": "esophagus-chews",
+  "source_url": "https://www.bestbullysticks.com/products/5-6-inch-gullet-wraps-beef-jerky",
+  "ingredients": "The jerky-like, single-ingredient treats have a grippy, textured surface. · Beef Esophagus",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "Not stated, check with them",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Our 5-6-Inch Gullet Strips are ideal as a treat or a chew for dogs with a gentle chewing style. · Perfect choice for light chewers",
+  "supervision": "Please supervise your dog when giving any chew or treat and ensure your pup has easy access to fresh water before, during, and after treat consumption. · Remove small or broken pieces to prevent any potential choking hazard.",
+  "sizes": [
+   "10 Pack",
+   "50 Pack"
+  ],
+  "note": "The nutrition facts list 38 calories each (3800 kcal/kg). The page's browser title calls this product \"5-6 Inch Gullet Wraps-Beef Jerky\".",
+  "last_checked": "2026-10-29",
+  "amazon_asin": "B00JWWARSC",
+  "affiliate_url": "https://www.amazon.com/dp/B00JWWARSC?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/gu-jp-gullet-1029.txt",
+  "brand": "Jack&Pup",
+  "product": "Gullet Sticks - 6 Inch",
+  "category": "esophagus-chews",
+  "source_url": "https://www.jackandpup.com/products/gullet-sticks-6-inch",
+  "ingredients": "Made from 100% beef gullet",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "FREE-RANGE, GRASS-FED BEEF",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Great for Moderate Chewers",
+  "supervision": "Feeding instructions: Always supervise your dog while chewing and provide fresh water. · Remove the chew if it becomes small enough to swallow or breaks into pieces.",
+  "sizes": [
+   "10 Pieces",
+   "40 Pieces"
+  ],
+  "note": "The page contradicts itself on the animal: its short description reads \"6-inch pork gullet stick\", while its bullet list says \"Made from 100% beef gullet\". Its feeding instructions say \"Not suitable for puppies under 3 months old.\", while the page's general FAQ names 6 months as the minimum puppy age.",
+  "last_checked": "2026-10-29",
+  "amazon_asin": "B0DP5GHYM9",
+  "affiliate_url": "https://www.amazon.com/dp/B0DP5GHYM9?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/gu-ng-gullet-1029.txt",
+  "brand": "Nature Gnaws",
+  "product": "Beef Gullet Chews 4-5\" Natural Dental Chews",
+  "category": "esophagus-chews",
+  "source_url": "https://www.naturegnaws.com/products/beef-gullet-natural-dog-chews-small-breeds",
+  "ingredients": "Ingredients: Beef Gullet",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "We source from Europe, The Americas and Nepal through our SQF Food Safety Program",
+  "rawhide_free": "These training treats are grain-free, gluten-free, and rawhide-free.",
+  "size_guidance": "Ideal for moderate chewers and teething puppies and small breeds.",
+  "supervision": "Always supervise your dog while they are chewing and provide plenty of fresh water. · remove any small, broken, or splintered pieces, and be sure to choose the appropriate size chew.",
+  "sizes": [
+   "20 count"
+  ],
+  "note": "The page lists about 45 calories per chew. The sourcing line is the brand's general statement shown on the product page, not specific to this chew.",
+  "last_checked": "2026-10-29",
+  "amazon_asin": "B0799YMJ1Q",
+  "affiliate_url": "https://www.amazon.com/dp/B0799YMJ1Q?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/gu-sancho-weasand-1029.txt",
+  "brand": "Sancho & Lola's Closet",
+  "product": "6\" Beef Weasand Strips",
+  "category": "esophagus-chews",
+  "source_url": "https://sanchoandlola.com/products/12-beef-weasand-strips",
+  "ingredients": "SINGLE INGREDIENT: Grass-Fed, Free-Range Low Fat Beef Weasand. · Ingredients: Dehydrated Beef Weasand (Esophagus)",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "Not stated, check with them",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "LIGHT CHEW: Ideal for young dogs, seniors and those with dental issues.",
+  "supervision": "Not stated, check with them",
+  "sizes": [
+   "15 count",
+   "30 count"
+  ],
+  "note": "The page's web address ends in \"12-beef-weasand-strips\", but the product on it is titled 6\" Beef Weasand Strips. It doesn't state a calorie figure.",
+  "last_checked": "2026-10-29"
+ },
+ {
+  "snapshot": "research/pages/gu-jacks-weasand-1029.txt",
+  "brand": "Jack's Premium",
+  "product": "Beef Weasand",
+  "category": "esophagus-chews",
+  "source_url": "https://www.jackspremium.com/products/beef-jerky-dog-treat",
+  "ingredients": "Single Ingredient: 100% Beef Weasand, No Grain, No Glycerin, No Preservatives · 100% USDA Beef Weasand",
+  "made_in": "Sourced & Made in USA",
+  "sourced_from": "Sourced & Made in USA: We never source our meat from overseas.",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Not stated, check with them",
+  "supervision": "Not stated, check with them",
+  "sizes": [
+   "approximately 12 ounces"
+  ],
+  "note": "The page says \"Weasand is the muscle meat that surrounds the esophagus.\" and \"The weight of the package is approximately 12 ounces. Each piece being about 1 ounce.\" It doesn't state a calorie figure.",
+  "last_checked": "2026-10-29"
+ },
+ {
+  "snapshot": "research/pages/gu-redbarn-esoph-1029.txt",
+  "brand": "Redbarn",
+  "product": "Collagen Wrapped Esophagus Stick",
+  "category": "esophagus-chews",
+  "source_url": "https://www.redbarn.com/products/collagen-wrapped-esophagus-stick",
+  "ingredients": "Collagen (from Beef Hide), Beef Esophagus.",
+  "made_in": "Country of Origin: Paraguay, Brazil",
+  "sourced_from": "Not stated, check with them",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Recommended chew size is slightly larger than your pet’s mouth.",
+  "supervision": "Always monitor your pet while rewarding with a chew and give in limited quantity if your pet is not used to this chew. · discard any pieces that could be swallowed by your pet, as pieces could cause choking, gastric upset, or blockage.",
+  "sizes": [
+   "Medium - 5pk",
+   "Large - 5pk",
+   "Medium - Case of 20",
+   "Large - Case of 30"
+  ],
+  "note": "This is a collagen chew wrapped with beef esophagus, not esophagus alone. The page lists a shelf life of 36 months and leaves the calories field blank. It gives two different Medium net weights: 0.74oz in the details table and 1.12oz (32g) in the product description.",
+  "last_checked": "2026-10-29",
+  "amazon_asin": "B0FPBGN16D",
+  "affiliate_url": "https://www.amazon.com/dp/B0FPBGN16D?tag=nibbables-20"
  }
 ]

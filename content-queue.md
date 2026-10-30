@@ -9,7 +9,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /water-buffalo-horns/: Pawstruck, Nature Gnaws, Jack&Pup
 - [ ] /pig-ears/: Redbarn, Pawstruck, Raw Paws, Jack&Pup (feeds)
 - [ ] /cow-ears/: Pawstruck, Raw Paws, Best Bully Sticks, Nature Gnaws
-- [ ] /esophagus-chews/: beef gullet and esophagus. Pawstruck, Raw Paws, Best Bully Sticks
+- [x] /esophagus-chews/ (PUBLISHED 2026-10-29, 9 products from 7 brands; also /bully-stick-vs-gullet-stick/): beef gullet and esophagus. Raw Paws, Best Bully Sticks, Jack&Pup, Nature Gnaws, Sancho & Lola's, Jack's Premium, Redbarn (Pawstruck has none in its feed)
 - [ ] /trachea-chews/: beef trachea. Pawstruck, Redbarn, Best Bully Sticks, Nature Gnaws
 - [ ] /braided-bully-sticks/: braided and ring bully sticks. Best Bully Sticks, Jack&Pup, Redbarn, Pawstruck; also GREAT DOG twisted and Jack's Premium braided (both say USA in their feed titles; real query "braided bully sticks made in usa")
 - [ ] /bully-stick-holders/: bully-stick holder devices. Bow Wow Labs (feed); quote brand descriptions only, no safety claims
@@ -51,5 +51,8 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] Bully stick holders (keyword-targets row 8): needs a data model for non-chew accessories (material, sizes, cleaning as stated) before it can be built
 
 - [ ] Collagen chew vs rawhide standalone guide (autocomplete: "collagen chew vs rawhide", "collagen dog chew vs rawhide"); needs more collagen brands (Pawstruck) and processing quotes
-- [ ] /bully-stick-vs-gullet/: pair page once /esophagus-chews/ exists (keyword-targets row 3, "bully stick vs gullet stick")
+- [x] /bully-stick-vs-gullet/: PUBLISHED 2026-10-29 as /bully-stick-vs-gullet-stick/ (7 brands' pairs) (keyword-targets row 3, "bully stick vs gullet stick")
 - [ ] /beef-tendons/ expansion: Nature Gnaws USA Beef Tendons, Pupford Standard and Turbo tendons, turkey tendons (Pupford, Nature Gnaws, Sancho) as a separate chew type if 3+ brands
+- [ ] /esophagus-chews/ expansion: Raw Paws Lamb Esophagus Twists (12-inch 5-ct), Best Bully Sticks Braided Gullet Cane / 12-Inch Beef Jerky Gullet Strips / Hickory Smoked Gullet Strips, Jack&Pup Braided and Flat Gullet, Nature Gnaws Gullet Springs and 9-10" gullet (all seen in feeds 2026-10-29)
+- [ ] Re-check Jack&Pup gullet page for the "pork gullet" vs "100% beef gullet" wording (flagged 2026-10-29)
+- [ ] Gullet vs trachea guide (autocomplete "beef esophagus vs trachea") once /trachea-chews/ exists

@@ -102,3 +102,16 @@ No new products; the guide reuses 6 existing cards. Amazon links unchanged: 5 of
 - MISS Redbarn Beef Tendon: Amazon lists "Redbarn Large Beef Tendons" (10-ct B00DZSCAG6, 50-ct B005EIPD9G); brand page product is "Beef Tendon" (2 pack / Case of 50) with no "Large" wording, so the variant can't be confirmed.
 - MISS Pupford Thick Beef Tendon Dog Chew: Amazon search shows only Pupford Standard (B07VMZWHG7, B07VS9XHB7) and Turbo (B0B65P7PGS, B0B663HJPR) tendons, no Thick.
 - MISS Sancho & Lola's Closet USA Flexor Tendons and USA Beef Tendons: no Sancho & Lola's tendon listing found in Amazon search.
+
+## 2026-10-29 nightly: /esophagus-chews/ (new chew type) + /bully-stick-vs-gullet-stick/
+Method: Amazon search via curl returned an error page tonight, so candidates came from WebSearch results showing ASIN, title and brand; matched only where brand, product and size/pack clearly match the brand page. No prices/ratings recorded.
+- MATCH Raw Paws Beef Gullet Sticks for Dogs, 6-inch - 10-ct → B09317B3D3 "Raw Paws Beef Gullet Sticks for Dogs, 6-inch (10-Count) - Single Ingredient", Brand: Raw Paws.
+- MATCH Raw Paws Beef Esophagus Strips for Dogs, 40-ct (6 inches approx per brand page) → B01M5KFNQ3 "Raw Paws Beef Esophagus Dog Treats, 6-inch (40-Count)", Brand: Raw Paws.
+- MATCH Best Bully Sticks 6-Inch Standard Braided Gullet Sticks (25 Pack) → B00JWW8G6C "6-Inch Standard Braided Gullet Sticks (25 Pack)", Brand: Best Bully Sticks.
+- MATCH Best Bully Sticks 5-6 Inch Beef Jerky Gullet Strips (10 Pack option) → B00JWWARSC "5-6 Inch Gullet Wraps-Beef Jerky for Dogs - 10 Pack", Brand: Best Bully Sticks (the brand page's browser title is "5-6 Inch Gullet Wraps-Beef Jerky", same handle). 50 Pack also on Amazon as B004GVIS6M (not linked).
+- MATCH Jack&Pup Gullet Sticks - 6 Inch (10 Pieces option) → B0DP5GHYM9 "Jack&Pup 6-inch Gullet Sticks for Dogs ... (10 Pack)", Brand: Jack&Pup.
+- MATCH Nature Gnaws Beef Gullet Chews 4-5" Natural Dental Chews (20 count) → B0799YMJ1Q "Nature Gnaws Beef Gullet Chews for Small Dogs 4-5" (20 Count)".
+- MATCH Redbarn Collagen Wrapped Esophagus Stick (Medium - Case of 20 option) → B0FPBGN16D "Redbarn Medium Collagen-Wrapped Esophagus Sticks Dog Treat ... (Case of 20)". Other Redbarn listings (B0FPBGCLF3, B0FPBGDD2B, Large 30-ct B0FPBG811L) not linked.
+- MISS Sancho & Lola's Closet 6" Beef Weasand Strips: no Sancho & Lola's weasand listing found (Amazon results only showed its bully sticks and trachea).
+- MISS Jack's Premium Beef Weasand (package approx. 12 ounces): B011898XCS "Jack's Premium Beef Jerky for Dogs ..." returned 404 on fetch; other Jack's Premium jerky listings are 4 oz / 10 oz "100% Dehydrated Beef" (B0D1DVZLST, B0D1D9ZZ7P) or "Gullet Treat 4-5 Inch Stick" (B07T7YCL3L), none confirmable as the same product/size.
+- Guide /bully-stick-vs-gullet-stick/ reuses 7 existing bully stick cards (Amazon links unchanged).

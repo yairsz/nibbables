@@ -1,0 +1,538 @@
+{
+ "slug": "bully-stick-vs-gullet-stick",
+ "title": "Bully stick vs gullet stick: what 7 brands say",
+ "meta": "Bully sticks vs gullet sticks (beef esophagus) from the same 7 brands: ingredients, origin, calories and chewer wording quoted from each brand's page.",
+ "h1": "Bully stick vs gullet stick: the same brands, side by side",
+ "intro": "Bully sticks and gullet sticks are both beef chews, but brands make them from different parts of the animal. Seven brands in our directory sell both, so this page puts each brand's bully stick next to its gullet or esophagus chew and quotes what the pages say about ingredients, origin, calories and chewer type. Where a page is silent, we say so. We don't pick a winner; your vet can help you choose for your dog.",
+ "table": {
+  "h": "Each brand's bully stick and gullet chew",
+  "caption": "Quoted from each brand's product page, checked 2026-10-29. \"Not stated\" means we found nothing on that page about it.",
+  "head": [
+   "Brand: product",
+   "Type",
+   "Ingredients (quoted)",
+   "Origin (quoted)",
+   "Calories (quoted)",
+   "Chewer or size wording (quoted)"
+  ],
+  "rows": [
+   {
+    "snapshot": "research/pages/gbs-raw-paws-pet-food-1029.txt",
+    "cells": [
+     "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct",
+     "Bully stick",
+     {
+      "q": "Single-ingredient: Bull Pizzle!"
+     },
+     {
+      "q": "Origin: Turkey."
+     },
+     "Not stated",
+     {
+      "q": "Ideal for Small to Medium Dogs."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gu-rawpaws-gullet-1029.txt",
+    "cells": [
+     "Raw Paws Pet Food: Beef Gullet Sticks for Dogs, 6-inch - 10-ct",
+     "Gullet stick",
+     {
+      "q": "Single-ingredient: Beef Gullet!"
+     },
+     {
+      "q": "Origin: Colombia."
+     },
+     "Not stated",
+     {
+      "q": "Ideal for Small to Medium Dogs. Chew Hardness: Light."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gbs-best-bully-sticks-1029.txt",
+    "cells": [
+     "Best Bully Sticks: 6-Inch Thin Bully Stick",
+     "Bully stick",
+     {
+      "q": "made from a single ingredient: beef pizzle"
+     },
+     {
+      "q": "sourced from trusted free-range cattle farmers around the world"
+     },
+     "Not stated",
+     {
+      "q": "always choose a bully stick that's wider than your dog's mouth"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gu-bbs-braided-1029.txt",
+    "cells": [
+     "Best Bully Sticks: 6-Inch Standard Braided Gullet Sticks (25 Pack)",
+     "Braided gullet stick",
+     {
+      "q": "Beef Esophagus"
+     },
+     {
+      "q": "Our beef gullet is sourced from trusted free-range cattle farmers around the world."
+     },
+     {
+      "q": "Calories Each 114"
+     },
+     {
+      "q": "ideal for small to medium dogs who are moderate to strong chewers."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gbs-jack-pup-1029.txt",
+    "cells": [
+     "Jack&Pup: Bully Sticks - 6 inch Standard",
+     "Bully stick",
+     {
+      "q": "100% Beef Pizzle"
+     },
+     {
+      "q": "Made from all-natural beef - grass-fed cattle from Brazil"
+     },
+     "Not stated",
+     {
+      "q": "Standard thickness bully stick for moderate chewers."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gu-jp-gullet-1029.txt",
+    "cells": [
+     "Jack&Pup: Gullet Sticks - 6 Inch",
+     "Gullet stick",
+     {
+      "q": "Made from 100% beef gullet"
+     },
+     "Not stated",
+     "Not stated",
+     {
+      "q": "Great for Moderate Chewers"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gbs-nature-gnaws-1029.txt",
+    "cells": [
+     "Nature Gnaws: Small Bully Sticks 6\"",
+     "Bully stick",
+     {
+      "q": "Ingredients: Beef Pizzle"
+     },
+     "Not stated",
+     {
+      "q": "About 70 calories per chew"
+     },
+     {
+      "q": "the perfect rawhide-free chew for puppies and small dogs"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gu-ng-gullet-1029.txt",
+    "cells": [
+     "Nature Gnaws: Beef Gullet Chews 4-5\" Natural Dental Chews",
+     "Gullet chew",
+     {
+      "q": "Ingredients: Beef Gullet"
+     },
+     "Not stated",
+     {
+      "q": "About 45 calories per chew"
+     },
+     {
+      "q": "Ideal for moderate chewers and teething puppies and small breeds."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gbs-sancho-lola-s-closet-1029.txt",
+    "cells": [
+     "Sancho & Lola's Closet: 6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA",
+     "Bully stick",
+     {
+      "q": "SINGLE INGREDIENT: 100% Beef Pizzle and nothing else."
+     },
+     {
+      "q": "CHARCUTERIE: Made in the USA."
+     },
+     "Not stated",
+     {
+      "q": "great for small dogs, medium dogs, puppies, and older dogs."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gu-sancho-weasand-1029.txt",
+    "cells": [
+     "Sancho & Lola's Closet: 6\" Beef Weasand Strips",
+     "Weasand (esophagus) strip",
+     {
+      "q": "Ingredients: Dehydrated Beef Weasand (Esophagus)"
+     },
+     "Not stated",
+     "Not stated",
+     {
+      "q": "LIGHT CHEW: Ideal for young dogs, seniors and those with dental issues."
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gbs-jack-s-premium-1029.txt",
+    "cells": [
+     "Jack's Premium: 5-8\" Thin Bully Sticks",
+     "Bully stick",
+     {
+      "q": "100% Bovine Steer Pizzle"
+     },
+     {
+      "q": "Jack’s Premium Bully Sticks are a longer lasting treat sourced and made in the USA."
+     },
+     {
+      "q": "Bully sticks contain about 15 kcal/inch for a thin stick."
+     },
+     {
+      "q": "Light Chewer"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gu-jacks-weasand-1029.txt",
+    "cells": [
+     "Jack's Premium: Beef Weasand",
+     "Weasand chew",
+     {
+      "q": "100% USDA Beef Weasand"
+     },
+     {
+      "q": "Sourced & Made in USA: We never source our meat from overseas."
+     },
+     "Not stated",
+     "Not stated"
+    ]
+   },
+   {
+    "snapshot": "research/pages/gbs-redbarn-1029.txt",
+    "cells": [
+     "Redbarn: Bully Sticks for Dogs",
+     "Bully stick",
+     {
+      "q": "Beef Pizzle."
+     },
+     {
+      "q": "Country of Origin: Paraguay, Brazil, Colombia, New Zealand, Peru, Turkey"
+     },
+     {
+      "q": "Calories: N/A"
+     },
+     {
+      "q": "Power chewers: 12\"+ Bully Sticks"
+     }
+    ]
+   },
+   {
+    "snapshot": "research/pages/gu-redbarn-esoph-1029.txt",
+    "cells": [
+     "Redbarn: Collagen Wrapped Esophagus Stick",
+     "Collagen stick wrapped with esophagus",
+     {
+      "q": "Collagen (from Beef Hide), Beef Esophagus."
+     },
+     {
+      "q": "Country of Origin: Paraguay, Brazil"
+     },
+     "Not stated",
+     {
+      "q": "Recommended chew size is slightly larger than your pet’s mouth."
+     }
+    ]
+   }
+  ]
+ },
+ "faq": [
+  {
+   "q": "Gullet stick vs bully stick: what's the difference?",
+   "a": "They're made from different parts of the animal. All seven brands' bully sticks list pizzle (Redbarn: “Beef Pizzle.”; Raw Paws: “Single-ingredient: Bull Pizzle!”). Their gullet chews list gullet or esophagus instead: Raw Paws “Single-ingredient: Beef Gullet!”, Nature Gnaws “Ingredients: Beef Gullet”, Sancho & Lola's Closet “Ingredients: Dehydrated Beef Weasand (Esophagus)”. Jack's Premium explains that “Weasand is the muscle meat that surrounds the esophagus.” Not every esophagus chew is esophagus alone: Redbarn's lists “Collagen (from Beef Hide), Beef Esophagus.”"
+  },
+  {
+   "q": "What lasts longer than a bully stick?",
+   "a": "We found no study that measures how long gullet sticks or bully sticks last. Several brands describe their gullet chews as the softer option: Jack&Pup calls its gullet sticks “a great alternative to bully sticks as they're softer and easier to chew”, Raw Paws lists “Chew Hardness: Light.”, and Best Bully Sticks says its braided gullet sticks “offer more of a challenge than a standard gullet stick, but they're not as tough as braided bully”. How long any chew lasts depends on its size and on how your dog chews."
+  },
+  {
+   "q": "How many calories are in a gullet stick?",
+   "a": "Only some pages say. Best Bully Sticks lists “Calories Each 114” for its 6-inch braided gullet sticks and “Calories Each 38” for its 5-6 inch jerky gullet strips, and Nature Gnaws gives “About 45 calories per chew” for its 4-5 inch gullet chews. For bully sticks, Nature Gnaws gives “About 70 calories per chew” for its 6-inch stick and Jack's Premium says “Bully sticks contain about 15 kcal/inch for a thin stick.” The Raw Paws, Jack&Pup, Sancho & Lola's Closet, Jack's Premium and Redbarn gullet or esophagus pages we checked don't state a calorie figure. Chews differ in size and thickness, so these numbers can't be lined up directly; our bully stick calories guide covers the published study that measured bully sticks."
+  },
+  {
+   "q": "Gullet sticks for puppies: what do the brands say?",
+   "a": "Nature Gnaws says its 4-5 inch gullet chews are “Ideal for moderate chewers and teething puppies and small breeds.” Jack&Pup's feeding instructions say “Not suitable for puppies under 3 months old.”, while the same page's general FAQ mentions “puppies 6 months and older”. Sancho & Lola's Closet describes its weasand strips as a “LIGHT CHEW: Ideal for young dogs, seniors and those with dental issues.” Ask your vet before giving any chew to a puppy."
+  },
+  {
+   "q": "Where are gullet sticks made?",
+   "a": "Some pages name a country and most don't. Raw Paws lists “Origin: Colombia.” for its gullet sticks and “Origin: Brazil.” for its esophagus strips. Redbarn lists “Country of Origin: Paraguay, Brazil” for its collagen-wrapped esophagus stick. Jack's Premium says “Sourced & Made in USA: We never source our meat from overseas.” for its weasand. The Best Bully Sticks, Jack&Pup, Nature Gnaws and Sancho & Lola's Closet gullet pages we checked don't name a country; Best Bully Sticks says “Our beef gullet is sourced from trusted free-range cattle farmers around the world.”"
+  }
+ ],
+ "sections": [
+  {
+   "h": "The same seven brands, side by side",
+   "p": [
+    "Raw Paws, Best Bully Sticks, Jack&Pup, Nature Gnaws, Sancho & Lola's Closet, Jack's Premium and Redbarn each sell both a bully stick and a gullet or esophagus chew, so the table puts each brand's two pages next to each other. Origins can differ within one brand: Raw Paws lists “Origin: Turkey.” for its standard bully sticks and “Origin: Colombia.” for its gullet sticks."
+   ]
+  },
+  {
+   "h": "What veterinary sources say about gullet chews",
+   "p": [
+    "We didn't find a veterinary source that discusses gullet or esophagus chews by name. Today's Veterinary Practice lists “Other body parts (e.g., ears, trachea, lung, hooves, antlers, horns, bully sticks, tendons, masseter muscles, skin, hides)” under “Animal-derived products that have undergone minimal processing”; esophagus isn't named in that list. The AKC notes that “different animal parts are marketed as edible dog chews.” The ASPCA recommends that people “read and follow label directions explicitly, and choose products designed for the species, size and chewing habits of their pets”. Ask your vet which chew suits your dog."
+   ]
+  },
+  {
+   "h": "What each brand says about supervision",
+   "p": [
+    "Most of these gullet pages ask you to watch your dog. Raw Paws says “always supervise your pet when giving any chew.”, Best Bully Sticks says “Please supervise your dog when giving any chew or treat”, Jack&Pup says “Always supervise your dog while chewing and provide fresh water.”, Nature Gnaws says “Always supervise your dog while they are chewing and provide plenty of fresh water.” and Redbarn says “Always monitor your pet while rewarding with a chew”. We found no supervision line on the Sancho & Lola's Closet or Jack's Premium weasand pages we checked."
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "label": "American Kennel Club: How to Pick Edible Dog Chews (Stephanie Gibeault, MSc, CPDT; updated Nov 6, 2025)",
+   "url": "https://www.akc.org/expert-advice/nutrition/choosing-edible-chews-for-dogs/"
+  },
+  {
+   "label": "Today's Veterinary Practice: The Benefits and Risks of Chew Treats, by Laura Gaylord, DVM, DACVIM (Nutrition) and Donna Raditic, DVM, DACVIM (Nutrition) (Jan/Feb 2024 issue)",
+   "url": "https://todaysveterinarypractice.com/nutrition/the-benefits-and-risks-of-chew-treats/"
+  },
+  {
+   "label": "ASPCA: Position Statement on Dog Chews/Treats",
+   "url": "https://www.aspca.org/about-us/aspca-policy-and-position-statements/position-statement-dog-chewstreats"
+  },
+  {
+   "label": "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct (product page)",
+   "url": "https://www.rawpawspetfood.com/products/standard-bully-sticks-6-inch-10-ct"
+  },
+  {
+   "label": "Raw Paws Pet Food: Beef Gullet Sticks for Dogs, 6-inch - 10-ct (product page)",
+   "url": "https://www.rawpawspetfood.com/products/beef-gullet-sticks-dogs-6-inch-10-ct"
+  },
+  {
+   "label": "Best Bully Sticks: 6-Inch Thin Bully Stick (product page)",
+   "url": "https://www.bestbullysticks.com/products/6-inch-thin-bully-stick"
+  },
+  {
+   "label": "Best Bully Sticks: 6-Inch Standard Braided Gullet Sticks (25 Pack) (product page)",
+   "url": "https://www.bestbullysticks.com/products/6-inch-standard-braided-gullet-sticks-25-pack"
+  },
+  {
+   "label": "Jack&Pup: Bully Sticks - 6 inch Standard (product page)",
+   "url": "https://www.jackandpup.com/products/bully-stick-6-inch-standard"
+  },
+  {
+   "label": "Jack&Pup: Gullet Sticks - 6 Inch (product page)",
+   "url": "https://www.jackandpup.com/products/gullet-sticks-6-inch"
+  },
+  {
+   "label": "Nature Gnaws: Small Bully Sticks 6\" (product page)",
+   "url": "https://www.naturegnaws.com/products/natural-small-beef-bully-sticks-long-lasting-dog-chews"
+  },
+  {
+   "label": "Nature Gnaws: Beef Gullet Chews 4-5\" Natural Dental Chews (product page)",
+   "url": "https://www.naturegnaws.com/products/beef-gullet-natural-dog-chews-small-breeds"
+  },
+  {
+   "label": "Sancho & Lola's Closet: 6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA (product page)",
+   "url": "https://sanchoandlola.com/products/copy-of-6-inch-charcuterie-style-bully-sticks-no-odor-farmed-in-the-usa"
+  },
+  {
+   "label": "Sancho & Lola's Closet: 6\" Beef Weasand Strips (product page)",
+   "url": "https://sanchoandlola.com/products/12-beef-weasand-strips"
+  },
+  {
+   "label": "Jack's Premium: 5-8\" Thin Bully Sticks (product page)",
+   "url": "https://jackspremium.com/products/6-inch-thin-bully-sticks"
+  },
+  {
+   "label": "Jack's Premium: Beef Weasand (product page)",
+   "url": "https://www.jackspremium.com/products/beef-jerky-dog-treat"
+  },
+  {
+   "label": "Redbarn: Bully Sticks for Dogs (product page)",
+   "url": "https://www.redbarn.com/products/bully-stick"
+  },
+  {
+   "label": "Redbarn: Collagen Wrapped Esophagus Stick (product page)",
+   "url": "https://www.redbarn.com/products/collagen-wrapped-esophagus-stick"
+  },
+  {
+   "label": "Raw Paws Pet Food: Beef Esophagus Strips for Dogs, 40-ct (product page)",
+   "url": "https://www.rawpawspetfood.com/products/beef-esophagus-strips-dogs-40-ct"
+  },
+  {
+   "label": "Best Bully Sticks: 5-6 Inch Beef Jerky Gullet Strips (product page)",
+   "url": "https://www.bestbullysticks.com/products/5-6-inch-gullet-wraps-beef-jerky"
+  }
+ ],
+ "product_ids": [
+  "raw-paws-pet-food-standard-bully-sticks-6-inch-10-ct",
+  "raw-paws-pet-food-beef-gullet-sticks-for-dogs-6-inch-10-ct",
+  "best-bully-sticks-6-inch-thin-bully-stick",
+  "best-bully-sticks-6-inch-standard-braided-gullet-sticks-25-pack",
+  "jack-pup-bully-sticks-6-inch-standard",
+  "jack-pup-gullet-sticks-6-inch",
+  "nature-gnaws-small-bully-sticks-6",
+  "nature-gnaws-beef-gullet-chews-4-5-natural-dental-chews",
+  "sancho-lola-s-closet-6-inch-standard-charcuterie-style-bully-sticks-no-odor-made",
+  "sancho-lola-s-closet-6-beef-weasand-strips",
+  "jack-s-premium-5-8-thin-bully-sticks",
+  "jack-s-premium-beef-weasand",
+  "redbarn-bully-sticks-for-dogs",
+  "redbarn-collagen-wrapped-esophagus-stick"
+ ],
+ "quote_checks": [
+  {
+   "snapshot": "research/pages/gbs-redbarn-1029.txt",
+   "text": "Beef Pizzle."
+  },
+  {
+   "snapshot": "research/pages/gbs-raw-paws-pet-food-1029.txt",
+   "text": "Single-ingredient: Bull Pizzle!"
+  },
+  {
+   "snapshot": "research/pages/gu-rawpaws-gullet-1029.txt",
+   "text": "Single-ingredient: Beef Gullet!"
+  },
+  {
+   "snapshot": "research/pages/gu-ng-gullet-1029.txt",
+   "text": "Ingredients: Beef Gullet"
+  },
+  {
+   "snapshot": "research/pages/gu-sancho-weasand-1029.txt",
+   "text": "Ingredients: Dehydrated Beef Weasand (Esophagus)"
+  },
+  {
+   "snapshot": "research/pages/gu-jacks-weasand-1029.txt",
+   "text": "Weasand is the muscle meat that surrounds the esophagus."
+  },
+  {
+   "snapshot": "research/pages/gu-redbarn-esoph-1029.txt",
+   "text": "Collagen (from Beef Hide), Beef Esophagus."
+  },
+  {
+   "snapshot": "research/pages/gu-jp-gullet-1029.txt",
+   "text": "a great alternative to bully sticks as they're softer and easier to chew"
+  },
+  {
+   "snapshot": "research/pages/gu-rawpaws-gullet-1029.txt",
+   "text": "Chew Hardness: Light."
+  },
+  {
+   "snapshot": "research/pages/gu-bbs-braided-1029.txt",
+   "text": "offer more of a challenge than a standard gullet stick, but they're not as tough as braided bully"
+  },
+  {
+   "snapshot": "research/pages/gu-bbs-braided-1029.txt",
+   "text": "Calories Each 114"
+  },
+  {
+   "snapshot": "research/pages/gu-bbs-jerky-1029.txt",
+   "text": "Calories Each 38"
+  },
+  {
+   "snapshot": "research/pages/gu-ng-gullet-1029.txt",
+   "text": "About 45 calories per chew"
+  },
+  {
+   "snapshot": "research/pages/gbs-nature-gnaws-1029.txt",
+   "text": "About 70 calories per chew"
+  },
+  {
+   "snapshot": "research/pages/gbs-jack-s-premium-1029.txt",
+   "text": "Bully sticks contain about 15 kcal/inch for a thin stick."
+  },
+  {
+   "snapshot": "research/pages/gu-ng-gullet-1029.txt",
+   "text": "Ideal for moderate chewers and teething puppies and small breeds."
+  },
+  {
+   "snapshot": "research/pages/gu-jp-gullet-1029.txt",
+   "text": "Not suitable for puppies under 3 months old."
+  },
+  {
+   "snapshot": "research/pages/gu-jp-gullet-1029.txt",
+   "text": "puppies 6 months and older"
+  },
+  {
+   "snapshot": "research/pages/gu-sancho-weasand-1029.txt",
+   "text": "LIGHT CHEW: Ideal for young dogs, seniors and those with dental issues."
+  },
+  {
+   "snapshot": "research/pages/gu-rawpaws-gullet-1029.txt",
+   "text": "Origin: Colombia."
+  },
+  {
+   "snapshot": "research/pages/gu-rawpaws-esoph-1029.txt",
+   "text": "Origin: Brazil."
+  },
+  {
+   "snapshot": "research/pages/gu-redbarn-esoph-1029.txt",
+   "text": "Country of Origin: Paraguay, Brazil"
+  },
+  {
+   "snapshot": "research/pages/gu-jacks-weasand-1029.txt",
+   "text": "Sourced & Made in USA: We never source our meat from overseas."
+  },
+  {
+   "snapshot": "research/pages/gu-bbs-braided-1029.txt",
+   "text": "Our beef gullet is sourced from trusted free-range cattle farmers around the world."
+  },
+  {
+   "snapshot": "research/pages/gbs-raw-paws-pet-food-1029.txt",
+   "text": "Origin: Turkey."
+  },
+  {
+   "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+   "text": "Other body parts (e.g., ears, trachea, lung, hooves, antlers, horns, bully sticks, tendons, masseter muscles, skin, hides)"
+  },
+  {
+   "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+   "text": "Animal-derived products that have undergone minimal processing"
+  },
+  {
+   "snapshot": "research/pages/akc-edible-chews-1029.txt",
+   "text": "different animal parts are marketed as edible dog chews."
+  },
+  {
+   "snapshot": "research/pages/aspca-chews-position-1029.txt",
+   "text": "read and follow label directions explicitly, and choose products designed for the species, size and chewing habits of their pets"
+  },
+  {
+   "snapshot": "research/pages/gu-rawpaws-gullet-1029.txt",
+   "text": "always supervise your pet when giving any chew."
+  },
+  {
+   "snapshot": "research/pages/gu-bbs-braided-1029.txt",
+   "text": "Please supervise your dog when giving any chew or treat"
+  },
+  {
+   "snapshot": "research/pages/gu-jp-gullet-1029.txt",
+   "text": "Always supervise your dog while chewing and provide fresh water."
+  },
+  {
+   "snapshot": "research/pages/gu-ng-gullet-1029.txt",
+   "text": "Always supervise your dog while they are chewing and provide plenty of fresh water."
+  },
+  {
+   "snapshot": "research/pages/gu-redbarn-esoph-1029.txt",
+   "text": "Always monitor your pet while rewarding with a chew"
+  }
+ ],
+ "last_checked": "2026-10-29",
+ "categories": [
+  "bully-sticks",
+  "esophagus-chews"
+ ]
+}
