@@ -397,6 +397,25 @@ def antler_choose_faq(ps):
     return [("How do I choose an antler chew for my dog? What brands say", a1),
             ("Elk vs deer antlers, and split vs whole: what's listed here?", a2)]
 
+# Yak "made of" answer (added 2026-10-30, run #55: Search Console shows "what are yak chews made of" on
+# /yak-cheese-chews/; Nicole Makes Websites: answer the question directly with names and numbers). Counted only from
+# each card's verbatim ingredients quote; we add no ingredient knowledge of our own.
+def yak_made_of_faq(ps):
+    n = len(ps)
+    nm = lambda L: "; ".join(f"{p['brand']} {p['product']}" for p in L).rstrip(".")
+    ing = lambda p: p["ingredients"].lower()
+    yak_cow = [p for p in ps if "yak" in ing(p) and "cow" in ing(p)]
+    yak_only = [p for p in ps if "yak" in ing(p) and "cow" not in ing(p)]
+    plain = [p for p in ps if "milk" in ing(p) and "yak" not in ing(p) and "cow" not in ing(p)]
+    lime = [p for p in ps if "lime" in ing(p)]; salt = [p for p in ps if "salt" in ing(p)]
+    parts = [f"By the brands' own ingredient lists, yak cheese chews are milk, lime juice and salt. Of the {n} yak chew products we list, "
+             f"{len(lime)} name lime and {len(salt)} name salt."]
+    if yak_only: parts.append(f"{len(yak_only)} list yak milk only: {nm(yak_only)}." if len(yak_only) > 1 else f"1 lists yak milk only: {nm(yak_only)}.")
+    if yak_cow: parts.append(f"{len(yak_cow)} list yak and cow milk: {nm(yak_cow)}." if len(yak_cow) > 1 else f"1 lists yak and cow milk: {nm(yak_cow)}.")
+    if plain: parts.append(f"{len(plain)} {'say' if len(plain) > 1 else 'says'} \u201cmilk\u201d without naming the animal: {nm(plain)}.")
+    parts.append("Each card quotes the exact ingredient wording from the brand's page; for diet questions about your own dog, ask your vet.")
+    return [("What are yak chews made of?", " ".join(parts))]
+
 def cat_faq(c, ps):
     noun = FAQ_NOUN.get(c["slug"], c["name"].lower())
     n = len(ps); last = max(p["last_checked"] for p in ps)
@@ -407,7 +426,7 @@ def cat_faq(c, ps):
         if k: counts.append((k, place))
     counts.sort(key=lambda x: -x[0])
     places = ", ".join(f"{pl} ({k})" for k, pl in counts)
-    qa = []
+    qa = yak_made_of_faq(ps) if c["slug"] == "yak-cheese-chews" else []
     qa.append((f"Where are {noun} made or sourced?",
         (f"All {n} {noun} product pages we list state where the chew is made. " if stated == n else
          f"{stated} of the {n} {noun} product pages we list state where the chew is made; the rest don't say. ")
