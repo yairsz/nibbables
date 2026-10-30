@@ -1,6 +1,6 @@
 {
  "slug": "yak-chew-microwave",
- "title": "How long to microwave a yak chew: brand instructions | Nibbables",
+ "title": "How long to microwave a Himalayan yak chew: 7 sources | Nibbables",
  "meta": "Yak chew microwave instructions from Himalayan Dog Chew, Yak Chewz, Mighty Paw, Pawstruck, YAKERS, Yakkity Zac's and Whole Dog Journal: soak, time, cooling.",
  "h1": "Yak chew microwave instructions: what each brand says, quoted",
  "intro": "Several yak cheese chew brands tell owners to puff the last small piece of a chew in the microwave. Their instructions don't all match: times run from 30 to 90 seconds, and some say to soak the piece first while others don't mention it. Below, each source's own wording is quoted side by side and linked. Nibbables hasn't tested any of these methods; follow the instructions for the brand you bought and ask your vet if you're unsure.",
@@ -138,6 +138,10 @@
   ]
  },
  "faq": [
+  {
+   "q": "Can you microwave a Himalayan dog chew?",
+   "a": "The brand behind the Himalayan Dog Chew name gives microwave instructions for the leftover end piece, not the whole chew. Himalayan Pet Supply's Cheese product page says “After your dog enjoys their chew, take the leftover piece away”, then “Soak in warm water for 5 minutes” and “Heat for 45 seconds in a 1000-watt microwave”. Pawstruck, which sells a “Medium Himalayan Yak Dog Chew”, says “Put the piece in the microwave for 45 seconds”. The other five sources quoted on this page also give microwave times for yak cheese chews, from 30 to 90 seconds, and none of them describes microwaving a whole chew. Nibbables hasn't tested any of these methods; follow the instructions for the chew you bought and ask your vet if you're unsure."
+  },
   {
    "q": "How long to microwave a yak chew?",
    "a": "It depends on whose instructions you follow. In the seven sources above, times run from 30 to 90 seconds: Himalayan Dog Chew and Pawstruck each say 45 seconds (Himalayan Pet Supply specifies a 1000-watt microwave), Mighty Paw says 45-60 seconds, YAKERS 30-60 seconds, Yak Chewz 60 seconds plus an optional 30 more, Yakkity Zac's approximately 45–90 seconds, and Whole Dog Journal roughly 30 to 90 seconds depending on the piece's size."
@@ -322,6 +326,18 @@
   {
    "snapshot": "research/pages/mightypaw-yak-cheese-4-pack.txt",
    "text": "Soak it in water for 5 minutes, then microwave for 45–60 seconds to create a crunchy cheese puff your dog will love."
+  },
+  {
+   "snapshot": "research/pages/himalayan-dog-chew-cheese.txt",
+   "text": "After your dog enjoys their chew, take the leftover piece away"
+  },
+  {
+   "snapshot": "research/pages/himalayan-dog-chew-cheese.txt",
+   "text": "Heat for 45 seconds in a 1000-watt microwave"
+  },
+  {
+   "snapshot": "research/pages/pawstruck-medium-yak.txt",
+   "text": "Medium Himalayan Yak Dog Chew"
   }
  ],
  "last_checked": "2026-10-23",
