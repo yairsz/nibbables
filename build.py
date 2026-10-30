@@ -194,6 +194,7 @@ def page(title, desc, path, body, jsonld=None):
 <meta name="description" content="{e(desc)}">
 <meta name="msvalidate.01" content="45CDFD465C8824EB2040D1A77F7E20CB" />
 <link rel="canonical" href="{e(url)}">
+<link rel="alternate" type="application/atom+xml" title="{e(CFG['site_name'])}" href="{e(base_url())}/feed.xml">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
 <meta property="og:type" content="website"><meta property="og:url" content="{e(url)}">
 <link rel="stylesheet" href="{U('/static/style.css')}">{ld}
@@ -946,6 +947,21 @@ def robots_txt(base):
     return (f"# {CFG['site_name']}: search engines and AI answer engines are welcome.\n"
             f"{group}Allow: /\n\nUser-agent: *\nAllow: /\n\nSitemap: {base}/sitemap.xml\n")
 
+def feed_xml(base, pages):
+    """/feed.xml Atom feed of every page (title + meta description, updated = the page's sourced lastmod date).
+    Added 2026-10-30 run #57 (Yoast Oct 2026 update: AI crawlers read sitemaps and RSS/Atom feeds as plain-text entry points)."""
+    from xml.sax.saxutils import escape as x
+    items = sorted(pages, key=lambda p: (MODIFIED.get(p, ""), p), reverse=True)
+    newest = max(MODIFIED.get(p, "") for p in pages)
+    entries = "".join(
+        f"<entry><title>{x(META[p][0])}</title><link href=\"{x(base + p)}\"/><id>{x(base + p)}</id>"
+        f"<updated>{MODIFIED.get(p, newest)}T00:00:00Z</updated><summary>{x(META[p][1])}</summary></entry>\n"
+        for p in items if p in META)
+    return ('<?xml version="1.0" encoding="utf-8"?>\n<feed xmlns="http://www.w3.org/2005/Atom">'
+            f"<title>{x(CFG['site_name'])}</title><link href=\"{x(base)}/\"/><link rel=\"self\" href=\"{x(base)}/feed.xml\"/>"
+            f"<id>{x(base)}/</id><updated>{newest}T00:00:00Z</updated><author><name>{x(CFG['site_name'])}</name></author>\n"
+            f"{entries}</feed>\n")
+
 def llms_txt(base, pages):
     """/llms.txt (llmstxt.org format) built only from the site's own page titles and meta descriptions."""
     def item(path):
@@ -955,7 +971,8 @@ def llms_txt(base, pages):
     for heading, test in LLMS_SECTIONS:
         items = [item(p) for p in pages if test(p)]
         if items: out += [f"## {heading}", ""] + items + [""]
-    out += ["## Optional", "", f"- [Sitemap]({base}/sitemap.xml): every page with a lastmod date", ""]
+    out += ["## Optional", "", f"- [Sitemap]({base}/sitemap.xml): every page with a lastmod date",
+            f"- [Atom feed]({base}/feed.xml): every page with its summary and last-checked date", ""]
     return "\n".join(out)
 
 
@@ -1031,6 +1048,7 @@ def main():
         (OUT / f"{CFG['indexnow_key']}.txt").write_text(CFG["indexnow_key"])
     (OUT / "robots.txt").write_text(robots_txt(base))
     (OUT / "llms.txt").write_text(llms_txt(base, pages))
+    (OUT / "feed.xml").write_text(feed_xml(base, pages))
     if (ROOT / "BingSiteAuth.xml").exists():  # Bing Webmaster Tools verification file, must sit at the site root
         shutil.copyfile(ROOT / "BingSiteAuth.xml", OUT / "BingSiteAuth.xml")
     if CFG.get("cname"):
