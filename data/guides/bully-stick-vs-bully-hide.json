@@ -1,0 +1,304 @@
+{
+  "slug": "bully-stick-vs-bully-hide",
+  "title": "Bully stick vs bully hide chew: what Cadet and Rocky Ranch say",
+  "meta": "Bully hide chews vs bully sticks: ingredients and rawhide wording quoted from Cadet's and Rocky Ranch's own pages. Are Cadet bully sticks rawhide?",
+  "h1": "Bully stick vs bully hide chew: what the brands' own pages say",
+  "intro": "A bully hide chew is not the same thing as a bully stick. The two brands we found selling bully hide chews on their own websites, Cadet and Rocky Ranch, both list beef hide plus bully stick (pizzle) as the ingredients, while their plain bully sticks list pizzle or beef only. The brands disagree on whether that beef hide counts as rawhide, so this page quotes both, next to how veterinary sources define rawhide. Nibbables doesn't rate chews; ask your vet what suits your dog.",
+  "table": {
+    "h": "Each brand's bully stick and bully hide chew",
+    "caption": "Quoted from each brand's own product page, checked 2026-10-30. \"Not stated\" means we found nothing on that page about it.",
+    "head": [
+      "Brand: product",
+      "Type",
+      "Ingredients (quoted)",
+      "What the page says about rawhide (quoted)",
+      "Origin or packaging (quoted)",
+      "Who it's for (quoted)"
+    ],
+    "rows": [
+      {
+        "snapshot": "research/pages/bh-cadet-bully-small-1030.txt",
+        "cells": [
+          "Cadet: Bully Stick Dog Chews (Extra Small, 8 Ounce)",
+          "Bully stick",
+          {
+            "q": "Bull Pizzle"
+          },
+          "Not stated",
+          {
+            "q": "Inspected and tested in the USA"
+          },
+          {
+            "q": "Recommended for extra small and small adult dogs"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/bh-cadet-bully-hide-1030.txt",
+        "url": "https://www.cadetpet.com/all-products/cadet-bully-hide-sticks-all-natural-dog-chews",
+        "cells": [
+          "Cadet: Bully Hide Sticks All-Natural Dog Chews",
+          "Bully hide stick",
+          {
+            "q": "Beef Hide, Bull Pizzle"
+          },
+          {
+            "q": "We start with the select top layer of beef hide—the most digestible cut of rawhide available."
+          },
+          {
+            "q": "These bully hide chews are tested, hand-inspected, and packaged in the USA"
+          },
+          "Not stated"
+        ]
+      },
+      {
+        "snapshot": "research/pages/bh-rockyranch-bully-1030.txt",
+        "cells": [
+          "Rocky Ranch: 12 Inch Bully Sticks – 4 Pack",
+          "Bully stick",
+          {
+            "q": "Every Rocky Ranch natural bully stick is single-ingredient beef with no chemicals or bleach."
+          },
+          {
+            "q": "Forget rawhide."
+          },
+          "Not stated",
+          {
+            "q": "Best for: Medium to large dogs, determined chewers, dogs that need a long-lasting distraction."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/bh-rockyranch-bully-hide-1030.txt",
+        "url": "https://rockyranchpet.com/products/bully-hide-collagen-roll/",
+        "cells": [
+          "Rocky Ranch: Bully Hide Collagen Roll",
+          "Bully hide roll",
+          {
+            "q": "100% Beef Hide, Beef Pizzle (Bully Stick)"
+          },
+          {
+            "q": "the perfect, digestible rawhide-free alternative · NO RAW HIDE"
+          },
+          "Not stated",
+          {
+            "q": "Designed for powerful chewers who crave a challenge"
+          }
+        ]
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Bully hide chews vs bully sticks: what's the difference?",
+      "a": "The ingredient list. Cadet's bully stick page lists “Bull Pizzle”; its Bully Hide Sticks list “Beef Hide, Bull Pizzle”, and Cadet says they “combine 2 of dogs' favorite natural chews: real bully stick and premium beef hide.” Rocky Ranch's bully sticks are “single-ingredient beef”, while its Bully Hide Collagen Roll lists “100% Beef Hide, Beef Pizzle (Bully Stick)”. Both brands pitch the hide versions at harder chewers: Cadet's article says Bully Hide Sticks “keep even the heaviest chewers occupied”, and Rocky Ranch says “Dogs that quickly finish traditional bully sticks may need a tougher alternative such as a Bully Hide Collagen Roll.”"
+    },
+    {
+      "q": "Are Cadet bully sticks rawhide?",
+      "a": "Cadet's plain bully sticks: no, by Cadet's own description. The bully stick page lists “Bull Pizzle” as the ingredient, and Cadet's article says “bully sticks are not rawhide and are in fact quite different in how they’re sourced and prepared.” The bully stick page doesn't use the words “rawhide-free”. Cadet Bully Hide Sticks are different: Cadet says it starts with “the select top layer of beef hide—the most digestible cut of rawhide available”, so by Cadet's own words they contain rawhide."
+    },
+    {
+      "q": "Is a bully hide chew rawhide?",
+      "a": "The two brands answer differently. Cadet writes “Beef hide is rawhide—but rawhide is not always beef hide.” and calls the hide in its Bully Hide Sticks “the most digestible cut of rawhide available”. Rocky Ranch lists “100% Beef Hide” in its Bully Hide Collagen Roll, yet calls it “the perfect, digestible rawhide-free alternative” and shows “NO RAW HIDE” on the page. Today's Veterinary Practice defines rawhide by the hide layer and the processing: “Rawhide chews are made from the chemically processed inner hide layer, most commonly from cows but also other animal species (e.g., pigs, sheep, even water buffalo).” Neither page describes its hide processing, so if this matters to you, ask the brand how the hide is made."
+    },
+    {
+      "q": "What about Cadet TORO Bully Hide Chews?",
+      "a": "We couldn't quote them. Cadet's website had no TORO page when we checked its sitemap on 2026-10-30, and we only found TORO Bully Hide Chews on retailer listings, which Nibbables doesn't use as sources. Check the package label or ask Cadet. Cadet's own Bully Hide Sticks page is in the table above."
+    }
+  ],
+  "sections": [
+    {
+      "h": "How each brand describes its bully hide chew",
+      "p": [
+        "Cadet: “We start with the select top layer of beef hide—the most digestible cut of rawhide available. Next, we wrap it with 100% real bully stick and oven-roast it to bring out the irresistible bully flavor”. Its article adds: “They’re then rolled into a stick shape and oven-roasted to perfection.” The product page lists “More digestible than traditional rawhide and less odor than traditional bully sticks” and “Made from only the highest-quality grass-fed, free-range cattle”, and offers Small and Large sizes.",
+        "Rocky Ranch says its rolls “combine the irresistible taste of a bully stick with the satisfying, long-lasting durability of a premium beef hide wrap.” The page sells a “6″ Collagen and Bully Roll – 1 Pack” and a “12″ Collagen and Bully Roll – 1 Pack”, among other packs. Neither brand page names a country where the hide or pizzle comes from; Cadet says its bully hide chews are “tested, hand-inspected, and packaged in the USA”."
+      ]
+    },
+    {
+      "h": "Top layer or inner layer of the hide?",
+      "p": [
+        "Cadet's two pages describe the hide differently. The Bully Hide Sticks page says “the select top layer of beef hide”, and its bully sticks vs rawhide article says “the top layer of beef hide—the finest, most flavorful cut of rawhide available.” Cadet's beef hide article says “Beef hide is a type of rawhide made from the inner layer of cattle skin”. Today's Veterinary Practice describes rawhide as the “inner hide layer”. We don't know which layer is used; ask Cadet."
+      ]
+    },
+    {
+      "h": "What veterinary sources say about hide and bully sticks",
+      "p": [
+        "We didn't find a veterinary source that discusses bully hide chews by name. Today's Veterinary Practice lists “Other body parts (e.g., ears, trachea, lung, hooves, antlers, horns, bully sticks, tendons, masseter muscles, skin, hides)” under “Animal-derived products that have undergone minimal processing”, and separately writes: “Among products classified as extensively processed animal-derived chews are rawhides”. The AKC says “Rawhide is also difficult to digest.” and that “bully sticks, sometimes known as pizzle sticks, are easily digestible.” Neither source says how a chew combining the two should be classed. Our bully stick vs rawhide page has more of what these sources say."
+      ]
+    },
+    {
+      "h": "Supervision, as the brands put it",
+      "p": [
+        "Cadet's bully stick page: “Supervise the use of all edible chews to ensure that your dog does not bite off pieces too large to swallow.” Rocky Ranch's bully stick page: “However, dogs should always be supervised while chewing, and small remaining pieces should be removed to prevent choking.” and “We recommend bully sticks for any dog over 6 months old.” We found no supervision line on either brand's bully hide page. The ASPCA “encourages guardians to actively observe their dog while chewing and to immediately consult a veterinarian if their pet consumes a chunk of chew material.”"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Cadet: Bully Hide Sticks All-Natural Dog Chews (product page)",
+      "url": "https://www.cadetpet.com/all-products/cadet-bully-hide-sticks-all-natural-dog-chews"
+    },
+    {
+      "label": "Cadet: Bully Stick Dog Chews (product page)",
+      "url": "https://www.cadetpet.com/all-products/cadet-dog-bully-sticks-small"
+    },
+    {
+      "label": "Cadet: Bully Sticks Vs. Rawhide: How Are They Different? (brand article)",
+      "url": "https://www.cadetpet.com/dog-basics/bully-sticks-vs-rawhide"
+    },
+    {
+      "label": "Cadet: Beef Hide vs. Rawhide vs. Pork Hide (brand article)",
+      "url": "https://www.cadetpet.com/dog-basics/beef-hide-vs-rawhide-vs-pork-hide"
+    },
+    {
+      "label": "Rocky Ranch: Bully Hide Collagen Roll (product page)",
+      "url": "https://rockyranchpet.com/products/bully-hide-collagen-roll/"
+    },
+    {
+      "label": "Rocky Ranch: Natural Bully Sticks for Dogs (product page)",
+      "url": "https://rockyranchpet.com/products/natural-bully-sticks-for-dogs/"
+    },
+    {
+      "label": "Today's Veterinary Practice: The Benefits and Risks of Chew Treats, by Laura Gaylord, DVM, DACVIM (Nutrition) and Donna Raditic, DVM, DACVIM (Nutrition) (Jan/Feb 2024 issue)",
+      "url": "https://todaysveterinarypractice.com/nutrition/the-benefits-and-risks-of-chew-treats/"
+    },
+    {
+      "label": "American Kennel Club: How to Pick Edible Dog Chews (Stephanie Gibeault, MSc, CPDT; updated Nov 6, 2025)",
+      "url": "https://www.akc.org/expert-advice/nutrition/choosing-edible-chews-for-dogs/"
+    },
+    {
+      "label": "ASPCA: Position Statement on Dog Chews/Treats",
+      "url": "https://www.aspca.org/about-us/aspca-policy-and-position-statements/position-statement-dog-chewstreats"
+    }
+  ],
+  "product_ids": [
+    "cadet-bully-stick-dog-chews-extra-small-8-ounce",
+    "rocky-ranch-12-inch-bully-sticks-4-pack"
+  ],
+  "quote_checks": [
+    {
+      "snapshot": "research/pages/bh-cadet-bully-hide-1030.txt",
+      "text": "Cadet Bully Hide Sticks combine 2 of dogs' favorite natural chews: real bully stick and premium beef hide."
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bully-hide-1030.txt",
+      "text": "Next, we wrap it with 100% real bully stick and oven-roast it to bring out the irresistible bully flavor"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bully-hide-1030.txt",
+      "text": "More digestible than traditional rawhide and less odor than traditional bully sticks"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bully-hide-1030.txt",
+      "text": "Made from only the highest-quality grass-fed, free-range cattle"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bully-hide-1030.txt",
+      "text": "Contains 1 small dog chew"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bully-hide-1030.txt",
+      "text": "Small"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bully-hide-1030.txt",
+      "text": "Large"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-hide-article-1030.txt",
+      "text": "Beef hide is a type of rawhide made from the inner layer of cattle skin"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-hide-article-1030.txt",
+      "text": "Beef hide is rawhide—but rawhide is not always beef hide."
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bs-vs-rawhide-1030.txt",
+      "text": "bully sticks are not rawhide and are in fact quite different in how they’re sourced and prepared."
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bs-vs-rawhide-1030.txt",
+      "text": "Bully sticks are made from beef pizzle. They’re cleaned, cooked, and cut to size"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bs-vs-rawhide-1030.txt",
+      "text": "These one-of-a-kind chews are made from real bully stick and the top layer of beef hide—the finest, most flavorful cut of rawhide available."
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bs-vs-rawhide-1030.txt",
+      "text": "They’re then rolled into a stick shape and oven-roasted to perfection."
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bs-vs-rawhide-1030.txt",
+      "text": "keep even the heaviest chewers occupied"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bully-small-1030.txt",
+      "text": "Bully sticks are made of 100% real beef pizzle sourced from the finest-quality cattle"
+    },
+    {
+      "snapshot": "research/pages/bh-cadet-bully-small-1030.txt",
+      "text": "Supervise the use of all edible chews to ensure that your dog does not bite off pieces too large to swallow."
+    },
+    {
+      "snapshot": "research/pages/bh-rockyranch-bully-hide-1030.txt",
+      "text": "combine the irresistible taste of a bully stick with the satisfying, long-lasting durability of a premium beef hide wrap."
+    },
+    {
+      "snapshot": "research/pages/bh-rockyranch-bully-hide-1030.txt",
+      "text": "Our Bully Hide Collagen Rolls are the perfect, digestible rawhide-free alternative"
+    },
+    {
+      "snapshot": "research/pages/bh-rockyranch-bully-hide-1030.txt",
+      "text": "6″ Collagen and Bully Roll – 1 Pack"
+    },
+    {
+      "snapshot": "research/pages/bh-rockyranch-bully-hide-1030.txt",
+      "text": "12″ Collagen and Bully Roll – 1 Pack"
+    },
+    {
+      "snapshot": "research/pages/bh-rockyranch-bully-1030.txt",
+      "text": "Dogs that quickly finish traditional bully sticks may need a tougher alternative such as a Bully Hide Collagen Roll."
+    },
+    {
+      "snapshot": "research/pages/bh-rockyranch-bully-1030.txt",
+      "text": "However, dogs should always be supervised while chewing, and small remaining pieces should be removed to prevent choking."
+    },
+    {
+      "snapshot": "research/pages/bh-rockyranch-bully-1030.txt",
+      "text": "We recommend bully sticks for any dog over 6 months old."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Rawhide chews are made from the chemically processed inner hide layer, most commonly from cows but also other animal species (e.g., pigs, sheep, even water buffalo)."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Animal-derived products that have undergone minimal processing"
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Other body parts (e.g., ears, trachea, lung, hooves, antlers, horns, bully sticks, tendons, masseter muscles, skin, hides)"
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Among products classified as extensively processed animal-derived chews are rawhides"
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "Rawhide is also difficult to digest."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "bully sticks, sometimes known as pizzle sticks, are easily digestible."
+    },
+    {
+      "snapshot": "research/pages/aspca-chews-position-1029.txt",
+      "text": "encourages guardians to actively observe their dog while chewing and to immediately consult a veterinarian if their pet consumes a chunk of chew material."
+    }
+  ],
+  "last_checked": "2026-10-30",
+  "categories": [
+    "bully-sticks"
+  ]
+}

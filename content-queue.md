@@ -56,3 +56,8 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /esophagus-chews/ expansion: Raw Paws Lamb Esophagus Twists (12-inch 5-ct), Best Bully Sticks Braided Gullet Cane / 12-Inch Beef Jerky Gullet Strips / Hickory Smoked Gullet Strips, Jack&Pup Braided and Flat Gullet, Nature Gnaws Gullet Springs and 9-10" gullet (all seen in feeds 2026-10-29)
 - [ ] Re-check Jack&Pup gullet page for the "pork gullet" vs "100% beef gullet" wording (flagged 2026-10-29)
 - [ ] Gullet vs trachea guide (autocomplete "beef esophagus vs trachea") once /trachea-chews/ exists
+- [x] /bully-stick-vs-rawhide/: PUBLISHED 2026-10-30 (keyword-targets row 3, rawhide pair; 14 brands' bully stick pages re-checked)
+- [x] /bully-stick-vs-bully-hide/: PUBLISHED 2026-10-30 (keyword-targets row 3, bully hide pair; Cadet + Rocky Ranch)
+- [ ] Re-check whether Cadet publishes a TORO Bully Hide Chews page (none in cadetpet.com sitemap 2026-10-30; real query "cadet bully sticks vs toro bully hide chews")
+- [ ] Re-check Cadet wording: Cadet bully hide page says "select top layer of beef hide" while its beef hide article says beef hide is "made from the inner layer of cattle skin" (flagged 2026-10-30)
+- [ ] /bully-sticks/ expansion: more Cadet bully stick sizes (Small, Large, Extra-Thick) and Rocky Ranch 6" sticks, if the variant pages can be cited separately

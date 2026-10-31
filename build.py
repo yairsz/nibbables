@@ -819,7 +819,12 @@ def guide_table(t, products=()):
         c = r["cells"][0]
         p = bylabel.get(r.get("product") or (c if isinstance(c, str) else ""))
         if r.get("product"): assert p, f"table row product {r['product']!r} not in products.json"
-        if not p: return cell(c)
+        if not p:
+            # Non-catalog rows (added 2026-10-30): an explicit row "url" (the brand's own page) links the first cell.
+            if r.get("url"):
+                assert r["url"].startswith("https://"), f"table row url must be https: {r['url']!r}"
+                return f'<a href="{e(r["url"])}" rel="nofollow noopener" target="_blank">{cell(c)}</a>'
+            return cell(c)
         url, aff = primary_url(p)
         rel = "sponsored nofollow noopener" if aff else "nofollow noopener"
         return f'<a href="{e(url)}" rel="{rel}" target="_blank">{cell(c)}</a>'

@@ -1,0 +1,491 @@
+{
+  "slug": "bully-stick-vs-rawhide",
+  "title": "Bully stick vs rawhide: what vets and 14 brands say",
+  "meta": "Bully sticks vs rawhide for dogs: how vet sources define each, and what 14 bully stick brands' pages say about rawhide, quoted. Are bully sticks rawhide?",
+  "h1": "Bully stick vs rawhide: what veterinary sources and 14 brands say",
+  "intro": "Bully sticks and rawhide are made from different parts of the animal and go through different processing, according to the veterinary sources quoted below. This page puts those definitions next to what 14 bully stick brands' own product pages say about rawhide, word for word. Five pages say their stick is rawhide-free or has no rawhide, five more describe it as an alternative to rawhide or compare it with rawhide, and four don't mention rawhide at all. Nibbables doesn't rate chews; ask your vet what suits your dog.",
+  "table": {
+    "h": "What each bully stick page says about rawhide",
+    "caption": "Quoted from each brand's product page, checked 2026-10-30. \"Not stated\" means the brand's own text on that page doesn't mention rawhide (Campfire's page mentions it only in a customer review, which we don't quote).",
+    "head": [
+      "Brand: product",
+      "What it's made from (quoted)",
+      "What the page says about rawhide (quoted)",
+      "Origin (quoted)"
+    ],
+    "rows": [
+      {
+        "snapshot": "research/pages/rh-campfire-1030.txt",
+        "cells": [
+          "Campfire Treats: Standard Odor-Free Bully Sticks (8-10 Inch)",
+          {
+            "q": "Ingredients: Dehydrated beef pizzles"
+          },
+          "Not stated",
+          {
+            "q": "Sourced and made in the USA"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-greatdog-1030.txt",
+        "cells": [
+          "GREAT DOG CO.: 12\" Beef Bully Stick – Beef Pizzle 4.0, Jumbo Size",
+          {
+            "q": "US sourced beef bull pizzle"
+          },
+          {
+            "q": "this low-odor, rawhide-free treat provides long-lasting chewing satisfaction"
+          },
+          {
+            "q": "Proudly sourced and made in the USA"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-bbs-1030.txt",
+        "cells": [
+          "Best Bully Sticks: 6-Inch Thin Bully Stick",
+          {
+            "q": "made from a single ingredient: beef pizzle"
+          },
+          {
+            "q": "Easily digestible rawhide alternative that's high in protein"
+          },
+          {
+            "q": "sourced from trusted free-range cattle farmers around the world"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-jackpup-1030.txt",
+        "cells": [
+          "Jack&Pup: Bully Sticks - 6 inch Standard",
+          {
+            "q": "100% Beef Pizzle"
+          },
+          {
+            "q": "Excellent alternative to rawhide"
+          },
+          {
+            "q": "Made from all-natural beef - grass-fed cattle from Brazil"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-bowwow-1030.txt",
+        "cells": [
+          "Bow Wow Labs: SafeFit Bully Sticks",
+          {
+            "q": "Ingredients: 100% Beef Pizzle"
+          },
+          {
+            "q": "Smart alternative to rawhide"
+          },
+          {
+            "q": "Sourced from Brazil, Argentina, the USA, & Turkey"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-pawstruck-1030.txt",
+        "cells": [
+          "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight)",
+          {
+            "q": "Beef pizzle"
+          },
+          {
+            "q": "Many pet parents prefer bully sticks over rawhide because bully sticks are natural, fully digestible, and made from a single ingredient, while rawhide can be harder to digest."
+          },
+          {
+            "q": "Made in: Paraguay, Brazil, Colombia, New Zealand, Peru, or Turkey"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-naturegnaws-1030.txt",
+        "cells": [
+          "Nature Gnaws: Small Bully Sticks 6\"",
+          {
+            "q": "Ingredients: Beef Pizzle"
+          },
+          {
+            "q": "the perfect rawhide-free chew for puppies and small dogs"
+          },
+          {
+            "q": "We source from Europe, The Americas and Nepal"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-redbarn-1030.txt",
+        "cells": [
+          "Redbarn: Bully Sticks for Dogs",
+          {
+            "q": "Beef Pizzle."
+          },
+          {
+            "q": "No Rawhide · Unlike rawhide, bully sticks are digestible when fed appropriately and under supervision."
+          },
+          {
+            "q": "Country of Origin: Paraguay, Brazil, Colombia, New Zealand, Peru, Turkey"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-mightypaw-1030.txt",
+        "cells": [
+          "Mighty Paw: All-Natural Bully Sticks",
+          {
+            "q": "Ingredients: Beef"
+          },
+          "Not stated",
+          {
+            "q": "sourced from grass-fed, free-range beef in Colombia"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-pupford-1030.txt",
+        "cells": [
+          "Pupford: Skinny Smoky Bully Stick",
+          {
+            "q": "Beef Pizzle"
+          },
+          "Not stated",
+          {
+            "q": "This product is made in the USA."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-rawpaws-1030.txt",
+        "cells": [
+          "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct",
+          {
+            "q": "Single-ingredient: Bull Pizzle!"
+          },
+          "Not stated",
+          {
+            "q": "Origin: Turkey."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-sancho-1030.txt",
+        "cells": [
+          "Sancho & Lola's Closet: 6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA",
+          {
+            "q": "SINGLE INGREDIENT: 100% Beef Pizzle and nothing else."
+          },
+          {
+            "q": "They will never contain any rawhide."
+          },
+          {
+            "q": "Sourced and Made in the USA"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-jacks-1030.txt",
+        "cells": [
+          "Jack's Premium: 5-8\" Thin Bully Sticks",
+          {
+            "q": "100% Bovine Steer Pizzle"
+          },
+          {
+            "q": "They are bone and rawhide free."
+          },
+          {
+            "q": "sourced and made in the USA"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/rh-bullybunches-1030.txt",
+        "cells": [
+          "Bully Bunches: 6 Inch Standard Bully Stick",
+          {
+            "q": "100% Beef Pizzle"
+          },
+          {
+            "q": "oven-baked to provide a healthy alternative to rawhide"
+          },
+          {
+            "q": "Packaged in the USA; product of Brazil, Turkey or Colombia."
+          }
+        ]
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Bully stick vs rawhide for dogs: what's the difference?",
+      "a": "The sources describe two different products. Rawhide is hide: Today's Veterinary Practice says “Rawhide chews are made from the chemically processed inner hide layer, most commonly from cows but also other animal species (e.g., pigs, sheep, even water buffalo).” A bully stick is a pizzle: Tufts' Petfoodology blog says “Bully sticks are, in fact, bull or steer penises.” Today's Veterinary Practice also files them differently, listing bully sticks under “Animal-derived products that have undergone minimal processing” and rawhides among “extensively processed animal-derived chews”. The AKC adds that “Unlike rawhide,” “bully sticks, sometimes known as pizzle sticks, are easily digestible.”"
+    },
+    {
+      "q": "Are bully sticks rawhide?",
+      "a": "No. None of the sources we checked calls a bully stick rawhide. The ASPCA says “Rawhide chews are manufactured from animal hides.” The 14 bully stick pages in the table list beef pizzle (or, on Mighty Paw's page, “Ingredients: Beef”) as the ingredient, and Jack's Premium spells it out: “They are made from 100% steer or bull penis, also commonly referred to as pizzle.” A 2013 study in the Canadian Veterinary Journal lists rawhide and bully sticks as separate treats: “cattle hooves or skin (i.e., rawhide chews)” and “the bull or steer penis, commonly known as “bully” or “pizzle” sticks.”"
+    },
+    {
+      "q": "Are all bully sticks rawhide free?",
+      "a": "Of the 14 bully stick pages we checked, 5 say so in plain words: GREAT DOG CO. (“rawhide-free”), Nature Gnaws (“rawhide-free chew”), Redbarn (“No Rawhide”), Sancho & Lola's Closet (“They will never contain any rawhide.”) and Jack's Premium (“They are bone and rawhide free.”). Five more (Best Bully Sticks, Jack&Pup, Bow Wow Labs, Pawstruck and Bully Bunches) describe their stick as an alternative to rawhide or compare it with rawhide without saying “rawhide-free”. Four pages (Campfire Treats, Mighty Paw, Pupford and Raw Paws Pet Food) don't mention rawhide in their own text. All 14 list pizzle or beef as the ingredient. If the wording matters to you, ask the brand."
+    },
+    {
+      "q": "Are bully sticks or rawhide better for dogs?",
+      "a": "Nibbables doesn't rank chews, so here is what the sources say. On digestion, the AKC says “Rawhide is also difficult to digest. Pieces will pass through the digestive system whole, which is why they pose an obstruction risk.” and that bully sticks are “easily digestible”. Today's Veterinary Practice says “The digestibility of rawhide chews is often unknown or suspected to be poor”. Both have cautions: for rawhide the AKC says “Power chewers can break off large pieces.”, and for bully sticks “power chewers might bite straight through, producing large pieces that pose a choking risk, or swallow the entire stick whole.” Redbarn puts the brand view this way: “Many pet parents choose bully sticks as an alternative to rawhide because they are single-ingredient chews and digestible when fed appropriately.” Your vet knows your dog and can tell you what suits it."
+    }
+  ],
+  "sections": [
+    {
+      "h": "How rawhide is made, as Today's Veterinary Practice describes it",
+      "p": [
+        "The article, by two board-certified veterinary nutritionists, says: “To produce a rawhide chew, the hide may be processed in brine (salt), degreasers, detergents, sodium bicarbonate, hydrogen peroxide, lime, or other chemicals needed to remove hair or fat, kill pathogens, and improve the appearance.” It adds: “Artificial colors and flavors are often added to make the final product more palatable, and additives (e.g., glues to hold shape) may be used.”",
+        "None of the 14 bully stick pages in the table lists anything besides pizzle or beef as an ingredient. Sancho & Lola's Closet writes: “All of our chews are 100% natural and digestible. They will never contain any rawhide.” Redbarn's FAQ says: “A bully stick is a single-ingredient dog chew made from 100% beef pizzle.”"
+      ]
+    },
+    {
+      "h": "What studies say about bully sticks themselves",
+      "p": [
+        "Rawhide isn't the only chew with open questions. The 2013 Canadian Veterinary Journal study measured bully sticks: “Mean caloric density was 15 kcal/inch (38 kcal/cm) [range: 9 to 22 kcal/inch (23 to 56 kcal/cm), 2.96 to 3.07 kcal/g].” It also reported: “Of 26 bully sticks that were tested for bacterial contamination 1 (4%) was contaminated with Clostridium difficile, 1 was contaminated with methicillin-resistant Staphylococcus aureus (MRSA), and 1 with a tetracycline resistant Escherichia coli.” The study didn't test rawhide. Our bully stick calories page lists what each brand states."
+      ]
+    },
+    {
+      "h": "Labels and regulation",
+      "p": [
+        "Today's Veterinary Practice notes that “Minimally processed bones, other body parts, extensively processed rawhides, and compressed rawhides are not considered “food” by the FDA and are therefore poorly regulated.” Writing about plant-based chews, it adds: “These may be marketed as “rawhide free,” but selecting a quality product is difficult because these chews are poorly regulated.” In the study it cites, “Of the 10 products tested, 2 contained skin layers (consistent with rawhides) and were therefore deemed inconsistent with their labeling.” The article doesn't name those products, and they weren't described as bully sticks."
+      ]
+    },
+    {
+      "h": "Supervision, as the sources put it",
+      "p": [
+        "For rawhide, the ASPCA says: “Pet parents should limit the amount of rawhide consumed at any given time and discourage consumption of significant pieces that could cause choking or gastrointestinal obstruction.” For bully sticks, the AKC says: “When your dog has chewed the stick down to a nub, take it away before they can swallow what’s left.” Best Bully Sticks: “Always supervise your dog when they're enjoying a bully stick, and remove small or broken pieces to prevent your pup from choking.” Redbarn: “Always choose a size suitable for your dog's chewing style and remove small end pieces that could become a choking hazard.” The ASPCA also “encourages guardians to actively observe their dog while chewing and to immediately consult a veterinarian if their pet consumes a chunk of chew material.”"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "label": "Today's Veterinary Practice: The Benefits and Risks of Chew Treats, by Laura Gaylord, DVM, DACVIM (Nutrition) and Donna Raditic, DVM, DACVIM (Nutrition) (Jan/Feb 2024 issue)",
+      "url": "https://todaysveterinarypractice.com/nutrition/the-benefits-and-risks-of-chew-treats/"
+    },
+    {
+      "label": "American Kennel Club: How to Pick Edible Dog Chews (Stephanie Gibeault, MSc, CPDT; updated Nov 6, 2025)",
+      "url": "https://www.akc.org/expert-advice/nutrition/choosing-edible-chews-for-dogs/"
+    },
+    {
+      "label": "ASPCA: Position Statement on Dog Chews/Treats",
+      "url": "https://www.aspca.org/about-us/aspca-policy-and-position-statements/position-statement-dog-chewstreats"
+    },
+    {
+      "label": "Freeman LM, Janecko N, Weese JS. Nutritional and microbial analysis of bully sticks and survey of opinions about pet treats. Canadian Veterinary Journal. 2013;54:50-54 (PMC3524813)",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3524813/"
+    },
+    {
+      "label": "Tufts Petfoodology: Dangers of Bully Sticks: Popular Treat Can Carry Bacteria and Add Calories (Nov 1, 2018)",
+      "url": "https://sites.tufts.edu/petfoodology/2018/11/01/dangers-of-bully-sticks-popular-treat-can-carry-bacteria-and-add-calories/"
+    },
+    {
+      "label": "Campfire Treats: Standard Odor-Free Bully Sticks (8-10 Inch) (product page)",
+      "url": "https://campfiretreats.com/products/odor-free-bully-sticks-for-dogs-8-10-inch"
+    },
+    {
+      "label": "GREAT DOG CO.: 12\" Beef Bully Stick – Beef Pizzle 4.0, Jumbo Size (product page)",
+      "url": "https://www.greatdogco.com/products/great-dog-12-inch-4oz-beef-pizzle-jumbo-bully-stick-usa"
+    },
+    {
+      "label": "Best Bully Sticks: 6-Inch Thin Bully Stick (product page)",
+      "url": "https://www.bestbullysticks.com/products/6-inch-thin-bully-stick"
+    },
+    {
+      "label": "Jack&Pup: Bully Sticks - 6 inch Standard (product page)",
+      "url": "https://www.jackandpup.com/products/bully-stick-6-inch-standard"
+    },
+    {
+      "label": "Bow Wow Labs: SafeFit Bully Sticks (product page)",
+      "url": "https://bowwowlabs.com/products/bully-sticks"
+    },
+    {
+      "label": "Pawstruck: Straight Bully Sticks for Dogs (Sold by Weight) (product page)",
+      "url": "https://pawstruck.com/products/straight-bully-sticks-for-dogs-sold-by-weight"
+    },
+    {
+      "label": "Nature Gnaws: Small Bully Sticks 6\" (product page)",
+      "url": "https://www.naturegnaws.com/products/natural-small-beef-bully-sticks-long-lasting-dog-chews"
+    },
+    {
+      "label": "Redbarn: Bully Sticks for Dogs (product page)",
+      "url": "https://www.redbarn.com/products/bully-stick"
+    },
+    {
+      "label": "Mighty Paw: All-Natural Bully Sticks (product page)",
+      "url": "https://mightypaw.com/products/naturals-bully-sticks-5-pack"
+    },
+    {
+      "label": "Pupford: Skinny Smoky Bully Stick (product page)",
+      "url": "https://www.pupford.com/products/skinny-bully-sticks"
+    },
+    {
+      "label": "Raw Paws Pet Food: Standard Bully Sticks, 6-inch - 10-ct (product page)",
+      "url": "https://www.rawpawspetfood.com/products/standard-bully-sticks-6-inch-10-ct"
+    },
+    {
+      "label": "Sancho & Lola's Closet: 6-Inch Standard Charcuterie Style Bully Sticks - No odor-Made in the USA (product page)",
+      "url": "https://sanchoandlola.com/products/copy-of-6-inch-charcuterie-style-bully-sticks-no-odor-farmed-in-the-usa"
+    },
+    {
+      "label": "Jack's Premium: 5-8\" Thin Bully Sticks (product page)",
+      "url": "https://jackspremium.com/products/6-inch-thin-bully-sticks"
+    },
+    {
+      "label": "Bully Bunches: 6 Inch Standard Bully Stick (product page)",
+      "url": "https://bullybunches.com/products/6-inch-standard-bully-stick"
+    }
+  ],
+  "product_ids": [
+    "campfire-treats-standard-odor-free-bully-sticks-8-10-inch",
+    "great-dog-co-12-beef-bully-stick-beef-pizzle-4-0-jumbo-size",
+    "best-bully-sticks-6-inch-thin-bully-stick",
+    "jack-pup-bully-sticks-6-inch-standard",
+    "bow-wow-labs-safefit-bully-sticks",
+    "pawstruck-straight-bully-sticks-for-dogs-sold-by-weight",
+    "nature-gnaws-small-bully-sticks-6",
+    "redbarn-bully-sticks-for-dogs",
+    "mighty-paw-all-natural-bully-sticks",
+    "pupford-skinny-smoky-bully-stick",
+    "raw-paws-pet-food-standard-bully-sticks-6-inch-10-ct",
+    "sancho-lola-s-closet-6-inch-standard-charcuterie-style-bully-sticks-no-odor-made",
+    "jack-s-premium-5-8-thin-bully-sticks",
+    "bully-bunches-6-inch-standard-bully-stick"
+  ],
+  "quote_checks": [
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Rawhide chews are made from the chemically processed inner hide layer, most commonly from cows but also other animal species (e.g., pigs, sheep, even water buffalo)."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "Rawhide, which is made from the inner layer of horse or cowhide, is a popular chew"
+    },
+    {
+      "snapshot": "research/pages/aspca-chews-position-1029.txt",
+      "text": "Rawhide chews are manufactured from animal hides."
+    },
+    {
+      "snapshot": "research/pages/tufts-petfoodology-bully-sticks.txt",
+      "text": "Bully sticks are, in fact, bull or steer penises."
+    },
+    {
+      "snapshot": "research/pages/pmc3524813.txt",
+      "text": "such as cattle hooves or skin (i.e., rawhide chews) and pig ears"
+    },
+    {
+      "snapshot": "research/pages/pmc3524813.txt",
+      "text": "One treat for dogs is the bull or steer penis, commonly known as “bully” or “pizzle” sticks."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Animal-derived products that have undergone minimal processing"
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Other body parts (e.g., ears, trachea, lung, hooves, antlers, horns, bully sticks, tendons, masseter muscles, skin, hides)"
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Among products classified as extensively processed animal-derived chews are rawhides"
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "To produce a rawhide chew, the hide may be processed in brine (salt), degreasers, detergents, sodium bicarbonate, hydrogen peroxide, lime, or other chemicals needed to remove hair or fat, kill pathogens, and improve the appearance."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Artificial colors and flavors are often added to make the final product more palatable, and additives (e.g., glues to hold shape) may be used."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "The digestibility of rawhide chews is often unknown or suspected to be poor"
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "Unlike rawhide,"
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "bully sticks, sometimes known as pizzle sticks, are easily digestible."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "Rawhide is also difficult to digest. Pieces will pass through the digestive system whole, which is why they pose an obstruction risk."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "Power chewers can break off large pieces."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "However, power chewers might bite straight through, producing large pieces that pose a choking risk, or swallow the entire stick whole."
+    },
+    {
+      "snapshot": "research/pages/akc-edible-chews-1029.txt",
+      "text": "When your dog has chewed the stick down to a nub, take it away before they can swallow what’s left."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Minimally processed bones, other body parts, extensively processed rawhides, and compressed rawhides are not considered “food” by the FDA and are therefore poorly regulated."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "These may be marketed as “rawhide free,” but selecting a quality product is difficult because these chews are poorly regulated."
+    },
+    {
+      "snapshot": "research/pages/tvp-chew-treats-1029.txt",
+      "text": "Of the 10 products tested, 2 contained skin layers (consistent with rawhides) and were therefore deemed inconsistent with their labeling."
+    },
+    {
+      "snapshot": "research/pages/pmc3524813.txt",
+      "text": "Mean caloric density was 15 kcal/inch (38 kcal/cm) [range: 9 to 22 kcal/inch (23 to 56 kcal/cm), 2.96 to 3.07 kcal/g]."
+    },
+    {
+      "snapshot": "research/pages/pmc3524813.txt",
+      "text": "Of 26 bully sticks that were tested for bacterial contamination 1 (4%) was contaminated with Clostridium difficile, 1 was contaminated with methicillin-resistant Staphylococcus aureus (MRSA), and 1 with a tetracycline resistant Escherichia coli."
+    },
+    {
+      "snapshot": "research/pages/aspca-chews-position-1029.txt",
+      "text": "Pet parents should limit the amount of rawhide consumed at any given time and discourage consumption of significant pieces that could cause choking or gastrointestinal obstruction."
+    },
+    {
+      "snapshot": "research/pages/aspca-chews-position-1029.txt",
+      "text": "encourages guardians to actively observe their dog while chewing and to immediately consult a veterinarian if their pet consumes a chunk of chew material."
+    },
+    {
+      "snapshot": "research/pages/rh-redbarn-1030.txt",
+      "text": "Many pet parents choose bully sticks as an alternative to rawhide because they are single-ingredient chews and digestible when fed appropriately."
+    },
+    {
+      "snapshot": "research/pages/rh-redbarn-1030.txt",
+      "text": "Always choose a size suitable for your dog's chewing style and remove small end pieces that could become a choking hazard."
+    },
+    {
+      "snapshot": "research/pages/rh-redbarn-1030.txt",
+      "text": "A bully stick is a single-ingredient dog chew made from 100% beef pizzle."
+    },
+    {
+      "snapshot": "research/pages/rh-jacks-1030.txt",
+      "text": "They are made from 100% steer or bull penis, also commonly referred to as pizzle."
+    },
+    {
+      "snapshot": "research/pages/rh-sancho-1030.txt",
+      "text": "All of our chews are 100% natural and digestible. They will never contain any rawhide."
+    },
+    {
+      "snapshot": "research/pages/rh-bbs-1030.txt",
+      "text": "Always supervise your dog when they're enjoying a bully stick, and remove small or broken pieces to prevent your pup from choking."
+    }
+  ],
+  "last_checked": "2026-10-30",
+  "categories": [
+    "bully-sticks",
+    "rawhide-free"
+  ]
+}
