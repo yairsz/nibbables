@@ -371,7 +371,7 @@ def supervision_faq(noun, ps):
 
 # Antler "how to choose" answers (added 2026-10-29, run #46: Search Console shows "best antlers for dogs" on
 # /antlers/; Nathan Gotch AI SEO checklist: answer the conversational version of the query). We don't rank or pick
-# a "best"; every line is counted from product names/size options or quoted from each card's size_guidance.
+# a "best" (run #58: question wording now matches the query; answer still says we don't rank); every line is counted from product names/size options or quoted from each card's size_guidance.
 def _merge_quotes(ps):
     out = {}
     for p in ps:
@@ -395,7 +395,7 @@ def antler_choose_faq(ps):
           + (f"{len(split)} offer a split or half option: {nm(split)}. " if split else "")
           + "GREAT DOG CO. describes its split elk antler as \u201c" + next((p["size_guidance"].rstrip(".") for p in ps if p["brand"] == "GREAT DOG CO." and "Split" in p["product"]), "") + "\u201d. "
           "Those are the brands' descriptions, not our recommendation.")
-    return [("How do I choose an antler chew for my dog? What brands say", a1),
+    return [("What are the best antlers for dogs? How brands say to choose", a1),
             ("Elk vs deer antlers, and split vs whole: what's listed here?", a2)]
 
 # Yak "made of" answer (added 2026-10-30, run #55: Search Console shows "what are yak chews made of" on
