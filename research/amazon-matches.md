@@ -122,3 +122,14 @@ Method: Amazon search + dp pages via curl (title, byline, Brand field); Cadet ma
 - MATCH Rocky Ranch 12 Inch Bully Sticks – 4 Pack → B0FSGDR553 "Rocky Ranch, 12" Dog Bully Sticks, Beef Flavor, 5.68 oz, ... 4 Count", byline "Visit the Rocky Ranch. Healthier Life. Happier Tails. Store".
 - NOT IN CATALOG (no card, table links to the brand page only): Cadet Bully Hide Sticks (Amazon shows Cadet-store bully hide listings in several counts, e.g. Small 9 ct B0C6YR4MR8, Small 4 ct B0CC6SH685, Large 7 ct B0C384BKP1; not linked because these chews are not catalog products) and Rocky Ranch Bully Hide Collagen Roll. TORO Bully Hide listings on Amazon (B0G6HW2F9W, B0H3QFFG5X, B0HBBXNTB3, B0GDWDQBSK, B0GLXLHPLC, B0GT3877XT) are mostly "Brand: Generic" resellers and TORO has no page on cadetpet.com, so not used.
 - /bully-stick-vs-rawhide/ reuses 14 existing bully stick cards (Amazon links unchanged: 9 of 14 have ASINs; Raw Paws shows its CJ link first).
+
+## 2026-10-31 — /trachea-chews/ (8 new products)
+Method: Amazon search + dp pages via curl (title, byline). No prices/ratings recorded.
+- MATCH Campfire Treats Beef Trachea for Dogs (8-10 Inch) → B0HKLBDJ3L "Beef Trachea for Dogs (8-10 Inch)", byline "Visit the Campfire Treats Store".
+- MATCH Best Bully Sticks Beef Trachea Dog Chews - 5 to 6 Inch → B0HGZMFK65 "Beef Trachea Dog Chews - 5 to 6 Inch", byline "Visit the Best Bully Sticks Store" (brand page sells 10 and 25 packs).
+- MATCH Jack&Pup Trachea - 6 Inch → B08QVBS456 "Beef Trachea For Dogs, Trachea Dog Chews, Natural Dog Chews 6 inch 20 pack", byline "Visit the Jack&Pup Store", Brand Jack&Pup (brand page sells 12 and 20 pieces; 20 pack linked). Other Jack&Pup 6 inch counts seen: B0HK521QR2 (8 pack), B085417VL8 (10 pack).
+- MATCH Jack's Premium Beef Trachea → B015BPLEP8 "JACK'S PREMIUM Large Beef Trachea - Dog Chew Made in USA - 12\" Trachea ...", byline "Visit the JACK'S PREMIUM Store"; this is the 12 Inch variant of the brand page's 3/6/12 inch/1 lb options.
+- MISS Nature Gnaws Natural Beef Trachea 6" (6 Count): only B0DXQFD54Z "Beef Trachea Chews for Dogs 6\" (6 Count) ... (Pack of 2)" found; the brand page sells only a 6 Count, so the 2-pack isn't an exact match. Not linked.
+- MISS Sancho & Lola's Closet Nebraska Farmed Beef Trachea: no Sancho & Lola's-branded trachea listing in search (B0HK521QR2 "6 inch 8 pack" is Jack&Pup).
+- MISS Bully Bunches 6 Inch Beef Trachea: no Bully Bunches trachea listing in search.
+- MISS GREAT DOG Beef Trachea (Beef Tubes) – 6 Inch, 10 Count: only B00VX8E5L8 "Great Dog Beef Trachea Pieces, 3/4 Pound Bag" (a different product). Not linked.

@@ -10,7 +10,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /pig-ears/: Redbarn, Pawstruck, Raw Paws, Jack&Pup (feeds)
 - [ ] /cow-ears/: Pawstruck, Raw Paws, Best Bully Sticks, Nature Gnaws
 - [x] /esophagus-chews/ (PUBLISHED 2026-10-29, 9 products from 7 brands; also /bully-stick-vs-gullet-stick/): beef gullet and esophagus. Raw Paws, Best Bully Sticks, Jack&Pup, Nature Gnaws, Sancho & Lola's, Jack's Premium, Redbarn (Pawstruck has none in its feed)
-- [ ] /trachea-chews/: beef trachea. Pawstruck, Redbarn, Best Bully Sticks, Nature Gnaws
+- [x] /trachea-chews/ (PUBLISHED 2026-10-31, 8 products from 8 brands: Campfire, Sancho & Lola's, Best Bully Sticks, Bully Bunches, GREAT DOG, Jack&Pup, Jack's Premium, Nature Gnaws; Pawstruck/Redbarn not in tonight's feeds)
 - [ ] /braided-bully-sticks/: braided and ring bully sticks. Best Bully Sticks, Jack&Pup, Redbarn, Pawstruck; also GREAT DOG twisted and Jack's Premium braided (both say USA in their feed titles; real query "braided bully sticks made in usa")
 - [ ] /bully-stick-holders/: bully-stick holder devices. Bow Wow Labs (feed); quote brand descriptions only, no safety claims
 - [ ] /filled-bones/: Redbarn filled bones (feed)
@@ -61,3 +61,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] Re-check whether Cadet publishes a TORO Bully Hide Chews page (none in cadetpet.com sitemap 2026-10-30; real query "cadet bully sticks vs toro bully hide chews")
 - [ ] Re-check Cadet wording: Cadet bully hide page says "select top layer of beef hide" while its beef hide article says beef hide is "made from the inner layer of cattle skin" (flagged 2026-10-30)
 - [ ] /bully-sticks/ expansion: more Cadet bully stick sizes (Small, Large, Extra-Thick) and Rocky Ranch 6" sticks, if the variant pages can be cited separately
+
+- [ ] Beef trachea guide for keyword-targets row 7 ("are beef trachea safe for dogs / puppies", "beef trachea for dogs calories / how often / benefits"): calorie table from /trachea-chews/ cards plus vet or AKC quotes that name trachea (none snapshotted yet); no safety verdicts, and headings can't use the word "safe"
+- [ ] /trachea-chews/ expansion: bison trachea (GREAT DOG, Jack's Premium), turkey trachea (Jack's Premium), trachea wrapped in jerky (Bully Bunches), trachea balls / crunch wrap (Nature Gnaws), Campfire trachea strips
+- [ ] Gullet vs trachea guide can now be built (autocomplete "beef esophagus vs trachea"): /esophagus-chews/ and /trachea-chews/ share 6 brands
