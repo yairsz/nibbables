@@ -4,6 +4,8 @@
 set -euo pipefail
 cd "$(dirname "$0")"
 python3 build.py
+python3 scripts/og_images.py   # share images from each page title (needs Pillow)
+python3 build.py
 touch site/.nojekyll
 SRC_SHA=$(git rev-parse --short HEAD)
 TMP=$(mktemp -d)
