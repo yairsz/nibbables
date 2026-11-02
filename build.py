@@ -90,6 +90,13 @@ def ga_tag():
   gtag('config', '{gid}');
 </script>"""
 
+def pinterest_tag():
+    v = (CFG.get("pinterest_domain_verify") or "").strip()
+    if not v:
+        return ""
+    assert re.fullmatch(r"[a-f0-9]+", v), f"bad pinterest_domain_verify {v}"
+    return '\n<meta name="p:domain_verify" content="%s"/>' % v
+
 def clarity_tag():
     cid = (CFG.get("clarity_project_id") or "").strip()
     if not cid: return ""
@@ -226,7 +233,7 @@ def page(title, desc, path, body, jsonld=None):
     year = datetime.date.today().year
     nav = "".join(f'<a href="{U("/" + s + "/")}">{e(n)}</a>' for s, n in CAT_LABEL.items())
     return f"""<!doctype html>
-<html lang="en"><head>{ga_tag()}{clarity_tag()}
+<html lang="en"><head>{ga_tag()}{clarity_tag()}{pinterest_tag()}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">

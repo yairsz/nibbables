@@ -23,3 +23,6 @@ A static directory of long-lasting dog chews (bully sticks, yak cheese chews, be
 - Clarity tag is rendered in every page <head> right after the GA4 tag by `clarity_tag()` in build.py, from `site.json` `clarity_project_id` (remove the field to disable; privacy page section also keys off it).
 - Project IDs: ByeBulky `z7gso98mvr`, Nibbables `z7gtb12n7l`. Account: malteado001@gmail.com. Dashboard: https://clarity.microsoft.com
 - AI-assistant referral data: Clarity puts sessions from ChatGPT, Copilot, Gemini, Claude and Perplexity (standalone sites only; Google AI Overviews are not separated) in the **AIPlatform** / **PaidAIPlatform** channel groups. Per https://learn.microsoft.com/en-us/clarity/insights/ai-channel-group: project Dashboard > Referrer card (the doc also calls it the Traffic card) > **Channels** tab > select AIPlatform. Hidden referrers show as Direct. Include it in traffic reports alongside GA4.
+
+## Pinterest (added 2026-11-02)
+- `p:domain_verify` meta rendered in every page <head> by `pinterest_tag()` from `site.json` `pinterest_domain_verify`.
