@@ -316,7 +316,8 @@ PLACES = [("USA", r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American|Co
           ("Colombia", r"Colombi|Columbia"),  # one brand page writes "Columbia" for its country of origin
           ("Peru", r"Peru"), ("Mexico", r"Mexico"), ("South America", r"South America"), ("the Americas", r"The Americas"),
           ("Turkey", r"Turkey"), ("New Zealand", r"New Zealand"), ("Europe", r"Europe"), ("India", r"India"),
-          ("Nepal", r"Nepal"), ("the Himalayas", r"Himalaya")]
+          ("Nepal", r"Nepal"), ("the Himalayas", r"Himalaya"),
+          ("Iceland", r"Iceland"), ("Alaska", r"Alaska"), ("Norway", r"Norw")]  # fish skin chews (2026-11-01)
 FAQ_NOUN = {"antlers": "antler chews"}
 # Wording that names a place but isn't about where the chew is made or sourced (e.g. a recipe's origin).
 NOT_A_PLACE = re.compile(r"recipe that originates in [^.·]*", re.I)

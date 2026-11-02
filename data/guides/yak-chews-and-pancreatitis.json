@@ -1,0 +1,350 @@
+{
+  "slug": "yak-chews-and-pancreatitis",
+  "title": "Yak chews and pancreatitis: fat % by brand, vet notes | Nibbables",
+  "meta": "Can dogs with pancreatitis eat yak chews? The fat and calorie lines on 8 yak chew pages, what Tufts vet nutritionists say about fat, and what to ask your vet.",
+  "h1": "Yak chews and pancreatitis: the fat each brand lists and what vets say",
+  "intro": "If your dog has had pancreatitis, the question about a yak chew usually comes down to fat. This page puts the fat and calorie lines from 8 yak cheese chew product pages side by side, explains what a \"Crude Fat (min)\" figure does and doesn't tell you (per AAFCO), and quotes veterinary nutritionists at Tufts on fat and pancreatitis. None of the yak chew pages we checked mention pancreatitis. Nibbables doesn't say whether any chew suits a dog with pancreatitis; that's a call for your vet, who knows your dog's history.",
+  "table": {
+    "h": "Fat and calories on each yak chew page",
+    "caption": "Quoted from each brand's product page, checked 2026-11-01. \"Not stated\" means we found no figure on that page. Fat is listed as a minimum (\"min\"), so the real fat content can be higher. Best Bully Sticks' nutrition table shows 0 for every value, which looks like a placeholder, not a measurement.",
+    "head": [
+      "Brand: product",
+      "Fat line (quoted)",
+      "Calorie line (quoted)",
+      "Ingredients (quoted)"
+    ],
+    "rows": [
+      {
+        "snapshot": "research/pages/pk-mightypaw-1101.txt",
+        "cells": [
+          "Mighty Paw: All-Natural Yak Cheese Dog Chews",
+          {
+            "q": "Crude Fat Min: 1.5% · Fat - 9 cal."
+          },
+          {
+            "q": "2751 kcal ME/kg; 275 kcal ME/serving"
+          },
+          {
+            "q": "Ingredients: milk, lime, salt"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/pk-pupford-med-1101.txt",
+        "cells": [
+          "Pupford: Yak Cheese Dog Chew Medium",
+          {
+            "q": "Crude Fat (min): 1%"
+          },
+          {
+            "q": "About 329 kcal per chew."
+          },
+          {
+            "q": "Yak Milk, Salt, Lime Juice."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/pk-pupford-jumbo-1101.txt",
+        "url": "https://www.pupford.com/products/yak-cheese-dog-chew-jumbo",
+        "cells": [
+          "Pupford: Yak Cheese Dog Chew Jumbo",
+          {
+            "q": "Crude Fat (min): 1%"
+          },
+          {
+            "q": "About 471 kcal per chew."
+          },
+          {
+            "q": "Yak Milk, Salt, Lime Juice."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/pk-rawpaws-med-1101.txt",
+        "cells": [
+          "Raw Paws Pet Food: Himalayan Yak Chews for Dogs, Medium - 3-ct",
+          {
+            "q": "Crude Fat (min)... 0.5%"
+          },
+          {
+            "q": "3,168 kcal/kg., 90 kcal/oz."
+          },
+          {
+            "q": "Ingredients: Yak Milk, Lime Juice, Salt"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/pk-rawpaws-small-1101.txt",
+        "cells": [
+          "Raw Paws Pet Food: Himalayan Yak Chews for Dogs, Small - 10-ct",
+          {
+            "q": "Crude Fat (min)... 0.5%"
+          },
+          {
+            "q": "3,168 kcal/kg., 90 kcal/oz."
+          },
+          {
+            "q": "Ingredients: Yak Milk, Lime Juice, Salt"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/pk-bullybunches-med-1101.txt",
+        "url": "https://www.bullybunches.com/products/himalayan-yak-chew-medium",
+        "cells": [
+          "Bully Bunches: Himalayan Yak Chew (MEDIUM)",
+          {
+            "q": "Fat (min) 2%"
+          },
+          {
+            "q": "Calories 119/oz"
+          },
+          {
+            "q": "Ingredients: Yak milk, Cow Milk and Lime juice."
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/pk-bbs-golden-1101.txt",
+        "cells": [
+          "Best Bully Sticks: Medium Himalayan Golden Yak Cheese Odor-Free (3 Pack)",
+          {
+            "q": "Crude Fat Min 0.0%"
+          },
+          {
+            "q": "Calories per kg 0 kcal/kg"
+          },
+          {
+            "q": "Yak and Cow Milk, Lime Juice, Salt"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/pk-pawstruck-1101.txt",
+        "cells": [
+          "Pawstruck: Medium Himalayan Yak Dog Chew, 3-4 oz.",
+          "Not stated",
+          "Not stated",
+          {
+            "q": "Yak Milk, Cow Milk, Lime Juice, and a small amount of salt"
+          }
+        ]
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Can dogs with pancreatitis eat yak chews?",
+      "a": "None of the 8 yak chew product pages in the table above mention pancreatitis, so no brand we checked addresses it. Veterinary nutritionists at Tufts write that \"If your dog has had pancreatitis, ask your veterinarian whether she should be fed a lower fat diet.\" The yak chew pages list fat as a minimum of 0.5% to 2% (Best Bully Sticks shows 0.0%, which looks like a placeholder), and AAFCO explains that a minimum means the real fat can be higher. Per chew, Pupford lists \"About 329 kcal per chew.\" (Medium) and \"About 471 kcal per chew.\" (Jumbo), and Mighty Paw lists \"275 kcal ME/serving\" with a serving size of one chew. Show your vet the label and let them decide."
+    }
+  ],
+  "sections": [
+    {
+      "h": "What fat percentage do yak chew brands list?",
+      "p": "Mighty Paw lists \"Crude Fat Min: 1.5%\" and, in its nutrition facts, \"Fat - 9 cal.\" of \"275 kcal ME/serving\". Pupford lists \"Crude Fat (min): 1%\" on both its Medium and Jumbo pages. Raw Paws Pet Food lists \"Crude Fat (min)... 0.5%\" on its Small and Medium pages. Bully Bunches lists \"Fat (min) 2%\". Best Bully Sticks' nutrition table reads \"Crude Fat Min 0.0%\" and \"Calories per kg 0 kcal/kg\", which can't describe a milk-based chew and looks like an unfilled template. Pawstruck's page gives ingredients but no fat or calorie figure."
+    },
+    {
+      "h": "Why a \"Crude Fat (min)\" figure isn't a maximum",
+      "p": "AAFCO, which writes the model rules for pet food labels, says guaranteed analyses must show \"minimum percentages of crude protein and crude fat, and maximum percentages of crude fiber and moisture\". It explains that a lab test of the product means \"the crude protein and crude fat must be NO LESS THAN the stated percentage on the label\". So a yak chew labeled 1% fat (min) has at least 1% fat, and the label doesn't say how much more it could have. If the exact fat matters for your dog, ask the brand for a typical analysis and share it with your vet."
+    },
+    {
+      "h": "What veterinary nutritionists say about fat and pancreatitis",
+      "p": "In a Tufts Petfoodology article (December 1, 2020), Cailin R. Heinze, VMD, MS, DACVIM (Nutrition), writes that in dogs pancreatitis \"is associated with high levels of fat in the blood, especially triglycerides, which is more common in certain breeds such as miniature schnauzers.\" She adds: \"Some dogs do not do well on high-fat diets and may develop gastrointestinal signs, increased fat levels in the blood, and/or pancreatitis.\" and \"Some dogs may need special therapeutic low-fat diets because normal diets that you buy at pet food or grocery stores may be too high in fat.\" An earlier Tufts post (March 15, 2018) notes that \"many dogs can eat high fat diets and never develop pancreatitis and many dogs that develops pancreatitis do not have a history of eating a high fat diet.\""
+    },
+    {
+      "h": "How many calories brands list per yak chew",
+      "p": "Brands state calories in different units, so the figures can't be compared directly. Pupford gives \"About 329 kcal per chew.\" for its Medium and \"About 471 kcal per chew.\" for its Jumbo. Mighty Paw gives \"2751 kcal ME/kg; 275 kcal ME/serving\", and its nutrition facts list \"Serving Size: 1 Chew\". Raw Paws Pet Food gives \"3,168 kcal/kg., 90 kcal/oz.\" and Bully Bunches \"Calories 119/oz\". Our yak chew microwave guide and bully stick calorie guide cover related questions."
+    },
+    {
+      "h": "How fish skin chews compare on listed fat",
+      "p": "Fish skin chews vary more. Campfire Treats lists \"Crude Fat (min.) 1%\" for its Alaskan Crunch cod skins, while Jack's Premium's nutrition panel for its smoked salmon skins shows \"Fat 18.0%\". Our fish skin chews page quotes the fat line from each fish skin brand we list."
+    },
+    {
+      "h": "What to ask your vet before giving a yak chew",
+      "p": "Bring the product page or bag. Useful things to show your vet are the fat line (and the fact that it's a minimum), the calorie line, the ingredient list (some yak chews are yak milk only, others list cow milk too), and how big the chew is for your dog. Raw Paws Pet Food and Pupford list yak milk with no cow milk; Bully Bunches, Best Bully Sticks and Pawstruck list cow milk alongside yak milk; Mighty Paw lists \"milk\" without naming the animal."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Tufts Petfoodology: Pancreatitis: A Real Pain in the Abdomen (Cailin R. Heinze, VMD, DACVIM Nutrition, Dec 1, 2020)",
+      "url": "https://sites.tufts.edu/petfoodology/2020/12/01/pancreatitis/"
+    },
+    {
+      "label": "Tufts Petfoodology: The Skinny on Fat: Part 1 – The Basics (Mar 15, 2018)",
+      "url": "https://sites.tufts.edu/petfoodology/2018/03/15/the-skinny-on-fat-part-1/"
+    },
+    {
+      "label": "AAFCO: Nutritional Labeling (guaranteed analysis minimums and maximums)",
+      "url": "https://www.aafco.org/resources/startups/nutritional-labeling/"
+    },
+    {
+      "label": "Mighty Paw: All-Natural Yak Cheese Dog Chews (product page)",
+      "url": "https://mightypaw.com/products/mighty-paw-all-natural-yak-cheese-dog-chews-4-pack"
+    },
+    {
+      "label": "Pupford: Yak Cheese Dog Chew Medium (product page)",
+      "url": "https://www.pupford.com/products/yak-cheese-dog-chew-medium"
+    },
+    {
+      "label": "Pupford: Yak Cheese Dog Chew Jumbo (product page)",
+      "url": "https://www.pupford.com/products/yak-cheese-dog-chew-jumbo"
+    },
+    {
+      "label": "Raw Paws Pet Food: Himalayan Yak Chews for Dogs, Medium (product page)",
+      "url": "https://www.rawpawspetfood.com/products/himalayan-yak-chews-dogs-medium-3-ct"
+    },
+    {
+      "label": "Raw Paws Pet Food: Himalayan Yak Chews for Dogs, Small (product page)",
+      "url": "https://www.rawpawspetfood.com/products/himalayan-yak-chews-dogs-small-10-ct"
+    },
+    {
+      "label": "Bully Bunches: Himalayan Yak Chew (MEDIUM) (product page)",
+      "url": "https://www.bullybunches.com/products/himalayan-yak-chew-medium"
+    },
+    {
+      "label": "Best Bully Sticks: Medium Himalayan Golden Yak Cheese Odor-Free (product page)",
+      "url": "https://www.bestbullysticks.com/products/products-himalayan-golden-yak-cheese-odor-free-medium-3-pack"
+    },
+    {
+      "label": "Pawstruck: Medium Himalayan Yak Dog Chew (product page)",
+      "url": "https://pawstruck.com/products/medium-himalayan-yak-dog-chew-3-4-oz-disco-1"
+    },
+    {
+      "label": "Campfire Treats: Cod Skins for Dogs | Alaskan Crunch (product page)",
+      "url": "https://campfiretreats.com/products/cod-skins-for-dogs"
+    },
+    {
+      "label": "Jack's Premium: Salmon Skin (product page)",
+      "url": "https://www.jackspremium.com/products/salmon-skins"
+    }
+  ],
+  "product_ids": [
+    "mighty-paw-all-natural-yak-cheese-dog-chews",
+    "pupford-yak-cheese-dog-chew-medium",
+    "raw-paws-pet-food-himalayan-yak-chews-for-dogs-medium-3-ct",
+    "raw-paws-pet-food-himalayan-yak-chews-for-dogs-small-10-ct",
+    "best-bully-sticks-medium-himalayan-golden-yak-cheese-odor-free-3-pack",
+    "pawstruck-medium-himalayan-yak-dog-chew-3-4-oz"
+  ],
+  "quote_checks": [
+    {
+      "snapshot": "research/pages/tufts-skinny-fat-1101.txt",
+      "text": "If your dog has had pancreatitis, ask your veterinarian whether she should be fed a lower fat diet."
+    },
+    {
+      "snapshot": "research/pages/tufts-skinny-fat-1101.txt",
+      "text": "many dogs can eat high fat diets and never develop pancreatitis and many dogs that develops pancreatitis do not have a history of eating a high fat diet."
+    },
+    {
+      "snapshot": "research/pages/tufts-skinny-fat-1101.txt",
+      "text": "March 15, 2018"
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "is associated with high levels of fat in the blood, especially triglycerides, which is more common in certain breeds such as miniature schnauzers."
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "Some dogs do not do well on high-fat diets and may develop gastrointestinal signs, increased fat levels in the blood, and/or pancreatitis."
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "Some dogs may need special therapeutic low-fat diets because normal diets that you buy at pet food or grocery stores may be too high in fat."
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "Cailin R. Heinze, VMD, MS, DACVIM (Nutrition)"
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "December 1, 2020"
+    },
+    {
+      "snapshot": "research/pages/aafco-nutritional-labeling-1101.txt",
+      "text": "minimum percentages of crude protein and crude fat, and maximum percentages of crude fiber and moisture"
+    },
+    {
+      "snapshot": "research/pages/aafco-nutritional-labeling-1101.txt",
+      "text": "the crude protein and crude fat must be NO LESS THAN the stated percentage on the label"
+    },
+    {
+      "snapshot": "research/pages/pk-mightypaw-1101.txt",
+      "text": "Crude Fat Min: 1.5%"
+    },
+    {
+      "snapshot": "research/pages/pk-mightypaw-1101.txt",
+      "text": "Fat - 9 cal."
+    },
+    {
+      "snapshot": "research/pages/pk-mightypaw-1101.txt",
+      "text": "275 kcal ME/serving"
+    },
+    {
+      "snapshot": "research/pages/pk-mightypaw-1101.txt",
+      "text": "2751 kcal ME/kg; 275 kcal ME/serving"
+    },
+    {
+      "snapshot": "research/pages/pk-pupford-med-1101.txt",
+      "text": "Crude Fat (min): 1%"
+    },
+    {
+      "snapshot": "research/pages/pk-pupford-jumbo-1101.txt",
+      "text": "Crude Fat (min): 1%"
+    },
+    {
+      "snapshot": "research/pages/pk-pupford-med-1101.txt",
+      "text": "About 329 kcal per chew."
+    },
+    {
+      "snapshot": "research/pages/pk-pupford-jumbo-1101.txt",
+      "text": "About 471 kcal per chew."
+    },
+    {
+      "snapshot": "research/pages/pk-rawpaws-med-1101.txt",
+      "text": "Crude Fat (min)... 0.5%"
+    },
+    {
+      "snapshot": "research/pages/pk-rawpaws-small-1101.txt",
+      "text": "Crude Fat (min)... 0.5%"
+    },
+    {
+      "snapshot": "research/pages/pk-rawpaws-med-1101.txt",
+      "text": "3,168 kcal/kg., 90 kcal/oz."
+    },
+    {
+      "snapshot": "research/pages/pk-bullybunches-med-1101.txt",
+      "text": "Fat (min) 2%"
+    },
+    {
+      "snapshot": "research/pages/pk-bullybunches-med-1101.txt",
+      "text": "Calories 119/oz"
+    },
+    {
+      "snapshot": "research/pages/pk-bbs-golden-1101.txt",
+      "text": "Crude Fat Min 0.0%"
+    },
+    {
+      "snapshot": "research/pages/pk-bbs-golden-1101.txt",
+      "text": "Calories per kg 0 kcal/kg"
+    },
+    {
+      "snapshot": "research/pages/fs-campfire-alaskan-1101.txt",
+      "text": "Crude Fat (min.) 1%"
+    },
+    {
+      "snapshot": "research/pages/fs-jacks-salmon-1101.txt",
+      "text": "Fat 18.0%"
+    },
+    {
+      "snapshot": "research/pages/pk-mightypaw-1101.txt",
+      "text": "Serving Size: 1 Chew"
+    }
+  ],
+  "last_checked": "2026-11-01",
+  "categories": [
+    "yak-cheese-chews",
+    "fish-skin-chews"
+  ]
+}

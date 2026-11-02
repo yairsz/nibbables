@@ -133,3 +133,16 @@ Method: Amazon search + dp pages via curl (title, byline). No prices/ratings rec
 - MISS Sancho & Lola's Closet Nebraska Farmed Beef Trachea: no Sancho & Lola's-branded trachea listing in search (B0HK521QR2 "6 inch 8 pack" is Jack&Pup).
 - MISS Bully Bunches 6 Inch Beef Trachea: no Bully Bunches trachea listing in search.
 - MISS GREAT DOG Beef Trachea (Beef Tubes) – 6 Inch, 10 Count: only B00VX8E5L8 "Great Dog Beef Trachea Pieces, 3/4 Pound Bag" (a different product). Not linked.
+
+## 2026-11-01 — /fish-skin-chews/ (9 new products)
+Method: Amazon search + dp pages via curl (title, byline). No prices/ratings recorded. All 9 matched under the brand's own Amazon store.
+- MATCH Icelandic+ Cod Long Skins Dog Chews (20 Skin Count) → B0HNN31BJJ "Cod Long Skins Dog Chews (20 Skin Count)", byline "Visit the Icelandic+ Store".
+- MATCH Icelandic+ 100% Wild-Caught Icelandic Cod Skin Chews for Dogs (variant "Cod Short Skins Dog Chew (3 count)") → B0G26G62BW "Icelandic+ 3 Pack Cod Short Skins - Wild-Caught Fish Skin Dog Treat Chews", byline "Visit the Icelandic+ Store" (brand page also sells 36 count).
+- MATCH Icelandic+ Hand Wrapped Cod Skin Long 10" Chew Sticks (variants 2 pack / 12 pack) → B08F5HZXYW "Icelandic+ 12 Pack Cod Skin Long Chew Sticks - 10 in Air-Dried Dog Treats", byline "Visit the Icelandic+ Store". The 2-piece listing B08DLHN918 says 3.2oz while the brand page says approximately 4.6 oz for two, so the 12 pack was linked instead.
+- MATCH Icelandic+ Wolffish Skin Sticks & Pieces (3-oz / 9-oz bags) → B08DLJ2685 "Icelandic+ Sticks & Pieces: Wolffish 9oz ...", byline "Visit the Icelandic+ Store".
+- MATCH Campfire Treats Cod Skins for Dogs | Alaskan Crunch™ → B0HKLF9DS7 (same title), byline "Visit the Campfire Treats Store".
+- MATCH Campfire Treats Cod Skin Treats for Dogs → B0HKL3WLVL (same title), byline "Visit the Campfire Treats Store".
+- MATCH Jack's Premium Salmon Skin → B0HP8YDHXN "Salmon Skin", byline "Visit the JACK'S PREMIUM Store".
+- MATCH The Honest Kitchen Ocean Chews Crispy Cod Fish Skins Beams (2.75 oz / 5.5 oz) → B07H2Q42M9 "The Honest Kitchen Ocean Chews™ Crispy Cod Fish Skins Dog Treats, 2.75 oz (Beams™)", byline "Visit the The Honest Kitchen Store".
+- MATCH The Honest Kitchen Ocean Chews Hearty Wolffish Skins Beams (3.25 oz / 6 oz) → B01MR59LKS "The Honest Kitchen Ocean Chews Wolffish Skins Dog Treats ... 3.25 oz", byline "Visit the The Honest Kitchen Store". (B01N106KPK is the 6 oz pouch.)
+- /yak-chews-and-pancreatitis/ reuses 6 existing yak cards (Amazon links unchanged: 4 of 6 have ASINs); its 2 non-catalog table rows (Pupford Jumbo, Bully Bunches Medium) link to the brand pages only.

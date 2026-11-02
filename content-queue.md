@@ -3,6 +3,13 @@
 Each item: page path, what it needs, and candidate official sources to check first. Sources marked (feed) have a Shopify products.json that worked on 2026-10-23.
 
 ## New categories / product batches
+- [x] /fish-skin-chews/ (PUBLISHED 2026-11-01, 9 products: Icelandic+, Campfire Treats, Jack's Premium, The Honest Kitchen; keyword-targets row 7 fish skin cluster)
+- [x] /yak-chews-and-pancreatitis/ (PUBLISHED 2026-11-01: fat/calorie lines from 8 yak pages + Tufts + AAFCO; keyword-targets row 7 yak + pancreatitis)
+- [ ] /fish-skin-chews/ expansion: Icelandic+ Cod Skin Braids, Cod Skin Rolls, Cod Skin Large Cube, Fish Ear (pig ear wrapped in cod skin; maybe pig-ears page); Jack's Premium Salmon Skin Chips; Pawstruck/BBS if they add fish skins
+- [ ] Collagen sticks + pancreatitis / fat guide ("are collagen sticks safe for dogs with pancreatitis" autocomplete): fat lines from /collagen-sticks/ pages, same format as /yak-chews-and-pancreatitis/
+- [ ] Rawhide + pancreatitis ("is rawhide bad for dogs with pancreatitis"): only if a vet source names rawhide and fat; otherwise skip
+- [ ] Re-check Best Bully Sticks yak nutrition table (all zeros on 2026-11-01) and whether other BBS yak pages changed their rawhide-free wording
+- [ ] Jack&Pup yak page: product text didn't render in curl snapshot 2026-11-01; try WebFetch to get its fat/calorie lines
 - [x] /collagen-sticks/: published 2026-10-27 (Raw Paws, Best Bully Sticks, Jack&Pup; Pawstruck still available for expansion)
 - [x] /beef-tendons/ (PUBLISHED 2026-10-28, 6 products; also /bully-stick-vs-beef-tendon/): beef tendon and "paddywhack" chews. Pawstruck, Redbarn, Best Bully Sticks, Raw Paws (feeds)
 - [ ] /lamb-and-goat-horns/: horn chews. Pawstruck, Best Bully Sticks, Nature Gnaws (feeds)
