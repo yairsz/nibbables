@@ -187,13 +187,34 @@ def og_image(path, title):
             f'<meta property="og:image:height" content="630"><meta property="og:image:alt" content="{e(title)}">'
             f'<meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="{e(img)}">')
 
+def breadcrumb_ld(body, path):
+    """BreadcrumbList JSON-LD mirroring the visible "Home › ..." trail at the top of the page (added 2026-11-02, run #75)."""
+    m = re.match(r'\s*<p class="meta">(<a href="[^"]*">Home</a>.*?)</p>', body, re.S)
+    if not m:
+        return None
+    items = []
+    for part in m.group(1).split(" › "):
+        a = re.match(r'<a href="([^"]*)">(.*?)</a>$', part.strip())
+        name = html.unescape(re.sub(r"<[^>]+>", "", a.group(2) if a else part)).strip()
+        href = a.group(1) if a else None
+        if href is not None:
+            from urllib.parse import urljoin
+            href = urljoin(base_url() + path, href)
+        items.append((name, href))
+    if len(items) < 2:
+        return None
+    return {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        dict({"@type": "ListItem", "position": i + 1, "name": n}, **({"item": h} if h else {}))
+        for i, (n, h) in enumerate(items)]}
+
 def page(title, desc, path, body, jsonld=None):
+    crumbs = breadcrumb_ld(body, path)
     body = link_hubs(body, path)
     desc = META_DESC.get(path, desc)
     title, desc = fit_meta(title, desc)
     url = base_url() + path
     META[path] = (title, desc)
-    lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path), webpage_ld(title, desc, path)]) if x]
+    lds = [x for x in ((jsonld if isinstance(jsonld, list) else [jsonld]) + [video_ld(path), webpage_ld(title, desc, path), crumbs]) if x]
     ld = "".join(f'<script type="application/ld+json">{json.dumps(x)}</script>' for x in lds)
     year = datetime.date.today().year
     nav = "".join(f'<a href="{U("/" + s + "/")}">{e(n)}</a>' for s, n in CAT_LABEL.items())
