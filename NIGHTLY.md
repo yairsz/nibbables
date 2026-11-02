@@ -87,3 +87,8 @@ Goal: each night, publish **one** new page that is useful and 100% sourced. A pa
 - **At-a-glance table on chew-type pages (added 2026-10-26):** `cat_glance()` in build.py renders a table after Quick answers (brand/product linked to its card, made-in, sourced-from, rawhide-free, options), using each product's data fields verbatim. Nothing to hand-edit; keep the fields verbatim and it stays right.
 
 - **Share images (added 2026-11-01, run #73):** `publish.sh` runs `scripts/og_images.py` between two builds, making a 1200x630 `static/og/<slug>.png` from each page's own title, and `build.py` adds og:image + twitter:card for any page that has one (for Pinterest, Buffer, X and chat link previews). Commit new PNGs in `static/og/`. The images only show the page title and the site tagline; never add claims, prices or ratings to them.
+
+## Microsoft Clarity (added 2026-11-02)
+- Clarity tag is rendered in every page <head> right after the GA4 tag by `clarity_tag()` in build.py, from `site.json` `clarity_project_id` (remove the field to disable; privacy page section also keys off it).
+- Project IDs: ByeBulky `z7gso98mvr`, Nibbables `z7gtb12n7l`. Account: malteado001@gmail.com. Dashboard: https://clarity.microsoft.com
+- AI-assistant referral data (ChatGPT, Perplexity, Copilot, Gemini etc.) is in the Clarity dashboard traffic/channel views (Dashboard > Traffic / Channels, filter by referrer/channel). Include it in traffic reports alongside GA4.

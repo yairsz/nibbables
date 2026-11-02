@@ -8,11 +8,11 @@ no forms, accounts or email collection; hosted on GitHub Pages (no Cloudflare/CD
 import html
 e = lambda s: html.escape(str(s), quote=True)
 
-EFFECTIVE = "October 27, 2026"
+EFFECTIVE = "November 2, 2026"
 OPERATOR = "2 Handed Coding, LLC"
 CONTACT = "developer@2handedcoding.com"
 
-def body(site, domain, ga_id, video_pages, affiliate_html, filter_note):
+def body(site, domain, ga_id, video_pages, affiliate_html, filter_note, clarity_id=None):
     """site: display name; video_pages: list of (label, href) for pages with an embedded video;
     affiliate_html: site-specific affiliate section (HTML, already escaped); filter_note: where the in-page filter is."""
     vids = ", ".join(f'<a href="{e(h)}">{e(l)}</a>' for l, h in video_pages) or "none right now"
@@ -27,13 +27,25 @@ def body(site, domain, ga_id, video_pages, affiliate_html, filter_note):
 <li><strong>What we see:</strong> aggregate reports (page views, traffic sources, countries, device types). We don't see your name, email address or IP address.</li>
 <li><strong>Opting out:</strong> you can block or delete cookies in your browser, use a content blocker, or install the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics Opt-out Browser Add-on</a>. Google explains its practices in <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">How Google uses information from sites or apps that use its services</a>.</li>
 </ul>"""
+    if clarity_id is None:
+        import json as _j, pathlib as _p
+        clarity_id = (_j.load(open(_p.Path(__file__).with_name("site.json"))).get("clarity_project_id") or "").strip()
+    if clarity_id:
+        ga += f"""<h2>Microsoft Clarity</h2>
+<p>Every page also loads Microsoft Clarity (project ID <code>{e(clarity_id)}</code>) from <code>www.clarity.ms</code>. It's provided by Microsoft Corporation. We use it to understand how visitors use the site, for example which parts of a page people read or click and which sites or AI assistants sent them here.</p>
+<ul>
+<li><strong>What it collects:</strong> usage and interaction data such as clicks, scrolling, mouse movement and the pages you view, plus your browser and device type, screen size, the page that referred you and an approximate location. Clarity can build session replays and heatmaps from this data.</li>
+<li><strong>Cookies:</strong> Clarity may set first-party and third-party cookies (for example <code>_clck</code> and <code>_clsk</code>) to tell one visit from another.</li>
+<li><strong>What we see:</strong> aggregate dashboards, heatmaps and session replays. We don't see your name, email address or IP address.</li>
+<li><strong>Opting out:</strong> you can block or delete cookies in your browser or use a content blocker. Microsoft explains its practices in the <a href="https://privacy.microsoft.com/privacystatement" rel="noopener" target="_blank">Microsoft Privacy Statement</a>.</li>
+</ul>"""
     return f"""<h1>{e(site)} privacy policy</h1>
 <p class="meta">Effective date: {EFFECTIVE}</p>
 <p>{e(site)} (<code>{e(domain)}</code>) is published by {OPERATOR}. This page explains what information is collected when you visit, by whom, and why. Questions or requests: <a href="mailto:{CONTACT}">{CONTACT}</a>.</p>
 <h2>The short version</h2>
 <ul>
 <li>There are no accounts, sign-ups, comment boxes, newsletters, contact forms or payments on {e(site)}. We don't ask for your name, email address or any other personal details.</li>
-<li>We use Google Analytics to count visits. It uses cookies.</li>
+<li>We use Google Analytics to count visits{' and Microsoft Clarity to see how pages are used (clicks and scrolling)' if clarity_id else ''}. They use cookies.</li>
 <li>Videos are click-to-play. Nothing from the YouTube player loads until you press play.</li>
 <li>Our host, GitHub Pages, logs visitors' IP addresses for its own security purposes.</li>
 <li>We don't sell personal information, and we don't show ads from ad networks.</li>
@@ -50,7 +62,7 @@ def body(site, domain, ga_id, video_pages, affiliate_html, filter_note):
 <h2>Hosting and server logs</h2>
 <p>{e(site)} is a static website hosted on <a href="https://pages.github.com/" rel="noopener" target="_blank">GitHub Pages</a>, a service of GitHub, Inc. GitHub states that when a GitHub Pages site is visited, the visitor's IP address is logged and stored for security purposes, whether or not the visitor is signed in to GitHub (see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection" rel="noopener" target="_blank">GitHub Pages data collection</a> and the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener" target="_blank">GitHub General Privacy Statement</a>). We don't receive or have access to those logs.</p>
 <h2>Things that stay in your browser</h2>
-<p>{e(filter_note)} It runs entirely in your browser: what you type or select isn't sent to us or stored. (Google Analytics may record that you interacted with the page, as described above, but not the text you type.)</p>
+<p>{e(filter_note)} It runs entirely in your browser: what you type or select isn't sent to us or stored. (Google Analytics and Microsoft Clarity may record that you interacted with the page, as described above, but not the text you type.)</p>
 <h2>If you email us</h2>
 <p>If you email us (for example to report an out-of-date listing), we receive your email address and whatever you include in the message. We use it only to reply and to fix the listing. We don't add it to a mailing list or share it.</p>
 <h2>Links to other websites</h2>
@@ -58,6 +70,6 @@ def body(site, domain, ga_id, video_pages, affiliate_html, filter_note):
 <h2>Children</h2>
 <p>{e(site)} isn't directed at children under 13, and we don't knowingly collect personal information from children.</p>
 <h2>Your choices and requests</h2>
-<p>You can control cookies through your browser settings and the Google Analytics opt-out add-on linked above. If you have a question about this policy, or want to make a request about your information, email <a href="mailto:{CONTACT}">{CONTACT}</a>. Keep in mind that we don't hold analytics data tied to your name or email, and we can't access GitHub's server logs, so for data held by Google or GitHub you may need to contact them directly.</p>
+<p>You can control cookies through your browser settings and the Google Analytics opt-out add-on linked above. If you have a question about this policy, or want to make a request about your information, email <a href="mailto:{CONTACT}">{CONTACT}</a>. Keep in mind that we don't hold analytics data tied to your name or email, and we can't access GitHub's server logs, so for data held by Google, Microsoft or GitHub you may need to contact them directly.</p>
 <h2>Changes to this policy</h2>
 <p>If the site starts collecting something new (for example a new analytics tool, embed or affiliate program), we'll update this page and the effective date above before or when the change goes live.</p>"""

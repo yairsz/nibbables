@@ -90,6 +90,13 @@ def ga_tag():
   gtag('config', '{gid}');
 </script>"""
 
+def clarity_tag():
+    cid = (CFG.get("clarity_project_id") or "").strip()
+    if not cid: return ""
+    assert re.fullmatch(r"[a-z0-9]+", cid), f"bad clarity_project_id {cid}"
+    return """
+<script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window, document, "clarity", "script", "%s");</script>""" % cid
+
 META = {}  # path -> (title, description); feeds llms.txt
 # path -> YYYY-MM-DD the page's content was last checked/changed. Filled in main() from the data
 # (latest last_checked of what the page shows), never "today". Feeds WebPage dateModified, visible dates and sitemap lastmod.
@@ -219,7 +226,7 @@ def page(title, desc, path, body, jsonld=None):
     year = datetime.date.today().year
     nav = "".join(f'<a href="{U("/" + s + "/")}">{e(n)}</a>' for s, n in CAT_LABEL.items())
     return f"""<!doctype html>
-<html lang="en"><head>{ga_tag()}
+<html lang="en"><head>{ga_tag()}{clarity_tag()}
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{e(title)}</title>
 <meta name="description" content="{e(desc)}">
@@ -907,7 +914,7 @@ def about(products, cats, guides):
 </ul>
 <p>Affiliate links don't affect which products are listed or what we say about them. Every card quotes the brand's own product page. We add an Amazon link only when we can find the same product (same brand, product name and size) on Amazon. Products without an exact match simply have no Amazon link. CJ links are used only for Raw Paws products where we have a verified deep-link URL. A brand can't pay to change what its card says. We don't show prices, ratings or review counts. For brands other than Raw Paws, "Brand's product page" links are ordinary links and don't earn a commission.</p>
 <h2>Analytics</h2>
-<p>This site uses Google Analytics to collect aggregate traffic statistics, such as page views and how visitors found us. It doesn't collect your name or email, though Google may set cookies to tell visits apart. Details are in our <a href="{U('/privacy/')}">privacy policy</a>.</p>
+<p>This site uses Google Analytics and Microsoft Clarity to collect aggregate traffic and usage statistics, such as page views and how visitors found us. It doesn't collect your name or email, though Google and Microsoft may set cookies to tell visits apart. Details are in our <a href="{U('/privacy/')}">privacy policy</a>.</p>
 <h2>Corrections</h2>
 <p>Brands update their pages. If a card is out of date, let us know and we'll re-check it against the brand's page and update the date.</p>""" + nums
     return page("About Nibbables: how we verify & affiliate disclosure",
@@ -936,7 +943,7 @@ def privacy_page():
     body = privacy.body(CFG["site_name"], "nibbables.com", CFG.get("ga_measurement_id", "").strip(), vids, aff,
                         "The compare page has a chew-type menu, checkboxes and a search box for narrowing the table.")
     return page("Privacy policy | Nibbables",
-                "What Nibbables collects (Google Analytics, click-to-play YouTube videos, GitHub Pages hosting logs), how its Amazon and CJ affiliate links work, and how to opt out.",
+                "What Nibbables collects (Google Analytics, Microsoft Clarity, click-to-play YouTube videos, GitHub Pages hosting logs), how its Amazon and CJ affiliate links work, and how to opt out.",
                 "/privacy/", body)
 
 def check_links(out):
