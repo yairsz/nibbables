@@ -146,3 +146,6 @@ Method: Amazon search + dp pages via curl (title, byline). No prices/ratings rec
 - MATCH The Honest Kitchen Ocean Chews Crispy Cod Fish Skins Beams (2.75 oz / 5.5 oz) → B07H2Q42M9 "The Honest Kitchen Ocean Chews™ Crispy Cod Fish Skins Dog Treats, 2.75 oz (Beams™)", byline "Visit the The Honest Kitchen Store".
 - MATCH The Honest Kitchen Ocean Chews Hearty Wolffish Skins Beams (3.25 oz / 6 oz) → B01MR59LKS "The Honest Kitchen Ocean Chews Wolffish Skins Dog Treats ... 3.25 oz", byline "Visit the The Honest Kitchen Store". (B01N106KPK is the 6 oz pouch.)
 - /yak-chews-and-pancreatitis/ reuses 6 existing yak cards (Amazon links unchanged: 4 of 6 have ASINs); its 2 non-catalog table rows (Pupford Jumbo, Bully Bunches Medium) link to the brand pages only.
+
+## 2026-11-02 /collagen-sticks/ expansion (6 new products)
+Amazon search pages returned a bot-block page from the box tonight (all 6 queries), so no listing could be confirmed. MISS (unverified, not linked): Pawstruck Beef Collagen Sticks; Nature Gnaws Collagen Sticks 6" 12 Count; Bow Wow Labs Collagen Sticks; Mighty Paw Beef Collagen Sticks 8 Pack Variety; Best Bully 12-Inch Beef Collagen Stick; Jack&Pup Collagen Sticks - 12 Inch. Retry on a later run.

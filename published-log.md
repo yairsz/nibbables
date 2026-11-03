@@ -109,3 +109,8 @@ Deploy confirm 2026-11-02 ~12:05 AM ET: main@24fc332 gh-pages pushed, Pages buil
 2026-11-02 12:44 Clarity tag + privacy section; IndexNow / and /privacy/
 2026-11-02 12:47 Clarity privacy wording verified vs Microsoft docs; IndexNow /privacy/ 200
 2026-11-02 21:20 Guaranteed-analysis rows on 25 cards (main@6c40d69), live-checked; IndexNow 200 (9 URLs)
+
+## 2026-11-02 — /collagen-sticks/ expansion (nightly)
+| Date | Path | Products | Sources checked | Notes |
+|---|---|---|---|---|
+| 2026-11-02 | /collagen-sticks/ (existing hub, 3 → 9 products) | 6 new (Pawstruck, Nature Gnaws, Bow Wow Labs, Mighty Paw, Best Bully Sticks 12", Jack&Pup 12"); 0 with Amazon links (Amazon search blocked from the box tonight, logged as misses) | 6 brand product pages snapshotted 2026-11-02 (research/pages/cs-*-1102.txt), all card quotes checked verbatim | keyword-targets row 7 collagen sticks ("are collagen sticks safe" cluster; the build forbids "safe" so no such heading). Flags: Mighty Paw label says Crude Fat Min 25% (others 0.21-0.5%); Bow Wow Labs product page "Sourced: South America" vs site-wide "made in the USA"; Pawstruck made in "Paraguay, Brazil or India". |
