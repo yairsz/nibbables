@@ -2,7 +2,7 @@
 of the brand's page (research/pages/NN.txt + Shopify body text). Run before publishing."""
 import json, re, sys
 NS = "Not stated, check with them"
-FIELDS = ["ingredients","made_in","sourced_from","rawhide_free","size_guidance","supervision"]
+FIELDS = ["ingredients","made_in","sourced_from","rawhide_free","size_guidance","supervision","guaranteed_analysis"]
 def norm(s): return re.sub(r"\s+"," ",s.replace("\u00a0"," ")).strip().lower()
 try:
     cands = json.load(open("research/candidates.json"))
@@ -19,8 +19,8 @@ for p in json.load(open("data/products.json")):
     else:
         bad += 1; print(f"NO SNAPSHOT [{p['brand']} / {p['product']}]"); continue
     for f in FIELDS:
-        v = p[f]
-        if v == NS: continue
+        v = p.get(f)
+        if not v or v == NS: continue
         for seg in v.split(" · "):
             if norm(seg) not in hay:
                 bad += 1; print(f"NOT FOUND [{p['brand']} / {p['product']}] {f}: {seg}")

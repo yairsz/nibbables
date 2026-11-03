@@ -312,6 +312,7 @@ def report_link(name):
 def card(p):
     sizes = "".join(f"<li>{e(s)}</li>" for s in p["sizes"])
     note = f"<dt>Note</dt><dd>{e(p['note'])}</dd>" if p.get("note") else ""
+    ga = f"<dt>Guaranteed analysis (brand label)</dt><dd>{q(p['guaranteed_analysis'])}</dd>" if p.get("guaranteed_analysis") else ""
     return f"""<article class="card" id="{e(p['id'])}">
 <span class="badge">{e(CAT_LABEL[p['category']])}</span><h3>{e(p['brand'])}: {e(p['product'])}</h3>
 <dl><dt>Ingredients (as listed)</dt><dd>{q(p['ingredients'])}</dd>
@@ -319,7 +320,7 @@ def card(p):
 <dt>Sourced-from claim</dt><dd>{q(p['sourced_from'])}</dd>
 <dt>Rawhide-free?</dt><dd>{q(p['rawhide_free'])}</dd>
 <dt>Size / dog guidance</dt><dd>{q(p['size_guidance'])}</dd>
-<dt>Supervision note</dt><dd>{q(p['supervision'])}</dd>
+<dt>Supervision note</dt><dd>{q(p['supervision'])}</dd>{ga}
 <dt>Options on the page</dt><dd><ul class="items">{sizes}</ul></dd>{note}
 <dt>Source</dt><dd>{brand_page_link(p)} · checked {e(p['last_checked'])}</dd></dl>
 {affiliate_slot(p)}{report_link(p['brand'] + ': ' + p['product'])}</article>"""
