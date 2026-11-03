@@ -108,3 +108,4 @@ Deploy confirm 2026-11-01 ~12:05 AM ET: main@ef86306 gh-pages pushed, Pages buil
 Deploy confirm 2026-11-02 ~12:05 AM ET: main@24fc332 gh-pages pushed, Pages built; https://nibbables.com/fish-skin-chews/ HTTP 200 (9 tag=nibbables-20 links, disclosure present); https://nibbables.com/yak-chews-and-pancreatitis/ HTTP 200 (6 tag links, disclosure present); /yak-cheese-chews/ and /bully-stick-vs-yak-chew/ 200. Both new pages in sitemap.xml and llms.txt. IndexNow 200 (api.indexnow.org + bing) for all 28 sitemap URLs + sitemap.xml + llms.txt.
 2026-11-02 12:44 Clarity tag + privacy section; IndexNow / and /privacy/
 2026-11-02 12:47 Clarity privacy wording verified vs Microsoft docs; IndexNow /privacy/ 200
+2026-11-02 21:20 Guaranteed-analysis rows on 25 cards (main@6c40d69), live-checked; IndexNow 200 (9 URLs)
