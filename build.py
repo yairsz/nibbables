@@ -108,6 +108,15 @@ META = {}  # path -> (title, description); feeds llms.txt
 # path -> YYYY-MM-DD the page's content was last checked/changed. Filled in main() from the data
 # (latest last_checked of what the page shows), never "today". Feeds WebPage dateModified, visible dates and sitemap lastmod.
 MODIFIED = {}
+# Pages whose visible copy was rewritten by hand (not by a product re-check), with the date that edit shipped.
+# Written by the editor at the time of the edit, never computed from the build clock. MODIFIED takes the later of
+# this and the page's data date, so a byline date is always a real change to that page.
+CONTENT_EDITED = {"/bully-sticks/": "2026-11-04",          # use-case block
+                  "/antlers/": "2026-11-04",               # use-case block
+                  "/yak-chew-microwave/": "2026-11-04",    # headings rebuilt around the query phrasings
+                  "/bully-stick-vs-bully-hide/": "2026-11-04",   # title shortened
+                  "/esophagus-chews/": "2026-11-04",       # title suffix dropped
+                  "/how-long-do-bully-sticks-last/": "2026-11-04"}  # title suffix dropped
 ABOUT_UPDATED = "2026-10-27"     # bump when /about/ text changes
 PRIVACY_UPDATED = "2026-11-04"   # matches privacy.EFFECTIVE
 
@@ -1210,6 +1219,10 @@ def main():
     for g in guides:
         MODIFIED[f"/{g['slug']}/"] = max([g["last_checked"]] + [byid0[i]["last_checked"] for i in g.get("product_ids", []) if i in byid0])
     MODIFIED[AUD_PATH] = latest
+    for _p, _d in CONTENT_EDITED.items():
+        assert _p in MODIFIED, f"CONTENT_EDITED path not a built page: {_p}"
+        assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", _d), f"bad CONTENT_EDITED date {_d}"
+        MODIFIED[_p] = max(MODIFIED[_p], _d)
     pages = {"/": home(products, cats, guides), "/compare/": compare(products), "/about/": about(products, cats, guides), "/privacy/": privacy_page()}
     for c in cats: pages[f"/{c['slug']}/"] = category_page(c, products)
     pages[AUD_PATH] = audience_page(products)
