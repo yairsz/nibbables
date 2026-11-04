@@ -109,7 +109,7 @@ META = {}  # path -> (title, description); feeds llms.txt
 # (latest last_checked of what the page shows), never "today". Feeds WebPage dateModified, visible dates and sitemap lastmod.
 MODIFIED = {}
 ABOUT_UPDATED = "2026-10-27"     # bump when /about/ text changes
-PRIVACY_UPDATED = "2026-10-27"   # matches privacy.EFFECTIVE
+PRIVACY_UPDATED = "2026-11-04"   # matches privacy.EFFECTIVE
 
 def cat_products(c, products):
     if c["slug"] == "rawhide-free":
@@ -127,9 +127,29 @@ def webpage_ld(title, desc, path):
     return {"@context": "https://schema.org", "@type": "AboutPage" if path == "/about/" else "WebPage",
             "@id": base_url() + path, "url": base_url() + path, "name": title, "description": desc,
             "dateModified": MODIFIED[path], "inLanguage": "en-US",
+            "author": {"@type": "Organization", "@id": base_url() + "/#org", "name": CFG["site_name"]},
             "isPartOf": {"@type": "WebSite", "@id": base_url() + "/#website", "name": CFG["site_name"],
                          "url": base_url() + "/", "publisher": org_ld()},
             "publisher": {"@id": base_url() + "/#org"}}
+
+def article_ld(g, path):
+    """Article JSON-LD for guide pages (added 2026-11-04). Author is the Nibbables Organization node, never a Person:
+    there is no named human behind this site and we don't imply veterinary review. datePublished is the guide's real
+    first-publication date, recorded in its own JSON when the page was written; dateModified is the page's real
+    last-checked date (MODIFIED, from the data), never the build time."""
+    pub = g.get("published")
+    assert re.fullmatch(r"\d{4}-\d{2}-\d{2}", pub or ""), f"guide {g['slug']}: needs a real 'published' date"
+    mod = MODIFIED[path]
+    assert pub <= mod, f"guide {g['slug']}: published {pub} is after its last-checked date {mod}"
+    return {"@context": "https://schema.org", "@type": "Article",
+            "@id": base_url() + path + "#article", "url": base_url() + path,
+            "headline": g["h1"][:110], "description": g["meta"],
+            "datePublished": pub, "dateModified": mod, "inLanguage": "en-US",
+            "author": {"@type": "Organization", "@id": base_url() + "/#org", "name": CFG["site_name"],
+                       "url": base_url() + "/"},
+            "publisher": {"@id": base_url() + "/#org"},
+            "isPartOf": {"@id": base_url() + "/#website"},
+            "mainEntityOfPage": {"@type": "WebPage", "@id": base_url() + path}}
 
 # Hand-written complete meta descriptions for pages whose long description would otherwise be cut mid-sentence.
 # Reworded only from the page's own description; no new facts. Keep <= 158 chars.
@@ -221,9 +241,43 @@ def breadcrumb_ld(body, path):
         dict({"@type": "ListItem", "position": i + 1, "name": n}, **({"item": h} if h else {}))
         for i, (n, h) in enumerate(items)]}
 
-def page(title, desc, path, body, jsonld=None):
+# Sitewide byline (added 2026-11-04). Organization only: there is no named person behind this site, so this never
+# names an author and never implies veterinary review. The date is the page's OWN last-checked date from the data
+# (MODIFIED), never the build time.
+BEFORE_LINE = ("Nibbables editorial team. Every claim on this page is quoted from the brand's own page or the source "
+               "linked next to it; we don't test, rate or review products.")
+GUIDE_LINE = ("Nibbables editorial team. Every claim on this page is quoted from the brand's own page or the named "
+              "source linked beside it; we don't test, rate or review products.")
+NO_BYLINE = ("/about/", "/privacy/")
+
+def byline(path, guide=False):
+    d = MODIFIED.get(path)
+    if not d or path in NO_BYLINE:
+        return ""
+    line = GUIDE_LINE if guide else BEFORE_LINE
+    return (f'<p class="byline">{e(line)} Page updated {e(d)}. '
+            f'<a href="{U("/about/")}">How we verify</a>.</p>')
+
+CLICK_JS = r"""<script>
+/* Outbound + affiliate click tracking (added 2026-11-04). Sends the destination host and, for affiliate links,
+   the id of the product card the link sits in. No personal data, no cookies, no cross-site ids. */
+(function(){function card(a){var c=a.closest('article.card');return c&&c.id?c.id:''}
+document.addEventListener('click',function(ev){var t=ev.target;if(!t||!t.closest)return;var a=t.closest('a[href]');if(!a)return;
+var h=a.getAttribute('href')||'';if(!h||h.charAt(0)==='#'||h.indexOf('mailto:')===0)return;var u;
+try{u=new URL(h,location.href)}catch(x){return}if(u.hostname===location.hostname)return;
+if(typeof gtag!=='function')return;var d=u.hostname.replace(/^www\./,'');
+if(a.classList.contains('aff')){gtag('event','affiliate_click',{link_domain:d,product_card:card(a)});}
+else{gtag('event','outbound_click',{link_domain:d,link_url:u.href});}},true);})();
+</script>
+</body></html>"""
+
+def page(title, desc, path, body, jsonld=None, guide=False):
     crumbs = breadcrumb_ld(body, path)
     body = link_hubs(body, path)
+    bl = byline(path, guide)
+    if bl:
+        i = body.find("</h1>")
+        body = (body[:i + 5] + "\n" + bl + body[i + 5:]) if i != -1 else bl + body
     desc = META_DESC.get(path, desc)
     title, desc = fit_meta(title, desc)
     url = base_url() + path
@@ -241,7 +295,7 @@ def page(title, desc, path, body, jsonld=None):
 <link rel="canonical" href="{e(url)}">
 <link rel="alternate" type="application/atom+xml" title="{e(CFG['site_name'])}" href="{e(base_url())}/feed.xml">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(desc)}">
-<meta property="og:type" content="website"><meta property="og:url" content="{e(url)}">
+<meta property="og:type" content="{'article' if guide else 'website'}"><meta property="og:url" content="{e(url)}">
 {og_image(path, title)}
 <link rel="stylesheet" href="{U('/static/style.css')}">{ld}
 </head><body>
@@ -251,7 +305,7 @@ def page(title, desc, path, body, jsonld=None):
 {body}
 </div></main>
 <footer><div class="wrap">© {year} {e(CFG['site_name'])}. We quote what each brand says on its own website and link the source. We don't test, rate or review products. Brand claims (including "Made in USA") are the brand's, not ours. Always supervise chewing, pick an appropriate size, and ask your vet. {footer_aff_note()} <a href="{U('/about/')}">How we verify &amp; affiliate disclosure</a>. <a href="{U('/privacy/')}">Privacy policy</a>. <a href="{YT_CHANNEL}" rel="noopener" target="_blank">Nibbables on YouTube</a>.</div></footer>
-</body></html>"""
+{CLICK_JS}"""
 
 SAFETY = """<aside class="note"><strong>Before you give any chew:</strong> supervise your dog while it chews, choose a size and hardness that suits your dog (follow the brand's size guidance), take away small or broken pieces, keep fresh water available, and ask your vet if a chew is right for your dog, especially for puppies, seniors, dogs with dental work or dogs on special diets. Nibbables does not rate safety. Each card shows what the brand itself says.</aside>"""
 
@@ -556,6 +610,108 @@ def cat_faq(c, ps):
 
 CATS = []  # filled in main()
 
+# ---------------------------------------------------------------------------------------------------------------
+# "Which one, by use case" hub answer blocks (added 2026-11-04, audit P1-10b). Google's results for "best bully sticks
+# for dogs" are recommendation listicles; these hubs opened with methodology and gave no answer. Every pick below rests
+# ONLY on an attribute the brand states on the product page we already quote, and that attribute is printed next to a
+# link to the product's own card. Nothing here is a test, a rating or a review. Each entry is machine-checked: the
+# assertion has to hold against data/products.json or the build fails, and the few superlatives are computed, not asserted.
+VERDICTS = {
+    "bully-sticks": {
+        "h": "Which bully stick, by use case, on the brands' own wording",
+        "intro": ("Not a ranking. Four use cases, and for each one a stick whose brand states the relevant attribute on "
+                  "the page we quote. The attribute is named for every pick, and each product links to its card below."),
+        "picks": [
+            {"use": "Small dogs and puppies",
+             "brand": "Campfire Treats", "product": "Thin Odor-Free Bully Sticks (4-6 Inch)",
+             "why": "its brand sizes it for small dogs and puppies",
+             "attribute": "the brand's own size guidance: \u201cPerfectly sized for small dogs and puppies\u201d",
+             "check": [("size_guidance", r"small dogs and puppies")]},
+            {"use": "Power chewers",
+             "brand": "GREAT DOG CO.", "product": "12\" Beef Bully Stick \u2013 Beef Pizzle 4.0, Jumbo Size",
+             "why": "its brand names strong chewers and states the stick's weight",
+             "attribute": "the brand's own size guidance: \u201cPerfect for Strong Chewers \u2013 Dense, long-lasting chew time for medium to large dogs\u201d, and its listed weight of 4.0\u20134.9 ounces per 12-inch stick",
+             "check": [("size_guidance", r"Strong Chewers"), ("sizes", "4\\.0\u2013?4\\.9 ounces")]},
+            {"use": "Odor and fat",
+             "brand": "Campfire Treats", "product": "Standard Odor-Free Bully Sticks (8-10 Inch)",
+             "why": "the brand calls it odor-free and its label states crude fat",
+             "attribute": "\u201cOdor-Free\u201d in the brand's product name; guaranteed analysis 7% crude fat (min) as the label states it",
+             "check": [("product", r"odor-free")], "fat": 7.0},
+            {"use": "The longest single stick listed on this page",
+             "brand": "Redbarn", "product": "Bully Sticks for Dogs",
+             "why": "it lists a 36-inch option, longer than any other brand here lists",
+             "attribute": "size options the brand lists, 3-4 inches up to 36 inches; that 36-inch option is the longest listed by any brand on this page",
+             "check": [("sizes", r"36\"")], "longest": 36},
+        ]},
+    "antlers": {
+        "h": "Which antler, by use case, on the brands' own wording",
+        "intro": ("Not a ranking. Three use cases, and for each one an antler whose brand states the relevant attribute on "
+                  "the page we quote. The attribute is named for every pick, and each product links to its card below. "
+                  "The antler cards here don't carry a guaranteed analysis from the brands, so this page makes no fat or "
+                  "calorie claim."),
+        "picks": [
+            {"use": "Sizes split by dog weight",
+             "brand": "Mighty Paw", "product": "All-Natural Elk Antlers",
+             "why": "it is the only brand here whose size options are given as dog weight ranges",
+             "attribute": "size options the brand lists by dog weight: Medium 10-45 lbs, Large 45-75 lbs, Monster 75+ lbs",
+             "check": [("sizes", r"75\+\s*lbs")], "only_weight_sizes": True},
+            {"use": "A stated country of origin",
+             "brand": "Redbarn", "product": "Elk Antler",
+             "why": "its page names the countries of origin and says where the antlers come from",
+             "attribute": "the brand's own wording: \u201cCountry of Origin: USA, Canada\u201d and \u201cWe only source wild antlers\u201d",
+             "check": [("made_in", "Country of Origin: USA, Canada"), ("sourced_from", "only source wild antlers")]},
+            {"use": "Puppies, senior dogs and dogs that need easier access to the marrow",
+             "brand": "GREAT DOG CO.", "product": "5 Inch Split Jumbo Elk Antler Chew",
+             "why": "it is listed as split, and its brand names those three groups for the split",
+             "attribute": "the brand's own size guidance naming \u201cpuppies, senior dogs, and dogs that prefer easier access to the marrow center\u201d",
+             "check": [("size_guidance", r"puppies, senior dogs, and dogs that prefer easier access to the marrow")]},
+        ]},
+}
+
+def _fat(p):
+    ga = p.get("guaranteed_analysis") or ""
+    m = re.search(r"crude\s+fat[^0-9%]{0,25}([\d.]+)\s*%", ga, re.I)
+    return float(m.group(1)) if m else None
+
+def _max_inches(p):
+    """Longest length in inches across a product's own size option labels (only where the label states inches)."""
+    n = 0
+    for lab in p["sizes"]:
+        for m in re.finditer(r"(\d+(?:\.\d+)?)\s*(?:\"|\u201d|in\b|inch)", lab, re.I):
+            n = max(n, float(m.group(1)))
+        for m in re.finditer(r"(\d+)\s*(?:-|\u2013)\s*(\d+)\s*(?:\"|\u201d|in\b|inch)", lab, re.I):
+            n = max(n, float(m.group(2)))
+    return n
+
+def verdict_block(c, ps):
+    """Render the use-case block for a hub. Every claim is asserted against the product's own quoted field."""
+    v = VERDICTS.get(c["slug"])
+    if not v:
+        return ""
+    items = []
+    for pk in v["picks"]:
+        p = next((x for x in ps if x["brand"] == pk["brand"] and x["product"] == pk["product"]), None)
+        assert p, f"verdict pick not in {c['slug']}: {pk['brand']} / {pk['product']}"
+        for field, rx in pk["check"]:
+            val = p[field]
+            val = " \u00b7 ".join(val) if isinstance(val, list) else val
+            assert re.search(rx, val, re.I), f"verdict claim unsupported by {p['id']}.{field}: {rx!r} not in {val!r}"
+        if "fat" in pk:
+            assert _fat(p) == pk["fat"], f"verdict fat claim no longer matches data for {p['id']}: {_fat(p)} != {pk['fat']}"
+        if "longest" in pk:
+            best = max(_max_inches(x) for x in ps)
+            assert _max_inches(p) == pk["longest"] == best, f"verdict 'longest' claim broken: {p['id']}={_max_inches(p)}, max={best}"
+        if pk.get("only_weight_sizes"):
+            others = [x for x in ps if x is not p and re.search(r"\blbs\b", " ".join(x["sizes"]), re.I)]
+            assert not others, f"verdict 'only brand with weight sizes' broken by {[o['id'] for o in others]}"
+        assert p["source_url"].startswith("https://"), f"verdict source for {p['id']} must be https"
+        items.append(f'<li><strong>{e(pk["use"])}:</strong> <a href="#{e(p["id"])}">{e(p["brand"])}: {e(p["product"])}</a> '
+                     f'&#8212; {e(pk["why"])}.<br><span class="meta">Brand-stated attribute: {e(pk["attribute"])}. '
+                     f'<a href="{e(p["source_url"])}" rel="nofollow noopener" target="_blank">Brand\'s own page, where it states that</a>.</span></li>')
+    return (f'<h2 id="which-one">{e(v["h"])}</h2><p>{e(v["intro"])}</p><ul class="verdict">{"".join(items)}</ul>'
+            f'<p class="meta">Each pick rests on the attribute named above and nothing else. Nibbables doesn\'t rank, '
+            f'test or rate chews, and this isn\'t a recommendation for your dog; ask your vet what suits it.</p>')
+
 def sibling_hubs_block(c, products):
     """Hub-to-hub links (entity hubs, 2026-10-25): every chew-type page links in-body to the other chew-type pages,
     with product counts computed from data/products.json."""
@@ -584,8 +740,9 @@ def category_page(c, products):
     faq_html, faq_ld = cat_faq(c, ps)
     toc = "".join(f'<li><a href="#{e(p["id"])}">{e(p["brand"])}: {e(p["product"])}</a></li>' for p in ps)
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}</p>
-<h1>{e(c['h1'])}</h1><p class="lead">{e(c['intro'])}</p>
-<p class="meta">{len(ps)} products · every claim is quoted from the brand's own page and linked · no prices (they change; check the brand) · page updated {e(MODIFIED.get(f"/{c['slug']}/", ""))} · <a href="{U('/compare/')}">compare all in one table</a></p>
+<h1>{e(c['h1'])}</h1>
+{verdict_block(c, ps)}<p class="lead">{e(c['intro'])}</p>
+<p class="meta">{len(ps)} products · every claim is quoted from the brand's own page and linked · no prices (they change; check the brand) · <a href="{U('/compare/')}">compare all in one table</a></p>
 {SAFETY}
 {aff_disclosure(ps)}
 <details class="toc"><summary>Products on this page</summary><ul>{toc}</ul></details>
@@ -597,8 +754,11 @@ def category_page(c, products):
 {sibling_hubs_block(c, products)}
 <h2 id="all-products">All {len(ps)} {e(c['name'].lower())} we list, with what each brand's page says</h2>
 {''.join(card(p) for p in ps)}"""
+    # ListItem url = the product's own page (2026-11-04): the destination of the card's "Brand's product page" link
+    # (for CJ products that link resolves to exactly this URL). Names only otherwise: no Product, Offer, price or rating.
     ld = {"@context": "https://schema.org", "@type": "ItemList", "name": c["h1"],
-          "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{p['brand']} {p['product']}"} for i, p in enumerate(ps)]}
+          "itemListElement": [{"@type": "ListItem", "position": i + 1, "name": f"{p['brand']} {p['product']}", "url": p["source_url"]}
+                              for i, p in enumerate(ps)]}
     return page(c["title"], c["meta"], f"/{c['slug']}/", body, [ld, faq_ld])
 
 def mentions_usa(p):
@@ -841,10 +1001,10 @@ def guide_page(g, products):
     srcs = "".join(f'<li><a href="{e(s["url"])}" rel="nofollow noopener" target="_blank">{e(s["label"])}</a></li>' for s in g["sources"])
     cards = aff_disclosure([byid[pid] for pid in g.get("product_ids", [])]) + "".join(card(byid[pid]) for pid in g.get("product_ids", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(g['h1'])}</p><h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p>
-<p class="meta">Last checked {e(g['last_checked'])}{(" · page updated " + e(MODIFIED[f"/{g['slug']}/"])) if MODIFIED.get(f"/{g['slug']}/", g['last_checked']) != g['last_checked'] else ""}</p>{SAFETY}{tbl}{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>{guide_related(g)}"""
+<p class="meta">Sources last checked {e(g['last_checked'])}</p>{SAFETY}{tbl}{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>{guide_related(g)}"""
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]} if faq else None
-    return page(g["title"], g["meta"], f"/{g['slug']}/", body, ld)
+    return page(g["title"], g["meta"], f"/{g['slug']}/", body, [x for x in (ld, article_ld(g, f"/{g['slug']}/")) if x], guide=True)
 
 def primary_url(p):
     """Same primary outbound destination as the product card: CJ (Raw Paws) > Amazon (exact ASIN) > brand source_url."""

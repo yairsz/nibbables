@@ -2,6 +2,9 @@
 
 Each item: page path, what it needs, and candidate official sources to check first. Sources marked (feed) have a Shopify products.json that worked on 2026-10-23.
 
+## TOP OF QUEUE — do this first
+- [ ] Split /dog-chews-by-dog-size-and-chewer/ (audit 2026-11-04): 127 KB of HTML with 174 internal and 297 outbound links, 120 of them affiliate. Dilutes link equity on a page whose job is grouping, and 120 sponsored links on one URL is the shape Google's thin-affiliate guidance warns about. Proposed split: one page per group already defined in AUD_GROUPS (puppies, small-dogs, medium-large-dogs, power-chewers, light-chewers, seniors, by-weight), each with the brand table for that group only, plus a small index at the current URL that links them. Keep the same verbatim size-guidance quotes; no new claims. Bigger job than a nightly run: plan it as its own session.
+
 ## New categories / product batches
 - [x] /fish-skin-chews/ (PUBLISHED 2026-11-01, 9 products: Icelandic+, Campfire Treats, Jack's Premium, The Honest Kitchen; keyword-targets row 7 fish skin cluster)
 - [x] /yak-chews-and-pancreatitis/ (PUBLISHED 2026-11-01: fat/calorie lines from 8 yak pages + Tufts + AAFCO; keyword-targets row 7 yak + pancreatitis)

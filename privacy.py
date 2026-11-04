@@ -8,7 +8,7 @@ no forms, accounts or email collection; hosted on GitHub Pages (no Cloudflare/CD
 import html
 e = lambda s: html.escape(str(s), quote=True)
 
-EFFECTIVE = "November 2, 2026"
+EFFECTIVE = "November 4, 2026"
 OPERATOR = "2 Handed Coding, LLC"
 CONTACT = "developer@2handedcoding.com"
 
@@ -24,6 +24,7 @@ def body(site, domain, ga_id, video_pages, affiliate_html, filter_note, clarity_
 <li><strong>What it collects:</strong> the pages you view and the standard events Google Analytics records automatically (for example page views, scrolls and outbound link clicks), the page that referred you, your browser and device type, screen size, language, and an approximate location (country, region or city) that Google derives from your IP address. Google states that Google Analytics 4 does not log or store IP addresses.</li>
 <li><strong>Cookies:</strong> Google Analytics sets first-party cookies named <code>_ga</code> and <code>_ga_&lt;ID&gt;</code> on {e(domain)} to tell one visit from another. Google documents a lifetime of up to 2 years for these cookies.</li>
 <li><strong>Our settings:</strong> Google signals is turned off, event-level data is kept for 2 months (the shortest option Google Analytics offers), and the property isn't linked to Google Ads. The account's data-sharing settings are on, which lets Google use the data as described in <a href="https://support.google.com/analytics/answer/1011397" rel="noopener" target="_blank">Google Analytics data-sharing settings</a>.</li>
+<li><strong>Clicks to other sites:</strong> when you click a link that leaves {e(domain)}, the page sends Google Analytics an event so we can tell whether anyone uses the links we list. For affiliate links the event records the destination's domain name and which product card the link sat in; for other links it records the destination's domain name and full URL. It sends no name, email address or other identifier, and it isn't tied to a profile of you.</li>
 <li><strong>What we see:</strong> aggregate reports (page views, traffic sources, countries, device types). We don't see your name, email address or IP address.</li>
 <li><strong>Opting out:</strong> you can block or delete cookies in your browser, use a content blocker, or install the <a href="https://tools.google.com/dlpage/gaoptout" rel="noopener" target="_blank">Google Analytics Opt-out Browser Add-on</a>. Google explains its practices in <a href="https://policies.google.com/technologies/partner-sites" rel="noopener" target="_blank">How Google uses information from sites or apps that use its services</a>.</li>
 </ul>"""
