@@ -1843,5 +1843,141 @@
   "note": "",
   "last_checked": "2026-11-02",
   "guaranteed_analysis": "CRUDE PROTEIN (min) 90% · CRUDE FAT (min) 0.5% · CRUDE FIBER (max) 1% · COLLAGEN (min) 85%"
+ },
+ {
+  "snapshot": "research/pages/pe-jp-whole-1103.txt",
+  "brand": "Jack&Pup",
+  "product": "Whole All-Natural Pig Ear Dog Chews",
+  "source_url": "https://jackandpup.com/products/whole-all-natural-pig-ear-dog-chews",
+  "ingredients": "Ingredients: 100% Pork Ear",
+  "made_in": "Made from 100% Natural Pork in Brazil",
+  "sourced_from": "Made from 100% Natural Pork in Brazil",
+  "rawhide_free": "Rawhide free",
+  "size_guidance": "Choose chews appropriate for your dog's size and chewing ability to prevent choking hazards. · Not suitable for puppies under 3 months old.",
+  "supervision": "Always supervise your dog while chewing and provide fresh water.",
+  "sizes": [
+   "Single listing (no size options shown)"
+  ],
+  "note": "",
+  "guaranteed_analysis": "CRUDE PROTEIN (min) 75% · CRUDE FAT (min) 9% · CRUDE FIBER (max) 0.2% · MOISTURE (max) 20%",
+  "category": "pig-ears",
+  "last_checked": "2026-11-03"
+ },
+ {
+  "snapshot": "research/pages/pe-jp-half-1103.txt",
+  "brand": "Jack&Pup",
+  "product": "Half All-Natural Pig Ear Dog Chews",
+  "source_url": "https://jackandpup.com/products/half-all-natural-pig-ear-dog-chews",
+  "ingredients": "Ingredients: 100% Pork Ear",
+  "made_in": "Made from 100% Natural Pork in Brazil",
+  "sourced_from": "Made from 100% Natural Pork in Brazil",
+  "rawhide_free": "Rawhide free",
+  "size_guidance": "Choose chews appropriate for your dog's size and chewing ability to prevent choking hazards. · Not suitable for puppies under 3 months old.",
+  "supervision": "Always supervise your dog while chewing and provide fresh water.",
+  "sizes": [
+   "5 Pieces",
+   "10 Pieces",
+   "18 Pieces",
+   "30 Pieces"
+  ],
+  "note": "",
+  "guaranteed_analysis": "CRUDE PROTEIN (min) 75% · CRUDE FAT (min) 9% · CRUDE FIBER (max) 0.2% · MOISTURE (max) 20%",
+  "category": "pig-ears",
+  "last_checked": "2026-11-03"
+ },
+ {
+  "snapshot": "research/pages/pe-bbs-1103.txt",
+  "brand": "Best Bully Sticks",
+  "product": "Pig Ear Dog Treat (25 Pack)",
+  "source_url": "https://www.bestbullysticks.com/products/pig-ear-dog-treat",
+  "ingredients": "These pig ears are a single-ingredient chew made for dogs of all sizes.",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "sourced from responsibly raised, hormone-free pigs",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Great for dogs of all sizes",
+  "supervision": "Always supervise your dog when they're enjoying an ear dog treat, and remove small or broken pieces to prevent your pup from choking.",
+  "sizes": [
+   "25 Pack"
+  ],
+  "note": "A product image's alt text says \"made in the USA\", but the page text itself doesn't state where the chews are made.",
+  "category": "pig-ears",
+  "last_checked": "2026-11-03"
+ },
+ {
+  "snapshot": "research/pages/pe-bbs-smoked-1103.txt",
+  "brand": "Best Bully Sticks",
+  "product": "Hickory Smoked Pig Ears",
+  "source_url": "https://www.bestbullysticks.com/products/hickory-smoked-pig-ears",
+  "ingredients": "Ingredients Pig Ear",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "sourced from responsibly raised, hormone-free pigs",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "the perfect indulgence for dogs of all sizes",
+  "supervision": "Please supervise your dog when giving any chew or treat and ensure your pup has easy access to fresh water before, during, and after treat consumption.",
+  "sizes": [
+   "12 Pack",
+   "25 Pack"
+  ],
+  "note": "Calories as stated: Calories per kg 4500 kcal/kg · Calories Each 135",
+  "guaranteed_analysis": "Crude Fat Min 5.0% · Crude Fiber Max 3.0% · Crude Protein Min 60.0% · Moisture Max 12.0%",
+  "category": "pig-ears",
+  "last_checked": "2026-11-03"
+ },
+ {
+  "snapshot": "research/pages/pe-rb-natural-1103.txt",
+  "brand": "Redbarn",
+  "product": "Natural Pig Ears",
+  "source_url": "https://www.redbarn.com/products/natural-pig-ears",
+  "ingredients": "Natural Pig Ear is our ONLY Ingredient",
+  "made_in": "Made in the USA with Globally Sourced Ingredients",
+  "sourced_from": "Country of Origin Canada, Mexico, and South Korea.",
+  "rawhide_free": "No Rawhide",
+  "size_guidance": "Not stated, check with them",
+  "supervision": "Not stated, check with them",
+  "sizes": [
+   "Single Wrap - 3pk",
+   "10pk",
+   "10pk - Case of 8",
+   "Case of 100"
+  ],
+  "note": "Shelf life as stated: 36 months. Calories: N/A on the page.",
+  "category": "pig-ears",
+  "last_checked": "2026-11-03"
+ },
+ {
+  "snapshot": "research/pages/pe-rb-smoked-1103.txt",
+  "brand": "Redbarn",
+  "product": "Smoked Pig Ears",
+  "source_url": "https://www.redbarn.com/products/smoked-pig-ears",
+  "ingredients": "Not stated, check with them",
+  "made_in": "Made in the USA with Globally Sourced Ingredients",
+  "sourced_from": "Country of Origin: USA, Canada",
+  "rawhide_free": "No Rawhide",
+  "size_guidance": "Not stated, check with them",
+  "supervision": "Not stated, check with them",
+  "sizes": [
+   "Case of 100"
+  ],
+  "note": "Shelf life as stated: 36 months. Calories: N/A on the page.",
+  "category": "pig-ears",
+  "last_checked": "2026-11-03"
+ },
+ {
+  "snapshot": "research/pages/pe-cf-1103.txt",
+  "brand": "Campfire Treats",
+  "product": "Pig Ears for Dogs",
+  "source_url": "https://www.campfiretreats.com/products/pig-ears",
+  "ingredients": "Ingredients:  Dehydrated pig ears",
+  "made_in": "Sourced and made in the USA",
+  "sourced_from": "100% American pork sourced from animal welfare certified US farms",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "recommended for dogs of all sizes and life stages",
+  "supervision": "Always supervise your dog when feeding any treats or chews.",
+  "sizes": [
+   "Single listing (no size options shown)"
+  ],
+  "note": "Calorie Content: 4,590 kcal/kg; 130 kcal/oz",
+  "category": "pig-ears",
+  "last_checked": "2026-11-03"
  }
 ]

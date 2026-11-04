@@ -115,3 +115,8 @@ Deploy confirm 2026-11-02 ~12:05 AM ET: main@24fc332 gh-pages pushed, Pages buil
 |---|---|---|---|---|
 | 2026-11-02 | /collagen-sticks/ (existing hub, 3 → 9 products) | 6 new (Pawstruck, Nature Gnaws, Bow Wow Labs, Mighty Paw, Best Bully Sticks 12", Jack&Pup 12"); 0 with Amazon links (Amazon search blocked from the box tonight, logged as misses) | 6 brand product pages snapshotted 2026-11-02 (research/pages/cs-*-1102.txt), all card quotes checked verbatim | keyword-targets row 7 collagen sticks ("are collagen sticks safe" cluster; the build forbids "safe" so no such heading). Flags: Mighty Paw label says Crude Fat Min 25% (others 0.21-0.5%); Bow Wow Labs product page "Sourced: South America" vs site-wide "made in the USA"; Pawstruck made in "Paraguay, Brazil or India". |
 Deploy confirm 2026-11-02 ~11:55 PM ET: main@15ca048 live, https://nibbables.com/collagen-sticks/ HTTP 200 with new cards; IndexNow 200 (/collagen-sticks/, sitemap, llms.txt).
+
+## 2026-11-03 — /pig-ears/ (nightly)
+| Date | Path | Products | Sources checked | Notes |
+|---|---|---|---|---|
+| 2026-11-03 | /pig-ears/ (new chew-type hub) | 7 new (Jack&Pup ×2, Best Bully Sticks ×2, Redbarn ×2, Campfire Treats ×1); 0 with Amazon links (Amazon search blocked from the box, logged as misses) | 7 brand product pages snapshotted 2026-11-03 (research/pages/pe-*-1103.txt), card quotes checked verbatim | keyword-targets row 7 "are pig ears safe for dogs" cluster (no such heading; build forbids the word). Flags: BBS made-in only in image alt text (made_in Not stated); Redbarn natural ears country of origin "Canada, Mexico, and South Korea" vs smoked "USA, Canada"; Redbarn calories "N/A". PLACES gained South Korea. |

@@ -149,3 +149,6 @@ Method: Amazon search + dp pages via curl (title, byline). No prices/ratings rec
 
 ## 2026-11-02 /collagen-sticks/ expansion (6 new products)
 Amazon search pages returned a bot-block page from the box tonight (all 6 queries), so no listing could be confirmed. MISS (unverified, not linked): Pawstruck Beef Collagen Sticks; Nature Gnaws Collagen Sticks 6" 12 Count; Bow Wow Labs Collagen Sticks; Mighty Paw Beef Collagen Sticks 8 Pack Variety; Best Bully 12-Inch Beef Collagen Stick; Jack&Pup Collagen Sticks - 12 Inch. Retry on a later run.
+
+## 2026-11-03 /pig-ears/ (new hub, 7 products)
+Amazon search pages returned a ~2 KB bot-block page from the box tonight (4 queries), so no listing could be confirmed. MISS (unverified, not linked): Jack&Pup Whole All-Natural Pig Ear Dog Chews; Jack&Pup Half All-Natural Pig Ear Dog Chews; Best Bully Sticks Pig Ear Dog Treat (25 Pack); Best Bully Sticks Hickory Smoked Pig Ears; Redbarn Natural Pig Ears; Redbarn Smoked Pig Ears; Campfire Treats Pig Ears for Dogs. Retry on a later run.
