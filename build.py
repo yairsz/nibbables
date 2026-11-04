@@ -646,7 +646,7 @@ VERDICTS = {
              "why": "the brand calls it odor-free and its label states crude fat",
              "attribute": "\u201cOdor-Free\u201d in the brand's product name; guaranteed analysis 7% crude fat (min) as the label states it",
              "check": [("product", r"odor-free")], "fat": 7.0},
-            {"use": "The longest single stick listed on this page",
+            {"use": "The longest length any brand on this page lists",
              "brand": "Redbarn", "product": "Bully Sticks for Dogs",
              "why": "it lists a 36-inch option, longer than any other brand here lists",
              "attribute": "size options the brand lists, 3-4 inches up to 36 inches; that 36-inch option is the longest listed by any brand on this page",
