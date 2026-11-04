@@ -270,13 +270,15 @@ def byline(path, guide=False):
 CLICK_JS = r"""<script>
 /* Outbound + affiliate click tracking (added 2026-11-04). Sends the destination host and, for affiliate links,
    the id of the product card the link sits in. No personal data, no cookies, no cross-site ids. */
-(function(){function card(a){var c=a.closest('article.card');return c&&c.id?c.id:''}
-document.addEventListener('click',function(ev){var t=ev.target;if(!t||!t.closest)return;var a=t.closest('a[href]');if(!a)return;
+(function(){function card(a){var c=a.closest('article.card');return c&&c.id?c.id:''}var sent={};
+document.addEventListener('click',function(ev){if(ev.__nbOut)return;var t=ev.target;if(!t||!t.closest)return;var a=t.closest('a[href]');if(!a)return;
 var h=a.getAttribute('href')||'';if(!h||h.charAt(0)==='#'||h.indexOf('mailto:')===0)return;var u;
 try{u=new URL(h,location.href)}catch(x){return}if(u.hostname===location.hostname)return;
-if(typeof gtag!=='function')return;var d=u.hostname.replace(/^www\./,'');
-if(a.classList.contains('aff')){gtag('event','affiliate_click',{link_domain:d,product_card:card(a)});}
-else{gtag('event','outbound_click',{link_domain:d,link_url:u.href});}},true);})();
+if(typeof gtag!=='function')return;if(sent[u.href])return;sent[u.href]=1;ev.__nbOut=1;
+var d=u.hostname.replace(/^www\./,'');
+/* transport_type beacon: the hit survives the navigation that follows the click */
+if(a.classList.contains('aff')){gtag('event','affiliate_click',{link_domain:d,product_card:card(a),transport_type:'beacon'});}
+else{gtag('event','outbound_click',{link_domain:d,link_url:u.href,transport_type:'beacon'});}},true);})();
 </script>
 </body></html>"""
 
