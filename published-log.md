@@ -121,3 +121,16 @@ Deploy confirm 2026-11-02 ~11:55 PM ET: main@15ca048 live, https://nibbables.com
 |---|---|---|---|---|
 | 2026-11-03 | /pig-ears/ (new chew-type hub) | 7 new (Jack&Pup ×2, Best Bully Sticks ×2, Redbarn ×2, Campfire Treats ×1); 0 with Amazon links (Amazon search blocked from the box, logged as misses) | 7 brand product pages snapshotted 2026-11-03 (research/pages/pe-*-1103.txt), card quotes checked verbatim | keyword-targets row 7 "are pig ears safe for dogs" cluster (no such heading; build forbids the word). Flags: BBS made-in only in image alt text (made_in Not stated); Redbarn natural ears country of origin "Canada, Mexico, and South Korea" vs smoked "USA, Canada"; Redbarn calories "N/A". PLACES gained South Korea. |
 Deploy confirm 2026-11-03 ~11:50 PM ET: main@d6b1412 live, https://nibbables.com/pig-ears/ HTTP 200; IndexNow 200 (/pig-ears/, sitemap, llms.txt).
+
+## 2026-11-04 07:45 AM ET — audit fixes (Traffic Desk audit, main@f1f10a0)
+| Area | Change |
+|---|---|
+| Article schema | All 13 guides now emit Article JSON-LD (headline, datePublished = each guide's real first-commit date, dateModified = the page's own last-checked date from data, mainEntityOfPage, author + publisher = the Nibbables Organization node). og:type=article on guides. No Person/Review/Product/Offer nodes anywhere. |
+| Author signal | Every page (except /about/ and /privacy/, which stay as they were) carries a visible byline: "Nibbables editorial team. Every claim on this page is quoted from the brand's own page or the source linked next to it; we don't test, rate or review products. Page updated YYYY-MM-DD. How we verify." The date is MODIFIED[path], i.e. the latest last_checked of what the page shows, never the build date. WebPage/AboutPage JSON-LD gains author = Organization (same @id as publisher). |
+| /yak-chew-microwave/ | Headings rebuilt around the six query phrasings (himalayan dog chew microwave, yak milk chews microwave, can you microwave himalayan dog chews, max time, whole chew vs last piece). Answers unchanged; no new time or rule. |
+| Hubs | /bully-sticks/ and /antlers/ get a "Which …, by use case" block inside the first 100 words: 4 bully-stick and 3 antler picks, each naming the brand-stated attribute and linking both the card and the brand page. Every entry is asserted against data/products.json at build time. |
+| Titles | /bully-stick-vs-bully-hide/ 62->44; dropped " | Nibbables" from /esophagus-chews/, /how-long-do-bully-sticks-last/, /yak-chew-microwave/. All titles now <=58 chars. |
+| ItemList | Hub ListItem entries carry the product's own page URL (same destination as the card's brand link). |
+| Click tracking | affiliate_click {link_domain, product_card} on .aff links and outbound_click {link_domain, link_url} on other external links, on every page. privacy.py updated (effective 2026-11-04). |
+Deploy confirm 2026-11-04 07:36 AM ET: gh-pages pushed from main@f1f10a0; /, /bully-sticks/, /antlers/, /yak-chew-microwave/, /privacy/, /compare/ all 200 and serving the new HTML; all 29 sitemap URLs 200 on the local build; every page's JSON-LD parses; no page contains "safe" or a price. IndexNow 200 (api.indexnow.org + bing, 29 URLs).
+- Not done: splitting /dog-chews-by-dog-size-and-chewer/ (queued at the top of content-queue.md with the audit's reasoning).
