@@ -120,3 +120,4 @@ Deploy confirm 2026-11-02 ~11:55 PM ET: main@15ca048 live, https://nibbables.com
 | Date | Path | Products | Sources checked | Notes |
 |---|---|---|---|---|
 | 2026-11-03 | /pig-ears/ (new chew-type hub) | 7 new (Jack&Pup ×2, Best Bully Sticks ×2, Redbarn ×2, Campfire Treats ×1); 0 with Amazon links (Amazon search blocked from the box, logged as misses) | 7 brand product pages snapshotted 2026-11-03 (research/pages/pe-*-1103.txt), card quotes checked verbatim | keyword-targets row 7 "are pig ears safe for dogs" cluster (no such heading; build forbids the word). Flags: BBS made-in only in image alt text (made_in Not stated); Redbarn natural ears country of origin "Canada, Mexico, and South Korea" vs smoked "USA, Canada"; Redbarn calories "N/A". PLACES gained South Korea. |
+Deploy confirm 2026-11-03 ~11:50 PM ET: main@d6b1412 live, https://nibbables.com/pig-ears/ HTTP 200; IndexNow 200 (/pig-ears/, sitemap, llms.txt).
