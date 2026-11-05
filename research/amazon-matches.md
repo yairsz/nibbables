@@ -152,3 +152,10 @@ Amazon search pages returned a bot-block page from the box tonight (all 6 querie
 
 ## 2026-11-03 /pig-ears/ (new hub, 7 products)
 Amazon search pages returned a ~2 KB bot-block page from the box tonight (4 queries), so no listing could be confirmed. MISS (unverified, not linked): Jack&Pup Whole All-Natural Pig Ear Dog Chews; Jack&Pup Half All-Natural Pig Ear Dog Chews; Best Bully Sticks Pig Ear Dog Treat (25 Pack); Best Bully Sticks Hickory Smoked Pig Ears; Redbarn Natural Pig Ears; Redbarn Smoked Pig Ears; Campfire Treats Pig Ears for Dogs. Retry on a later run.
+
+## 2026-11-04 — /cow-hooves/ (nightly)
+- MATCH Redbarn Filled Hoof Peanut Butter Flavor → B003ALGKI2 ("Redbarn Filled Hooves-Peanut Butter, Pack of 25", byline Visit the Redbarn Pet Products Store; brand page sells Case of 25).
+- MATCH Redbarn Filled Hoof Beef Flavor → B0HMZRY9FY (title "Filled Hoof Beef Flavor", byline Visit the Redbarn Pet Products Store; pack count not read from the listing).
+- MISS Pawstruck Cow Hooves for Dogs: Amazon search showed no Pawstruck-branded listing (top hits hotspot pets, 123 Treats).
+- MISS Pawstruck Filled Cow Hooves - Peanut Butter: closest hit B09DRBZ1BM is Raw Paws, not Pawstruck.
+- MISS Jack&Pup 100% Natural Cow Hooves, Best Bully Sticks Cow Hooves 25 count, Best Bully Sticks Peanut Butter Stuffed Hoof 4 Pack: no brand-confirmed listing found in search titles tonight; not checked further.

@@ -1979,5 +1979,147 @@
   "note": "Calorie Content: 4,590 kcal/kg; 130 kcal/oz",
   "category": "pig-ears",
   "last_checked": "2026-11-03"
+ },
+ {
+  "snapshot": "research/pages/hv-jp-nat-1104.txt",
+  "brand": "Jack&Pup",
+  "product": "100% Natural Cow Hooves",
+  "source_url": "https://jackandpup.com/products/100-natural-cow-hooves-dog-chews",
+  "ingredients": "Made from 100% natural cow hoof",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "Sourced from grass-fed free-range cattle in Brazil",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Choose chews appropriate for your dog's size and chewing ability to prevent choking hazards. · Not suitable for puppies under 3 months old. · Ideal for medium & heavy chewers",
+  "supervision": "Always supervise your dog while chewing and provide fresh water.",
+  "sizes": [
+   "8 Pieces",
+   "12 Pieces",
+   "25 Pieces"
+  ],
+  "note": "The same page's FAQ names a different minimum puppy age (6 months and older) from the feeding instructions (under 3 months).",
+  "guaranteed_analysis": "CRUDE PROTEIN (min) 75% · CRUDE FAT (min) 1% · CRUDE FIBER (max) 4% · MOISTURE (max) 20%",
+  "category": "cow-hooves",
+  "last_checked": "2026-11-04"
+ },
+ {
+  "snapshot": "research/pages/hv-bbs-nat-1104.txt",
+  "brand": "Best Bully Sticks",
+  "product": "100% Natural Cow Hooves Dog Chews (25 count Value Pack)",
+  "source_url": "https://www.bestbullysticks.com/products/100-natural-cow-hooves-dog-chews-by-best-bully-sticks-25-count-value-pack",
+  "ingredients": "Ingredients: Natural Cow Hooves",
+  "made_in": "Country of Origin: Australia",
+  "sourced_from": "Each hoof is made from 100% natural, free range, grass fed cattle",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Size: Approximately 2-4 inches wide and 4-6 inches in length · please limit your dog to 1 per day",
+  "supervision": "Please supervise your dog when giving any chew or treat and ensure your pup has easy access to fresh water before, during, and after treat consumption.",
+  "sizes": [
+   "25 count Value Pack"
+  ],
+  "note": "",
+  "guaranteed_analysis": "Crude Protein (Min.): 86.00% · Crude Fat (Max.): 1.03% · Crude Fiber (Max.): 3.63% · Moisture (Max.): 8.50%",
+  "category": "cow-hooves",
+  "last_checked": "2026-11-04"
+ },
+ {
+  "snapshot": "research/pages/hv-bbs-pb-1104.txt",
+  "brand": "Best Bully Sticks",
+  "product": "Peanut Butter Stuffed Hoof (4 Pack)",
+  "source_url": "https://www.bestbullysticks.com/products/peanut-butter-stuffed-hoof-4-pack",
+  "ingredients": "Ingredients Beef Shin Bone, Beef Meal, Vegetable Glycerin, Natural Peanut Butter Flavor, Lecithin, Mixed Tocopherols (Preservative), Vinegar (Preservative)",
+  "made_in": "Not stated, check with them",
+  "sourced_from": "Not stated, check with them",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "If you're the pup parent of a power chewer",
+  "supervision": "Please supervise your dog when giving any chew or treat and ensure your pup has easy access to fresh water before, during, and after treat consumption.",
+  "sizes": [
+   "4 Pack"
+  ],
+  "note": "The page's ingredient list starts with beef shin bone, not hoof, although the product is sold as a stuffed cow hoof. It lists Calories Each 150 and 3000 kcal/kg.",
+  "guaranteed_analysis": "Crude Fat Min 0.5% · Crude Fiber Max 3.0% · Crude Protein Min 20.0% · Moisture Max 15.0%",
+  "category": "cow-hooves",
+  "last_checked": "2026-11-04"
+ },
+ {
+  "snapshot": "research/pages/hv-rb-pb-1104.txt",
+  "brand": "Redbarn",
+  "product": "Filled Hoof Peanut Butter Flavor",
+  "source_url": "https://www.redbarn.com/products/filled-hooves-peanut-butter-flavor",
+  "ingredients": "Natural Beef Hoof. Filling: Corn Syrup, Beef Broth, Chicken Meal, Sugar, Beef Fat (Preserved with Mixed Tocopherols), Salt, Propylene Glycol, Peanut Butter (Peanuts, Dextrose, Vegetable Oil, Salt), Peanut Butter Flavor, Agar-Agar, Vegetable Glycerin, Potassium Sorbate",
+  "made_in": "Made in the USA with Globally Sourced Ingredients",
+  "sourced_from": "Made in the USA with Globally Sourced Ingredients",
+  "rawhide_free": "No Rawhide",
+  "size_guidance": "Not stated, check with them",
+  "supervision": "Not stated, check with them",
+  "sizes": [
+   "2 pack",
+   "Case of 25"
+  ],
+  "note": "The page lists Calories: 2927 kcal/kg, 149 kcal per hoof; Net Weight: 1.8oz (51g); Shelf Life: 24 months.",
+  "guaranteed_analysis": "Crude Protein: 50% Min · Crude Fat: 2% Min · Crude Fiber: 3% Max · Moisture: 24% Max",
+  "category": "cow-hooves",
+  "last_checked": "2026-11-04",
+  "amazon_asin": "B003ALGKI2",
+  "affiliate_url": "https://www.amazon.com/dp/B003ALGKI2?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/hv-rb-beef-1104.txt",
+  "brand": "Redbarn",
+  "product": "Filled Hoof Beef Flavor",
+  "source_url": "https://www.redbarn.com/products/filled-hooves-beef-flavor",
+  "ingredients": "Premium Beef Hoof. Filling: Corn Syrup, Beef Broth, Chicken Meal, Sugar, Beef Fat (Preserved with Mixed Tocopherols), Salt, Propylene Glycol, Agar-Agar, Vegetable Glycerin, Potassium Sorbate",
+  "made_in": "Made in the USA with Globally Sourced Ingredients",
+  "sourced_from": "Made in the USA with Globally Sourced Ingredients",
+  "rawhide_free": "No Rawhide",
+  "size_guidance": "Not stated, check with them",
+  "supervision": "Not stated, check with them",
+  "sizes": [
+   "2 pack",
+   "Case of 25"
+  ],
+  "note": "The page lists Calories: 2800 kcal/kg, 142 kcal per hoof; Weight: 1.8oz (51g); Shelf Life: 24 months.",
+  "guaranteed_analysis": "Crude Protein: 50% Min · Crude Fat: 2% Min · Crude Fiber: 2% Max · Moisture: 24% Max",
+  "category": "cow-hooves",
+  "last_checked": "2026-11-04",
+  "amazon_asin": "B0HMZRY9FY",
+  "affiliate_url": "https://www.amazon.com/dp/B0HMZRY9FY?tag=nibbables-20"
+ },
+ {
+  "snapshot": "research/pages/hv-ps-nat-1104.txt",
+  "brand": "Pawstruck",
+  "product": "Cow Hooves for Dogs",
+  "source_url": "https://www.pawstruck.com/products/cow-hooves-for-dogs-natural-chews",
+  "ingredients": "Made from 100% natural cow hooves",
+  "made_in": "slowly oven-roasted in the USA",
+  "sourced_from": "sourced from USDA-approved facilities",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Not stated, check with them",
+  "supervision": "Natural hooves may splinter or break causing injury. Supervise use and feed in limited quantity if your pet is not used to this chew. If hoof should splinter or break remove immediately.",
+  "sizes": [
+   "10 Hooves",
+   "25 Hooves"
+  ],
+  "note": "The page's spec list reads Made in: USA, Brazil, Colombia, while the description says oven-roasted in the USA. Dimensions listed: 4\" x 2.5\" x 3\". Shelf life stated as 36 months.",
+  "guaranteed_analysis": "Not stated, check with them",
+  "category": "cow-hooves",
+  "last_checked": "2026-11-04"
+ },
+ {
+  "snapshot": "research/pages/hv-ps-pb-1104.txt",
+  "brand": "Pawstruck",
+  "product": "Filled Cow Hooves - Peanut Butter",
+  "source_url": "https://www.pawstruck.com/products/filled-cow-hooves-peanut-butter",
+  "ingredients": "Natural Beef Hoof. Filling: Corn Syrup, Beef Broth, Chicken Meal, Sugar, Beef Fat (Preserved with Mixed Tocopherols), Salt, Propylene Glycol, Peanut Butter (Peanuts, Dextrose, Vegetable Oil, Salt), Peanut Butter Flavor",
+  "made_in": "slow-baked in the USA",
+  "sourced_from": "sourced from USDA-approved facilities",
+  "rawhide_free": "Not stated, check with them",
+  "size_guidance": "Perfect for light to medium chewers",
+  "supervision": "Natural hooves may splinter or break causing injury. Supervise use and feed in limited quantity if your pet is not used to this chew. If hoof should splinter or break remove immediately.",
+  "sizes": [
+   "5 Hooves"
+  ],
+  "note": "The page lists Calories: 149 per Filled Hoof and a shelf life of up to 36 months.",
+  "guaranteed_analysis": "Not stated, check with them",
+  "category": "cow-hooves",
+  "last_checked": "2026-11-04"
  }
 ]

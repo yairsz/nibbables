@@ -413,7 +413,7 @@ def guide_related(g):
 # (where is it made, which brands, rawhide-free?). Every answer is COUNTED from data/products.json, so it can't
 # say anything the cards don't. No judgments, no safety wording.
 PLACES = [("USA", r"\bUSA\b|\bU\.S\.|United States|\bUS\b|(?<!South )American|Colorado"), ("Canada", r"Canada"),
-          ("Brazil", r"Brazil"), ("Argentina", r"Argentina"), ("Paraguay", r"Paraguay"),
+          ("Brazil", r"Brazil"), ("Australia", r"Australia"), ("Argentina", r"Argentina"), ("Paraguay", r"Paraguay"),
           ("Colombia", r"Colombi|Columbia"),  # one brand page writes "Columbia" for its country of origin
           ("Peru", r"Peru"), ("Mexico", r"Mexico"), ("South America", r"South America"), ("the Americas", r"The Americas"),
           ("Turkey", r"Turkey"), ("New Zealand", r"New Zealand"), ("Europe", r"Europe"), ("India", r"India"),

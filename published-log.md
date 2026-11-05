@@ -136,3 +136,8 @@ Deploy confirm 2026-11-04 07:36 AM ET: gh-pages pushed from main@f1f10a0; /, /bu
 - Not done: splitting /dog-chews-by-dog-size-and-chewer/ (queued at the top of content-queue.md with the audit's reasoning).
 - Follow-up (main@28514bb): bylines now read the page's own real edit date via CONTENT_EDITED (2026-11-04 for /bully-sticks/, /antlers/, /yak-chew-microwave/, /bully-stick-vs-bully-hide/, /esophagus-chews/, /how-long-do-bully-sticks-last/; unchanged data dates elsewhere). Re-deployed, 200 on all changed URLs, IndexNow 200 (29 URLs).
 - Label tweak (main@0ab2be2): "The longest length any brand on this page lists" for the Redbarn 36-inch use case; deployed, live verified, IndexNow 200.
+
+## 2026-11-04 — /cow-hooves/ (nightly)
+| Date | Path | Products | Sources checked | Notes |
+|---|---|---|---|---|
+| 2026-11-04 | /cow-hooves/ (new chew-type hub) | 7 new (Jack&Pup ×1, Best Bully Sticks ×2, Redbarn ×2, Pawstruck ×2); 2 with Amazon links (both Redbarn) | 7 brand product pages snapshotted 2026-11-04 (research/pages/hv-*-1104.txt), card quotes checked verbatim | keyword-targets row 7 "are cow hooves safe for dogs" cluster (no such heading; build forbids the word). Flags: Jack&Pup FAQ says 6 months+ vs feeding note "under 3 months"; BBS PB stuffed hoof ingredients start with beef shin bone; Pawstruck plain hooves spec "Made in: USA, Brazil, Colombia" vs "oven-roasted in the USA". PLACES gained Australia. |
