@@ -142,3 +142,5 @@ Deploy confirm 2026-11-04 07:36 AM ET: gh-pages pushed from main@f1f10a0; /, /bu
 |---|---|---|---|---|
 | 2026-11-04 | /cow-hooves/ (new chew-type hub) | 7 new (Jack&Pup ×1, Best Bully Sticks ×2, Redbarn ×2, Pawstruck ×2); 2 with Amazon links (both Redbarn) | 7 brand product pages snapshotted 2026-11-04 (research/pages/hv-*-1104.txt), card quotes checked verbatim | keyword-targets row 7 "are cow hooves safe for dogs" cluster (no such heading; build forbids the word). Flags: Jack&Pup FAQ says 6 months+ vs feeding note "under 3 months"; BBS PB stuffed hoof ingredients start with beef shin bone; Pawstruck plain hooves spec "Made in: USA, Brazil, Colombia" vs "oven-roasted in the USA". PLACES gained Australia. |
 Deploy confirm 2026-11-05 ~12:00 AM ET: main@461bb9d live, https://nibbables.com/cow-hooves/ HTTP 200 with 2 Amazon links; IndexNow 200 (/cow-hooves/, sitemap, llms.txt).
+
+| 2026-11-05 | /cow-hooves/ (Short embed) | 0 | Short rwc9wjOhid0 + VideoObject + transcript (brand pages checked 2026-11-04; quote check OK); Pages built, live 200 with embed, IndexNow 200 (api.indexnow.org + bing) | Daytime Short pipeline |
