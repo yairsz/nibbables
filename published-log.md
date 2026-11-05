@@ -144,3 +144,5 @@ Deploy confirm 2026-11-04 07:36 AM ET: gh-pages pushed from main@f1f10a0; /, /bu
 Deploy confirm 2026-11-05 ~12:00 AM ET: main@461bb9d live, https://nibbables.com/cow-hooves/ HTTP 200 with 2 Amazon links; IndexNow 200 (/cow-hooves/, sitemap, llms.txt).
 
 | 2026-11-05 | /cow-hooves/ (Short embed) | 0 | Short rwc9wjOhid0 + VideoObject + transcript (brand pages checked 2026-11-04; quote check OK); Pages built, live 200 with embed, IndexNow 200 (api.indexnow.org + bing) | Daytime Short pipeline |
+
+| 2026-11-05 | /cow-hooves/ calories field (improvement run #110) | 0 new products; 7 existing cow-hooves cards | Snapshots hv-*-1104.txt (already on box from nightly 2026-11-04). Quotes verified: BBS stuffed "Calories per kg 3000 kcal/kg · Calories Each 150"; Redbarn PB "2927 kcal/kg, 149 kcal per hoof"; Redbarn beef "2800 kcal/kg, 142 kcal per hoof"; Pawstruck filled PB "149 per Filled Hoof". Jack&Pup plain, BBS plain, Pawstruck plain = Not stated. | main@f284414, gh-pages deployed, live 200 with Calories column + at-a-glance; IndexNow 200 (api.indexnow.org + bing) for /cow-hooves/ + sitemap |
