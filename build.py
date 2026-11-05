@@ -321,8 +321,8 @@ def page(title, desc, path, body, jsonld=None, guide=False):
 {og_image(path, title)}
 <link rel="stylesheet" href="{U('/static/style.css')}">{ld}
 </head><body>
-<header class="site"><div class="wrap"><a class="logo" href="{U('/')}">Nibb<span>ables</span></a>
-<nav><details class="nav-types"><summary>Browse chew types</summary><div class="nav-panel">{nav}</div></details><a href="{U('/compare/')}">Compare all</a><a href="{U('/about/')}">How we verify</a></nav></div></header>
+<header class="site"><div class="wrap"><div class="brand-row"><a class="logo" href="{U('/')}">Nibb<span>ables</span></a><a class="nav-verify-mobile" href="{U('/about/')}">How we verify</a></div>
+<nav><details class="nav-types"><summary>Browse chew types</summary><div class="nav-panel">{nav}</div></details><a href="{U('/compare/')}">Compare all</a><a class="nav-verify-desktop" href="{U('/about/')}">How we verify</a></nav></div></header>
 <main><div class="wrap">
 {body}
 </div></main>
