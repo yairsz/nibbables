@@ -389,6 +389,8 @@ def card(p):
     sizes = "".join(f"<li>{e(s)}</li>" for s in p["sizes"])
     note = f"<dt>Note</dt><dd>{e(p['note'])}</dd>" if p.get("note") else ""
     ga = f"<dt>Guaranteed analysis (brand label)</dt><dd>{q(p['guaranteed_analysis'])}</dd>" if p.get("guaranteed_analysis") else ""
+    # Optional calories (added 2026-11-05): only when the brand page states a number (or NS).
+    cal = f"<dt>Calories (as stated)</dt><dd>{q(p['calories'])}</dd>" if p.get("calories") else ""
     return f"""<article class="card" id="{e(p['id'])}">
 <span class="badge">{e(CAT_LABEL[p['category']])}</span><h3>{e(p['brand'])}: {e(p['product'])}</h3>
 <dl><dt>Ingredients (as listed)</dt><dd>{q(p['ingredients'])}</dd>
@@ -396,7 +398,7 @@ def card(p):
 <dt>Sourced-from claim</dt><dd>{q(p['sourced_from'])}</dd>
 <dt>Rawhide-free?</dt><dd>{q(p['rawhide_free'])}</dd>
 <dt>Size / dog guidance</dt><dd>{q(p['size_guidance'])}</dd>
-<dt>Supervision note</dt><dd>{q(p['supervision'])}</dd>{ga}
+<dt>Supervision note</dt><dd>{q(p['supervision'])}</dd>{ga}{cal}
 <dt>Options on the page</dt><dd><ul class="items">{sizes}</ul></dd>{note}
 <dt>Source</dt><dd>{brand_page_link(p)} · checked {e(p['last_checked'])}</dd></dl>
 {affiliate_slot(p)}{report_link(p['brand'] + ': ' + p['product'])}</article>"""
@@ -743,16 +745,29 @@ def sibling_hubs_block(c, products):
 
 def cat_glance(c, ps):
     """Per-chew-type "At a glance" table (added 2026-10-26): every cell is the product's own data field,
-    verbatim (same text as its card), so it adds a skimmable comparison without any new claims."""
+    verbatim (same text as its card), so it adds a skimmable comparison without any new claims.
+    Calories column (2026-11-05) only when at least one product on the hub carries a calories field."""
     def cell(v):
         v = " · ".join(v) if isinstance(v, list) else v
         return '<span class="ns">Not stated</span>' if (not v or v == NS) else e(v)
-    rows = "".join(f'<tr><td><a href="#{e(p["id"])}">{e(p["brand"])}</a><br><span class="meta">{e(p["product"])}</span></td>'
-                   f'<td>{cell(p["made_in"])}</td><td>{cell(p["sourced_from"])}</td><td>{cell(p["rawhide_free"])}</td><td>{cell(p["sizes"])}</td></tr>' for p in ps)
+    show_cal = any(p.get("calories") for p in ps)
+    if show_cal:
+        rows = "".join(f'<tr><td><a href="#{e(p["id"])}">{e(p["brand"])}</a><br><span class="meta">{e(p["product"])}</span></td>'
+                       f'<td>{cell(p["made_in"])}</td><td>{cell(p["sourced_from"])}</td><td>{cell(p["rawhide_free"])}</td>'
+                       f'<td>{cell(p.get("calories"))}</td><td>{cell(p["sizes"])}</td></tr>' for p in ps)
+        head = ('<th>Brand / product</th><th>Made-in claim</th><th>Sourced-from claim</th>'
+                '<th>Rawhide-free (as stated)</th><th>Calories (as stated)</th><th>Options on the brand page</th>')
+        h2 = f'At a glance: made-in, sourcing, rawhide-free, calories and options for {len(ps)}'
+    else:
+        rows = "".join(f'<tr><td><a href="#{e(p["id"])}">{e(p["brand"])}</a><br><span class="meta">{e(p["product"])}</span></td>'
+                       f'<td>{cell(p["made_in"])}</td><td>{cell(p["sourced_from"])}</td><td>{cell(p["rawhide_free"])}</td><td>{cell(p["sizes"])}</td></tr>' for p in ps)
+        head = ('<th>Brand / product</th><th>Made-in claim</th><th>Sourced-from claim</th>'
+                '<th>Rawhide-free (as stated)</th><th>Options on the brand page</th>')
+        h2 = f'At a glance: made-in, sourcing, rawhide-free and options for {len(ps)}'
     name = c["name"].lower()
-    return (f'<h2 id="at-a-glance">At a glance: made-in, sourcing, rawhide-free and options for {len(ps)} {e(name)}</h2>'
+    return (f'<h2 id="at-a-glance">{h2} {e(name)}</h2>'
             f'<div class="tablewrap"><table class="cmp"><caption>Each cell is the brand\'s own wording from its product page, the same text as the product card below. "Not stated" means the page doesn\'t say, so check with the brand.</caption>'
-            f'<thead><tr><th>Brand / product</th><th>Made-in claim</th><th>Sourced-from claim</th><th>Rawhide-free (as stated)</th><th>Options on the brand page</th></tr></thead>'
+            f'<thead><tr>{head}</tr></thead>'
             f'<tbody>{rows}</tbody></table></div>')
 
 def jump_chips(c, ps):

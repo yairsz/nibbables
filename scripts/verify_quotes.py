@@ -2,7 +2,7 @@
 of the brand's page (research/pages/NN.txt + Shopify body text). Run before publishing."""
 import json, re, sys
 NS = "Not stated, check with them"
-FIELDS = ["ingredients","made_in","sourced_from","rawhide_free","size_guidance","supervision","guaranteed_analysis"]
+FIELDS = ["ingredients","made_in","sourced_from","rawhide_free","size_guidance","supervision","guaranteed_analysis","calories"]
 def norm(s): return re.sub(r"\s+"," ",s.replace("\u00a0"," ")).strip().lower()
 try:
     cands = json.load(open("research/candidates.json"))

@@ -1999,7 +1999,8 @@
   "note": "The same page's FAQ names a different minimum puppy age (6 months and older) from the feeding instructions (under 3 months).",
   "guaranteed_analysis": "CRUDE PROTEIN (min) 75% · CRUDE FAT (min) 1% · CRUDE FIBER (max) 4% · MOISTURE (max) 20%",
   "category": "cow-hooves",
-  "last_checked": "2026-11-04"
+  "last_checked": "2026-11-04",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/hv-bbs-nat-1104.txt",
@@ -2018,7 +2019,8 @@
   "note": "",
   "guaranteed_analysis": "Crude Protein (Min.): 86.00% · Crude Fat (Max.): 1.03% · Crude Fiber (Max.): 3.63% · Moisture (Max.): 8.50%",
   "category": "cow-hooves",
-  "last_checked": "2026-11-04"
+  "last_checked": "2026-11-04",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/hv-bbs-pb-1104.txt",
@@ -2037,7 +2039,8 @@
   "note": "The page's ingredient list starts with beef shin bone, not hoof, although the product is sold as a stuffed cow hoof. It lists Calories Each 150 and 3000 kcal/kg.",
   "guaranteed_analysis": "Crude Fat Min 0.5% · Crude Fiber Max 3.0% · Crude Protein Min 20.0% · Moisture Max 15.0%",
   "category": "cow-hooves",
-  "last_checked": "2026-11-04"
+  "last_checked": "2026-11-04",
+  "calories": "Calories per kg 3000 kcal/kg · Calories Each 150"
  },
  {
   "snapshot": "research/pages/hv-rb-pb-1104.txt",
@@ -2059,7 +2062,8 @@
   "category": "cow-hooves",
   "last_checked": "2026-11-04",
   "amazon_asin": "B003ALGKI2",
-  "affiliate_url": "https://www.amazon.com/dp/B003ALGKI2?tag=nibbables-20"
+  "affiliate_url": "https://www.amazon.com/dp/B003ALGKI2?tag=nibbables-20",
+  "calories": "2927 kcal/kg, 149 kcal per hoof"
  },
  {
   "snapshot": "research/pages/hv-rb-beef-1104.txt",
@@ -2081,7 +2085,8 @@
   "category": "cow-hooves",
   "last_checked": "2026-11-04",
   "amazon_asin": "B0HMZRY9FY",
-  "affiliate_url": "https://www.amazon.com/dp/B0HMZRY9FY?tag=nibbables-20"
+  "affiliate_url": "https://www.amazon.com/dp/B0HMZRY9FY?tag=nibbables-20",
+  "calories": "2800 kcal/kg, 142 kcal per hoof"
  },
  {
   "snapshot": "research/pages/hv-ps-nat-1104.txt",
@@ -2101,7 +2106,8 @@
   "note": "The page's spec list reads Made in: USA, Brazil, Colombia, while the description says oven-roasted in the USA. Dimensions listed: 4\" x 2.5\" x 3\". Shelf life stated as 36 months.",
   "guaranteed_analysis": "Not stated, check with them",
   "category": "cow-hooves",
-  "last_checked": "2026-11-04"
+  "last_checked": "2026-11-04",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/hv-ps-pb-1104.txt",
@@ -2120,6 +2126,7 @@
   "note": "The page lists Calories: 149 per Filled Hoof and a shelf life of up to 36 months.",
   "guaranteed_analysis": "Not stated, check with them",
   "category": "cow-hooves",
-  "last_checked": "2026-11-04"
+  "last_checked": "2026-11-04",
+  "calories": "149 per Filled Hoof"
  }
 ]
