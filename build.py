@@ -111,11 +111,20 @@ MODIFIED = {}
 # Pages whose visible copy was rewritten by hand (not by a product re-check), with the date that edit shipped.
 # Written by the editor at the time of the edit, never computed from the build clock. MODIFIED takes the later of
 # this and the page's data date, so a byline date is always a real change to that page.
-CONTENT_EDITED = {"/bully-sticks/": "2026-11-04",          # use-case block
-                  "/antlers/": "2026-11-04",               # use-case block
+CONTENT_EDITED = {"/bully-sticks/": "2026-11-05",          # jump chips to existing section/product ids
+                  "/antlers/": "2026-11-05",               # jump chips
+                  "/yak-cheese-chews/": "2026-11-05",      # jump chips
+                  "/beef-cheek-rolls/": "2026-11-05",      # jump chips
+                  "/rawhide-free/": "2026-11-05",          # jump chips
+                  "/collagen-sticks/": "2026-11-05",       # jump chips
+                  "/beef-tendons/": "2026-11-05",          # jump chips
+                  "/esophagus-chews/": "2026-11-05",       # jump chips (was title suffix, 2026-11-04)
+                  "/trachea-chews/": "2026-11-05",         # jump chips
+                  "/fish-skin-chews/": "2026-11-05",       # jump chips
+                  "/pig-ears/": "2026-11-05",              # jump chips
+                  "/cow-hooves/": "2026-11-05",            # jump chips
                   "/yak-chew-microwave/": "2026-11-04",    # headings rebuilt around the query phrasings
                   "/bully-stick-vs-bully-hide/": "2026-11-04",   # title shortened
-                  "/esophagus-chews/": "2026-11-04",       # title suffix dropped
                   "/how-long-do-bully-sticks-last/": "2026-11-04"}  # title suffix dropped
 ABOUT_UPDATED = "2026-10-27"     # bump when /about/ text changes
 PRIVACY_UPDATED = "2026-11-04"   # matches privacy.EFFECTIVE
@@ -313,7 +322,7 @@ def page(title, desc, path, body, jsonld=None, guide=False):
 <link rel="stylesheet" href="{U('/static/style.css')}">{ld}
 </head><body>
 <header class="site"><div class="wrap"><a class="logo" href="{U('/')}">Nibb<span>ables</span></a>
-<nav>{nav}<a href="{U('/compare/')}">Compare all</a><a href="{U('/about/')}">How we verify</a></nav></div></header>
+<nav><details class="nav-types"><summary>Browse chew types</summary><div class="nav-panel">{nav}</div></details><a href="{U('/compare/')}">Compare all</a><a href="{U('/about/')}">How we verify</a></nav></div></header>
 <main><div class="wrap">
 {body}
 </div></main>
@@ -746,6 +755,20 @@ def cat_glance(c, ps):
             f'<thead><tr><th>Brand / product</th><th>Made-in claim</th><th>Sourced-from claim</th><th>Rawhide-free (as stated)</th><th>Options on the brand page</th></tr></thead>'
             f'<tbody>{rows}</tbody></table></div>')
 
+def jump_chips(c, ps):
+    """In-page jump links to section or product ids that already exist on this page. Labels come from
+    the existing use-case wording (or the existing heading anchors); no new claims."""
+    chips = []
+    v = VERDICTS.get(c["slug"])
+    if v:
+        for pk in v["picks"]:
+            p = next((x for x in ps if x["brand"] == pk["brand"] and x["product"] == pk["product"]), None)
+            if p:
+                chips.append(f'<a class="btn-secondary" href="#{e(p["id"])}">{e(pk["use"])}</a>')
+    chips.append('<a class="btn-secondary" href="#at-a-glance">At a glance</a>')
+    chips.append('<a class="btn-secondary" href="#all-products">All products</a>')
+    return '<p class="chips">' + "".join(chips) + "</p>"
+
 def category_page(c, products):
     set_page(f"/{c['slug']}/")
     ps = cat_products(c, products)
@@ -754,7 +777,7 @@ def category_page(c, products):
     toc = "".join(f'<li><a href="#{e(p["id"])}">{e(p["brand"])}: {e(p["product"])}</a></li>' for p in ps)
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}</p>
 <h1>{e(c['h1'])}</h1>
-{verdict_block(c, ps)}<p class="lead">{e(c['intro'])}</p>
+{jump_chips(c, ps)}{verdict_block(c, ps)}<p class="lead">{e(c['intro'])}</p>
 <p class="meta">{len(ps)} products · every claim is quoted from the brand's own page and linked · no prices (they change; check the brand) · <a href="{U('/compare/')}">compare all in one table</a></p>
 {SAFETY}
 {aff_disclosure(ps)}
@@ -1014,7 +1037,7 @@ def guide_page(g, products):
     srcs = "".join(f'<li><a href="{e(s["url"])}" rel="nofollow noopener" target="_blank">{e(s["label"])}</a></li>' for s in g["sources"])
     cards = aff_disclosure([byid[pid] for pid in g.get("product_ids", [])]) + "".join(card(byid[pid]) for pid in g.get("product_ids", []))
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(g['h1'])}</p><h1>{e(g['h1'])}</h1><p class="lead">{e(g['intro'])}</p>
-<p class="meta">Sources last checked {e(g['last_checked'])}</p>{SAFETY}{tbl}{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>{guide_related(g)}"""
+<p class="meta">Sources last checked {e(g['last_checked'])}</p>{SAFETY}{tbl}<div class="vid-after-table">{yt_embed(f"/{g['slug']}/", YT_CHANNEL, 'Nibbables')}</div>{faq_html}{secs}{cards}<h2>Sources</h2><ul>{srcs}</ul>{guide_related(g)}"""
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
         {"@type": "Question", "name": f["q"], "acceptedAnswer": {"@type": "Answer", "text": f["a"]}} for f in faq]} if faq else None
     return page(g["title"], g["meta"], f"/{g['slug']}/", body, [x for x in (ld, article_ld(g, f"/{g['slug']}/")) if x], guide=True)
