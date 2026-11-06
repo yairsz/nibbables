@@ -111,8 +111,8 @@ MODIFIED = {}
 # Pages whose visible copy was rewritten by hand (not by a product re-check), with the date that edit shipped.
 # Written by the editor at the time of the edit, never computed from the build clock. MODIFIED takes the later of
 # this and the page's data date, so a byline date is always a real change to that page.
-CONTENT_EDITED = {"/bully-sticks/": "2026-11-05",          # jump chips to existing section/product ids
-                  "/antlers/": "2026-11-05",               # jump chips
+CONTENT_EDITED = {"/bully-sticks/": "2026-11-06",          # T003 answer-first + independent sourced calorie fact
+                  "/antlers/": "2026-11-06",               # T003 answer-first + independent Cornell dental fact
                   "/yak-cheese-chews/": "2026-11-05",      # jump chips
                   "/beef-cheek-rolls/": "2026-11-05",      # jump chips
                   "/rawhide-free/": "2026-11-05",          # jump chips
@@ -640,6 +640,41 @@ CATS = []  # filled in main()
 # ONLY on an attribute the brand states on the product page we already quote, and that attribute is printed next to a
 # link to the product's own card. Nothing here is a test, a rating or a review. Each entry is machine-checked: the
 # assertion has to hold against data/products.json or the build fails, and the few superlatives are computed, not asserted.
+# Answer-first block for Traffic Desk T003 / GEO (2026-11-06). One independent source per
+# listed hub, opened this run; numbers quoted exactly. Never invent. Rendered under H1+byline.
+# Each entry is (before_html_escaped_text, url, link_label, after_html_escaped_text) assembled so the
+# source name appears once, as the visible link text.
+ANSWER_FIRST = {
+    "bully-sticks": {
+        "before": "Bully sticks are single-ingredient chews made from dried bull or steer pizzle. ",
+        "link_label": "Tufts Cummings School of Veterinary Medicine",
+        "url": ("https://sites.tufts.edu/petfoodology/2018/11/01/"
+                "dangers-of-bully-sticks-popular-treat-can-carry-bacteria-and-add-calories/"),
+        "mid": (" reported that bully sticks contain between 9-22 calories per inch, so an "
+                "average 6-inch stick is nearly 100 calories. "),
+        "after": ("This page compares ingredients, made-in and sourcing claims, and sizes "
+                  "quoted from each brand's own product page."),
+    },
+    "antlers": {
+        "before": "Antler chews are pieces of elk or deer antler sold as long-lasting dog chews. ",
+        "link_label": "Cornell University College of Veterinary Medicine",
+        "url": ("https://www.vet.cornell.edu/departments-centers-and-institutes/"
+                "canine-health-center/health-info/worries-about-fractured-tooth"),
+        "mid": (" notes that fractured teeth are commonly caused by chewing very hard objects "
+                "and advises owners to avoid antlers, hooves and bones, which may break a tooth. "),
+        "after": ("This page compares sourcing claims, size guidance and supervision notes "
+                  "quoted from each brand's own page."),
+    },
+}
+
+def answer_first_block(slug):
+    a = ANSWER_FIRST.get(slug)
+    if not a:
+        return ""
+    return (f'<p class="answer-first">{e(a["before"])}'
+            f'<a href="{e(a["url"])}" rel="noopener" target="_blank">{e(a["link_label"])}</a>'
+            f'{e(a["mid"])}{e(a["after"])}</p>')
+
 VERDICTS = {
     "bully-sticks": {
         "h": "Which bully stick, by use case, on the brands' own wording",
@@ -792,7 +827,7 @@ def category_page(c, products):
     toc = "".join(f'<li><a href="#{e(p["id"])}">{e(p["brand"])}: {e(p["product"])}</a></li>' for p in ps)
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}</p>
 <h1>{e(c['h1'])}</h1>
-{jump_chips(c, ps)}{verdict_block(c, ps)}<p class="lead">{e(c['intro'])}</p>
+{answer_first_block(c['slug'])}{jump_chips(c, ps)}{verdict_block(c, ps)}<p class="lead">{e(c['intro'])}</p>
 <p class="meta">{len(ps)} products · every claim is quoted from the brand's own page and linked · no prices (they change; check the brand) · <a href="{U('/compare/')}">compare all in one table</a></p>
 {SAFETY}
 {aff_disclosure(ps)}
