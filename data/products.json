@@ -1381,7 +1381,8 @@
   "last_checked": "2026-10-31",
   "amazon_asin": "B0HKLBDJ3L",
   "affiliate_url": "https://www.amazon.com/dp/B0HKLBDJ3L?tag=nibbables-20",
-  "guaranteed_analysis": "Crude Protein (min.) | 60% | Crude Fat (min.) | 24% | Crude Fiber (max.) | 1.5% | Moisture (max.) | 4%"
+  "guaranteed_analysis": "Crude Protein (min.) | 60% | Crude Fat (min.) | 24% | Crude Fiber (max.) | 1.5% | Moisture (max.) | 4%",
+  "calories": "4,510 kcal/kg; 159 kcal/oz"
  },
  {
   "snapshot": "research/pages/tr-sancho-1031.txt",
@@ -1405,7 +1406,8 @@
   "note": "The nutrition tab lists \"5200 kcal/kg\". The rawhide and monitoring lines come from the founder's safety note on the page, which covers all the brand's chews. The page showed \"Sold out\" when checked.",
   "category": "trachea-chews",
   "last_checked": "2026-10-31",
-  "guaranteed_analysis": "Crude Protein: Min 35% * Crude Fat: Min 40% * Crude Fiber: Max 10% * Moisture: Max 10%"
+  "guaranteed_analysis": "Crude Protein: Min 35% * Crude Fat: Min 40% * Crude Fiber: Max 10% * Moisture: Max 10%",
+  "calories": "5200 kcal/kg"
  },
  {
   "snapshot": "research/pages/tr-bbs-1031.txt",
@@ -1426,7 +1428,8 @@
   "category": "trachea-chews",
   "last_checked": "2026-10-31",
   "amazon_asin": "B0HGZMFK65",
-  "affiliate_url": "https://www.amazon.com/dp/B0HGZMFK65?tag=nibbables-20"
+  "affiliate_url": "https://www.amazon.com/dp/B0HGZMFK65?tag=nibbables-20",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/tr-bullybunches-1031.txt",
@@ -1447,7 +1450,8 @@
   ],
   "note": "The product nutrition lists \"Calories99.2/oz\" (99.2 per ounce). The brand also sells a 12 Inch Beef Trachea and trachea wrapped in jerky.",
   "category": "trachea-chews",
-  "last_checked": "2026-10-31"
+  "last_checked": "2026-10-31",
+  "calories": "Calories 99.2/oz"
  },
  {
   "snapshot": "research/pages/tr-greatdog-1031.txt",
@@ -1466,7 +1470,8 @@
   "note": "The page lists \"Metabolizable Energy (ME): 466 kcal/100 gr\". GREAT DOG also sells 9–10 inch beef trachea, trachea pieces and bison trachea on separate pages.",
   "category": "trachea-chews",
   "last_checked": "2026-10-31",
-  "guaranteed_analysis": "Crude Protein 66% (min); Crude Fat 5% (min); Crude Fiber 5% (max); Moisture 12%"
+  "guaranteed_analysis": "Crude Protein 66% (min); Crude Fat 5% (min); Crude Fiber 5% (max); Moisture 12%",
+  "calories": "Metabolizable Energy (ME): 466 kcal/100 gr"
  },
  {
   "snapshot": "research/pages/tr-jackandpup-1031.txt",
@@ -1488,7 +1493,8 @@
   "last_checked": "2026-10-31",
   "amazon_asin": "B08QVBS456",
   "affiliate_url": "https://www.amazon.com/dp/B08QVBS456?tag=nibbables-20",
-  "guaranteed_analysis": "CRUDE PROTEIN (min) 30% CRUDE FAT (min) 7% CRUDE FIBER (max) 1.5% MOISTURE (max) 20%"
+  "guaranteed_analysis": "CRUDE PROTEIN (min) 30% CRUDE FAT (min) 7% CRUDE FIBER (max) 1.5% MOISTURE (max) 20%",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/tr-jackspremium-1031.txt",
@@ -1511,7 +1517,8 @@
   "category": "trachea-chews",
   "last_checked": "2026-10-31",
   "amazon_asin": "B015BPLEP8",
-  "affiliate_url": "https://www.amazon.com/dp/B015BPLEP8?tag=nibbables-20"
+  "affiliate_url": "https://www.amazon.com/dp/B015BPLEP8?tag=nibbables-20",
+  "calories": "159 kcal/oz"
  },
  {
   "snapshot": "research/pages/tr-naturegnaws-1031.txt",
@@ -1529,7 +1536,8 @@
   ],
   "note": "The page lists \"About 178 calories per chew\". The sourcing line is the brand's general statement shown on the product page, not specific to this chew. Nature Gnaws also sells a 3-inch trachea for small breeds.",
   "category": "trachea-chews",
-  "last_checked": "2026-10-31"
+  "last_checked": "2026-10-31",
+  "calories": "About 178 calories per chew"
  },
  {
   "snapshot": "research/pages/fs-icel-codlong-1101.txt",
@@ -1861,7 +1869,8 @@
   "note": "",
   "guaranteed_analysis": "CRUDE PROTEIN (min) 75% · CRUDE FAT (min) 9% · CRUDE FIBER (max) 0.2% · MOISTURE (max) 20%",
   "category": "pig-ears",
-  "last_checked": "2026-11-03"
+  "last_checked": "2026-11-03",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/pe-jp-half-1103.txt",
@@ -1883,7 +1892,8 @@
   "note": "",
   "guaranteed_analysis": "CRUDE PROTEIN (min) 75% · CRUDE FAT (min) 9% · CRUDE FIBER (max) 0.2% · MOISTURE (max) 20%",
   "category": "pig-ears",
-  "last_checked": "2026-11-03"
+  "last_checked": "2026-11-03",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/pe-bbs-1103.txt",
@@ -1901,7 +1911,8 @@
   ],
   "note": "A product image's alt text says \"made in the USA\", but the page text itself doesn't state where the chews are made.",
   "category": "pig-ears",
-  "last_checked": "2026-11-03"
+  "last_checked": "2026-11-03",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/pe-bbs-smoked-1103.txt",
@@ -1921,7 +1932,8 @@
   "note": "Calories as stated: Calories per kg 4500 kcal/kg · Calories Each 135",
   "guaranteed_analysis": "Crude Fat Min 5.0% · Crude Fiber Max 3.0% · Crude Protein Min 60.0% · Moisture Max 12.0%",
   "category": "pig-ears",
-  "last_checked": "2026-11-03"
+  "last_checked": "2026-11-03",
+  "calories": "Calories per kg 4500 kcal/kg · Calories Each 135"
  },
  {
   "snapshot": "research/pages/pe-rb-natural-1103.txt",
@@ -1942,7 +1954,8 @@
   ],
   "note": "Shelf life as stated: 36 months. Calories: N/A on the page.",
   "category": "pig-ears",
-  "last_checked": "2026-11-03"
+  "last_checked": "2026-11-03",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/pe-rb-smoked-1103.txt",
@@ -1960,7 +1973,8 @@
   ],
   "note": "Shelf life as stated: 36 months. Calories: N/A on the page.",
   "category": "pig-ears",
-  "last_checked": "2026-11-03"
+  "last_checked": "2026-11-03",
+  "calories": "Not stated, check with them"
  },
  {
   "snapshot": "research/pages/pe-cf-1103.txt",
@@ -1978,7 +1992,8 @@
   ],
   "note": "Calorie Content: 4,590 kcal/kg; 130 kcal/oz",
   "category": "pig-ears",
-  "last_checked": "2026-11-03"
+  "last_checked": "2026-11-03",
+  "calories": "4,590 kcal/kg; 130 kcal/oz"
  },
  {
   "snapshot": "research/pages/hv-jp-nat-1104.txt",

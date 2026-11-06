@@ -150,3 +150,9 @@ Deploy confirm 2026-11-05 ~12:00 AM ET: main@461bb9d live, https://nibbables.com
 | 2026-11-05 | /cow-ears/ (new hub) | 7 (Jack&Pup ×2, Best Bully Sticks ×2, Pawstruck, Redbarn, Raw Paws) | Brand pages snapshotted 2026-11-05 (ce-*-1105.txt); quote check OK; 1 Amazon link (Redbarn B00PF1GMK6) | Calories only on BBS Thick-Cut; Pawstruck page states USA in copy but USA/Canada/Colombia in details (noted); Redbarn Bully Coated Cow Ears skipped (gravy/rawhide wording unclear); headless screenshot failed locally |
 Deploy confirm 2026-11-05 ~11:50 PM ET: main@341d42a live, https://nibbables.com/cow-ears/ HTTP 200 with 1 Amazon link; IndexNow 200 (/cow-ears/, sitemap, llms.txt).
 | 2026-11-06 | /bully-sticks/ + /antlers/ (T003 answer-first) | 0 | Answer-first sourced paras under H1+byline (Tufts calories; Cornell hard-chew / tooth fracture). main@4555886, gh-pages deployed, live 200, sitemap lastmod 2026-11-06, IndexNow 200 | Traffic Desk growth-lab T003 |
+
+## 2026-11-06 ~12:10 PM ET — calories field on /pig-ears/ and /trachea-chews/ (improvement run)
+- Optional `calories` on all 7 pig-ears + 8 trachea products (same pattern as /cow-hooves/ run #110).
+- Pig ears with brand numbers: Best Bully Sticks Hickory Smoked (4500 kcal/kg · 135 each), Campfire (4,590 kcal/kg; 130 kcal/oz). Other 5: Not stated (Jack&Pup x2, BBS natural pack, Redbarn natural/smoked list N/A).
+- Trachea with brand numbers: Campfire (4,510 kcal/kg; 159 kcal/oz), Sancho (5200 kcal/kg), Bully Bunches (Calories 99.2/oz), GREAT DOG (ME 466 kcal/100 gr), Jack's Premium (159 kcal/oz), Nature Gnaws (About 178 calories per chew). BBS + Jack&Pup: Not stated.
+- verify_quotes OK; cards + at-a-glance Calories column. No invented numbers; quotes from existing research/pages snapshots only (last_checked unchanged).
