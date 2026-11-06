@@ -149,3 +149,4 @@ Deploy confirm 2026-11-05 ~12:00 AM ET: main@461bb9d live, https://nibbables.com
 
 | 2026-11-05 | /cow-ears/ (new hub) | 7 (Jack&Pup ×2, Best Bully Sticks ×2, Pawstruck, Redbarn, Raw Paws) | Brand pages snapshotted 2026-11-05 (ce-*-1105.txt); quote check OK; 1 Amazon link (Redbarn B00PF1GMK6) | Calories only on BBS Thick-Cut; Pawstruck page states USA in copy but USA/Canada/Colombia in details (noted); Redbarn Bully Coated Cow Ears skipped (gravy/rawhide wording unclear); headless screenshot failed locally |
 Deploy confirm 2026-11-05 ~11:50 PM ET: main@341d42a live, https://nibbables.com/cow-ears/ HTTP 200 with 1 Amazon link; IndexNow 200 (/cow-ears/, sitemap, llms.txt).
+| 2026-11-06 | /bully-sticks/ + /antlers/ (T003 answer-first) | 0 | Answer-first sourced paras under H1+byline (Tufts calories; Cornell hard-chew / tooth fracture). main@4555886, gh-pages deployed, live 200, sitemap lastmod 2026-11-06, IndexNow 200 | Traffic Desk growth-lab T003 |
