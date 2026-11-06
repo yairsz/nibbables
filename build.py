@@ -543,6 +543,25 @@ def yak_made_of_faq(ps):
     parts.append("Each card quotes the exact ingredient wording from the brand's page; for diet questions about your own dog, ask your vet.")
     return [("What are yak chews made of?", " ".join(parts))]
 
+def calories_faq(noun, ps):
+    """Self-contained calories Q (added 2026-11-06, Hostinger GEO: quoteable Q→A chunk).
+    Only when at least one product carries a calories field. Numbers are the brands' own wording."""
+    if not any(p.get("calories") for p in ps):
+        return []
+    n = len(ps)
+    stated = [p for p in ps if p.get("calories") and not str(p["calories"]).startswith("Not stated")]
+    unstated = [p for p in ps if not p.get("calories") or str(p["calories"]).startswith("Not stated")]
+    nm = lambda L: "; ".join(f"{p['brand']} {p['product']} (“{p['calories']}”)" for p in L)
+    if stated:
+        a = (f"{len(stated)} of the {n} {noun} product pages we list state calories: {nm(stated)}. "
+             f"{len(unstated)} do not state calories. Units differ (each vs per ounce vs per kilogram), so read the exact quote on each card. "
+             "These are the brands' figures, not ours; for your dog's diet, ask your vet.")
+    else:
+        a = (f"None of the {n} {noun} product pages we list state a calorie figure. "
+             "That only covers the products listed here as of the last check; other brands may differ. Ask your vet about calories for your dog.")
+    return [(f"How many calories do brands list for {noun}?", a)]
+
+
 def cat_faq(c, ps):
     noun = FAQ_NOUN.get(c["slug"], c["name"].lower())
     n = len(ps); last = max(p["last_checked"] for p in ps)
@@ -626,6 +645,7 @@ def cat_faq(c, ps):
     # "how often can a dog eat a bully stick", "are collagen sticks safe"). Counted only from each card's quoted
     # supervision wording; we never give our own safety or frequency advice.
     if c["slug"] == "antlers": qa.extend(antler_choose_faq(ps))
+    qa.extend(calories_faq(noun, ps))
     qa.extend(supervision_faq(noun, ps))
     html_ = '<section class="faq"><h2>Quick answers</h2>' + "".join(f"<h3>{e(q)}</h3><p>{e(a)}</p>" for q, a in qa) + "</section>"
     ld = {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
