@@ -159,3 +159,10 @@ Amazon search pages returned a ~2 KB bot-block page from the box tonight (4 quer
 - MISS Pawstruck Cow Hooves for Dogs: Amazon search showed no Pawstruck-branded listing (top hits hotspot pets, 123 Treats).
 - MISS Pawstruck Filled Cow Hooves - Peanut Butter: closest hit B09DRBZ1BM is Raw Paws, not Pawstruck.
 - MISS Jack&Pup 100% Natural Cow Hooves, Best Bully Sticks Cow Hooves 25 count, Best Bully Sticks Peanut Butter Stuffed Hoof 4 Pack: no brand-confirmed listing found in search titles tonight; not checked further.
+
+## 2026-11-05 — /cow-ears/ (nightly, new hub, 7 products)
+- MATCH Redbarn Cow Ears (Bag 4.2oz) → B00PF1GMK6 ("Redbarn Cow Ears Dog Treats, 100% Natural Single Ingredient, 4.2 oz", byline Visit the Redbarn Pet Products Store).
+- MISS Best Bully Sticks 100% All-Natural Cow Ears (20 Pack) and Premium Thick-Cut Cow Ear (25 Pack): B013TJ7UGA is "Best Bully Sticks Cow Ears for Dogs - 15 Count" (BBS store) but its title doesn't say which of the two products (thick-cut vs unwashed) and the count differs; not linked.
+- MISS Pawstruck Cow Ears for Dogs: search showed no Pawstruck-branded cow ear listing.
+- MISS Jack&Pup All-Natural Cow Ear / White Cow Ear: no Jack&Pup listing in search results.
+- MISS Raw Paws Cow Ears 5-ct: not searched separately; not linked.

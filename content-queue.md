@@ -18,7 +18,7 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [ ] /lamb-and-goat-horns/: horn chews. Pawstruck, Best Bully Sticks, Nature Gnaws (feeds)
 - [ ] /water-buffalo-horns/: Pawstruck, Nature Gnaws, Jack&Pup
 - [ ] /pig-ears/: Redbarn, Pawstruck, Raw Paws, Jack&Pup (feeds)
-- [ ] /cow-ears/: Pawstruck, Raw Paws, Best Bully Sticks, Nature Gnaws
+- [x] /cow-ears/ PUBLISHED 2026-11-05 → https://nibbables.com/cow-ears/ (7 products, 5 brands): Pawstruck, Raw Paws, Best Bully Sticks, Nature Gnaws
 - [x] /esophagus-chews/ (PUBLISHED 2026-10-29, 9 products from 7 brands; also /bully-stick-vs-gullet-stick/): beef gullet and esophagus. Raw Paws, Best Bully Sticks, Jack&Pup, Nature Gnaws, Sancho & Lola's, Jack's Premium, Redbarn (Pawstruck has none in its feed)
 - [x] /trachea-chews/ (PUBLISHED 2026-10-31, 8 products from 8 brands: Campfire, Sancho & Lola's, Best Bully Sticks, Bully Bunches, GREAT DOG, Jack&Pup, Jack's Premium, Nature Gnaws; Pawstruck/Redbarn not in tonight's feeds)
 - [ ] /braided-bully-sticks/: braided and ring bully sticks. Best Bully Sticks, Jack&Pup, Redbarn, Pawstruck; also GREAT DOG twisted and Jack's Premium braided (both say USA in their feed titles; real query "braided bully sticks made in usa")
