@@ -117,7 +117,7 @@ CONTENT_EDITED = {"/bully-sticks/": "2026-11-06",          # T003 answer-first +
                   "/beef-cheek-rolls/": "2026-11-05",      # jump chips
                   "/rawhide-free/": "2026-11-05",          # jump chips
                   "/collagen-sticks/": "2026-11-05",       # jump chips
-                  "/beef-tendons/": "2026-11-05",          # jump chips
+                  "/beef-tendons/": "2026-11-06",          # USA answer-first title/meta/intro for GSC "beef tendons for dogs made in usa"
                   "/esophagus-chews/": "2026-11-05",       # jump chips (was title suffix, 2026-11-04)
                   "/trachea-chews/": "2026-11-05",         # jump chips
                   "/fish-skin-chews/": "2026-11-05",       # jump chips
