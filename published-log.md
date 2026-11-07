@@ -157,3 +157,7 @@ Deploy confirm 2026-11-05 ~11:50 PM ET: main@341d42a live, https://nibbables.com
 - Trachea with brand numbers: Campfire (4,510 kcal/kg; 159 kcal/oz), Sancho (5200 kcal/kg), Bully Bunches (Calories 99.2/oz), GREAT DOG (ME 466 kcal/100 gr), Jack's Premium (159 kcal/oz), Nature Gnaws (About 178 calories per chew). BBS + Jack&Pup: Not stated.
 - verify_quotes OK; cards + at-a-glance Calories column. No invented numbers; quotes from existing research/pages snapshots only (last_checked unchanged).
 - Deploy: main@8b15e55 → gh-pages ca07a4d; Pages status built ~12:11 PM ET. Live 200 both URLs; HTML matches gh-pages (Calories (as stated) on cards + calories column in at-a-glance). IndexNow api.indexnow.org 200 + bing.com/indexnow 200 for /pig-ears/, /trachea-chews/, /, sitemap.
+
+## 2026-11-06 ~9:10 PM ET — /beef-tendons/ USA answer-first (improvement loop)
+- H1/title/meta/intro rewritten for GSC query "beef tendons for dogs made in usa" using only existing 3-of-6 USA brand quotes (Pupford; Sancho & Lola's Closet ×2). No new facts; FAQ/cards unchanged.
+- Deploy: main@f2644e2 → gh-pages 98e4828; Pages built. Live 200; dateModified 2026-11-06. IndexNow api.indexnow.org 200 + bing 200 for /beef-tendons/, /, sitemap. T003 pages untouched.
