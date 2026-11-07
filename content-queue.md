@@ -9,13 +9,13 @@ Each item: page path, what it needs, and candidate official sources to check fir
 - [x] /fish-skin-chews/ (PUBLISHED 2026-11-01, 9 products: Icelandic+, Campfire Treats, Jack's Premium, The Honest Kitchen; keyword-targets row 7 fish skin cluster)
 - [x] /yak-chews-and-pancreatitis/ (PUBLISHED 2026-11-01: fat/calorie lines from 8 yak pages + Tufts + AAFCO; keyword-targets row 7 yak + pancreatitis)
 - [ ] /fish-skin-chews/ expansion: Icelandic+ Cod Skin Braids, Cod Skin Rolls, Cod Skin Large Cube, Fish Ear (pig ear wrapped in cod skin; maybe pig-ears page); Jack's Premium Salmon Skin Chips; Pawstruck/BBS if they add fish skins
-- [ ] Collagen sticks + pancreatitis / fat guide ("are collagen sticks safe for dogs with pancreatitis" autocomplete): fat lines from /collagen-sticks/ pages, same format as /yak-chews-and-pancreatitis/
+- [x] /collagen-sticks-and-pancreatitis/ (PUBLISHED 2026-11-06: fat/calorie lines from 9 collagen pages + Tufts + AAFCO; keyword-targets row 7 collagen + pancreatitis)
 - [ ] Rawhide + pancreatitis ("is rawhide bad for dogs with pancreatitis"): only if a vet source names rawhide and fat; otherwise skip
 - [ ] Re-check Best Bully Sticks yak nutrition table (all zeros on 2026-11-01) and whether other BBS yak pages changed their rawhide-free wording
 - [ ] Jack&Pup yak page: product text didn't render in curl snapshot 2026-11-01; try WebFetch to get its fat/calorie lines
 - [x] /collagen-sticks/: published 2026-10-27 (Raw Paws, Best Bully Sticks, Jack&Pup; Pawstruck still available for expansion)
 - [x] /beef-tendons/ (PUBLISHED 2026-10-28, 6 products; also /bully-stick-vs-beef-tendon/): beef tendon and "paddywhack" chews. Pawstruck, Redbarn, Best Bully Sticks, Raw Paws (feeds)
-- [ ] /lamb-and-goat-horns/: horn chews. Pawstruck, Best Bully Sticks, Nature Gnaws (feeds)
+- [x] /lamb-and-goat-horns/ (PUBLISHED 2026-11-06, 4 products from Raw Paws, Icelandic+, Jack's Premium; Pawstruck/BBS/Nature Gnaws had no lamb/goat horn in tonight's feeds)
 - [ ] /water-buffalo-horns/: Pawstruck, Nature Gnaws, Jack&Pup
 - [ ] /pig-ears/: Redbarn, Pawstruck, Raw Paws, Jack&Pup (feeds)
 - [x] /cow-ears/ PUBLISHED 2026-11-05 → https://nibbables.com/cow-ears/ (7 products, 5 brands): Pawstruck, Raw Paws, Best Bully Sticks, Nature Gnaws

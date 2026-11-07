@@ -1,0 +1,378 @@
+{
+  "slug": "collagen-sticks-and-pancreatitis",
+  "title": "Collagen sticks & pancreatitis: fat % by brand | Nibbables",
+  "meta": "Can dogs with pancreatitis eat collagen sticks? Fat and calorie lines from 9 collagen pages, plus Tufts and AAFCO notes on fat. Ask your vet.",
+  "h1": "Collagen sticks and pancreatitis: the fat each brand lists and what vets say",
+  "intro": "If your dog has had pancreatitis, the question about a collagen stick usually comes down to fat. This page puts the fat and calorie lines from 9 collagen stick product pages side by side, explains what a \"Crude Fat (min)\" figure does and doesn't tell you (per AAFCO), and quotes veterinary nutritionists at Tufts on fat and pancreatitis. None of the collagen stick pages we checked mention pancreatitis. Nibbables doesn't say whether any chew suits a dog with pancreatitis; that's a call for your vet, who knows your dog's history.",
+  "table": {
+    "h": "Fat and calories on each collagen stick page",
+    "caption": "Quoted from each brand's product page, checked 2026-11-06. \"Not stated\" means we found no figure on that page. Fat is listed as a minimum (\"min\"), so the real fat content can be higher. Best Bully Sticks' 6-inch nutrition table shows Protein Min 0.75%, Fat Min 0.0% and Moisture Max 0.2%, which looks like a placeholder or mis-scaled table. Mighty Paw lists Crude Fat Min: 25%, far above the other brands that publish a fat line.",
+    "head": [
+      "Brand: product",
+      "Fat line (quoted)",
+      "Calorie line (quoted)",
+      "Ingredients (quoted)"
+    ],
+    "rows": [
+      {
+        "snapshot": "research/pages/cs-jp6-1106.txt",
+        "cells": [
+          "Jack&Pup: Collagen Sticks - 6 Inch",
+          {
+            "q": "CRUDE FAT (min) 0.5%"
+          },
+          "Not stated",
+          {
+            "q": "100% Beef Collagen"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/cs-jp12-1106.txt",
+        "cells": [
+          "Jack&Pup: Collagen Sticks - 12 Inch",
+          {
+            "q": "CRUDE FAT (min) 0.5%"
+          },
+          "Not stated",
+          {
+            "q": "100% Beef Collagen"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/cs-bowwow-1106.txt",
+        "cells": [
+          "Bow Wow Labs: Collagen Sticks",
+          {
+            "q": "Crude Fat: (min): 0.21%"
+          },
+          {
+            "q": "6” Thick: 89 kCal · 12\" Thick: 138 kCal · 6\" Jumbo: 118 kCal · 12\" Jumbo: 168 kCal"
+          },
+          {
+            "q": "Ingredients: 100% beef collagen"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/cs-mightypaw-1106.txt",
+        "cells": [
+          "Mighty Paw: All-Natural Beef Collagen Sticks (8 Pack Variety)",
+          {
+            "q": "Crude Fat Min: 25%"
+          },
+          {
+            "q": "CALORIE CONTENT (calculated) 3,080 kcal/kg"
+          },
+          {
+            "q": "Ingredients: Beef Collagen"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/cs-bbs6-1106.txt",
+        "cells": [
+          "Best Bully Sticks: Best Bully Collagen Sticks (6-Inch)",
+          {
+            "q": "Crude Fat Min | 0.0%"
+          },
+          {
+            "q": "Calories per kg | 3000 kcal/kg · Calories Each | 36"
+          },
+          {
+            "q": "Ingredients Beef Hide (Source of Collagen)"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/cs-bbs12-1106.txt",
+        "cells": [
+          "Best Bully Sticks: Best Bully 12-Inch Beef Collagen Stick",
+          {
+            "q": "Crude Fat Min | 0.25%"
+          },
+          {
+            "q": "Calories per kg | 3000 kcal/kg · Calories Each | 90"
+          },
+          {
+            "q": "Ingredients Beef Hide (Source of Collagen)"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/cs-naturegnaws-1106.txt",
+        "cells": [
+          "Nature Gnaws: Collagen Sticks for Dogs 6\" Long-Lasting Dental Dog Chews",
+          "Not stated",
+          {
+            "q": "About 60 calories per chew"
+          },
+          {
+            "q": "Ingredients: Beef Hide"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/cs-rawpaws-1106.txt",
+        "cells": [
+          "Raw Paws Pet Food: Beef Collagen Sticks for Dogs, 6-inch - 10-ct",
+          "Not stated",
+          "Not stated",
+          {
+            "q": "Single-ingredient: Beef Collagen!"
+          }
+        ]
+      },
+      {
+        "snapshot": "research/pages/cs-pawstruck-1106.txt",
+        "cells": [
+          "Pawstruck: Beef Collagen Sticks",
+          "Not stated",
+          "Not stated",
+          "Not stated"
+        ]
+      }
+    ]
+  },
+  "faq": [
+    {
+      "q": "Can dogs with pancreatitis eat collagen sticks?",
+      "a": "None of the 9 collagen stick product pages in the table above mention pancreatitis, so no brand we checked addresses it. Veterinary nutritionists at Tufts write that \"If your dog has had pancreatitis, ask your veterinarian whether she should be fed a lower fat diet.\" The collagen stick pages that list fat show a minimum of 0.0% to 25% (Best Bully Sticks' 6-inch table shows 0.0%, which looks like a placeholder; Mighty Paw lists 25%). AAFCO explains that a minimum means the real fat can be higher. Per stick, Bow Wow Labs lists \"6” Thick: 89 kCal\" through \"12\" Jumbo: 168 kCal\", Best Bully Sticks lists \"Calories Each | 36\" (6-inch) and \"Calories Each | 90\" (12-inch), and Nature Gnaws lists \"About 60 calories per chew\". Show your vet the label and let them decide."
+    },
+    {
+      "q": "Are collagen sticks low fat?",
+      "a": "We don't rate fat levels. Brand pages that publish a fat line disagree a lot: Bow Wow Labs lists \"Crude Fat: (min): 0.21%\", Jack&Pup lists \"CRUDE FAT (min) 0.5%\" on both its 6-inch and 12-inch pages, Best Bully Sticks lists \"Crude Fat Min | 0.25%\" on its 12-inch page (and 0.0% on its 6-inch page, which looks incomplete), and Mighty Paw lists \"Crude Fat Min: 25%\". Raw Paws Pet Food, Pawstruck and Nature Gnaws do not state a fat percentage on the pages we checked. Ask your vet how to read these figures for your dog."
+    }
+  ],
+  "sections": [
+    {
+      "h": "What fat percentage do collagen stick brands list?",
+      "p": "Bow Wow Labs lists \"Crude Fat: (min): 0.21%\". Jack&Pup lists \"CRUDE FAT (min) 0.5%\" on both its 6-inch and 12-inch pages. Best Bully Sticks' 12-inch page lists \"Crude Fat Min | 0.25%\"; its 6-inch page lists \"Crude Fat Min | 0.0%\" alongside \"Crude Protein Min | 0.75%\" and \"Moisture Max | 0.2%\", which can't describe a typical collagen stick and looks like an unfilled or mis-scaled template. Mighty Paw lists \"Crude Fat Min: 25%\". Raw Paws Pet Food, Pawstruck and Nature Gnaws give no fat percentage on the pages we checked tonight."
+    },
+    {
+      "h": "Why a \"Crude Fat (min)\" figure isn't a maximum",
+      "p": "AAFCO, which writes the model rules for pet food labels, says guaranteed analyses must show \"minimum percentages of crude protein and crude fat, and maximum percentages of crude fiber and moisture\". It explains that a lab test of the product means \"the crude protein and crude fat must be NO LESS THAN the stated percentage on the label\". So a collagen stick labeled 0.5% fat (min) has at least 0.5% fat, and the label doesn't say how much more it could have. If the exact fat matters for your dog, ask the brand for a typical analysis and share it with your vet."
+    },
+    {
+      "h": "What veterinary nutritionists say about fat and pancreatitis",
+      "p": "In a Tufts Petfoodology article (December 1, 2020), Cailin R. Heinze, VMD, MS, DACVIM (Nutrition), writes that in dogs pancreatitis \"is associated with high levels of fat in the blood, especially triglycerides, which is more common in certain breeds such as miniature schnauzers.\" She adds: \"Some dogs do not do well on high-fat diets and may develop gastrointestinal signs, increased fat levels in the blood, and/or pancreatitis.\" and \"Some dogs may need special therapeutic low-fat diets because normal diets that you buy at pet food or grocery stores may be too high in fat.\" An earlier Tufts post (March 15, 2018) notes that \"many dogs can eat high fat diets and never develop pancreatitis and many dogs that develops pancreatitis do not have a history of eating a high fat diet.\""
+    },
+    {
+      "h": "How many calories brands list per collagen stick",
+      "p": "Brands state calories in different units, so the figures can't be compared directly. Bow Wow Labs gives per-stick figures by size: \"6” Thick: 89 kCal\", \"12\" Thick: 138 kCal\", \"6\" Jumbo: 118 kCal\", \"12\" Jumbo: 168 kCal\". Best Bully Sticks gives \"Calories Each | 36\" for its 6-inch stick and \"Calories Each | 90\" for its 12-inch stick, both with \"Calories per kg | 3000 kcal/kg\". Nature Gnaws gives \"About 60 calories per chew\". Mighty Paw gives \"CALORIE CONTENT (calculated) 3,080 kcal/kg\" without a per-stick figure. Jack&Pup, Raw Paws Pet Food and Pawstruck do not state calories on the pages we checked. Our bully stick vs collagen stick guide and bully stick calories guide cover related questions."
+    },
+    {
+      "h": "How collagen sticks compare with yak chews on listed fat",
+      "p": "On our yak chews and pancreatitis page, the yak chew brands that publish a fat line list a minimum of 0.5% to 2% (with one Best Bully Sticks yak table showing 0.0%). Collagen stick pages span a wider range: Bow Wow Labs and Jack&Pup sit near the low end (0.21%–0.5% min), while Mighty Paw's collagen page lists 25% min. That spread is why a single \"collagen sticks\" answer doesn't replace reading the specific label with your vet."
+    },
+    {
+      "h": "What to ask your vet before giving a collagen stick",
+      "p": "Bring the product page or bag. Useful things to show your vet are the fat line (and the fact that it's a minimum), the calorie line, the ingredient list (some pages say beef collagen; others say beef hide as a source of collagen), and how big the stick is for your dog. Jack&Pup lists \"100% Beef Collagen\"; Bow Wow Labs lists \"Ingredients: 100% beef collagen\"; Best Bully Sticks and Nature Gnaws list beef hide; Mighty Paw lists \"Ingredients: Beef Collagen\"; Raw Paws Pet Food lists \"Single-ingredient: Beef Collagen!\"; Pawstruck's page did not give a clear single-line ingredient quote we could verify tonight."
+    }
+  ],
+  "sources": [
+    {
+      "label": "Tufts Petfoodology: Pancreatitis: A Real Pain in the Abdomen (Cailin R. Heinze, VMD, DACVIM Nutrition, Dec 1, 2020)",
+      "url": "https://sites.tufts.edu/petfoodology/2020/12/01/pancreatitis/"
+    },
+    {
+      "label": "Tufts Petfoodology: The Skinny on Fat: Part 1 – The Basics (Mar 15, 2018)",
+      "url": "https://sites.tufts.edu/petfoodology/2018/03/15/the-skinny-on-fat-part-1/"
+    },
+    {
+      "label": "AAFCO: Nutritional Labeling (guaranteed analysis minimums and maximums)",
+      "url": "https://www.aafco.org/resources/startups/nutritional-labeling/"
+    },
+    {
+      "label": "Jack&Pup: Collagen Sticks - 6 Inch (product page)",
+      "url": "https://jackandpup.com/products/collagen-sticks-6-inch"
+    },
+    {
+      "label": "Jack&Pup: Collagen Sticks - 12 Inch (product page)",
+      "url": "https://jackandpup.com/products/collagen-sticks-12-inch"
+    },
+    {
+      "label": "Bow Wow Labs: Collagen Sticks (product page)",
+      "url": "https://www.bowwowlabs.com/products/collagen-sticks"
+    },
+    {
+      "label": "Mighty Paw: All-Natural Beef Collagen Sticks (product page)",
+      "url": "https://www.mightypaw.com/products/naturals-collagen-sticks-variety-8-pack"
+    },
+    {
+      "label": "Best Bully Sticks: Best Bully Collagen Sticks 6-Inch (product page)",
+      "url": "https://bestbullysticks.com/products/6-inch-beef-collagen-stick"
+    },
+    {
+      "label": "Best Bully Sticks: Best Bully 12-Inch Beef Collagen Stick (product page)",
+      "url": "https://bestbullysticks.com/products/12-inch-beef-collagen-stick"
+    },
+    {
+      "label": "Nature Gnaws: Collagen Sticks for Dogs (product page)",
+      "url": "https://naturegnaws.com/products/natural-collagen-sticks-dog-chews"
+    },
+    {
+      "label": "Raw Paws Pet Food: Beef Collagen Sticks for Dogs, 6-inch (product page)",
+      "url": "https://www.rawpawspetfood.com/products/beef-collagen-sticks-dogs-6-inch-10-ct"
+    },
+    {
+      "label": "Pawstruck: Beef Collagen Sticks (product page)",
+      "url": "https://www.pawstruck.com/products/beef-collagen-sticks"
+    }
+  ],
+  "product_ids": [
+    "raw-paws-pet-food-beef-collagen-sticks-for-dogs-6-inch-10-ct",
+    "best-bully-sticks-best-bully-collagen-sticks-6-inch",
+    "jack-pup-collagen-sticks-6-inch",
+    "pawstruck-beef-collagen-sticks",
+    "nature-gnaws-collagen-sticks-for-dogs-6-long-lasting-dental-dog-chews",
+    "bow-wow-labs-collagen-sticks",
+    "mighty-paw-all-natural-beef-collagen-sticks-8-pack-variety",
+    "best-bully-sticks-best-bully-12-inch-beef-collagen-stick",
+    "jack-pup-collagen-sticks-12-inch"
+  ],
+  "quote_checks": [
+    {
+      "snapshot": "research/pages/tufts-skinny-fat-1101.txt",
+      "text": "If your dog has had pancreatitis, ask your veterinarian whether she should be fed a lower fat diet."
+    },
+    {
+      "snapshot": "research/pages/tufts-skinny-fat-1101.txt",
+      "text": "many dogs can eat high fat diets and never develop pancreatitis and many dogs that develops pancreatitis do not have a history of eating a high fat diet."
+    },
+    {
+      "snapshot": "research/pages/tufts-skinny-fat-1101.txt",
+      "text": "March 15, 2018"
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "is associated with high levels of fat in the blood, especially triglycerides, which is more common in certain breeds such as miniature schnauzers."
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "Some dogs do not do well on high-fat diets and may develop gastrointestinal signs, increased fat levels in the blood, and/or pancreatitis."
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "Some dogs may need special therapeutic low-fat diets because normal diets that you buy at pet food or grocery stores may be too high in fat."
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "Cailin R. Heinze, VMD, MS, DACVIM (Nutrition)"
+    },
+    {
+      "snapshot": "research/pages/tufts-pancreatitis-1101.txt",
+      "text": "December 1, 2020"
+    },
+    {
+      "snapshot": "research/pages/aafco-nutritional-labeling-1101.txt",
+      "text": "minimum percentages of crude protein and crude fat, and maximum percentages of crude fiber and moisture"
+    },
+    {
+      "snapshot": "research/pages/aafco-nutritional-labeling-1101.txt",
+      "text": "the crude protein and crude fat must be NO LESS THAN the stated percentage on the label"
+    },
+    {
+      "snapshot": "research/pages/cs-jp6-1106.txt",
+      "text": "CRUDE FAT (min) 0.5%"
+    },
+    {
+      "snapshot": "research/pages/cs-jp12-1106.txt",
+      "text": "CRUDE FAT (min) 0.5%"
+    },
+    {
+      "snapshot": "research/pages/cs-bowwow-1106.txt",
+      "text": "Crude Fat: (min): 0.21%"
+    },
+    {
+      "snapshot": "research/pages/cs-bowwow-1106.txt",
+      "text": "6” Thick: 89 kCal"
+    },
+    {
+      "snapshot": "research/pages/cs-bowwow-1106.txt",
+      "text": "12\" Thick: 138 kCal"
+    },
+    {
+      "snapshot": "research/pages/cs-bowwow-1106.txt",
+      "text": "6\" Jumbo: 118 kCal"
+    },
+    {
+      "snapshot": "research/pages/cs-bowwow-1106.txt",
+      "text": "12\" Jumbo: 168 kCal"
+    },
+    {
+      "snapshot": "research/pages/cs-bowwow-1106.txt",
+      "text": "Ingredients: 100% beef collagen"
+    },
+    {
+      "snapshot": "research/pages/cs-mightypaw-1106.txt",
+      "text": "Crude Fat Min: 25%"
+    },
+    {
+      "snapshot": "research/pages/cs-mightypaw-1106.txt",
+      "text": "CALORIE CONTENT (calculated) 3,080 kcal/kg"
+    },
+    {
+      "snapshot": "research/pages/cs-mightypaw-1106.txt",
+      "text": "Ingredients: Beef Collagen"
+    },
+    {
+      "snapshot": "research/pages/cs-bbs6-1106.txt",
+      "text": "Crude Fat Min | 0.0%"
+    },
+    {
+      "snapshot": "research/pages/cs-bbs6-1106.txt",
+      "text": "Calories Each | 36"
+    },
+    {
+      "snapshot": "research/pages/cs-bbs6-1106.txt",
+      "text": "Crude Protein Min | 0.75%"
+    },
+    {
+      "snapshot": "research/pages/cs-bbs6-1106.txt",
+      "text": "Moisture Max | 0.2%"
+    },
+    {
+      "snapshot": "research/pages/cs-bbs6-1106.txt",
+      "text": "Ingredients Beef Hide (Source of Collagen)"
+    },
+    {
+      "snapshot": "research/pages/cs-bbs12-1106.txt",
+      "text": "Crude Fat Min | 0.25%"
+    },
+    {
+      "snapshot": "research/pages/cs-bbs12-1106.txt",
+      "text": "Calories Each | 90"
+    },
+    {
+      "snapshot": "research/pages/cs-bbs12-1106.txt",
+      "text": "Ingredients Beef Hide (Source of Collagen)"
+    },
+    {
+      "snapshot": "research/pages/cs-naturegnaws-1106.txt",
+      "text": "About 60 calories per chew"
+    },
+    {
+      "snapshot": "research/pages/cs-naturegnaws-1106.txt",
+      "text": "Ingredients: Beef Hide"
+    },
+    {
+      "snapshot": "research/pages/cs-rawpaws-1106.txt",
+      "text": "Single-ingredient: Beef Collagen!"
+    },
+    {
+      "snapshot": "research/pages/cs-jp6-1106.txt",
+      "text": "100% Beef Collagen"
+    },
+    {
+      "snapshot": "research/pages/cs-jp12-1106.txt",
+      "text": "100% Beef Collagen"
+    }
+  ],
+  "last_checked": "2026-11-06",
+  "categories": [
+    "collagen-sticks"
+  ],
+  "published": "2026-11-06"
+}

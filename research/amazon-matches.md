@@ -166,3 +166,14 @@ Amazon search pages returned a ~2 KB bot-block page from the box tonight (4 quer
 - MISS Pawstruck Cow Ears for Dogs: search showed no Pawstruck-branded cow ear listing.
 - MISS Jack&Pup All-Natural Cow Ear / White Cow Ear: no Jack&Pup listing in search results.
 - MISS Raw Paws Cow Ears 5-ct: not searched separately; not linked.
+
+## 2026-11-06 — /lamb-and-goat-horns/ (nightly, new hub, 4 products)
+Amazon search HTML from the box returned HTTP 503 bot-block pages tonight. Matches below are from WebSearch result titles + one successful `/dp/` fetch; each was checked for brand, product name and variant.
+
+- MATCH Raw Paws Pet Food Lamb Horns for Dogs, 2-ct → B0B25VN35J ("Raw Paws Lamb Horns for Dogs, Large (2-Count) Long Lasting Sheep Horn Chew", Brand: Raw Paws). Same 2-count large lamb horn as the brand page.
+- MATCH Icelandic+ Large Lamb Horn Dog Chew → B01MT0D78G ("Icelandic+ Lamb Horn Large 7\" Dog Chew, Long-Lasting Pure Pet Treat"). `/dp/B01MT0D78G` fetched 200; title and brand Icelandic+ confirmed. Brand page sells 1-ct and 12-ct; linked the single-horn listing.
+- MATCH Icelandic+ Small Lamb Horn with Marrow Dog Chew → B07G7XGGK3 ("Icelandic+ Small Lamb Horn with Marrow - Long-Lasting Pure Dog Chew", Brand: Icelandic+; WebSearch also listed UPC 854854007636 matching the brand listing). Single-horn 1-ct match.
+- MISS Jack's Premium Goat Horn: WebSearch for site:amazon.com "Jack's Premium" Goat Horn returned other Jack's Premium chews (rabbit ear, duck feet, pig ears, boar bones) and no goat horn listing. Not linked.
+
+## 2026-11-06 — /collagen-sticks-and-pancreatitis/ (guide)
+Reuses 9 existing collagen cards (Amazon links unchanged; no new ASINs). Fat/calorie lines re-snapshotted tonight (cs-*-1106.txt). Tufts + AAFCO snapshots reused from 2026-11-01 yak pancreatitis guide.
