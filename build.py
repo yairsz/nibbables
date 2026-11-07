@@ -115,7 +115,7 @@ CONTENT_EDITED = {"/bully-sticks/": "2026-11-06",          # T003 answer-first +
                   "/antlers/": "2026-11-06",               # T003 answer-first + independent Cornell dental fact
                   "/yak-cheese-chews/": "2026-11-05",      # jump chips
                   "/beef-cheek-rolls/": "2026-11-05",      # jump chips
-                  "/rawhide-free/": "2026-11-05",          # jump chips
+                  "/rawhide-free/": "2026-11-07",          # computed brands answer-first lead + intro/meta refresh (was jump chips 11-05)
                   "/collagen-sticks/": "2026-11-05",       # jump chips
                   "/beef-tendons/": "2026-11-06",          # USA answer-first title/meta/intro for GSC "beef tendons for dogs made in usa"
                   "/esophagus-chews/": "2026-11-05",       # jump chips (was title suffix, 2026-11-04)
@@ -171,7 +171,7 @@ def article_ld(g, path):
 
 # Hand-written complete meta descriptions for pages whose long description would otherwise be cut mid-sentence.
 # Reworded only from the page's own description; no new facts. Keep <= 158 chars.
-META_DESC = {'/rawhide-free/': "Dog chews whose brand says they're rawhide-free or made without rawhide, including Earth Animal No-Hide, quoted from each brand's page.", '/compare/': "Bully sticks, yak chews, beef cheek rolls, rawhide-free chews and antlers side by side, with each brand's ingredient and made-in claims quoted.", '/yak-cheese-chews/': 'Yak cheese dog chews from Mighty Paw, Pupford, Pawstruck, Raw Paws and Best Bully Sticks, with ingredients and origin claims quoted from each brand.', '/antlers/': 'Elk and deer antler chews from GREAT DOG, Redbarn, Mighty Paw, Nature Gnaws and Best Bully Sticks, with sourcing and size guidance quoted from each brand.', '/': "Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared by each brand's own ingredient, made-in and sourcing claims.", '/bully-sticks/': 'Bully sticks from Campfire Treats, GREAT DOG, Best Bully Sticks, Redbarn, Jack&Pup, Mighty Paw and more, with ingredients, made-in claims and sizes quoted.'}
+META_DESC = {'/rawhide-free/': "Which dog chew brands say rawhide-free? Earth Animal, Jack&Pup, Redbarn, Nature Gnaws and more, with each brand's exact rawhide-free wording quoted.", '/compare/': "Bully sticks, yak chews, beef cheek rolls, rawhide-free chews and antlers side by side, with each brand's ingredient and made-in claims quoted.", '/yak-cheese-chews/': 'Yak cheese dog chews from Mighty Paw, Pupford, Pawstruck, Raw Paws and Best Bully Sticks, with ingredients and origin claims quoted from each brand.', '/antlers/': 'Elk and deer antler chews from GREAT DOG, Redbarn, Mighty Paw, Nature Gnaws and Best Bully Sticks, with sourcing and size guidance quoted from each brand.', '/': "Bully sticks, yak cheese chews, beef cheek rolls, rawhide-free chews and antlers compared by each brand's own ingredient, made-in and sourcing claims.", '/bully-sticks/': 'Bully sticks from Campfire Treats, GREAT DOG, Best Bully Sticks, Redbarn, Jack&Pup, Mighty Paw and more, with ingredients, made-in claims and sizes quoted.'}
 
 def fit_meta(title, desc, suffix=" | Nibbables"):
     """Keep SERP snippets readable: titles <= 60 chars (keep the brand suffix unless longer; drop the site-name suffix if needed),
@@ -687,6 +687,28 @@ ANSWER_FIRST = {
     },
 }
 
+# Computed answer-first lead for /rawhide-free/ (added 2026-11-07, improvement loop: GSC query "which rawhide-free
+# chews come from trusted brands" ranks ~11). Counted only from each card's quoted rawhide_free wording; we never
+# rate brand trust.
+def rawhide_brands_lead(c, ps):
+    if c["slug"] != "rawhide-free":
+        return ""
+    rh = [p for p in ps if p["rawhide_free"] != NS]
+    brands, cats = {}, {}
+    for p in rh:
+        brands[p["brand"]] = brands.get(p["brand"], 0) + 1
+        cats[p["category"]] = cats.get(p["category"], 0) + 1
+    names = {x["slug"]: x["name"] for x in CATS}
+    names["rawhide-free"] = "baked No-Hide chews"
+    bl = sorted(brands.items(), key=lambda kv: (-kv[1], kv[0]))
+    cl = sorted(cats.items(), key=lambda kv: (-kv[1], names.get(kv[0], kv[0])))
+    return ('<p class="answer-first">' + e(
+        f"Short answer: {len(rh)} dog chews from {len(brands)} brands in this directory have brand pages that literally "
+        f"say rawhide-free, no rawhide or made without rawhide: " + ", ".join(f"{b} ({k})" for b, k in bl) + ". "
+        f"By chew type: " + ", ".join(f"{names.get(k, k).lower()} ({v})" for k, v in cl) + ". "
+        "Nibbables doesn't rate which brands to trust, and a line like \u201calternative to rawhide\u201d doesn't count here. "
+        "Each card below quotes the brand's exact wording and links its page.") + '</p>')
+
 def answer_first_block(slug):
     a = ANSWER_FIRST.get(slug)
     if not a:
@@ -847,7 +869,7 @@ def category_page(c, products):
     toc = "".join(f'<li><a href="#{e(p["id"])}">{e(p["brand"])}: {e(p["product"])}</a></li>' for p in ps)
     body = f"""<p class="meta"><a href="{U('/')}">Home</a> › {e(c['name'])}</p>
 <h1>{e(c['h1'])}</h1>
-{answer_first_block(c['slug'])}{jump_chips(c, ps)}{verdict_block(c, ps)}<p class="lead">{e(c['intro'])}</p>
+{answer_first_block(c['slug'])}{rawhide_brands_lead(c, ps)}{jump_chips(c, ps)}{verdict_block(c, ps)}<p class="lead">{e(c['intro'])}</p>
 <p class="meta">{len(ps)} products · every claim is quoted from the brand's own page and linked · no prices (they change; check the brand) · <a href="{U('/compare/')}">compare all in one table</a></p>
 {SAFETY}
 {aff_disclosure(ps)}
